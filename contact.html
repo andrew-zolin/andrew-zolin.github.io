@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<title>Orancy Planet | Job Seekers Services</title>
+
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Professional CV writing, interview coaching, and LinkedIn optimization services to help you land your dream job. Expert career support from Orancy Planet.">
+	<meta name="keywords" content="CV writing, cover letter, interview coaching, LinkedIn optimization, career support, job seekers">
+	<meta name="author" content="Orancy Planet">
+	
+	<!-- Mobile Responsive Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Orancy Planet | Job Seekers Services">
+	<meta property="og:description" content="Professional CV writing, interview coaching, and LinkedIn optimization services to help you land your dream job.">
+	<meta property="og:image" content="images/logo/logo.png">
+	<!-- <meta property="og:url" content="https://orancyplanet.com"> -->
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Orancy Planet | Job Seekers Services">
+	<meta name="twitter:description" content="Professional CV writing, interview coaching, and LinkedIn optimization services to help you land your dream job.">
+	<meta name="twitter:image" content="images/logo/logo.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/custom-colors.css">
+	<link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/custom-animations.css">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Canonical URL -->
+    <!-- <link rel="canonical" href="https://orancyplanet.com"> -->
+
+    <!-- Inline Styles -->
+    <style>
+        .color1_bg {
+			background: var(--secondary-color) !important;
+			color: var(--primary-color) !important;
+		}
+
+		.thm-color {
+			color: var(--secondary-color) !important;
+		}
+
+		.menuzord-menu > li > a {
+			color: var(--primary-color);
+		}
+
+		.menuzord-menu > li.active > a,
+		.menuzord-menu > li:hover > a {
+			color: var(--secondary-color);
+		}
+
+		.menuzord-menu > li > .megamenu,
+		.menuzord-menu > li > .dropdown {
+			background: var(--background-light);
+		}
+
+		.menuzord-menu > li > .megamenu a,
+		.menuzord-menu > li > .dropdown a {
+			color: var(--text-light);
+		}
+
+		.menuzord-menu > li > .megamenu a:hover,
+		.menuzord-menu > li > .dropdown a:hover {
+			color: var(--secondary-color);
+		}
+
+		/* Additional Styles */
+		.tech-partners .partner-logo {
+			max-width: 80px;
+			margin: 5px;
+			border-radius: var(--border-radius-sm);
+		}
+
+		.footer-nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer-nav li {
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+		.footer-nav li a {
+			color: var(--text-light);
+		}
+
+		.footer-nav li a:hover {
+			color: var(--secondary-color);
+		}
+
+		.process-box {
+			background: var(--text-light);
+			padding: 30px;
+			margin-bottom: 30px;
+			border-radius: var(--border-radius-md);
+			box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+			transition: all 0.3s ease;
+		}
+
+		.process-box:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+		}
+
+		.process-box .step-number {
+			width: 40px;
+			height: 40px;
+			background: var(--primary-color);
+			color: var(--text-light);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+
+		.success-stats {
+			background: var(--primary-color);
+			color: var(--text-light);
+			padding: 60px 0;
+			margin: 40px 0;
+			border-radius: var(--border-radius-md);
+		}
+
+		.success-stats .stat-item {
+			text-align: center;
+			padding: 20px;
+		}
+
+		.success-stats .stat-number {
+			font-size: 48px;
+			font-weight: bold;
+			color: var(--secondary-color);
+			margin-bottom: 10px;
+		}
+
+		.success-stats .stat-text {
+			font-size: 18px;
+		}
+
+		.features-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 20px 0;
+			text-align: left;
+		}
+
+		.features-list li {
+			padding: 10px 0;
+			border-bottom: 1px solid #eee;
+		}
+
+		.features-list li:last-child {
+			border-bottom: none;
+		}
+        .contact-info-box {
+            background: var(--background-light);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-info-box .icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .contact-info-box h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .contact-form {
+            background: var(--background-light);
+            padding: 40px;
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius-sm);
+            padding: 12px 15px;
+        }
+
+        .map-section {
+            height: 400px;
+            margin-top: 60px;
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--border-radius-md);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="theme_menu stricky">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="main-logo">
+                        <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                    </div>
+                </div>
+                <div class="col-md-9 menu-column">
+                    <nav class="menuzord" id="main_menu">
+                        <ul class="menuzord-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="#">HR Core Products</a></li>
+                                    <li><a href="#">Mediation Services</a></li>
+                                    <li><a href="#">Technology Development</a></li>
+                                    <li><a href="#">Health & Well-Being</a></li>
+                                    <li><a href="#">Training & Development</a></li>
+                                    <li><a href="#">International Business</a></li>
+                                </ul> -->
+                            </li>
+                            <li><a href="job-seekers.html">Job Seekers</a>
+                                <!-- <ul class="dropdown">
+                                    <li><a href="#">CV Writing Services</a></li>
+                                    <li><a href="#">Interview Coaching</a></li>
+                                    <li><a href="#">LinkedIn Optimization</a></li>
+                                    <li><a href="#">Career Support</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li><a href="military-support.html">Military Support</a>
+                                <ul class="dropdown">
+                                    <li><a href="military-career-transition.html">Career Transition</a></li>
+                                    <li><a href="military-family-support.html">Family Support</a></li>
+                                    <li><a href="military-development.html">Personal Development</a></li>
+                                </ul>
+                            </li>							
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
+        <div class="container">
+            <div class="box">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="inner-banner has-base-color-overlay text-center">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="videos/1114915_Man_Woman_1920x1080.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="breadcumb-wrapper">
+        <div class="container">
+            <div class="pull-left">
+                <ul class="list-inline link-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        Contact Us
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Start contact area-->
+    <section class="contact-info sec-padd">
+        <div class="container">
+            <div class="section-title center">
+                <h2 class="title-highlight-center"><span>Get in Touch</span></h2>
+                <p>We're here to help transform your business and career. Reach out to us through any of these channels.</p>
+            </div>
+            <div class="row">
+                <!--Start single item-->
+                <div class="col-md-4">
+                    <div class="contact-info-box text-center">
+                        <div class="icon">
+                            <span class="icon-signs"></span>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Visit Us</h3>
+                            <span class="border"></span>
+                            <p>Basepoint River mead Drive<br>Westlea, Swindon SN5 7EX<br>United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-4">
+                    <div class="contact-info-box text-center">
+                        <div class="icon">
+                            <span class="icon-phone-call"></span>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Call or Email</h3>
+                            <span class="border"></span>
+                            <p>Phone: +44 7828720102<br>Email: info@orancyplanet.com</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single item-->
+                <!--Start single item-->
+                <div class="col-md-4">
+                    <div class="contact-info-box text-center">
+                        <div class="icon">
+                            <span class="icon-clock"></span>
+                        </div>
+                        <div class="text-holder">
+                            <h3>Business Hours</h3>
+                            <span class="border"></span>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday & Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <!--End single item-->
+            </div>
+        </div>
+    </section>
+    <!--End contact area-->
+
+    <!--Start contact form area-->
+    <section class="contact-form-section sec-padd" style="background: #f7f7f7;">
+        <div class="container">
+            <div class="section-title center">
+                <h2 class="title-highlight-center"><span>Send Us a Message</span></h2>
+                <p>Have a question or want to discuss how we can help? Fill out the form below and we'll get back to you promptly.</p>
+            </div>
+            <div class="row">
+
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" placeholder="Your Name *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" name="email" placeholder="Email Address *" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" name="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="subject" placeholder="Subject *" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea name="message" placeholder="Your Message *" rows="6" required></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="thm-btn">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--End contact form area-->
+
+
+
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2485.686589670521!2d-1.8291387!3d51.561145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487144f49d89d957%3A0x3b8e0cd9c62c0e8c!2sBasepoint%20Business%20Centre!5e0!3m2!1sen!2suk!4v1234567890"
+            allowfullscreen></iframe>
+    </section>
+    
+    <footer class="main-footer">
+        <div class="widgets-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget about-column">
+                            <figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
+                            <div class="text">
+                                <p>Revolutionizing HR functions and driving transformative change since 2021.</p>
+                            </div>
+                            <ul class="contact-info">
+                                <li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
+                                <li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
+                                <li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
+                                <li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget link-column">
+                            <div class="section-title">
+                                <h4>Our Services</h4>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="services.html">HR Core Products</a></li>
+                                    <li><a href="services.html">Mediation Services</a></li>
+                                    <li><a href="services.html">Technology Development</a></li>
+                                    <li><a href="services.html">Health & Well-Being</a></li>
+                                    <li><a href="services.html">Training & Development</a></li>
+                                    <li><a href="services.html">International Business</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget link-column">
+                            <div class="section-title">
+                                <h4>Career Support</h4>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="services.html">CV Writing Services</a></li>
+                                    <li><a href="services.html">Interview Coaching</a></li>
+                                    <li><a href="services.html">LinkedIn Optimization</a></li>
+                                    <li><a href="military-support.html">Military Support</a></li>
+                                    <li><a href="services.html#career-development">Career Development</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Footer Column-->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget contact-column">
+                            <div class="section-title">
+                                <h4>Social Media</h4>
+                            </div>
+                            <ul class="social-icon">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                            </ul>
+                            <div style="margin-top: 30px;"></div>
+                            <div class="tech-partners">
+                                <h5>Technology Partners</h5>
+                                <img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+                                <img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+                                <img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="pull-left copy-text">
+                    <p>© 2024 Orancy Planet. All Rights Reserved.</p>
+                </div>
+                <div class="pull-right get-text">
+                    <ul class="footer-nav">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Top  -->
+    <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
+    <!-- preloader  -->
+    <div class="preloader"></div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/imagezoom.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.polyglot.language.switcher.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/pie-chart.js"></script>
+
+
+    <!-- revolution slider js -->
+    <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+
+
+
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+    <script src="js/gmap.js"></script>
+
+
+    <script id="map-script" src="js/default-map.js"></script>
+    <script src="js/custom.js"></script>
+
+    </div>
+
+</body>
+
+</html>

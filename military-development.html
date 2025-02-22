@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Orancy Planet | HR Consultancy & Technology Solutions</title>
+    
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Orancy Planet - Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta name="keywords" content="HR consultancy, technology solutions, career support, military support, employee well-being, training development">
+        <meta name="author" content="Orancy Planet">
+        
+        <!-- Mobile Responsive Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+        <meta property="og:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta property="og:image" content="images/logo/logo.png">
+        <!-- <meta property="og:url" content="https://orancyplanet.com"> -->
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+        <meta name="twitter:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta name="twitter:image" content="images/logo/logo.png">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/custom-colors.css">
+        <link rel="stylesheet" href="css/pages.css">
+        <link rel="stylesheet" href="css/custom-animations.css">
+    
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
+    
+        <!-- Canonical URL -->
+        <!-- <link rel="canonical" href="https://orancyplanet.com"> -->
+    
+        <!-- Inline Styles -->
+        <style>
+            .color1_bg {
+                background: var(--secondary-color) !important;
+                color: var(--primary-color) !important;
+            }
+    
+            .thm-color {
+                color: var(--secondary-color) !important;
+            }
+    
+            .menuzord-menu > li > a {
+                color: var(--primary-color);
+            }
+    
+            .menuzord-menu > li.active > a,
+            .menuzord-menu > li:hover > a {
+                color: var(--secondary-color);
+            }
+    
+            .menuzord-menu > li > .megamenu,
+            .menuzord-menu > li > .dropdown {
+                background: var(--background-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a,
+            .menuzord-menu > li > .dropdown a {
+                color: var(--text-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a:hover,
+            .menuzord-menu > li > .dropdown a:hover {
+                color: var(--secondary-color);
+            }
+    
+            /* Additional Styles */
+            .tech-partners .partner-logo {
+                max-width: 80px;
+                margin: 5px;
+                border-radius: var(--border-radius-sm);
+            }
+    
+            .footer-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .footer-nav li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+    
+            .footer-nav li a {
+                color: var(--text-light);
+            }
+    
+            .footer-nav li a:hover {
+                color: var(--secondary-color);
+            }
+        </style>
+        <style>
+            .contact-info {
+                background: #fff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                margin-top: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .contact-info:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            }
+
+            .info-header {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .info-header .icon-box {
+                width: 80px;
+                height: 80px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .info-header .icon-box:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0.3;
+                animation: pulse 2s infinite;
+            }
+
+            .info-header .icon-box span {
+                font-size: 32px;
+                color: #fff;
+            }
+
+            .info-header h4 {
+                color: var(--primary-color);
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .contact-info p {
+                text-align: center;
+                color: #666;
+                margin-bottom: 25px;
+            }
+
+            .contact-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .contact-list li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list li:hover {
+                background: #fff;
+                transform: translateX(10px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .contact-list .icon {
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list li:hover .icon {
+                background: var(--secondary-color);
+                transform: rotate(360deg);
+            }
+
+            .contact-list .icon i {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            .contact-list .text {
+                flex: 1;
+            }
+
+            .contact-list .text span {
+                display: block;
+                font-size: 12px;
+                color: #999;
+                margin-bottom: 5px;
+            }
+
+            .contact-list .text a {
+                color: var(--primary-color);
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list .text a:hover {
+                color: var(--secondary-color);
+            }
+
+            .cta-button {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .cta-button .thm-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 30px;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cta-button .thm-btn:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: width 0.6s ease, height 0.6s ease;
+            }
+
+            .cta-button .thm-btn:hover:before {
+                width: 300px;
+                height: 300px;
+            }
+
+            @keyframes pulse {
+                0% { transform: scale(1); opacity: 0.3; }
+                50% { transform: scale(1.1); opacity: 0.2; }
+                100% { transform: scale(1); opacity: 0.3; }
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="boxed_wrapper">
+        <!-- Header Section -->
+        <section class="theme_menu stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <nav class="menuzord" id="main_menu">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a>
+                                    <!-- <ul class="dropdown">
+                                        <li><a href="#">HR Core Products</a></li>
+                                        <li><a href="#">Mediation Services</a></li>
+                                        <li><a href="#">Technology Development</a></li>
+                                        <li><a href="#">Health & Well-Being</a></li>
+                                        <li><a href="#">Training & Development</a></li>
+                                        <li><a href="#">International Business</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="job-seekers.html">Job Seekers</a>
+                                    <!-- <ul class="dropdown">
+                                        <li><a href="#">CV Writing Services</a></li>
+                                        <li><a href="#">Interview Coaching</a></li>
+                                        <li><a href="#">LinkedIn Optimization</a></li>
+                                        <li><a href="#">Career Support</a></li>
+                                    </ul> -->
+                                </li>
+    
+                                <li><a href="military-support.html">Military Support</a>
+                                    <ul class="dropdown">
+                                        <li><a href="military-career-transition.html">Career Transition</a></li>
+                                        <li><a href="military-family-support.html">Family Support</a></li>
+                                        <li><a href="military-development.html">Personal Development</a></li>
+                                    </ul>
+                                </li>							
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
+            <div class="container">
+                <div class="box">
+                    <h1>Personal Development</h1>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="inner-banner has-base-color-overlay text-center">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/8145096-hd_1920_1080_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <h1>Personal Development</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcumb-wrapper">
+            <div class="container">
+                <div class="pull-left">
+                    <ul class="list-inline link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="military-support.html">Military Support</a></li>
+                        <li>Personal Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <section class="service-single sec-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <div class="content-box fade-in">
+                            <div class="section-title">
+                                <h2>Career Progression and Personal Development</h2>
+                                <p>Our comprehensive personal development programs are designed to help military personnel achieve their professional goals and advance their careers through targeted training and support.</p>
+                            </div>
+
+                            <!-- Development Programs -->
+                            <div class="text">
+                                <h3>Development Programs</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="feature-box">
+                                            <h4>Career Planning</h4>
+                                            <ul class="list-style-one">
+                                                <li>Personalized career roadmaps</li>
+                                                <li>Goal setting workshops</li>
+                                                <li>Progress tracking</li>
+                                                <li>Career milestone planning</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="feature-box">
+                                            <h4>Skills Enhancement</h4>
+                                            <ul class="list-style-one">
+                                                <li>Technical skills training</li>
+                                                <li>Leadership development</li>
+                                                <li>Communication workshops</li>
+                                                <li>Professional certifications</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="feature-box">
+                                            <h4>Personal Growth</h4>
+                                            <ul class="list-style-one">
+                                                <li>Confidence building</li>
+                                                <li>Stress management</li>
+                                                <li>Work-life balance</li>
+                                                <li>Personal effectiveness</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="feature-box">
+                                            <h4>Professional Development</h4>
+                                            <ul class="list-style-one">
+                                                <li>Networking skills</li>
+                                                <li>Industry knowledge</li>
+                                                <li>Business acumen</li>
+                                                <li>Project management</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Training Approach -->
+                            <div class="text">
+                                <h3 style="margin-bottom: 20px;">Our Training Approach</h3>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="list-style-one">
+                                            <li><strong>Personalized Learning:</strong> Programs tailored to your goals and experience</li>
+                                            <li><strong>Flexible Delivery:</strong> Online and in-person training options</li>
+                                            <li><strong>Practical Application:</strong> Real-world scenarios and exercises</li>
+                                            <li><strong>Ongoing Support:</strong> Regular check-ins and progress reviews</li>
+                                            <li><strong>Industry Recognition:</strong> Accredited certifications and qualifications</li>
+                                            <li><strong>Career Advancement:</strong> Clear pathways for progression</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success Stories -->
+                            <div class="text">
+                                <h3 style="margin-top: 20px; margin-bottom: 20px;">Success Stories</h3>
+                                <div class="testimonial-box">
+                                    <blockquote>
+                                        "The personal development program helped me identify and develop the skills I needed for my civilian career. The support and guidance were invaluable."
+                                        <footer>- Former Military Officer</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="default-sidebar">
+                            <!-- Service Navigation -->
+                            <div class="service-catergory">
+                                <ul class="catergory-list">
+                                    <li style="border-top-right-radius: 6px;"><a href="military-career-transition.html">Career Transition</a></li>
+                                    <li><a href="military-family-support.html">Family Support</a></li>
+                                    <li class="active" style="border-bottom-right-radius: 6px;"><a href="military-development.html">Personal Development</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="contact-info fade-in">
+                                <div class="info-header">
+                                    <div class="icon-box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <h4>Need Help?</h4>
+                                </div>
+                                <p>Contact our military support team for personalized assistance with your career transition.</p>
+                                <ul class="contact-list">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>Call Us</span>
+                                            <a href="tel:+447828720102">+44 7828720102</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>Email Us</span>
+                                            <a href="mailto:info@orancyplanet.com">info@orancyplanet.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="cta-button">
+                                    <a href="contact.html" class="thm-btn">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="main-footer">
+			<div class="widgets-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget about-column">
+								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
+								<div class="text">
+									<p>Revolutionizing HR functions and driving transformative change since 2021.</p>
+								</div>
+								<ul class="contact-info">
+									<li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
+									<li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
+									<li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
+									<li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Our Services</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="services.html">HR Core Products</a></li>
+										<li><a href="services.html">Mediation Services</a></li>
+										<li><a href="services.html">Technology Development</a></li>
+										<li><a href="services.html">Health & Well-Being</a></li>
+										<li><a href="services.html">Training & Development</a></li>
+										<li><a href="services.html">International Business</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Career Support</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="services.html">CV Writing Services</a></li>
+										<li><a href="services.html">Interview Coaching</a></li>
+										<li><a href="services.html">LinkedIn Optimization</a></li>
+										<li><a href="military-support.html">Military Support</a></li>
+										<li><a href="services.html#career-development">Career Development</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--Footer Column-->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget contact-column">
+                                <div class="section-title">
+                                    <h4>Social Media</h4>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+								<div style="margin-top: 30px;"></div>
+								<div class="tech-partners">
+									<h5>Technology Partners</h5>
+									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+									<img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
+								</div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="pull-left copy-text">
+						<p>© 2024 Orancy Planet. All Rights Reserved.</p>
+					</div>
+					<div class="pull-right get-text">
+						<ul class="footer-nav">
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+    
+        <!-- Scroll Top  -->
+        <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
+        <!-- preloader  -->
+        <div class="preloader"></div>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/imagezoom.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.polyglot.language.switcher.js"></script>
+        <script src="js/SmoothScroll.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/nouislider.js"></script>
+        <script src="js/isotope.js"></script>
+        <script src="js/pie-chart.js"></script>
+    
+    
+        <!-- revolution slider js -->
+        <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+        <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+    
+    
+    
+        <!-- google map js -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+        <script src="js/gmap.js"></script>
+    
+    
+        <script id="map-script" src="js/default-map.js"></script>
+        <script src="js/custom.js"></script>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Orancy Planet | HR Consultancy & Technology Solutions</title>
+    
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Orancy Planet - Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta name="keywords" content="HR consultancy, technology solutions, career support, military support, employee well-being, training development">
+        <meta name="author" content="Orancy Planet">
+        
+        <!-- Mobile Responsive Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+        <meta property="og:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta property="og:image" content="images/logo/logo.png">
+        <!-- <meta property="og:url" content="https://orancyplanet.com"> -->
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+        <meta name="twitter:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+        <meta name="twitter:image" content="images/logo/logo.png">
+    
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/custom-colors.css">
+        <link rel="stylesheet" href="css/custom-animations.css">
+        <link rel="stylesheet" href="css/pages.css">
+    
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
+    
+        <!-- Canonical URL -->
+        <!-- <link rel="canonical" href="https://orancyplanet.com"> -->
+    
+        <!-- Inline Styles -->
+        <style>
+            .color1_bg {
+                background: var(--secondary-color) !important;
+                color: var(--primary-color) !important;
+            }
+    
+            .thm-color {
+                color: var(--secondary-color) !important;
+            }
+    
+            .menuzord-menu > li > a {
+                color: var(--primary-color);
+            }
+    
+            .menuzord-menu > li.active > a,
+            .menuzord-menu > li:hover > a {
+                color: var(--secondary-color);
+            }
+    
+            .menuzord-menu > li > .megamenu,
+            .menuzord-menu > li > .dropdown {
+                background: var(--background-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a,
+            .menuzord-menu > li > .dropdown a {
+                color: var(--text-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a:hover,
+            .menuzord-menu > li > .dropdown a:hover {
+                color: var(--secondary-color);
+            }
+
+            /* Service Box Image Styles */
+            .service-box {
+                background: #fff;
+                padding: 0;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                overflow: hidden;
+            }
+
+            .service-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            }
+
+            .service-img {
+                position: relative;
+                overflow: hidden;
+                height: 200px;
+            }
+
+            .service-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+            .service-box:hover .service-img img {
+                transform: scale(1.1);
+            }
+
+            .service-box h4 {
+                padding: 20px 20px 10px;
+                margin: 0;
+                color: var(--primary-color);
+            }
+
+            .service-box .list-style-one {
+                padding: 0 20px 20px;
+                margin: 0;
+            }
+
+            .service-box .list-style-one li {
+                margin-bottom: 10px;
+            }
+
+            .service-box .list-style-one li:last-child {
+                margin-bottom: 0;
+            }
+    
+            /* Additional Styles */
+            .tech-partners .partner-logo {
+                max-width: 80px;
+                margin: 5px;
+                border-radius: var(--border-radius-sm);
+            }
+    
+            .footer-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .footer-nav li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+    
+            .footer-nav li a {
+                color: var(--text-light);
+            }
+    
+            .footer-nav li a:hover {
+                color: var(--secondary-color);
+            }
+        </style>
+        <style>
+            .contact-info {
+                background: #fff;
+                padding: 30px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                margin-top: 30px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .contact-info:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 5px;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            }
+
+            .info-header {
+                text-align: center;
+                margin-bottom: 25px;
+            }
+
+            .info-header .icon-box {
+                width: 80px;
+                height: 80px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 20px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .info-header .icon-box:before {
+                content: '';
+                position: absolute;
+                top: -5px;
+                left: -5px;
+                right: -5px;
+                bottom: -5px;
+                background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0.3;
+                animation: pulse 2s infinite;
+            }
+
+            .info-header .icon-box span {
+                font-size: 32px;
+                color: #fff;
+            }
+
+            .info-header h4 {
+                color: var(--primary-color);
+                font-size: 24px;
+                margin: 0;
+            }
+
+            .contact-info p {
+                text-align: center;
+                color: #666;
+                margin-bottom: 25px;
+            }
+
+            .contact-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .contact-list li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                padding: 15px;
+                background: #f8f9fa;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list li:hover {
+                background: #fff;
+                transform: translateX(10px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            }
+
+            .contact-list .icon {
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list li:hover .icon {
+                background: var(--secondary-color);
+                transform: rotate(360deg);
+            }
+
+            .contact-list .icon i {
+                color: #fff;
+                font-size: 16px;
+            }
+
+            .contact-list .text {
+                flex: 1;
+            }
+
+            .contact-list .text span {
+                display: block;
+                font-size: 12px;
+                color: #999;
+                margin-bottom: 5px;
+            }
+
+            .contact-list .text a {
+                color: var(--primary-color);
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .contact-list .text a:hover {
+                color: var(--secondary-color);
+            }
+
+            .cta-button {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .cta-button .thm-btn {
+                width: 100%;
+                text-align: center;
+                padding: 12px 30px;
+                border-radius: 6px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .cta-button .thm-btn:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                background: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                transition: width 0.6s ease, height 0.6s ease;
+            }
+
+            .cta-button .thm-btn:hover:before {
+                width: 300px;
+                height: 300px;
+            }
+
+            @keyframes pulse {
+                0% { transform: scale(1); opacity: 0.3; }
+                50% { transform: scale(1.1); opacity: 0.2; }
+                100% { transform: scale(1); opacity: 0.3; }
+            }
+        </style>
+        <style>
+            .animated-border {
+                position: relative;
+                padding-bottom: 15px;
+            }
+            
+            .animated-border:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 50px;
+                height: 3px;
+                background: var(--secondary-color);
+                animation: borderWidth 3s ease infinite;
+            }
+
+            @keyframes borderWidth {
+                0% { width: 50px; }
+                50% { width: 100px; }
+                100% { width: 50px; }
+            }
+
+            .process-timeline {
+                padding: 40px;
+                background: #fff;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                position: relative;
+            }
+
+            .timeline-progress {
+                position: absolute;
+                left: 69px;
+                top: 150px;
+                bottom: 150px;
+                width: 2px;
+                background: linear-gradient(to bottom, var(--secondary-color) 50%, #e0e0e0 50%);
+                background-size: 100% 40px;
+                animation: progressLine 2s linear infinite;
+            }
+
+            @keyframes progressLine {
+                0% { background-position: 0 0; }
+                100% { background-position: 0 40px; }
+            }
+
+            .process-step {
+                display: flex;
+                align-items: flex-start;
+                padding: 30px;
+                margin-bottom: 30px;
+                background: #f9f9f9;
+                border-radius: 15px;
+                transition: all 0.4s ease;
+                position: relative;
+                opacity: 0;
+                transform: translateX(-20px);
+                animation: stepAppear 0.5s ease forwards;
+            }
+
+            .process-step[data-step="1"] { animation-delay: 0.1s; }
+            .process-step[data-step="2"] { animation-delay: 0.2s; }
+            .process-step[data-step="3"] { animation-delay: 0.3s; }
+            .process-step[data-step="4"] { animation-delay: 0.4s; }
+            .process-step[data-step="5"] { animation-delay: 0.5s; }
+            .process-step[data-step="6"] { animation-delay: 0.6s; }
+
+            @keyframes stepAppear {
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .process-step:hover {
+                transform: translateX(15px);
+                background: #fff;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            }
+
+            .step-icon-wrapper {
+                position: relative;
+                margin-right: 30px;
+            }
+
+            .step-icon {
+                width: 60px;
+                height: 60px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s ease;
+            }
+
+            .step-number {
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                width: 30px;
+                height: 30px;
+                background: var(--secondary-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-weight: bold;
+                font-size: 14px;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+
+            .process-step:hover .step-icon {
+                background: var(--secondary-color);
+                transform: rotateY(180deg);
+            }
+
+            .step-icon span {
+                font-size: 24px;
+                color: #fff;
+                transition: all 0.4s ease;
+            }
+
+            .process-step:hover .step-icon span {
+                transform: rotateY(-180deg);
+            }
+
+            .step-content {
+                flex: 1;
+            }
+
+            .step-content h4 {
+                color: var(--primary-color);
+                margin-bottom: 10px;
+                font-size: 20px;
+                position: relative;
+                padding-bottom: 10px;
+            }
+
+            .step-content h4:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 30px;
+                height: 2px;
+                background: var(--secondary-color);
+                transition: width 0.3s ease;
+            }
+
+            .process-step:hover .step-content h4:after {
+                width: 60px;
+            }
+
+            .step-content p {
+                margin: 0 0 20px;
+                color: #666;
+                font-size: 15px;
+            }
+
+            .step-image {
+                border-radius: 10px;
+                overflow: hidden;
+                height: 200px;
+                position: relative;
+            }
+
+            .step-image:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(var(--primary-rgb), 0.1);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+
+            .process-step:hover .step-image:before {
+                opacity: 1;
+            }
+
+            .step-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.5s ease;
+            }
+
+            .process-step:hover .step-image img {
+                transform: scale(1.1);
+            }
+
+            @media (max-width: 767px) {
+                .process-timeline {
+                    padding: 20px;
+                }
+
+                .timeline-progress {
+                    left: 49px;
+                }
+
+                .process-step {
+                    padding: 15px;
+                }
+
+                .step-icon {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .step-icon span {
+                    font-size: 20px;
+                }
+
+                .step-number {
+                    width: 25px;
+                    height: 25px;
+                    font-size: 12px;
+                }
+
+                .step-image {
+                    height: 150px;
+                }
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="boxed_wrapper">
+        <!-- Header Section -->
+        <section class="theme_menu stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <nav class="menuzord" id="main_menu">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="job-seekers.html">Job Seekers</a></li>
+                                <li><a href="military-support.html">Military Support</a>
+                                    <ul class="dropdown">
+                                        <li><a href="military-career-transition.html">Career Transition</a></li>
+                                        <li><a href="military-family-support.html">Family Support</a></li>
+                                        <li><a href="military-development.html">Personal Development</a></li>
+                                    </ul>
+                                </li>							
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
+            <div class="container">
+                <div class="box">
+                    <h1>Military Career Transition</h1>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="inner-banner has-base-color-overlay text-center">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/3255274-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <h1>Military Career Transition</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcumb-wrapper">
+            <div class="container">
+                <div class="pull-left">
+                    <ul class="list-inline link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="military-support.html">Military Support</a></li>
+                        <li>Career Transition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <section class="service-single sec-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <div class="content-box fade-in">
+                            <div class="section-title">
+                                <h2>Career Transition and Resettlement Support</h2>
+                                <p class="lead">We understand the unique challenges of transitioning from military to civilian life. Our comprehensive support services are designed to help you make a successful career transition.</p>
+                            </div>
+
+                            <!-- Services Overview -->
+                            <div class="text">
+                                <h3 style="margin-bottom: 30px;">Our Career Transition Services</h3>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <div class="service-img">
+                                                <img src="images/resource/pexels-leeloothefirst-8970679.jpg" alt="CV Writing Services">
+                                            </div>
+                                            <h4>CV Writing Services</h4>
+                                            <ul class="list-style-one">
+                                                <li>Translation of military skills to civilian terms</li>
+                                                <li>Achievement-focused content</li>
+                                                <li>ATS-optimized formatting</li>
+                                                <li>Industry-specific targeting</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <div class="service-img">
+                                                <img src="images/resource/pexels-shkrabaanthony-5816293.jpg" alt="Interview Coaching">
+                                            </div>
+                                            <h4>Interview Coaching</h4>
+                                            <ul class="list-style-one">
+                                                <li>Civilian interview preparation</li>
+                                                <li>Common question practice</li>
+                                                <li>Confidence building</li>
+                                                <li>Mock interview sessions</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row" style="margin-top: 30px;">
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <div class="service-img">
+                                                <img src="images/resource/pexels-karolina-grabowska-4491492.jpg" alt="Skills Translation">
+                                            </div>
+                                            <h4>Skills Translation</h4>
+                                            <ul class="list-style-one">
+                                                <li>Military to civilian skill mapping</li>
+                                                <li>Industry-specific guidance</li>
+                                                <li>Career path planning</li>
+                                                <li>Qualification equivalency</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="service-box">
+                                            <div class="service-img">
+                                                <img src="images/resource/pexels-n-voitkevich-7173047.jpg" alt="Career Planning">
+                                            </div>
+                                            <h4>Career Planning</h4>
+                                            <ul class="list-style-one">
+                                                <li>Industry research support</li>
+                                                <li>Network building strategies</li>
+                                                <li>Job search techniques</li>
+                                                <li>Long-term career mapping</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Process Section -->
+                            <div class="text">
+                                <h3 class="section-subtitle animated-border">Our Transition Process</h3>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="process-timeline">
+                                            <div class="timeline-progress"></div>
+                                            <div class="process-step" data-step="1">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-search"></i>
+                                                    </div>
+                                                    <div class="step-number">1</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Initial Assessment</h4>
+                                                    <p>Understanding your military background and career goals</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-george-pak-7983832.jpg" alt="Initial Assessment">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="process-step" data-step="2">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-bar-chart"></i>
+                                                    </div>
+                                                    <div class="step-number">2</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Skills Analysis</h4>
+                                                    <p>Mapping your military skills to civilian equivalents</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-drew-williams-1285451-2657669.jpg" alt="Skills Analysis">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="process-step" data-step="3">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-compass"></i>
+                                                    </div>
+                                                    <div class="step-number">3</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Career Strategy</h4>
+                                                    <p>Developing a tailored transition strategy</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-dariaobymaha-1684149.jpg" alt="Career Strategy">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="process-step" data-step="4">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-file-text"></i>
+                                                    </div>
+                                                    <div class="step-number">4</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Document Preparation</h4>
+                                                    <p>Creating civilian-focused CVs and applications</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-alexander-suhorucov-6457521.jpg" alt="Document Preparation">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="process-step" data-step="5">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-comments"></i>
+                                                    </div>
+                                                    <div class="step-number">5</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Interview Preparation</h4>
+                                                    <p>Comprehensive coaching and practice sessions</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-tima-miroshnichenko-5686105.jpg" alt="Interview Preparation">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="process-step" data-step="6">
+                                                <div class="step-icon-wrapper">
+                                                    <div class="step-icon">
+                                                        <i class="fa fa-life-ring"></i>
+                                                    </div>
+                                                    <div class="step-number">6</div>
+                                                </div>
+                                                <div class="step-content">
+                                                    <h4>Ongoing Support</h4>
+                                                    <p>Continued guidance throughout your transition</p>
+                                                    <div class="step-image">
+                                                        <img src="images/resource/pexels-olly-840996.jpg" alt="Ongoing Support">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="col-md-4 col-sm-12">
+                        <div class="default-sidebar">
+                            <!-- Service Navigation -->
+                            <div class="service-catergory">
+                                <ul class="catergory-list">
+                                    <li class="active" style="border-top-right-radius: 6px;"><a href="military-career-transition.html">Career Transition</a></li>
+                                    <li><a href="military-family-support.html">Family Support</a></li>
+                                    <li style="border-bottom-right-radius: 6px;"><a href="military-development.html">Personal Development</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="contact-info fade-in">
+                                <div class="info-header">
+                                    <div class="icon-box">
+                                        <span class="fa fa-search"></span>
+                                    </div>
+                                    <h4>Need Help?</h4>
+                                </div>
+                                <p>Contact our military support team for personalized assistance with your career transition.</p>
+                                <ul class="contact-list">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>Call Us</span>
+                                            <a href="tel:+447828720102">+44 7828720102</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>Email Us</span>
+                                            <a href="mailto:info@orancyplanet.com">info@orancyplanet.com</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="cta-button">
+                                    <a href="contact.html" class="thm-btn">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="main-footer">
+			<div class="widgets-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget about-column">
+								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
+								<div class="text">
+									<p>Revolutionizing HR functions and driving transformative change since 2021.</p>
+								</div>
+								<ul class="contact-info">
+									<li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
+									<li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
+									<li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
+									<li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Our Services</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="services.html">HR Core Products</a></li>
+										<li><a href="services.html">Mediation Services</a></li>
+										<li><a href="services.html">Technology Development</a></li>
+										<li><a href="services.html">Health & Well-Being</a></li>
+										<li><a href="services.html">Training & Development</a></li>
+										<li><a href="services.html">International Business</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Career Support</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="services.html">CV Writing Services</a></li>
+										<li><a href="services.html">Interview Coaching</a></li>
+										<li><a href="services.html">LinkedIn Optimization</a></li>
+										<li><a href="military-support.html">Military Support</a></li>
+										<li><a href="services.html#career-development">Career Development</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--Footer Column-->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget contact-column">
+                                <div class="section-title">
+                                    <h4>Social Media</h4>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+								<div style="margin-top: 30px;"></div>
+								<div class="tech-partners">
+									<h5>Technology Partners</h5>
+									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+									<img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
+								</div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="pull-left copy-text">
+						<p>© 2024 Orancy Planet. All Rights Reserved.</p>
+					</div>
+					<div class="pull-right get-text">
+						<ul class="footer-nav">
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <!-- Scroll Top  -->
+        <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
+        <!-- preloader  -->
+        <div class="preloader"></div>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/imagezoom.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.polyglot.language.switcher.js"></script>
+        <script src="js/SmoothScroll.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/nouislider.js"></script>
+        <script src="js/isotope.js"></script>
+        <script src="js/pie-chart.js"></script>
+    
+    
+        <!-- revolution slider js -->
+        <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+        <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+    
+    
+    
+        <!-- google map js -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+        <script src="js/gmap.js"></script>
+    
+    
+        <script id="map-script" src="js/default-map.js"></script>
+        <script src="js/custom.js"></script>
+    </div>
+</body>
+</html> 
