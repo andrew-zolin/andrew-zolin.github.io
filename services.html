@@ -101,6 +101,126 @@
 		.footer-nav li a:hover {
 			color: var(--secondary-color);
 		}
+        
+        /* Journey Timeline Styles */
+        .journey-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .journey-step {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .step-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 25px;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* Process Box Styles */
+        .process-box {
+            transition: all 0.3s ease;
+        }
+        
+        .process-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .process-icon {
+            margin-bottom: 20px;
+        }
+        
+        /* Feature Block Styles */
+        .feature-block {
+            padding: 15px;
+            border-radius: 5px;
+            background: rgba(var(--secondary-color-rgb), 0.05);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-block:hover {
+            background: rgba(var(--secondary-color-rgb), 0.1);
+            transform: translateX(5px);
+        }
+        
+        /* Animation Enhancement */
+        .wow {
+            visibility: hidden;
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
 	</style>
 </head>
 <body>
@@ -119,25 +239,16 @@
 							<ul class="menuzord-menu">
 								<li><a href="index.html">Home</a></li>
 								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a>
-									<!-- <ul class="dropdown">
-										<li><a href="#">HR Core Products</a></li>
-										<li><a href="#">Mediation Services</a></li>
-										<li><a href="#">Technology Development</a></li>
-										<li><a href="#">Health & Well-Being</a></li>
-										<li><a href="#">Training & Development</a></li>
-										<li><a href="#">International Business</a></li>
-									</ul> -->
+								<li class="active"><a href="services.html">Services</a>
+									<ul class="dropdown">
+										<li><a href="#hr-core">HR Core Products</a></li>
+										<li><a href="#partnership">Partnership Development</a></li>
+										<li><a href="#development">Development Programs</a></li>
+										<li><a href="#business">Business Development</a></li>
+										<li><a href="#customer-journey">Customer Journey</a></li>
+									</ul>
 								</li>
-								<li><a href="job-seekers.html">Job Seekers</a>
-									<!-- <ul class="dropdown">
-										<li><a href="#">CV Writing Services</a></li>
-										<li><a href="#">Interview Coaching</a></li>
-										<li><a href="#">LinkedIn Optimization</a></li>
-										<li><a href="#">Career Support</a></li>
-									</ul> -->
-								</li>
-
+								<li><a href="orancy-card.html">Orancy Card</a></li>
 								<li><a href="military-support.html">Military Support</a>
 									<ul class="dropdown">
 										<li><a href="military-career-transition.html">Career Transition</a></li>
@@ -188,88 +299,247 @@
         </div>
 
         <!-- Services Overview Section -->
-        <section class="service-overview sec-padd">
+        <section class="service-overview sec-padd" id="hr-core">
             <div class="container">
                 <div style="margin-top: 30px;"></div>
                 <div class="section-title center">
                     <h2 class="title-highlight-center"><span>Human Resources Core Products</span></h2>
                     <p>Empower Your Workforce with Tailored HR Solutions</p>
-                    <p>Our HR Core Products are designed to help individual employees and organizations alike,
-                        From global recruitment to career development. With [X] years of experience and a [Y]%
-                        client satisfaction rate, we deliver customized solutions that promote professional
-                        development and operational effectiveness.</p>
+                    <p>Our HR Core Products support individuals and organizations, from global recruitment to career development. With 10+ years of experience and a 95% client satisfaction rate, we deliver tailored solutions that enhance professional growth and operational efficiency.</p>
                 </div>
             </div>
             <div class="container">
                 <div class="section-title center">
-                    <h2 class="title-highlight-center"><span>Our HR Core Products Include</span></h2>
+                    <h2 class="title-highlight-center"><span>Our HR Core Services Include</span></h2>
                 </div>
                 <div class="row">
                     <!-- HR Core Products -->
-                    <div class="col-md-6 col-sm-6">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-box">
                             <div class="icon">
-                                <i class="icon-people3"></i>
+                                <i class="icon-technology"></i>
                             </div>
-                            <h3>Individual Employee HR Support</h3>
+                            <h3>HR Technology & Digital Transformation</h3>
                             <ul class="list-style-one">
-                                <li><b>Career Development:</b> Personalized coaching to help employees achieve their
-                                    professional goals.</li>
-                                <li><b>Recruitment Support:</b> End-to-end assistance in finding the right talent for your
-                                    organization.</li>
-                                <li><b>CV and LinkedIn Profile Optimization:</b> Enhance visibility and success rates with
-                                    professionally crafted profiles.</li>
-                                <li><b>Job Application Assistance:</b> Tailored support to secure interviews and job offers.</li>
-                                <li><b>Immigration Support Letters:</b> Streamlined documentation for smooth international
-                                    transitions.</li>
-                                <li><b>International Recruitment Guidance:</b> Expert advice to attract and retain global
-                                    talent.</li>
-                                <li><b>Events and Entertainment:</b> Engaging activities to boost employee morale and
-                                    retention.</li>
-                                <li><b>Podcasts, Blogs, and Newsletters:</b> Stay informed with industry insights and trends.</li>
-                                <li><b>Visa Support Letters:</b> Hassle-free documentation for employers and workers.</li>
-                                <li><b>Family Reunion and Dependent Documentation Checks:</b> Ensure compliance and
-                                    accuracy (non-legal immigration support).</li>
+                                <li>AI-driven recruitment & workforce analytics</li>
+                                <li>HRIS (Human Resource Information Systems) implementation</li>
+                                <li>Blockchain for credential verification</li>
                             </ul>
                             <a href="hr-core-products.html" class="thm-btn">Learn More</a>
                         </div>
                     </div>
 
-                    <!-- Mediation Services -->
-                    <div class="col-md-6 col-sm-6">
+                    <!-- Global Workforce Strategy -->
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="service-box">
+                            <div class="icon">
+                                <i class="icon-world"></i>
+                            </div>
+                            <h3>Global Workforce Strategy & Compliance</h3>
+                            <ul class="list-style-one">
+                                <li>Cross-border HR & compliance consulting</li>
+                                <li>Remote work infrastructure solutions</li>
+                                <li>International talent mobility & immigration advisory</li>
+                            </ul>
+                            <a href="global-workforce.html" class="thm-btn">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Sustainable HR -->
+                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <i class="icon-nature"></i>
+                            </div>
+                            <h3>Sustainable HR & ESG Integration</h3>
+                            <ul class="list-style-one">
+                                <li>Green HR policies & eco-friendly workplace solutions</li>
+                                <li>DEI (Diversity, Equity & Inclusion) consulting</li>
+                                <li>Ethical employment practices & impact-driven HR policies</li>
+                            </ul>
+                            <a href="sustainable-hr.html" class="thm-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 30px;">
+                    <!-- Executive Leadership -->
+                    <div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.3s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <i class="icon-people3"></i>
+                            </div>
+                            <h3>Executive Leadership & Talent Development</h3>
+                            <p><strong>Individual:</strong> Bespoke leadership coaching for C-suite and HR executives</p>
+                            <ul class="list-style-one">
+                                <li>Cross-cultural management training</li>
+                                <li>Future-of-work strategy sessions</li>
+                            </ul>
+                            <a href="executive-leadership.html" class="thm-btn">Learn More</a>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Partnerships -->
+                    <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="service-box">
+                            <div class="icon">
+                                <i class="icon-cooperation"></i>
+                            </div>
+                            <h3>Strategic Partnerships & Ecosystem Development</h3>
+                            <p><strong>Group:</strong> Bespoke leadership coaching for C-suite and HR executives</p>
+                            <ul class="list-style-one">
+                                <li>HR-tech partnerships with leading AI and fintech firms</li>
+                                <li>Collaborative programs with government and NGOs for sustainable workforces</li>
+                                <li>Investment insights into HR sustainability innovations</li>
+                            </ul>
+                            <a href="strategic-partnerships.html" class="thm-btn">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-overview sec-padd" id="partnership" style="background: #f7f7f7;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-cooperation"></i>
+                            </div>
+                            <div class="section-title">
+                                <h2><span>Mediation Services</span></h2>
+                                <p>Resolve Workplace Conflicts Effectively and Fairly</p>
+                                <p>With 10+ years of experience and a 90% success rate in conflict resolution, we help organizations foster harmony, reduce turnover, and maintain productivity. Our Mediation Services offer a structured, impartial approach to resolving workplace complaints and investigating cases effectively.</p>
+                            </div>
+                            <br>
+                            <h3>Our Mediation Services Include:</h3>
+                            <ul class="list-style-one">
+                                <li><b>Complaint Resolution:</b> Address employee grievances promptly and professionally to restore trust and collaboration.</li>
+                                <li><b>Case Investigations:</b> Conduct thorough, unbiased investigations to ensure fair outcomes.</li>
+                                <li><b>Conflict Mediation:</b> Facilitate open dialogue between parties to reach mutually beneficial solutions.</li>
+                                <li><b>Workplace Restoration:</b> Implement strategies to rebuild team dynamics and morale after disputes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-technology"></i>
+                            </div>
+                            <div class="section-title">
+                                <h2><span>Technology Development Services</span></h2>
+                                <p>Innovate and Transform Your Business with Cutting-Edge Technology</p>
+                                <p>From custom software to AI-driven tools, our Technology Development Services streamline operations, enhance decision-making, and drive growth. With 10+ years of expertise and 200+ successful projects delivered, we help organizations stay ahead in a rapidly evolving digital landscape.</p>
+                            </div>
+                            <br>
+                            <h3>Our Technology Development Services Include:</h3>
+                            <ul class="list-style-one">
+                                <li><b>Custom Software Solutions:</b> Tailored applications to meet your unique business needs.</li>
+                                <li><b>HR Technology Integrations:</b> Seamlessly integrate HR systems for improved efficiency.</li>
+                                <li><b>AI-Driven Recruitment Tools:</b> Enhance hiring accuracy and reduce time-to-hire by up to 70%.</li>
+                                <li><b>HR Analytics Dashboards:</b> Gain actionable insights to optimize workforce performance.</li>
+                                <li><b>Employee Engagement Platforms:</b> Boost morale and productivity with innovative tools.</li>
+                                <li><b>Technology Developers:</b> Expert developers for custom systems, software, and innovations.</li>
+                                <li><b>AI Solutions for Businesses:</b> Leverage AI to automate processes and drive smarter decisions.</li>
+                                <li><b>Inquiry Options for Technology Projects:</b> Explore tailored solutions for your next project.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-overview sec-padd" id="development">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-heart2"></i>
+                            </div>
+                            <div class="section-title">
+                                <h2><span>Health & Well-Being Programs</span></h2>
+                                <p>Empower Your Workforce to Thrive Inside and Out</p>
+                                <p>Our Health & Well-Being Programs, in partnership with Paranimo, are designed to enhance employee wellness, boost productivity, and foster a positive workplace culture.</p>
+                            </div>
+                            <br>
+                            <h3>Our Health & Well-Being Programs Include:</h3>
+                            <p><strong>For Businesses:</strong></p>
+                            <ul class="list-style-one">
+                                <li><b>Workplace Wellness Programs:</b> Comprehensive initiatives to promote a healthy work environment.</li>
+                                <li><b>Employee Assistance Programs (EAPs):</b> Confidential support for personal and professional challenges.</li>
+                                <li><b>Mental Health and Stress Management Training:</b> Equip employees with tools to manage stress effectively.</li>
+                                <li><b>Health and Lifestyle Coaching:</b> Personalized coaching to improve overall well-being.</li>
+                            </ul>
+                            <p><strong>For Employees:</strong></p>
+                            <ul class="list-style-one">
+                                <li><b>Personal Health and Well-Being Plans:</b> Tailored strategies to achieve individual health goals.</li>
+                                <li><b>Work-Life Balance Strategies:</b> Practical solutions to harmonize professional and personal life.</li>
+                                <li><b>Mental Resilience Workshops:</b> Build emotional strength and adaptability.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInRight" data-wow-delay="0.3s">
                             <div class="icon">
                                 <i class="icon-star"></i>
                             </div>
-                            <h3>Our Business HR Support Services Include:</h3>
+                            <div class="section-title">
+                                <h2><span>Training & Development</span></h2>
+                                <p>Equip Your Team with Skills for Success</p>
+                                <p>Our Training & Development programs empower your workforce with essential skills for a dynamic business landscape. With 10+ years of experience and a 95% participant satisfaction rate, we deliver transformative learning experiences that drive growth, innovation, and measurable results.</p>
+                            </div>
+                            <br>
+                            <h3>Our Training & Development Services Include:</h3>
                             <ul class="list-style-one">
-                                <li><b>Talent Acquisition:</b> Attract and hire top talent with proven recruitment strategies.</li>
-                                <li><b>Employee Retention Strategies:</b> Reduce turnover by up to [Z]% with targeted
-                                    retention programs.</li>
-                                <li><b>HR Consultancy:</b> Expert guidance to align HR practices with business goals.</li>
-                                <li><b>Policy Development:</b> Create policies that foster a fair and productive workplace.</li>
-                                <li><b>Training and Development:</b> Upskill your workforce to boost performance and
-                                    engagement.</li>
-                                <li><b>Compliance and Regulatory Guidance:</b> Ensure adherence to labor laws and
-                                    industry standards.</li>
-                                <li><b>Employment Relations Assistance:</b> Resolve workplace issues with investigations
-                                    and manager training.</li>
-                                <li><b>Future of Work and Workforce Planning:</b> Prepare your organization for evolving
-                                    workforce trends.</li>
-                                <li><b>Flexible Working Strategies:</b> Implement policies that enhance work-life balance
-                                    and productivity.</li>
-                                <li><b>Employment Disputes Resolution:</b> Mediate conflicts to maintain a harmonious
-                                    workplace.</li>
-                                <li><b>Diversity, Equity, and Inclusion (DEI):</b> Build inclusive leadership teams that drive
-                                    innovation.</li>
-                                <li><b>Executive Burnout Support:</b> Protect your leadership with well-being initiatives.</li>
-                                <li><b>Corporate Governance:</b> Strengthen HR’s role in whistleblower protection and
-                                    ethical practices.</li>
-                                <li><b>Well-being Policies:</b> Attract top talent with policies that prioritize employee health
-                                    and diversity.</li>
+                                <li><b>Workshops and Courses:</b> Interactive sessions to enhance skills and knowledge across industries.</li>
+                                <li><b>Leadership Training:</b> Develop strong leaders who inspire and drive organizational success.</li>
+                                <li><b>Digital Transformation Education:</b> Equip teams with the tools to navigate and lead digital change.</li>
+                                <li><b>Technology Training:</b> Specialized programs like our 2-Day AI Training for HR Professionals to future-proof your workforce.</li>
+                                <li><b>Educational How-To Guides:</b> Practical resources to support continuous learning and development.</li>
                             </ul>
-                            <a href="mediation-services.html" class="thm-btn">Learn More</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-overview sec-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-connection"></i>
+                            </div>
+                            <div class="section-title">
+                                <h2><span>Partnership Development</span></h2>
+                                <p>Build Strategic Alliances for Sustainable Growth</p>
+                                <p>Our Partnership Development services help organizations establish meaningful collaborations that drive growth, enhance capabilities, and expand market reach.</p>
+                            </div>
+                            <br>
+                            <h3>What We Offer:</h3>
+                            <ul class="list-style-one">
+                                <li><b>Identification and evaluation of potential partners:</b> We help you find the right distributors, suppliers, and joint venture partners aligned with your strategic goals.</li>
+                                <li><b>Negotiation support:</b> Our experts provide guidance to secure mutually beneficial agreements that set the foundation for long-term success.</li>
+                                <li><b>Ongoing relationship management:</b> We implement strategies to foster long-term collaboration and ensure partnerships remain productive and valuable.</li>
+                            </ul>
+                            <br>
+                            <h3>Why It's Important:</h3>
+                            <ul class="list-style-one">
+                                <li>Strong partnerships are key to establishing a foothold in new markets.</li>
+                                <li>Our network and expertise help you build trust and credibility with local stakeholders.</li>
+                            </ul>
+                            <div class="link" style="margin-top: 20px;">
+                                <a href="partnership-development.html" class="thm-btn style-2 wow fadeInUp" data-wow-delay="0.3s">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <figure class="img-box wow fadeInRight" data-wow-delay="0.5s">
+                            <img src="images/resource/partnership.jpg" alt="Partnership Development">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -277,143 +547,704 @@
 
         <section class="service-overview sec-padd" style="background: #f7f7f7;">
             <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Development Programs</span></h2>
+                    <p>Empowering Communities and Building Capabilities</p>
+                </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="service-box">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-box text-center wow fadeInUp" data-wow-delay="0.2s">
                             <div class="icon">
                                 <i class="icon-people3"></i>
                             </div>
-                            <div class="section-title">
-                                <h2 ><span>Mediation Services</span></h2>
-                                <p>Resolve Workplace Conflicts Effectively and Fairly</p>
-                                <p>With [X] years of experience and a [Y]% success rate in conflict resolution, we help
-                                    organizations foster a harmonious work environment, reduce turnover, and maintain
-                                    productivity. Our Mediation Services provide a structured, impartial approach to resolving
-                                    workplace complaints and investigating cases.</p>
+                            <h3>Men Development Programs</h3>
+                            <p>Comprehensive programs designed to support men's professional growth, leadership skills, and personal development in today's evolving workplace.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-box text-center wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="icon">
+                                <i class="icon-star"></i>
                             </div>
-                            <br>
-                            <h3>Our Mediation Services Include:</h3>
+                            <h3>Youth Empowerment</h3>
+                            <p>Initiatives focused on equipping young people with essential skills, mentorship, and opportunities to thrive in their education and future careers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service-box text-center wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="icon">
+                                <i class="icon-heart2"></i>
+                            </div>
+                            <h3>Women's Development Programs</h3>
+                            <p>Supporting women's advancement in the workplace through specialized training and resources.</p>
+                            <ul class="list-style-one" style="text-align: left; margin-top: 15px;">
+                                <li><b>Tech Training for Women:</b> Specialized technical skills development for women in STEM fields.</li>
+                                <li><b>Leadership Workshops:</b> Programs designed to cultivate leadership capabilities and career advancement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-technology"></i>
+                            </div>
+                            <h3>Training for Developing Countries</h3>
+                            <p>Customized programs to support economic and professional development in emerging economies.</p>
                             <ul class="list-style-one">
-                                <li><b>Complaint Resolution:</b> Address employee grievances promptly and professionally
-                                    to restore trust and collaboration.</li>
-                                <li><b>Case Investigations:</b> Conduct thorough, unbiased investigations to ensure fair
-                                    outcomes.</li>
-                                <li><b>Conflict Mediation:</b> Facilitate open dialogue between parties to reach mutually
-                                    beneficial solutions.</li>
-                                <li><b>Workplace Restoration:</b>  Implement strategies to rebuild team dynamics and
-                                    morale after disputes.</li>
+                                <li><b>Skill Development Programs:</b> Building essential capabilities for workforce readiness and entrepreneurship.</li>
+                                <li><b>Educational Partnerships:</b> Collaborating with local institutions to enhance access to quality training.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <div class="service-box">
+                        <div class="service-box wow fadeInRight" data-wow-delay="0.3s">
                             <div class="icon">
-                                <i class="icon-people3"></i>
+                                <i class="icon-flag"></i>
                             </div>
-                            <div class="section-title">
-                                <h2 ><span>Technology Development Services</span></h2>
-                                <p>Innovate and Transform Your Business with Cutting</p>
-                                <p>From custom software solutions to AI-driven tools, our Technology Development Services
-                                    empower businesses to streamline operations, enhance decision-making, and drive
-                                    growth. With [X] years of expertise and [Y] successful projects delivered, we help
-                                    organizations stay ahead in a rapidly evolving digital landscape.</p>
-                            </div>
-                            <br>
-                            <h3>Our Technology Development Services Include:</h3>
+                            <h3>Collaboration with Charity Organizations</h3>
+                            <p>Partnering with non-profits to create meaningful social impact.</p>
                             <ul class="list-style-one">
-                                <li><b>Custom Software Solutions:</b> Tailored applications to meet your unique business
-                                    needs.</li>
-                                <li><b>HR Technology Integrations:</b> Seamlessly integrate HR systems for improved
-                                    efficiency.</li>
-                                <li><b>AI-Driven Recruitment Tools</b>  Enhance hiring accuracy and reduce time-to-hire by
-                                    up to [Z]%.</li>
-                                <li><b>HR Analytics Dashboards:</b>  Gain actionable insights to optimize workforce
-                                    performance.</li>
-                                <li><b>Employee Engagement Platforms:</b> Boost morale and productivity with innovative
-                                    tools.</li>
-                                <li><b>Technology Developers:</b> Expert developers for custom systems, software, and
-                                    innovations.</li>
-                                <li><b>AI Solutions for Businesses:</b> Leverage AI to automate processes and drive smarter
-                                    decisions.</li>
-                                <li><b>Inquiry Options for Technology Projects:</b> Explore tailored solutions for your next
-                                    project.</li>
+                                <li><b>Community Projects:</b> Supporting initiatives that address local needs and challenges.</li>
+                                <li><b>Fundraising Initiatives:</b> Helping organizations maximize their resource development efforts.</li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="development-programs.html" class="thm-btn wow fadeInUp" data-wow-delay="0.5s">Explore All Programs</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-overview sec-padd" id="business">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Business Development</span></h2>
+                    <p>Innovative Solutions to Accelerate Your Growth</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-arrows"></i>
+                            </div>
+                            <h3>Accelerator Programs</h3>
+                            <p>Comprehensive support to fast-track your business growth and market readiness.</p>
+                            <ul class="list-style-one">
+                                <li><b>Startup Mentorship:</b> Expert guidance from industry veterans and successful entrepreneurs.</li>
+                                <li><b>Funding Opportunities:</b> Connections to investors and capital sources to fuel your growth.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-box wow fadeInLeft" data-wow-delay="0.5s" style="margin-top: 30px;">
+                            <div class="icon">
+                                <i class="icon-technology"></i>
+                            </div>
+                            <h3>Tech Incubators for Startups</h3>
+                            <p>Nurturing environment for technology-focused startups to develop and thrive.</p>
+                            <ul class="list-style-one">
+                                <li><b>Workspace Solutions:</b> Flexible office spaces designed for collaboration and innovation.</li>
+                                <li><b>Technical Support:</b> Access to specialized expertise and resources to overcome technical challenges.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-sm-12">
+                        <div class="service-box wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="icon">
+                                <i class="icon-shapes"></i>
+                            </div>
+                            <h3>Project & Programme Management</h3>
+                            <p>Structured approaches to deliver complex initiatives on time and within budget.</p>
+                            <ul class="list-style-one">
+                                <li><b>Agile Project Management:</b> Flexible, iterative methodologies for responsive delivery.</li>
+                                <li><b>Portfolio Management:</b> Strategic alignment and optimization of multiple projects.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service-box wow fadeInRight" data-wow-delay="0.5s" style="margin-top: 30px;">
+                            <div class="icon">
+                                <i class="icon-search"></i>
+                            </div>
+                            <h3>Business Analysis</h3>
+                            <p>Comprehensive insights to inform strategic decision-making and operational improvements.</p>
+                            <ul class="list-style-one">
+                                <li><b>Market Research:</b> In-depth analysis of market trends, competitors, and opportunities.</li>
+                                <li><b>Requirement Gathering:</b> Structured processes to identify and document business needs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 30px;">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12">
+                        <div class="service-box text-center wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="icon">
+                                <i class="icon-layers"></i>
+                            </div>
+                            <h3>Product Management</h3>
+                            <p>Comprehensive guidance throughout the product lifecycle to maximize market success.</p>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-6">
+                                    <div class="feature-block">
+                                        <h4>Product Strategy</h4>
+                                        <p>Development of clear product vision, roadmaps, and market positioning.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-block">
+                                        <h4>Lifecycle Management</h4>
+                                        <p>Optimization of each stage from conception through maturity and beyond.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="business-development.html" class="thm-btn style-2 wow fadeInUp" data-wow-delay="0.5s">Explore Business Solutions</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Information Section -->
+        <section class="additional-info-section sec-padd" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Additional Information</span></h2>
+                    <p>Not all our services are displayed on our site. Feel free to enquire about your tailor-made requests to suit your requirements and we will satisfy your needs, including employment law issues and HR audits to prioritize your business case.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="policy-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h3>Pricing Structure</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>Personal Development & Corporate Training</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Personal Development Training:</b> £100 - £2,000 per session.</li>
+                                    </ul>
+                                    
+                                    <h4>Strategic Business Growth Solutions</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Competitive Advantage Services:</b> £1,000 - £10,000 per project.</li>
+                                        <li><b>Emerging Markets Tailored Solutions:</b> £2,000 - £15,000 per project.</li>
+                                    </ul>
+                                    
+                                    <h4>Corporate Training</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Executive Training:</b> £5,000 - £20,000 per program.</li>
+                                        <li><b>Leadership Development:</b> £3,000 - £15,000 per participant.</li>
+                                        <li><b>Line Manager Training:</b> £300 - £1,000 per person.</li>
+                                        <li><b>New Managers Training:</b> £395 - £1,500 per person</li>
+                                    </ul>
+                                    
+                                    <h4>HR Support & Consultancy</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>HR and System Support:</b> £55.00 - £1500 per hour</li>
+                                        <li><b>Consultancy Director:</b> £95.00 - £150 per hour</li>
+                                        <li><b>Employment Law Advice:</b> £350.00 - £2000.00 per hour</li>
+                                        <li><b>HR Business Analysis and Data:</b> £1,000 - £10,000 per project.</li>
+                                        <li><b>Employee Retention Survey and Strategies:</b> £1,000 - £5,000 per survey.</li>
+                                        <li><b>HR Audits:</b> £2,000 - £15,000 per audit</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <h4>HR Products</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Complaint Letter:</b> £65</li>
+                                        <li><b>Grievance Letter:</b> £65</li>
+                                        <li><b>Individual Visa Letters:</b> £65</li>
+                                        <li><b>HR Email Templates:</b>
+                                            <ul class="list-style-one" style="margin-left: 20px;">
+                                                <li>Support Disciplinary: £65</li>
+                                                <li>Time Off: £65</li>
+                                                <li>Compassionate Leave: £65</li>
+                                                <li>Generic HR Letters: £65</li>
+                                            </ul>
+                                        </li>
+                                        <li><b>Email Drafts:</b> £65</li>
+                                    </ul>
+                                    
+                                    <h4>Coaching Services</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>One-off Interview Coaching:</b> £100</li>
+                                        <li><b>Personal Coaching:</b> £150</li>
+                                        <li><b>Manager Coaching:</b> £200</li>
+                                        <li><b>Career Review:</b> £150</li>
+                                        <li><b>Goal Setting:</b> £150</li>
+                                        <li><b>Case Review:</b> £100 per hour per session</li>
+                                    </ul>
+                                    
+                                    <h4>Team Building Workshops and Events</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Online Cocktail Workshop:</b> From £25 per person</li>
+                                        <li><b>Teambuilding Activities:</b> From £29.50 per person</li>
+                                        <li><b>Beach Yoga:</b> From £25 per person</li>
+                                        <li><b>Archery Attack:</b> From £20 per person</li>
+                                        <li><b>Powerkiting:</b> From £25 per person</li>
+                                        <li><b>Live Table Football:</b> From £25 per person</li>
+                                        <li><b>Bike Ride Through the Dunes:</b> From £25 per person</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="row" style="margin-top: 30px;">
+                                <div class="col-md-12">
+                                    <h4>Packages</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>HR Support Package:</b> Includes 5 HR email templates and 3 individual visa letters for £500.</li>
+                                        <li><b>Coaching Package:</b> Includes one-off interview coaching, personal coaching, and career review for £350.</li>
+                                        <li><b>Team Building Package:</b> Includes online cocktail workshop, beach yoga, and archery attack for £70 per person.</li>
+                                    </ul>
+                                    <p>You can contact us for other customized packages</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row" style="margin-top: 30px;">
+                                <div class="col-md-12">
+                                    <h4>Retainer Structure</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Monthly HR Retainer:</b> £950.00</li>
+                                        <li><b>Start-up fee (added to the first invoice):</b> £1,500.00</li>
+                                    </ul>
+                                    
+                                    <h4>Other Costs/Expenses</h4>
+                                    <ul class="list-style-one">
+                                        <li><b>Car Mileage:</b> 45p per mile</li>
+                                        <li><b>Train Fare:</b> Standard Class</li>
+                                        <li><b>Postage costs for employee documents dispatched by us directly:</b> Postage charge</li>
+                                    </ul>
+                                    
+                                    <h4>Additional Services (if requested)</h4>
+                                    <p>Cost of additional hours purchased outside of the agreed Time Bank hours</p>
+                                    <ul class="list-style-one">
+                                        <li><b>HR Administrator:</b> £55.00 / hour</li>
+                                        <li><b>HR Consultancy Director:</b> £95.00 / hour</li>
+                                        <li><b>HR "Time Bank":</b> Flexible access to professional HR support when needed.</li>
+                                    </ul>
+                                    
+                                    <p><strong>Split Proposal for the first month:</strong><br>
+                                    As part of this first-year retainer, we will include in the monthly fee of the BreatheHR system. We will need to review the number of employees at the end of the 12 months to see what the new retainer would look like.</p>
+                                    
+                                    <p><strong>All fees are exclusive of VAT.</strong></p>
+                                    
+                                    <p>We have professional indemnity and in 2 years of running a consulting business have never needed to call on this but it gives you peace of mind that you are covered!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <p class="lead">Not all our services are displayed on our site. Feel free to enquire about your tailor-made requests to suit your requirements and we will satisfy your needs, including employment law issues and HR audits to prioritize your business case.</p>
+                            <a href="contact.html" class="thm-btn wow fadeInUp" data-wow-delay="0.3s">Contact Us For Custom Solutions</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="service-overview sec-padd">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <div class="service-box">
-                            <div class="icon">
-                                <i class="icon-people3"></i>
-                            </div>
-                            <div class="section-title">
-                                <h2 ><span>Health & Well-Being Programs</span></h2>
-                                <p>REmpower Your Workforce to Thrive Inside and Out</p>
-                                <p>Our Health & Well-Being Programs, in partnership with Paranimo, are designed to enhance
-                                    employee wellness, boost productivity, and foster a positive workplace culture.</p>
-                            </div>
-                            <br>
-                            <h3>Our Health & Well-Being Programs Include:</h3>
-                            <ul class="list-style-one">
-                                <b>For Businesses:</b>
-                                <ul class="list-style-one">
-                                    <li><b>Workplace Wellness Programs:</b> Comprehensive initiatives to promote a healthy
-                                        work environment.</li>
-                                    <li><b>Employee Assistance Programs (EAPs):</b> Confidential support for personal and
-                                        professional challenges</li>
-                                    <li><b>Mental Health and Stress Management Training:</b> Equip employees with tools to
-                                        manage stress effectively.</li>
-                                    <li><b>Health and Lifestyle Coaching:</b> Personalized coaching to improve overall well-
-                                        being.</li>
-                                </ul>
-                                <b>For Employees:</b>
-                                <ul class="list-style-one">
-                                    <li><b>Personal Health and Well-Being Plans:</b> Tailored strategies to achieve individual
-                                        health goals.</li>
-                                    <li><b>Work-Life Balance Strategies:</b> Practical solutions to harmonize professional and
-                                        personal life.</li>
-                                    <li><b>Mental Resilience Workshops:</b> Build emotional strength and adaptability.</li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="service-box">
-                            <div class="icon">
-                                <i class="icon-people3"></i>
-                            </div>
-                            <div class="section-title">
-                                <h2 ><span>Training & Development</span></h2>
-                                <p>Equip Your Team with Skills for Success</p>
-                                <p>Our Training & Development programs are designed to empower your workforce with the
-                                    knowledge and skills needed to excel in a rapidly evolving business landscape. With [X]
-                                    years of experience and [Y]% participant satisfaction, we deliver transformative learning
-                                    experiences that drive growth and innovation.</p>
-                            </div>
-                            <br>
-                            <h3>Our Training & Development Services Include:</h3>
-                            <ul class="list-style-one">
-                                <li><b>Workshops and Courses:</b> Interactive sessions to enhance skills and knowledge
-                                    across industries.</li>
-                                <li><b>Leadership Training:</b> Develop strong leaders who inspire and drive organizational
-                                    success.</li>
-                                <li><b>Digital Transformation Education:</b> Equip teams with the tools to navigate and lead
-                                    digital change.</li>
-                                <li><b>Technology Training:</b> Specialized programs like our <b>2-Day AI Training for HR Professionals</b> to future-proof your workforce.</li>
-                                <li><b>Educational How-To Guides:</b> Practical resources to support continuous learning
-                                    and development</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- CV and Cover Letter Services -->
+		<section class="service-overview sec-padd">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center"><span>Craft a Standout CV and Cover Letter</span></h2>
+					<p>Your CV and cover letter are your first impression on potential employers. Our expert team has helped over 1000+ clients land their dream jobs, with a 90% success rate in securing interviews.</p>
+				</div>
+
+				<!-- Success Stats -->
+				<div class="success-stats">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">90%</div>
+									<div class="stat-text">Interview Success Rate</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">2 Weeks</div>
+									<div class="stat-text">Average Time to First Interview</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">1000+</div>
+									<div class="stat-text">Successful Placements</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service Packages -->
+				<div class="row">
+					<!-- Gold Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table">
+							<div class="price-header">
+								<h3>Gold Package</h3>
+								<p>New CV + Telephone Consultations</p>
+								<div class="price">
+									<span class="amount">£120</span>
+								</div>
+								<span>Perfect for job
+									seekers who need
+									a polished CV to
+									stand out in
+									competitive
+									markets</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new, professionally written CV</b> tailored to your target roles.</li>
+								<li>An <b>outstanding personal profile</b> and comprehensive
+									career history highlighting your expertise, capabilities, and achievements.</li>
+								<li><b>Keyword optimization</b> to ensure your CV passes Applicant Tracking Systems (ATS).</li>
+								<li>A <b>well-designed, easy-to-read layout</b> that grabs attention</li>
+								<li><b>Unlimited revisions</b> and changes for 6 months, including telephone consultations.</li>
+								<li>Delivery in <b>Microsoft Word (fully editable)</b> and <b>PDF formats</b>.</li>
+								<li><b>Turnaround time:</b> 4 working days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_6oEbLU34sgLg4daeUX" class="thm-btn">Get Started</a>
+						</div>
+					</div>
+
+					<!-- Platinum Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table featured">
+							<div class="price-header">
+								<h3>Platinum Package</h3>
+								<p>New CV + Cover Letter + Telephone Consultations</p>
+								<div class="price">
+									<span class="amount">£150</span>
+								</div>
+								<span>Ideal for job
+									seekers who want
+									a complete
+									application
+									package to make a
+									lasting impression.</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new CV and tailored cover letter</b> designed for your target roles.</li>
+								<li>An <b>outstanding personal profile</b> and detailed career history showcasing your expertise and achievements.</li>
+								<li><b>Keyword
+									optimization</b> to
+									ensure your CV
+									passes ATS.</li>
+								<li>A <b>professional,
+									easy-to-read
+									layout</b> for both CV
+									and cover letter</li>
+								<li><b>Unlimited
+									revisions</b> and
+									changes for 6
+									months, including
+									telephone
+									consultations.</li>
+								<li>Delivery
+									in <b>Microsoft
+										Word (fully
+										editable)</b> and <b></b>PDF formats.</b></li>
+									formats.</li>
+								<li><b>Turnaround
+									time:</b> 4 working
+									days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_5kA7vE8oM2Uq4da8wA" class="thm-btn">Get Started</a>
+						</div>
+					</div>
+
+					<!-- Diamond Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table">
+							<div class="price-header">
+								<h3>Diamond Package</h3>
+								<p>New CV
+									+ Cover Letter +
+									LinkedIn Profile +
+									Telephone
+									Consultations</p>
+								<div class="price">
+									<span class="amount">£200</span>
+								</div>
+								<span>The ultimate
+									package for job
+									seekers who want
+									to dominate both
+									online and
+									offline job
+									markets.</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new CV,
+									tailored cover
+									letter, and
+									optimized
+									LinkedIn profile.</b></li>
+								<li>An <b>outstanding
+									personal
+									profile</b> and
+									detailed career
+									history
+									showcasing your
+									expertise and
+									achievements.</li>
+								<li><b>Keyword
+									optimization</b> for
+									CV and LinkedIn to pass ATS and
+									attract recruiters.</li>
+								<li>A <b>professional,
+									easy-to-read
+									layout</b> for all
+									documents.</li>
+								<li><b>Unlimited
+									revisions</b> and
+									changes for 6
+									months, including
+									telephone
+									consultations.</li>
+								<li>Delivery
+									in <b>Microsoft
+										Word (fully
+										editable)</b> and 
+										<b>PDF formats.</b>
+									</li>
+								<li></b>Turnaround
+									time:</b> 4 working
+									days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_fZe6rAbAYdz44da28d" class="thm-btn">Get Started</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+        
+        <style>
+            .color1_bg {
+                background: var(--secondary-color) !important;
+                color: var(--primary-color) !important;
+            }
+    
+            .thm-color {
+                color: var(--secondary-color) !important;
+            }
+    
+            .menuzord-menu > li > a {
+                color: var(--primary-color);
+            }
+    
+            .menuzord-menu > li.active > a,
+            .menuzord-menu > li:hover > a {
+                color: var(--secondary-color);
+            }
+    
+            .menuzord-menu > li > .megamenu,
+            .menuzord-menu > li > .dropdown {
+                background: var(--background-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a,
+            .menuzord-menu > li > .dropdown a {
+                color: var(--text-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a:hover,
+            .menuzord-menu > li > .dropdown a:hover {
+                color: var(--secondary-color);
+            }
+    
+            /* Additional Styles */
+            .tech-partners .partner-logo {
+                max-width: 80px;
+                margin: 5px;
+                border-radius: var(--border-radius-sm);
+            }
+    
+            .footer-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .footer-nav li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+    
+            .footer-nav li a {
+                color: var(--text-light);
+            }
+    
+            .footer-nav li a:hover {
+                color: var(--secondary-color);
+            }
+    
+            .process-box {
+                background: var(--text-light);
+                padding: 30px;
+                margin-bottom: 30px;
+                border-radius: var(--border-radius-md);
+                box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+    
+            .process-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            }
+    
+            .process-box .step-number {
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                color: var(--text-light);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+    
+            .success-stats {
+                background: var(--primary-color);
+                color: var(--text-light);
+                padding: 60px 0;
+                margin: 40px 0;
+                border-radius: var(--border-radius-md);
+            }
+    
+            .success-stats .stat-item {
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .success-stats .stat-number {
+                font-size: 48px;
+                font-weight: bold;
+                color: var(--secondary-color);
+                margin-bottom: 10px;
+            }
+    
+            .success-stats .stat-text {
+                font-size: 18px;
+            }
+    
+            .features-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 20px 0;
+                text-align: left;
+            }
+    
+            .features-list li {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+    
+            .features-list li:last-child {
+                border-bottom: none;
+            }
+        </style>
+		<!-- Success Stories -->
+		<section class="success-stories sec-padd">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center"><span>Our Proven Track Record</span></h2>
+					<p>We've helped thousands of job seekers transform their careers with our expert guidance and support. Here's how we've made a difference:</p>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="service-box text-center">
+							<div class="icon-box">
+								<img src="images/icons/success-rate.png" alt="Success Rate" class="service-icon">
+							</div>
+							<h4>95% Success Rate</h4>
+							<p>95% of our clients receive interview invitations within 30 days of using our CV services, compared to the industry average of 62%.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="service-box text-center">
+							<div class="icon-box">
+								<img src="images/icons/time-to-hire.png" alt="Time to Hire" class="service-icon">
+							</div>
+							<h4>Faster Job Placement</h4>
+							<p>Our clients receive job offers 40% faster than the national average, reducing stress and financial uncertainty during job searches.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="service-box text-center">
+							<div class="icon-box">
+								<img src="images/icons/salary-increase.png" alt="Salary Increase" class="service-icon">
+							</div>
+							<h4>Higher Salary Offers</h4>
+							<p>Clients who use our complete service package report receiving salary offers that are, on average, 15% higher than their previous positions.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How It Works -->
+		<section class="process-section sec-padd" style="background: #f7f7f7;">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center">How It Works</h2>
+					<p>Your journey to career success in 5 simple steps</p>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="process-box">
+							<div class="step-number">1</div>
+							<h3>Book Consultation</h3>
+							<p>Book a free consultation through our integrated booking system. Choose a date and time that works for you.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="process-box">
+							<div class="step-number">2</div>
+							<h3>Initial Discussion</h3>
+							<p>During the consultation, we'll understand your career goals, review your current CV, and outline how we can help.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="process-box">
+							<div class="step-number">3</div>
+							<h3>Package Selection</h3>
+							<p>Based on your consultation, select the package that best suits your needs (Gold, Platinum, or Diamond).</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="process-box">
+							<div class="step-number">4</div>
+							<h3>Information Gathering</h3>
+							<p>Share your career history, achievements, and target roles. Our experts will begin crafting your professional documents.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="process-box">
+							<div class="step-number">5</div>
+							<h3>Review & Delivery</h3>
+							<p>Receive your first draft within 4 working days. We offer unlimited revisions for 6 months to ensure your complete satisfaction.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
         <!-- Pricing Section -->
         <section class="pricing-section sec-padd" style="background: #f7f7f7;">
@@ -494,6 +1325,327 @@
                                 <li>Digital Transformation Education</li>
                             </ul>
                             <a href="https://buy.stripe.com/test_28oaHQdJ6cv0fVS146" class="thm-btn style-3">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Journey Section -->
+        <section class="customer-journey sec-padd" id="customer-journey" style="background: url(images/background/3.jpg); background-size: cover; position: relative;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-title center" style="color: #fff;">
+                    <h2 class="title-highlight-center" style="color: #fff;"><span>Customer Journey & Buying Process</span></h2>
+                    <p>Your Path to Success Starts Here</p>
+                    <p>At Orancy Planet, we've designed a simple and transparent process to ensure you get the support you need, every step of the way. From your first inquiry to final delivery, we're here to make your experience seamless and stress-free.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="journey-steps-wrapper wow fadeInUp" data-wow-delay="0.3s">
+                            <h3 style="color: #fff; margin-bottom: 30px; text-align: center;">Step-by-Step Guide from Inquiry to Purchase</h3>
+                            
+                            <div class="panel-group" id="customer-journey-accordion" role="tablist" aria-multiselectable="true">
+                                <!-- Option 1: Website Journey -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            <a role="button" data-toggle="collapse" data-parent="#customer-journey-accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <i class="fa fa-shopping-cart"></i> Customer Journey on Buying from a Website
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                            <div class="journey-timeline">
+                                                <!-- Step 1 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">1</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Website Entry</h4>
+                                                        <p><strong>Action:</strong> Customer lands on the website via search engine, referral, or direct visit.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Landing Page:</b> Clear navigation, search bar, and product categories should be visible.</li>
+                                                                <li><b>Personalization:</b> Use personalized suggestions based on customer behavior or previous visits.</li>
+                                                                <li><b>Responsiveness:</b> Ensure that the website is mobile-friendly.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Step 2 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">2</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Product Discovery</h4>
+                                                        <p><strong>Action:</strong> Customer searches or browses the product catalog.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Product Filters:</b> Provide filters like price, category, popularity, etc.</li>
+                                                                <li><b>Search Optimization:</b> The search function should provide relevant results with suggestions.</li>
+                                                                <li><b>Product Detail Page:</b> Include high-quality images, detailed descriptions, pricing, and reviews.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Step 3 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">3</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Product Selection</h4>
+                                                        <p><strong>Action:</strong> Customer clicks on a product, reviews the details, and adds it to the cart.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Add to Cart/Buy Now:</b> Prominent buttons that lead to the next steps.</li>
+                                                                <li><b>Stock Availability:</b> Real-time updates on stock levels.</li>
+                                                                <li><b>Cross-selling:</b> Suggest related or complementary products.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Step 4 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">4</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Shopping Cart Review</h4>
+                                                        <p><strong>Action:</strong> Customer reviews the items in their shopping cart.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Cart Summary:</b> Display products, quantity, pricing, and any applicable discounts.</li>
+                                                                <li><b>Shipping Cost Estimate:</b> Display shipping cost based on the customer's location.</li>
+                                                                <li><b>Coupon Code Entry:</b> Allow users to apply discount codes if applicable.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Step 5 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">5</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Checkout Process</h4>
+                                                        <p><strong>Action:</strong> Customer proceeds to checkout.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Guest Checkout:</b> Allow customers to check out without needing to create an account.</li>
+                                                                <li><b>Account Login Option:</b> Option for registered users to log in and access saved preferences.</li>
+                                                                <li><b>Shipping Information:</b> Collect shipping details in a clear, simple form.</li>
+                                                                <li><b>Billing Information:</b> Secure collection of payment details (credit card, PayPal, etc.).</li>
+                                                                <li><b>Shipping Method:</b> Allow users to select from multiple shipping options with delivery times and costs.</li>
+                                                                <li><b>Order Summary:</b> Final order details before confirming the purchase.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- Step 6 -->
+                                                <div class="journey-step">
+                                                    <div class="step-number">6</div>
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Order Confirmation</h4>
+                                                        <p><strong>Action:</strong> Customer submits the order and receives confirmation.</p>
+                                                        <div class="step-details">
+                                                            <p><strong>Key Design Elements:</strong></p>
+                                                            <ul class="list-style-one">
+                                                                <li><b>Order Confirmation Page:</b> Display order number, details, and estimated delivery time.</li>
+                                                                <li><b>Email Confirmation:</b> Automatically send an order confirmation email with all relevant details.</li>
+                                                                <li><b>Customer Account (Optional):</b> If they created an account, allow them to track the order via the website.</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Option 2: Order Process Design -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#customer-journey-accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="fa fa-cogs"></i> Order Process Design (Back-End)
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                            <div class="row" style="margin-bottom: 30px;">
+                                                <div class="col-md-6">
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Step 1: Order Submission</h4>
+                                                        <p><strong>Action:</strong> Once the customer submits the order, the system captures the details.</p>
+                                                        <p><strong>Key Design Elements:</strong></p>
+                                                        <ul class="list-style-one">
+                                                            <li><b>Order Number Generation:</b> Each order gets a unique order ID for tracking.</li>
+                                                            <li><b>Integration with Payment Gateway:</b> Verify and process payment through a secure gateway.</li>
+                                                            <li><b>Inventory Check:</b> Confirm stock availability before processing the order.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Step 4: Delivery and Post-Purchase</h4>
+                                                        <p><strong>Action:</strong> The customer receives the product.</p>
+                                                        <p><strong>Key Design Elements:</strong></p>
+                                                        <ul class="list-style-one">
+                                                            <li><b>Delivery Updates:</b> Send periodic updates on delivery status.</li>
+                                                            <li><b>Order Tracking:</b> Customers should be able to track their package from their account.</li>
+                                                            <li><b>Post-Purchase Support:</b> Provide easy access to customer service for inquiries or returns.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Step 5: Feedback and Returns</h4>
+                                                        <p><strong>Action:</strong> After delivery, collect feedback and manage returns if necessary.</p>
+                                                        <p><strong>Key Design Elements:</strong></p>
+                                                        <ul class="list-style-one">
+                                                            <li><b>Feedback Request:</b> Send an automated email or prompt to leave a review or feedback.</li>
+                                                            <li><b>Return Process:</b> Simplify returns by providing return labels and step-by-step instructions for returning the product.</li>
+                                                            <li><b>Customer Satisfaction:</b> Provide options for refunds, exchanges, or credits.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Option 3: Process Map -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#customer-journey-accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class="fa fa-sitemap"></i> Process Map for Customer Purchase and Order Process
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Swimlane 1: Customer Actions</h4>
+                                                        <ol class="list-style-one" style="counter-reset: step-counter;">
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</span>
+                                                                <strong>Website Entry</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>The customer accesses the website (mobile or desktop).</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</span>
+                                                                <strong>Product Discovery</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Customer searches for products or browses through categories.</li>
+                                                                    <li>Filters or search options narrow down preferences.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</span>
+                                                                <strong>Product Selection</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>The customer selects the product, views details, and adds it to the shopping cart.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">4</span>
+                                                                <strong>Shopping Cart Review</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Reviews the cart, checks items, pricing, and applies any discount codes.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">5</span>
+                                                                <strong>Checkout Process</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Enters shipping information, selects payment method, and confirms the order.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">6</span>
+                                                                <strong>Order Confirmation</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Receives confirmation of the order on-screen and via email.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="step-content" style="background: rgba(255,255,255,0.9); padding: 25px; border-radius: 5px;">
+                                                        <h4>Swimlane 2: System/Backend Actions</h4>
+                                                        <ol class="list-style-one" style="counter-reset: step-counter;">
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</span>
+                                                                <strong>Order Submission</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>The system generates a unique order ID and confirms stock availability.</li>
+                                                                    <li>Payment gateway processes payment.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</span>
+                                                                <strong>Order Processing</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Inventory levels are updated, and warehouse/fulfillment team receives the order.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</span>
+                                                                <strong>Order Fulfillment</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>The warehouse team prepares and ships the product.</li>
+                                                                    <li>A tracking number is generated, and the customer is notified of shipment.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">4</span>
+                                                                <strong>Delivery</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>The shipping carrier delivers the package to the customer.</li>
+                                                                    <li>Tracking is available to the customer throughout the process.</li>
+                                                                </ul>
+                                                            </li>
+                                                            <li style="position: relative; padding-left: 40px; margin-bottom: 15px;">
+                                                                <span style="position: absolute; left: 0; top: 0; width: 30px; height: 30px; background-color: var(--secondary-color); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">5</span>
+                                                                <strong>Post-Purchase Support</strong>
+                                                                <ul class="list-style-one" style="margin-top: 10px; padding-left: 20px;">
+                                                                    <li>Customer receives an option for feedback.</li>
+                                                                    <li>System handles returns and refunds, if applicable.</li>
+                                                                </ul>
+                                                            </li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="consultation-box text-center wow fadeInUp" data-wow-delay="0.7s" style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 5px;">
+                            <h3>Request a Consultation</h3>
+                            <p>Ready to take the next step? Contact our team for a personalized consultation to discuss your specific needs and how we can help you achieve your goals.</p>
+                            <a href="contact.html" class="thm-btn style-2" style="margin-top: 20px;">Contact Us Today</a>
                         </div>
                     </div>
                 </div>
@@ -671,6 +1823,41 @@
     <script src="js/rev-slider/revolution.extension.video.min.js"></script>
 
     <script src="js/custom.js"></script>
+    
+    <!-- Custom Script for Enhanced Animations -->
+    <script>
+        // Initialize WOW.js with custom settings
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 100,
+            mobile: true,
+            live: true
+        }).init();
+        
+        // Smooth scroll functionality for internal links
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a[href^='#']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    
+                    // Store hash
+                    var hash = this.hash;
+                    
+                    // Using jQuery's animate() method to add smooth page scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 80
+                    }, 800, function(){
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html> 

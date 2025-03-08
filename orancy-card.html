@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<title>Orancy Planet | Orancy Card - Premium Loyalty Program</title>
+
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="The Orancy Card is a premium loyalty program designed to reward our most dedicated clients with exclusive benefits, discounts, and personalized services.">
+	<meta name="keywords" content="loyalty program, exclusive membership, client rewards, Orancy Card, premium benefits, HR consulting">
+	<meta name="author" content="Orancy Planet">
+	
+	<!-- Mobile Responsive Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Orancy Planet | Orancy Card - Premium Loyalty Program">
+	<meta property="og:description" content="Exclusive benefits, discounts, and personalized services for our most dedicated clients.">
+	<meta property="og:image" content="images/logo/logo.png">
+	<!-- <meta property="og:url" content="https://orancyplanet.com"> -->
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Orancy Planet | Orancy Card - Premium Loyalty Program">
+	<meta name="twitter:description" content="Exclusive benefits, discounts, and personalized services for our most dedicated clients.">
+	<meta name="twitter:image" content="images/logo/logo.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/custom-colors.css">
+	<link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/custom-animations.css">
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
+
+    <!-- Canonical URL -->
+    <!-- <link rel="canonical" href="https://orancyplanet.com"> -->
+
+    <!-- Inline Styles -->
+    <style>
+        .color1_bg {
+			background: var(--secondary-color) !important;
+			color: var(--primary-color) !important;
+		}
+
+		.thm-color {
+			color: var(--secondary-color) !important;
+		}
+
+		.menuzord-menu > li > a {
+			color: var(--primary-color);
+		}
+
+		.menuzord-menu > li.active > a,
+		.menuzord-menu > li:hover > a {
+			color: var(--secondary-color);
+		}
+
+		.menuzord-menu > li > .megamenu,
+		.menuzord-menu > li > .dropdown {
+			background: var(--background-light);
+		}
+
+		.menuzord-menu > li > .megamenu a,
+		.menuzord-menu > li > .dropdown a {
+			color: var(--text-light);
+		}
+
+		.menuzord-menu > li > .megamenu a:hover,
+		.menuzord-menu > li > .dropdown a:hover {
+			color: var(--secondary-color);
+		}
+
+		/* Additional Styles */
+		.tech-partners .partner-logo {
+			max-width: 80px;
+			margin: 5px;
+			border-radius: var(--border-radius-sm);
+		}
+
+		.footer-nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer-nav li {
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+		.footer-nav li a {
+			color: var(--text-light);
+		}
+
+		.footer-nav li a:hover {
+			color: var(--secondary-color);
+		}
+
+        /* Orancy Card Specific Styles */
+        .card-tier {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-tier:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .tier-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+        }
+
+        .tier-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 100px 100px 0;
+        }
+
+        .silver-tier .tier-badge::before {
+            border-color: transparent #C0C0C0 transparent transparent;
+        }
+
+        .gold-tier .tier-badge::before {
+            border-color: transparent #FFD700 transparent transparent;
+        }
+
+        .platinum-tier .tier-badge::before {
+            border-color: transparent #E5E4E2 transparent transparent;
+        }
+
+        .tier-badge span {
+            position: absolute;
+            top: 15px;
+            right: 5px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            color: var(--primary-color);
+            text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+        }
+
+        .benefit-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-box:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .benefit-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefit-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+        }
+
+        .benefit-list li:before {
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .earn-card-box {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 60px;
+        }
+
+        .earn-card-box h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .earn-card-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .earn-card-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+        }
+
+        .earn-card-list li:before {
+            content: "\f105";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 18px;
+        }
+
+        /* Animation Styles */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in-up.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+    </style>
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+        <section class="theme_menu stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <nav class="menuzord" id="main_menu">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="active"><a href="orancy-card.html">Orancy Card</a></li>
+                                <li><a href="military-support.html">Military Support</a>
+                                    <ul class="dropdown">
+                                        <li><a href="military-career-transition.html">Career Transition</a></li>
+                                        <li><a href="military-family-support.html">Family Support</a></li>
+                                        <li><a href="military-development.html">Personal Development</a></li>
+                                    </ul>
+                                </li>							
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
+            <div class="container">
+                <div class="box">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="inner-banner has-base-color-overlay text-center">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/1114915_Man_Woman_1920x1080.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <h1>Orancy Card</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcumb-wrapper">
+            <div class="container">
+                <div class="pull-left">
+                    <ul class="list-inline link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Orancy Card</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="about-section sec-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title center">
+                            <h2 class="title-highlight-center"><span>Orancy Card</span></h2>
+                        </div>
+                        <div class="text-center wow fadeIn" data-wow-delay="0.3s">
+                            <p class="lead">The Orancy Card is a premium loyalty program designed to reward our most dedicated
+                            clients. Inspired by the concept of exclusivity and value, the Orancy Card offers a range of
+                            benefits to clients who demonstrate long-term commitment, consistency, and contribution
+                            to our growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section sec-padd" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Features of the Orancy Card</span></h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-block wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="feature-icon">
+                                <i class="fa fa-check-circle-o"></i>
+                            </div>
+                            <h3>Eligibility</h3>
+                            <ul class="benefit-list">
+                                <li>Available to loyal clients who have been with Orancy Planet for a minimum period (e.g., 1 year).</li>
+                                <li>Clients on retainer agreements who maintain consistent payments.</li>
+                                <li>Clients who refer new business and contribute to Orancy Planet's growth.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="feature-block wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="feature-icon">
+                                <i class="fa fa-trophy"></i>
+                            </div>
+                            <h3>Tiers</h3>
+                            <ul class="benefit-list">
+                                <li>Silver Tier: For clients with 1+ year of loyalty or consistent retainer payments.</li>
+                                <li>Gold Tier: For clients with 2+ years of loyalty or significant retainer contributions.</li>
+                                <li>Platinum Tier: For top-tier clients with 3+ years of loyalty, high retainer payments, or substantial referrals.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tiers-section sec-padd">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>The Orancy Card Tiers</span></h2>
+                    <p>Choose the tier that matches your relationship with Orancy Planet</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card-tier silver-tier wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="tier-badge">
+                                <span>SILVER</span>
+                            </div>
+                            <h3 class="text-center">Silver Tier</h3>
+                            <p class="text-center">For clients with 1+ year of loyalty</p>
+                            <hr>
+                            <h4>Benefits Include:</h4>
+                            <ul class="benefit-list">
+                                <li>10% discount on all services</li>
+                                <li>Dedicated account manager</li>
+                                <li>Priority customer support</li>
+                                <li>Quarterly free consultations</li>
+                                <li>Event invitations</li>
+                            </ul>
+                            <div class="text-center" style="margin-top: 30px;">
+                                <a href="contact.html" class="thm-btn style-3">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card-tier gold-tier wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="tier-badge">
+                                <span>GOLD</span>
+                            </div>
+                            <h3 class="text-center">Gold Tier</h3>
+                            <p class="text-center">For clients with 2+ years of loyalty</p>
+                            <hr>
+                            <h4>Benefits Include:</h4>
+                            <ul class="benefit-list">
+                                <li>15% discount on all services</li>
+                                <li>All Silver Tier benefits</li>
+                                <li>Extended revisions for 12 months</li>
+                                <li>Free CV or LinkedIn profile review</li>
+                                <li>Free coaching session annually</li>
+                                <li>Early access to new products</li>
+                            </ul>
+                            <div class="text-center" style="margin-top: 30px;">
+                                <a href="contact.html" class="thm-btn">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-12">
+                        <div class="card-tier platinum-tier wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="tier-badge">
+                                <span>PLATINUM</span>
+                            </div>
+                            <h3 class="text-center">Platinum Tier</h3>
+                            <p class="text-center">For clients with 3+ years of loyalty</p>
+                            <hr>
+                            <h4>Benefits Include:</h4>
+                            <ul class="benefit-list">
+                                <li>20% discount on all services</li>
+                                <li>All Gold Tier benefits</li>
+                                <li>Elite networking opportunities</li>
+                                <li>Private roundtable discussions</li>
+                                <li>Annual business review</li>
+                                <li>Charity donations in your name</li>
+                            </ul>
+                            <div class="text-center" style="margin-top: 30px;">
+                                <a href="contact.html" class="thm-btn style-3">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section sec-padd" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Benefits of the Orancy Card</span></h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="benefit-category">
+                            <h3>For All Cardholders:</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>1. Exclusive Discounts</h4>
+                            <ul class="benefit-list">
+                                <li>10-20% discounts on all Orancy Planet services (e.g., HR consulting, training programs, technology solutions).</li>
+                                <li>Discounts increase with higher tiers (e.g., Silver: 10%, Gold: 15%, Platinum: 20%).</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>2. Priority Support</h4>
+                            <ul class="benefit-list">
+                                <li>Dedicated account manager for personalized service.</li>
+                                <li>24/7 priority access to customer support and advisory services.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>3. Free Consultations</h4>
+                            <ul class="benefit-list">
+                                <li>Quarterly free consultations with HR and business development experts.</li>
+                                <li>Access to exclusive webinars and workshops.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>4. Event Invitations</h4>
+                            <ul class="benefit-list">
+                                <li>Complimentary tickets to Orancy Planet's exclusive events, such as the HR Innovation Summit and Tech Transformation Conference.</li>
+                                <li>VIP access to networking events with industry leaders.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>5. Customized Solutions</h4>
+                            <ul class="benefit-list">
+                                <li>Tailored HR and technology solutions designed specifically for cardholders' business needs.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-12">
+                        <div class="benefit-category">
+                            <h3>For Gold and Platinum Cardholders:</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>6. Extended Revisions</h4>
+                            <ul class="benefit-list">
+                                <li>Unlimited revisions on HR documents, CVs, and cover letters for 12 months.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>7. Complimentary Services</h4>
+                            <ul class="benefit-list">
+                                <li>Free CV optimization or LinkedIn profile review annually.</li>
+                                <li>One free coaching session (personal or executive) per year.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>8. Early Access to New Products</h4>
+                            <ul class="benefit-list">
+                                <li>Be the first to access and test new Orancy Planet services and technology solutions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-12">
+                        <div class="benefit-category">
+                            <h3>For Platinum Cardholders Only:</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>9. Elite Networking Opportunities</h4>
+                            <ul class="benefit-list">
+                                <li>Invitations to private roundtable discussions with Lady Presh and other industry leaders.</li>
+                                <li>Opportunities to collaborate on exclusive projects with Orancy Planet.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>10. Annual Business Review</h4>
+                            <ul class="benefit-list">
+                                <li>A comprehensive business health check and strategy session with Orancy Planet's senior consultants.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>11. Charity Donations in Your Name</h4>
+                            <ul class="benefit-list">
+                                <li>Orancy Planet will make a donation to a charity of your choice annually, reflecting your commitment to social impact.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="earn-card-section sec-padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="earn-card-box wow fadeIn" data-wow-delay="0.3s">
+                            <h3 class="text-center">How to Earn the Orancy Card</h3>
+                            <ul class="earn-card-list">
+                                <li><strong>Loyalty:</strong> Maintain a long-term relationship with Orancy Planet.</li>
+                                <li><strong>Retainer Consistency:</strong> Consistently pay for retainer services without delays.</li>
+                                <li><strong>Referrals:</strong> Bring new clients to Orancy Planet and contribute to our growth.</li>
+                            </ul>
+                            <div class="text-center" style="margin-top: 30px;">
+                                <a href="contact.html" class="thm-btn style-2">Apply for Orancy Card</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section sec-padd" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/background/3.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text-center" style="color: white;">
+                            <h2 class="wow fadeInUp" data-wow-delay="0.3s">Interested in the Orancy Card?</h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.5s">Contact our team today to learn more about how you can qualify for our exclusive loyalty program and start enjoying premium benefits.</p>
+                            <div class="wow fadeInUp" data-wow-delay="0.7s" style="margin-top: 30px;">
+                                <a href="contact.html" class="thm-btn">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="main-footer">
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget about-column">
+                                <figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
+                                <div class="text">
+                                    <p>Revolutionizing HR functions and driving transformative change since 2021.</p>
+                                </div>
+                                <ul class="contact-info">
+                                    <li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
+                                    <li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
+                                    <li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
+                                    <li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget link-column">
+                                <div class="section-title">
+                                    <h4>Our Services</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="services.html">HR Core Products</a></li>
+                                        <li><a href="services.html">Mediation Services</a></li>
+                                        <li><a href="services.html">Technology Development</a></li>
+                                        <li><a href="services.html">Health & Well-Being</a></li>
+                                        <li><a href="services.html">Training & Development</a></li>
+                                        <li><a href="services.html">International Business</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget link-column">
+                                <div class="section-title">
+                                    <h4>Career Support</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="services.html">CV Writing Services</a></li>
+                                        <li><a href="services.html">Interview Coaching</a></li>
+                                        <li><a href="services.html">LinkedIn Optimization</a></li>
+                                        <li><a href="military-support.html">Military Support</a></li>
+                                        <li><a href="services.html#career-development">Career Development</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Footer Column-->
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget contact-column">
+                                <div class="section-title">
+                                    <h4>Social Media</h4>
+                                </div>
+                                <ul class="social-icon">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                                <div style="margin-top: 30px;"></div>
+                                <div class="tech-partners">
+                                    <h5>Technology Partners</h5>
+                                    <img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+                                    <img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+                                    <img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="pull-left copy-text">
+                        <p>© 2024 Orancy Planet. All Rights Reserved.</p>
+                    </div>
+                    <div class="pull-right get-text">
+                        <ul class="footer-nav">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll Top  -->
+        <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
+        <!-- preloader  -->
+        <div class="preloader"></div>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/imagezoom.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.polyglot.language.switcher.js"></script>
+        <script src="js/SmoothScroll.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/nouislider.js"></script>
+        <script src="js/isotope.js"></script>
+        <script src="js/pie-chart.js"></script>
+
+        <!-- revolution slider js -->
+        <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+        <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+
+        <!-- google map js -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+        <script src="js/gmap.js"></script>
+
+        <script id="map-script" src="js/default-map.js"></script>
+        <script src="js/custom.js"></script>
+    </div>
+
+    <script>
+        // Custom animation script
+        $(document).ready(function() {
+            // Handle animations when elements come into view
+            function animateWhenVisible() {
+                $('.fade-in-up').each(function() {
+                    if ($(this).isInViewport()) {
+                        $(this).addClass('animated');
+                    }
+                });
+            }
+            
+            // Helper function to check if element is in viewport
+            $.fn.isInViewport = function() {
+                var elementTop = $(this).offset().top;
+                var elementBottom = elementTop + $(this).outerHeight();
+                var viewportTop = $(window).scrollTop();
+                var viewportBottom = viewportTop + $(window).height();
+                return elementBottom > viewportTop && elementTop < viewportBottom;
+            };
+            
+            // Run animation check on load and scroll
+            animateWhenVisible();
+            $(window).on('scroll resize', animateWhenVisible);
+            
+            // Initialize WOW.js for animations
+            new WOW().init();
+        });
+    </script>
+</body>
+
+</html>

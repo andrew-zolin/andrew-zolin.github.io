@@ -3,13 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Orancy Planet | HR Consultancy & Technology Solutions</title>
+    <title>Orancy Planet | About Us - Our Story, Mission and Values</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Orancy Planet - Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
-    <meta name="keywords"
-        content="HR consultancy, technology solutions, career support, military support, employee well-being, training development">
+    <meta name="description" content="Learn about Orancy Planet, a global consultancy and innovation hub specializing in HR transformation, IT solutions, and sustainable business growth founded by Lady Presh.">
+    <meta name="keywords" content="HR transformation, IT solutions, business growth, Lady Presh, Precious Lunga, consultancy, innovation hub">
     <meta name="author" content="Orancy Planet">
 
     <!-- Mobile Responsive Meta -->
@@ -17,17 +15,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
-    <meta property="og:description"
-        content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+    <meta property="og:title" content="Orancy Planet | About Us - Our Story, Mission and Values">
+    <meta property="og:description" content="Learn about Orancy Planet's journey, mission, values, and the visionary leadership of Lady Presh.">
     <meta property="og:image" content="images/logo/logo.png">
     <!-- <meta property="og:url" content="https://orancyplanet.com"> -->
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
-    <meta name="twitter:description"
-        content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+    <meta name="twitter:title" content="Orancy Planet | About Us - Our Story, Mission and Values">
+    <meta name="twitter:description" content="Learn about Orancy Planet's journey, mission, values, and the visionary leadership of Lady Presh.">
     <meta name="twitter:image" content="images/logo/logo.png">
 
     <!-- Stylesheets -->
@@ -43,7 +39,7 @@
     <link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://orancyplanet.com">
+    <!-- <link rel="canonical" href="https://orancyplanet.com"> -->
 
     <!-- Inline Styles -->
     <style>
@@ -87,96 +83,6 @@
             border-radius: var(--border-radius-sm);
         }
 
-        /* Image Styles */
-        .inner-banner {
-            position: relative;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 50px;
-        }
-
-        /* .inner-banner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .inner-banner {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        } */
-
-        /* .inner-banner h1 {
-            color: var(--text-light);
-            font-size: 48px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        } */
-
-        .approach-image img {
-            width: 100%;
-            border-radius: var(--border-radius-md);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .value-box {
-            height: 450px;
-            text-align: center;
-            padding: 30px;
-            background: var(--background-light);
-            border-radius: var(--border-radius-md);
-            transition: all 0.3s ease;
-        }
-
-        .value-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .value-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: var(--border-radius-sm);
-            margin: 20px 0;
-        }
-
-        .mission-section {
-            position: relative;
-            color: var(--text-light);
-        }
-
-        .mission-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .mission-section .section-title,
-        .mission-section .text {
-            position: relative;
-            z-index: 1;
-        }
-
-        .mission-section h2,
-        .mission-section h3,
-        .mission-section p {
-            color: var(--text-light);
-        }
-
         .footer-nav {
             list-style: none;
             margin: 0;
@@ -195,60 +101,199 @@
         .footer-nav li a:hover {
             color: var(--secondary-color);
         }
+
+        /* About Page Specific Styles */
+        .about-intro {
+            position: relative;
+            padding: 60px 0;
+        }
+
+        .about-intro:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary-color);
+            transform: translateX(-50%);
+        }
+
+        .about-person {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .about-person:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .about-person img {
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .value-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .value-box:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .value-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .achievement-box {
+            background: #fff;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .achievement-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .achievement-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .achievement-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .achievement-box ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+        }
+
+        .achievement-box ul li:before {
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .partnerships-section {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .partnerships-section h2 {
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .partner-logo-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo-item {
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .partner-logo-item img {
+            max-width: 120px;
+            max-height: 60px;
+        }
+
+        /* Animation Styles */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .fade-in-up.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
     </style>
 </head>
 
 <body>
     <div class="boxed_wrapper">
-        <!-- Header Section -->
         <section class="theme_menu stricky">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<div class="main-logo">
-							<a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
-						</div>
-					</div>
-					<div class="col-md-9 menu-column">
-						<nav class="menuzord" id="main_menu">
-							<ul class="menuzord-menu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="services.html">Services</a>
-									<!-- <ul class="dropdown">
-										<li><a href="#">HR Core Products</a></li>
-										<li><a href="#">Mediation Services</a></li>
-										<li><a href="#">Technology Development</a></li>
-										<li><a href="#">Health & Well-Being</a></li>
-										<li><a href="#">Training & Development</a></li>
-										<li><a href="#">International Business</a></li>
-									</ul> -->
-								</li>
-								<li><a href="job-seekers.html">Job Seekers</a>
-									<!-- <ul class="dropdown">
-										<li><a href="#">CV Writing Services</a></li>
-										<li><a href="#">Interview Coaching</a></li>
-										<li><a href="#">LinkedIn Optimization</a></li>
-										<li><a href="#">Career Support</a></li>
-									</ul> -->
-								</li>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <nav class="menuzord" id="main_menu">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="about.html">About Us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="orancy-card.html">Orancy Card</a></li>
+                                <li><a href="military-support.html">Military Support</a>
+                                    <ul class="dropdown">
+                                        <li><a href="military-career-transition.html">Career Transition</a></li>
+                                        <li><a href="military-family-support.html">Family Support</a></li>
+                                        <li><a href="military-development.html">Personal Development</a></li>
+                                    </ul>
+                                </li>							
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-								<li><a href="military-support.html">Military Support</a>
-									<ul class="dropdown">
-										<li><a href="military-career-transition.html">Career Transition</a></li>
-										<li><a href="military-family-support.html">Family Support</a></li>
-										<li><a href="military-development.html">Personal Development</a></li>
-									</ul>
-								</li>							
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section>
-
-        <!-- Banner Section -->
         <div class="inner-banner has-base-color-overlay text-center">
             <div class="video-background">
                 <video autoplay loop muted playsinline>
@@ -263,14 +308,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(videos/1114915_Man_Woman_1920x1080.mp4); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
-            <div class="container">
-                <div class="box">
-                    <h1>About Us</h1>
-                </div>
-            </div>
-        </div> -->
-       
+
         <div class="breadcumb-wrapper">
             <div class="container">
                 <div class="pull-left">
@@ -282,87 +320,39 @@
             </div>
         </div>
 
-        <!-- Banner Section -->
-        <!-- <section class="inner-banner has-base-color-overlay text-center" style="background: url(images/background/about-banner.jpg);">
+        <!-- How We Started Section -->
+        <section class="about-intro sec-padd">
             <div class="container">
-                <div class="box">
-                    <h1>About Orancy Planet</h1>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- About Section -->
-        <section class="about-section sec-padd">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="about-content">
-                            <div class="section-title">
-                                <h2><span>How We Started</span></h2>
-                            </div>
-                            <div class="text">
-                                <h3>Pioneering HR Transformation Since 2021</h3>
-                                <p>In 2021, Precious Lunga founded Orancy Planet HR Consultancy with a bold vision: to
-                                    revolutionize HR functions and drive transformative change. With nearly two decades
-                                    of experience in senior Human Resources roles, Precious identified a critical need
-                                    for a consultancy that could seamlessly bridge human capital and technological
-                                    advancement.</p>
-                                <p>The name 'Orancy Planet' reflects our mission to create a supportive, empowering
-                                    environment for every individual and organization we serve.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="img-box">
-                            <img src="images/resource/owner.png" alt="Orancy Planet Office">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Approach Section -->
-        <section class="approach-section sec-padd-top">
-            <div class="container">
-                <div class="section-title center">
-                    <h2 class="title-highlight-center">Our Approach</h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="text">
-                            <p>At Orancy Planet, we integrate cutting-edge HR strategies with transformative change
-                                management practices. Our tailored solutions are designed to:</p>
-                            <ul class="list-style-one">
-                                <li><b>Optimize human capital</b> by unlocking the full potential of your workforce.</li>
-                                <li><b>Drive organizational change</b> through innovative, data-driven methodologies.</li>
-                            </ul>
-                            <p>Today, our team of HR experts partners with businesses across the UK, leveraging their
-                                deep expertise to foster growth, streamline processes, and build empowered,
-                                high-performing teams.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="approach-image">
-                            <img src="images/resource/bar-graph-statistics-analysis-business-concept.jpg" alt="Our Approach to HR Solutions" class="img-responsive">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Future Commitment Section -->
-        <section class="commitment-section sec-padd">
-            <div class="container">
-                <div class="section-title center">
-                    <h2 class="title-highlight-center"><span>Our Commitment to the Future</span></h2>
-                </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="text">
-                            <p>As Orancy Planet continues to grow, we remain dedicated to pioneering new HR
-                                methodologies and technologies. By staying ahead of industry trends and embracing
-                                innovation, we empower our clients to navigate complex business landscapes with
-                                confidence.</p>
+                        <div class="section-title center">
+                            <h2 class="title-highlight-center"><span>How We Started</span></h2>
+                            <h3>Pioneering HR Transformation Since 2021</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="text wow fadeInLeft" data-wow-delay="0.3s">
+                            <p>Founded in 2021 by Precious Lunga (fondly known as Lady Presh), Orancy Planet is a global consultancy and innovation hub specializing in HR transformation, IT solutions, and sustainable business growth. With a deep passion for people, cultures, and evolving technology, Lady Presh has built Orancy Planet to connect with individuals and organizations from all walks of life, creating meaningful impacts in the world of HR and beyond.</p>
+                            <p>A natural leader and advocate for equality, Lady Presh's personal experiences have shaped her unwavering commitment to fairness, compassion, and humanity. Holding dual degrees in Business and Management from Oxford Brookes University and being a proud member of the Chartered Institute of Personnel and Development (CIPD), she brings over a decade of expertise in business development, change management, and global project execution across industries such as insurance, financial services, automotive, and humanitarian initiatives.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <figure class="img-box wow fadeInRight" data-wow-delay="0.5s">
+                            <img src="images/resource/pexels-tima-miroshnichenko-5686105.jpg" alt="Orancy Planet Leadership">
+                        </figure>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-top: 40px;">
+                    <div class="col-md-12">
+                        <div class="text wow fadeInUp" data-wow-delay="0.3s">
+                            <p>At Orancy Planet, we integrate cutting-edge HR strategies with transformative change management practices to optimize human capital and drive organizational success. Our tailored solutions empower businesses across the UK and globally, helping them build high-performing teams, streamline processes, and foster cultures of growth and inclusion.</p>
+                            <p>Guided by our core values—Innovation, Client-Centricity, Excellence, and Compassionate Leadership—we strive to be the trusted partner of choice for businesses and individuals. Our mission is to deliver innovative, high-tech solutions that enhance operational efficiency, drive competitiveness, and support sustainable growth, ensuring no one is left behind in the digital age.</p>
+                            <p>Lady Presh's vision extends to fostering high-tech innovation in emerging economies, particularly in Africa, bridging the gap between global advancements and local needs. Through strategic partnerships and a commitment to diversity, Orancy Planet is shaping an inclusive, prosperous, and sustainable future for businesses and communities worldwide.</p>
+                            <p>Together, we help our clients navigate complex business landscapes while fostering an empowered, inclusive environment. Let us help you say with confidence, "The HR and Tech aspects of my business? We've got it seamlessly covered!"</p>
                         </div>
                     </div>
                 </div>
@@ -370,74 +360,169 @@
         </section>
 
         <!-- Mission Section -->
-        <section class="mission-section sec-padd" style="background: url(images/resource/pexels-fauxels-3183150.jpg) no-repeat center center; background-size: cover;">
+        <section class="mission-section sec-padd" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/background/3.jpg); background-size: cover; background-position: center; background-attachment: fixed;">
             <div class="container">
-                <div class="section-title text-center">
-                    <h2 class="title-highlight-disable">Our Mission</h2>
-                    <h3>Empowering Businesses, Transforming Futures</h3>
-                </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="text">
-                            <p>We aim to empower businesses worldwide by delivering innovative, high-tech solutions that
-                                enhance operational efficiency, drive competitiveness, and support sustainable growth.
-                                We make technology accessible to all, ensuring no one is left behind as the world
-                                embraces the digital age.</p>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="text-center" style="color: white;">
+                            <div class="section-title center">
+                                <h2 class="title-highlight-center wow fadeInUp" data-wow-delay="0.3s"><span>Our Mission</span></h2>
+                                <h3 class="wow fadeInUp" data-wow-delay="0.5s">Empowering Businesses, Transforming Futures</h3>
+                            </div>
+                            <p class="lead wow fadeInUp" data-wow-delay="0.7s">Our mission is to deliver innovative, high-tech solutions that enhance operational efficiency, drive competitiveness, and support sustainable growth, ensuring no one is left behind in the digital age.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Values Section -->
+        <!-- Values Section -->
         <section class="values-section sec-padd">
             <div class="container">
                 <div class="section-title center">
-                    <h2 class="title-highlight-center">Our Values</h2>
+                    <h2 class="title-highlight-center"><span>Our Values</span></h2>
                 </div>
+                
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="value-box">
-                            <div class="icon_box">
-                                <span class="fa fa-lightbulb-o"></span>
+                        <div class="value-box wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="value-icon">
+                                <i class="fa fa-lightbulb-o"></i>
                             </div>
-                            <img src="images/resource/smiling_blonde_female_manager_holding_infographic_pencil_while_sitting.jpg" alt="Innovation" class="value-image">
-                            <h4>Innovation with Continuous Improvement</h4>
-                            <p>WWe embrace cutting-edge technology and foster a culture of innovation to deliver
-                                transformative solutions that stay ahead of industry trends. In a fast-evolving tech and HR
-                                landscape, we are committed to providing state-of-the-art services that enhance business
-                                operations and drive progress.</p>
+                            <h3>1. Innovation with Continuous Improvement</h3>
+                            <p>We embrace cutting-edge technology and foster a culture of innovation to deliver transformative solutions that stay ahead of industry trends. In a fast-evolving tech and HR landscape, we are committed to providing state-of-the-art services that enhance business operations and drive progress.</p>
                         </div>
                     </div>
+                    
                     <div class="col-md-4">
-                        <div class="value-box">
-                            <div class="icon_box">
-                                <span class="fa fa-users"></span>
+                        <div class="value-box wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="value-icon">
+                                <i class="fa fa-users"></i>
                             </div>
-                            <img src="images/resource/negotiating-with-new-employee.jpg" alt="Partnership" class="value-image">
-                            <h4>Client-Centricity and Partnerships</h4>
-                            <p>Our clients are at the heart of everything we do. We prioritize their unique needs, building
-                                long-term strategic alliances based on trust, collaboration, and mutual success. Together,
-                                we achieve more.</p>
+                            <h3>2. Client-Centricity and Partnerships</h3>
+                            <p>Our clients are at the heart of everything we do. We prioritize their unique needs, building long-term strategic alliances based on trust, collaboration, and mutual success. Together, we achieve more.</p>
                         </div>
                     </div>
+                    
                     <div class="col-md-4">
-                        <div class="value-box">
-                            <div class="icon_box">
-                                <span class="fa fa-bullseye"></span>
+                        <div class="value-box wow fadeInUp" data-wow-delay="0.7s">
+                            <div class="value-icon">
+                                <i class="fa fa-trophy"></i>
                             </div>
-                            <img src="images/resource/document-business-manager-hand-investment.jpg" alt="Excellence" class="value-image">
-                            <h4>Driven to Deliver with Excellence</h4>
-                            <p>We hold ourselves to the highest standards of quality and integrity. Every step of the
-                                transformation journey is guided by a commitment to delivering measurable results and
-                                being accountable for our impact.</p>
+                            <h3>3. Driven to Deliver with Excellence</h3>
+                            <p>We hold ourselves to the highest standards of quality and integrity. Every step of the transformation journey is guided by a commitment to delivering measurable results and being accountable for our impact.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        
+        <!-- CEO Section -->
+        <section class="ceo-section sec-padd" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Our CEO</span></h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="about-person wow fadeInLeft" data-wow-delay="0.3s">
+                            <img src="images/resource/owner.png" alt="Lady Presh - Orancy Planet CEO" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="text wow fadeInRight" data-wow-delay="0.3s">
+                            <h3>Precious Lunga (Lady Presh)</h3>
+                            <p>Precious Lunga, fondly known as Lady Presh, is the visionary CEO and Founder of Orancy Planet, a global consultancy and innovation hub specializing in HR transformation, IT solutions, and sustainable business growth. With over a decade of leadership experience, Lady Presh has established herself as a dynamic leader, entrepreneur, and advocate for equality and innovation.</p>
+                            <p>Her career spans diverse industries, including defense, healthcare, automotive, financial services, and humanitarian sectors, where she has consistently driven transformative change and delivered measurable results. A proud member of the Chartered Institute of Personnel and Development (CIPD), Lady Presh holds dual degrees in Business and Management from Oxford Brookes University and is deeply committed to fostering high-tech innovation in emerging economies, particularly in Africa.</p>
+                            <p>Guided by her mantra, "Strive through Innovation," Lady Presh blends cutting-edge technology with deep-rooted expertise to empower businesses and communities worldwide. Her leadership is defined by compassion, resilience, and a relentless drive to create an inclusive, sustainable future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="achievements-section sec-padd">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Achievements and Milestones</span></h2>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>1. Ministry of Defence – British Forces Germany</h4>
+                            <ul>
+                                <li>Served in key roles, including Human Resources, Movements, and Army Welfare, supporting military operations and ensuring smooth transitions.</li>
+                                <li>Awarded Gratuity for Long-Term Service in recognition of exceptional performance and dedication.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>2. NHS Redeployment Contract – Healthcare Sector</h4>
+                            <ul>
+                                <li>Led a redeployment project for displaced NHS staff, achieving a 95% success rate in workforce stabilization and resource optimization.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.5s">
+                            <h4>3. Global Recruitment Desk – Healthcare Workforce</h4>
+                            <ul>
+                                <li>Managed international recruitment, exceeding targets and attracting top global talent for the healthcare industry.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.6s">
+                            <h4>4. Claims Management System – Insurance, Automotive & Financial Services</h4>
+                            <ul>
+                                <li>Spearheaded the development of a claims management system, streamlining processes and enhancing customer experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.7s">
+                            <h4>5. Strategic Business Development – Automotive Industry</h4>
+                            <ul>
+                                <li>Onboarded 600+ garages into a breakdown-certified network within 3 months, fostering long-term partnerships with parts providers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.8s">
+                            <h4>6. Global Humanitarian & Supply Chain Consultancy</h4>
+                            <ul>
+                                <li>Partnered with global organizations to drive transformative change in recruitment, performance management, and training.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="achievement-box wow fadeInUp" data-wow-delay="0.9s">
+                            <h4>7. Business Ventures & Franchising</h4>
+                            <ul>
+                                <li>Recognized as Entrepreneur of the Month in the Oxford Entrepreneur Circle and awarded for Best Customer Service.</li>
+                                <li>Delivered the Best Speech at a networking event in Southampton and received an Oscar Award for exceptional business achievements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="border-bottom"></div>
 
@@ -468,137 +553,176 @@
 			</div>  
 		</section>
 
-        <!-- Footer -->
+        <!-- Partnerships Section -->
+        <section class="partnerships-section sec-padd">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center" style="color: #fff;"><span>Partnerships and Certifications</span></h2>
+                </div>
+                
+                <div class="partner-logo-container wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="partner-logo-item">
+                        <img src="images/parnters/microsoft.png" alt="Microsoft" class="img-responsive">
+                    </div>
+                    <div class="partner-logo-item">
+                        <img src="images/parnters/salesforce.png" alt="Salesforce" class="img-responsive">
+                    </div>
+                    <div class="partner-logo-item">
+                        <img src="images/parnters/paranimo.jpg" alt="Paranimo" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <footer class="main-footer">
-			<div class="widgets-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget about-column">
-								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
-								<div class="text">
-									<p>Revolutionizing HR functions and driving transformative change since 2021.</p>
-								</div>
-								<ul class="contact-info">
-									<li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
-									<li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
-									<li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
-									<li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget link-column">
-								<div class="section-title">
-									<h4>Our Services</h4>
-								</div>
-								<div class="widget-content">
-									<ul class="list">
-										<li><a href="services.html">HR Core Products</a></li>
-										<li><a href="services.html">Mediation Services</a></li>
-										<li><a href="services.html">Technology Development</a></li>
-										<li><a href="services.html">Health & Well-Being</a></li>
-										<li><a href="services.html">Training & Development</a></li>
-										<li><a href="services.html">International Business</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget link-column">
-								<div class="section-title">
-									<h4>Career Support</h4>
-								</div>
-								<div class="widget-content">
-									<ul class="list">
-										<li><a href="services.html">CV Writing Services</a></li>
-										<li><a href="services.html">Interview Coaching</a></li>
-										<li><a href="services.html">LinkedIn Optimization</a></li>
-										<li><a href="military-support.html">Military Support</a></li>
-										<li><a href="services.html#career-development">Career Development</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!--Footer Column-->
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
-                            <div class="footer-widget contact-column">
-                                <div class="section-title">
-                                    <h4>Social Media</h4>
+                            <div class="footer-widget about-column">
+                                <figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png" alt="Orancy Planet"></a></figure>
+                                <div class="text">
+                                    <p>Revolutionizing HR functions and driving transformative change since 2021.</p>
                                 </div>
-                                <ul class="social-icon">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-feed"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                <ul class="contact-info">
+                                    <li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon SN5 7EX</li>
+                                    <li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
+                                    <li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
+                                    <li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
                                 </ul>
-								<div style="margin-top: 30px;"></div>
-								<div class="tech-partners">
-									<h5>Technology Partners</h5>
-									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
-									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
-									<img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
-								</div>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="pull-left copy-text">
-						<p>© 2024 Orancy Planet. All Rights Reserved.</p>
-					</div>
-					<div class="pull-right get-text">
-						<ul class="footer-nav">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-							<li><a href="#">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget link-column">
+                                <div class="section-title">
+                                    <h4>Our Services</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="services.html">HR Consultancy</a></li>
+                                        <li><a href="services.html">Technology Solutions</a></li>
+                                        <li><a href="services.html">Career Support</a></li>
+                                        <li><a href="military-support.html">Military Support</a></li>
+                                        <li><a href="orancy-card.html">Orancy Card</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget post-column">
+                                <div class="section-title">
+                                    <h4>Quick Links</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget tech-column">
+                                <div class="section-title">
+                                    <h4>Technology Partners</h4>
+                                </div>
+                                <div class="widget-content tech-partners">
+                                    <img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+                                    <img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+                                    <img src="images/parnters/paranimo.jpg" alt="Paranimo" class="partner-logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="pull-left copy-text">
+                        <p>© 2024 Orancy Planet. All Rights Reserved.</p>
+                    </div>
+                    <div class="pull-right get-text">
+                        <ul class="footer-nav">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    <!-- Scripts -->
-    <div class="preloader"></div>
-		
-    
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.mixitup.min.js"></script>
-    <script src="js/jquery.fancybox.pack.js"></script>
-    <script src="js/imagezoom.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.polyglot.language.switcher.js"></script>
-    <script src="js/SmoothScroll.js"></script>
-    <script src="js/jquery.appear.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/wow.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/nouislider.js"></script>
-    <script src="js/isotope.js"></script>
-    <script src="js/pie-chart.js"></script>
-    <script src="js/custom.js"></script>
-    
-    <!-- revolution slider js -->
-    <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
-    <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
-    <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+        <!-- Scroll Top  -->
+        <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
+        <!-- preloader  -->
+        <div class="preloader"></div>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.mixitup.min.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/imagezoom.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/jquery.polyglot.language.switcher.js"></script>
+        <script src="js/SmoothScroll.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/jquery.countTo.js"></script>
+        <script src="js/validation.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/jquery.fitvids.js"></script>
+        <script src="js/nouislider.js"></script>
+        <script src="js/isotope.js"></script>
+        <script src="js/pie-chart.js"></script>
+
+        <!-- revolution slider js -->
+        <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+        <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+        <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+
+        <script src="js/custom.js"></script>
+
+        <script>
+            // Custom animation script
+            $(document).ready(function() {
+                // Handle animations when elements come into view
+                function animateWhenVisible() {
+                    $('.fade-in-up').each(function() {
+                        if ($(this).isInViewport()) {
+                            $(this).addClass('animated');
+                        }
+                    });
+                }
+                
+                // Helper function to check if element is in viewport
+                $.fn.isInViewport = function() {
+                    var elementTop = $(this).offset().top;
+                    var elementBottom = elementTop + $(this).outerHeight();
+                    var viewportTop = $(window).scrollTop();
+                    var viewportBottom = viewportTop + $(window).height();
+                    return elementBottom > viewportTop && elementTop < viewportBottom;
+                };
+                
+                // Run animation check on load and scroll
+                animateWhenVisible();
+                $(window).on('scroll resize', animateWhenVisible);
+                
+                // Initialize WOW.js for animations
+                new WOW().init();
+            });
+        </script>
+    </div>
 </body>
 
 </html>
