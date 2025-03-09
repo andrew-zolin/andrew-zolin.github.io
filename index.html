@@ -105,6 +105,116 @@
 		.footer-nav li a:hover {
 			color: var(--secondary-color);
 		}
+		.partnerships-section {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .partnerships-section h2 {
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .partner-logo-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            height: 100px;
+        }
+
+        .partner-logo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .partner-logo-item img {
+            max-width: 140px;
+            max-height: 100px;
+            border-radius: 10px;
+        }
+		/* Partner styles */
+        .partner-item {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .partner-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .partner-item img {
+            max-width: 120px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Event styles */
+        .event-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .event-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+        }
+        
+        .event-card:hover .event-image {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+        
+        .event-details {
+            padding: 20px;
+        }
+        
+        .event-date {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+        .stagger-delay-5 { transition-delay: 0.5s; }
+
 	</style>
 </head>
 
@@ -252,7 +362,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.1s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-people3"></span>
+								<i class="fa fa-users" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>HR Transformation</h4>
 							<p>Strategic HR solutions that revolutionize your human capital management for the digital age.</p>
@@ -261,7 +371,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.3s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-technology"></span>
+								<i class="fa fa-laptop" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Technology Integration</h4>
 							<p>Cutting-edge technology and AI-driven tools to streamline processes and enhance decision-making.</p>
@@ -270,7 +380,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.5s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-heart2"></span>
+								<i class="fa fa-heartbeat" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Employee Well-Being</h4>
 							<p>Comprehensive programs to enhance wellness, boost productivity, and foster positive workplace culture.</p>
@@ -279,7 +389,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.7s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-star"></span>
+								<i class="fa fa-star" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Career Support</h4>
 							<p>Expert guidance for career development, CV writing, interview coaching, and LinkedIn optimization.</p>
@@ -291,7 +401,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.2s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-arrows"></span>
+								<i class="fa fa-exchange" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Change Management</h4>
 							<p>Strategic guidance through organizational transitions and transformational initiatives.</p>
@@ -300,7 +410,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.4s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-search"></span>
+								<i class="fa fa-search" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Talent Acquisition</h4>
 							<p>Innovative recruitment strategies to identify and attract top talent for your organization.</p>
@@ -309,7 +419,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.6s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-layers"></span>
+								<i class="fa fa-graduation-cap" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Training & Development</h4>
 							<p>Customized learning programs to enhance skills, knowledge, and capabilities across your workforce.</p>
@@ -318,7 +428,7 @@
 					<div class="col-md-3 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.8s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-connection"></span>
+								<i class="fa fa-globe" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>International Business</h4>
 							<p>Expert guidance for global expansion, cross-cultural management, and international compliance.</p>
@@ -330,7 +440,7 @@
 					<div class="col-md-6 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.3s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-flag"></span>
+								<i class="fa fa-users" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Mediation & Employee Relations</h4>
 							<p>Professional conflict resolution and relationship management to create harmonious work environments.</p>
@@ -339,7 +449,7 @@
 					<div class="col-md-6 col-sm-6 col-x-12">
 						<div class="service-item center wow fadeInUp" data-wow-delay="0.6s">
 							<div style="display: flex; justify-content: center; align-items: center;" class="icon-box">
-								<span class="icon-shield"></span>
+								<i class="fa fa-shield" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h4>Military Personnel & Families Support</h4>
 							<p>Specialized programs designed to support career transitions and provide resources for military families.</p>
@@ -350,6 +460,64 @@
 				<div class="text-center" style="margin-top: 40px;">
 					<a href="services.html" class="thm-btn style-2 wow fadeInUp" data-wow-delay="0.5s">View All Services</a>
 				</div>
+			</div>
+		</section>
+
+		<section class="fact-counter style-2 sec-padd" style="background-color: var(--primary-color);">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center" style="color: var(--text-light);"><span>Networking and Technology Events</span></h2>
+					<p style="color: var(--text-light);">As a central hub for business development, we organise technology events, summits, and networking opportunities, enabling businesses to engage with thought leaders, learn about industry trends, and collaborate on innovative projects.</p>
+				</div>
+				<div class="row clearfix">
+					<div class="counter-outer clearfix">
+						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
+							data-wow-duration="0ms">
+							<div class="item">
+								<div class="icon"><i class="fa fa-users" style="color: var(--secondary-color);"></i>
+								</div>
+								<div class="count-outer"><span class="count-text" data-speed="3000"
+										data-stop="500">0</span>+</div>
+								<h4 style="color: var(--primary-color);" class="counter-title">Networking Connections</h4>
+							</div>
+						</article>
+
+						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
+							data-wow-duration="0ms">
+							<div class="item">
+								<div class="icon"><i class="fa fa-calendar" style="color: var(--secondary-color);"></i>
+								</div>
+								<div class="count-outer"><span class="count-text" data-speed="3000"
+										data-stop="25">0</span>+</div>
+								<h4 style="color: var(--primary-color);" class="counter-title">Annual Events</h4>
+							</div>
+						</article>
+
+						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
+							data-wow-duration="0ms">
+							<div class="item">
+								<div class="icon"><i class="fa fa-lightbulb-o" style="color: var(--secondary-color);"></i>
+								</div>
+								<div class="count-outer"><span class="count-text" data-speed="3000"
+										data-stop="100">0</span>+</div>
+								<h4 style="color: var(--primary-color);" class="counter-title">Industry Thought Leaders</h4>
+							</div>
+						</article>
+
+						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
+							data-wow-duration="0ms">
+							<div class="item">
+								<div class="icon"><i class="fa fa-rocket" style="color: var(--secondary-color);"></i></div>
+								<div class="count-outer"><span class="count-text" data-speed="3000"
+										data-stop="40">0</span>+</div>
+								<h4 style="color: var(--primary-color);" class="counter-title">Innovation Projects</h4>
+							</div>
+						</article>
+					</div>
+				</div>
+				<!-- <div class="text-center" style="margin-top: 40px;">
+					<a href="events.html" class="thm-btn style-3 wow fadeInUp" data-wow-delay="0.5s">View Upcoming Events</a>
+				</div> -->
 			</div>
 		</section>
 
@@ -429,63 +597,7 @@
 			</div>
 		</section>
 
-		<section class="fact-counter style-2 sec-padd" style="background-color: var(--primary-color);">
-			<div class="container">
-				<div class="section-title center">
-					<h2 class="title-highlight-center" style="color: var(--text-light);"><span>Networking and Technology Events</span></h2>
-					<p style="color: var(--text-light);">As a central hub for business development, we organise technology events, summits, and networking opportunities, enabling businesses to engage with thought leaders, learn about industry trends, and collaborate on innovative projects.</p>
-				</div>
-				<div class="row clearfix">
-					<div class="counter-outer clearfix">
-						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
-							data-wow-duration="0ms">
-							<div class="item">
-								<div class="icon"><i class="icon-people3" style="color: var(--secondary-color);"></i>
-								</div>
-								<div class="count-outer"><span class="count-text" data-speed="3000"
-										data-stop="500">0</span>+</div>
-								<h4 style="color: var(--primary-color);" class="counter-title">Networking Connections</h4>
-							</div>
-						</article>
-
-						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
-							data-wow-duration="0ms">
-							<div class="item">
-								<div class="icon"><i class="icon-technology" style="color: var(--secondary-color);"></i>
-								</div>
-								<div class="count-outer"><span class="count-text" data-speed="3000"
-										data-stop="25">0</span>+</div>
-								<h4 style="color: var(--primary-color);" class="counter-title">Annual Events</h4>
-							</div>
-						</article>
-
-						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
-							data-wow-duration="0ms">
-							<div class="item">
-								<div class="icon"><i class="icon-layers" style="color: var(--secondary-color);"></i>
-								</div>
-								<div class="count-outer"><span class="count-text" data-speed="3000"
-										data-stop="100">0</span>+</div>
-								<h4 style="color: var(--primary-color);" class="counter-title">Industry Thought Leaders</h4>
-							</div>
-						</article>
-
-						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
-							data-wow-duration="0ms">
-							<div class="item">
-								<div class="icon"><i class="icon-star" style="color: var(--secondary-color);"></i></div>
-								<div class="count-outer"><span class="count-text" data-speed="3000"
-										data-stop="40">0</span>+</div>
-								<h4 style="color: var(--primary-color);" class="counter-title">Innovation Projects</h4>
-							</div>
-						</article>
-					</div>
-				</div>
-				<div class="text-center" style="margin-top: 40px;">
-					<a href="events.html" class="thm-btn style-3 wow fadeInUp" data-wow-delay="0.5s">View Upcoming Events</a>
-				</div>
-			</div>
-		</section>
+		
 
 		<section class="fact-counter style-2 sec-padd" style="background-color: var(--primary-color);">
 			<div class="container">
@@ -497,7 +609,7 @@
 						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
 							data-wow-duration="0ms">
 							<div class="item">
-								<div class="icon"><i class="icon-heart2" style="color: var(--secondary-color);"></i>
+								<div class="icon"><i class="fa fa-heartbeat" style="color: var(--secondary-color);"></i>
 								</div>
 								<div class="count-outer"><span class="count-text" data-speed="3000"
 										data-stop="2">0</span>+</div>
@@ -508,7 +620,7 @@
 						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
 							data-wow-duration="0ms">
 							<div class="item">
-								<div class="icon"><i class="icon-people3" style="color: var(--secondary-color);"></i>
+								<div class="icon"><i class="fa fa-smile-o" style="color: var(--secondary-color);"></i>
 								</div>
 								<div class="count-outer"><span class="count-text" data-speed="3000"
 										data-stop="500">0</span>+</div>
@@ -519,7 +631,7 @@
 						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
 							data-wow-duration="0ms">
 							<div class="item">
-								<div class="icon"><i class="icon-technology" style="color: var(--secondary-color);"></i>
+								<div class="icon"><i class="fa fa-cogs" style="color: var(--secondary-color);"></i>
 								</div>
 								<div class="count-outer"><span class="count-text" data-speed="3000"
 										data-stop="50">0</span>+</div>
@@ -531,7 +643,7 @@
 						<article class="column counter-column col-md-3 col-sm-6 col-xs-12 wow fadeIn"
 							data-wow-duration="0ms">
 							<div class="item">
-								<div class="icon"><i class="icon-star" style="color: var(--secondary-color);"></i></div>
+								<div class="icon"><i class="fa fa-thumbs-up" style="color: var(--secondary-color);"></i></div>
 								<div class="count-outer"><span class="count-text" data-speed="3000"
 										data-stop="90">0</span>%</div>
 								<h4 style="color: var(--primary-color);" class="counter-title">Client Satisfaction</h4>
@@ -594,7 +706,7 @@
 						<div class="item wow fadeInLeft" data-wow-delay="0.3s">
 							<div class="inner-box">
 								<div class="icon_box">
-									<span class="icon-star"></span>
+									<i class="fa fa-check-circle"></i>
 								</div>
 								<h4>Integrity</h4>
 							</div>
@@ -607,7 +719,7 @@
 						<div class="item wow fadeInRight" data-wow-delay="0.5s">
 							<div class="inner-box">
 								<div class="icon_box">
-									<span class="icon-people3"></span>
+									<i class="fa fa-users"></i>
 								</div>
 								<h4>Diversity</h4>
 							</div>
@@ -625,7 +737,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-connection"></span>
+								<i class="fa fa-plug" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Technology Partners</h5>
 						</div>
@@ -633,7 +745,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-layers"></span>
+								<i class="fa fa-briefcase" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Business Associates</h5>
 						</div>
@@ -641,7 +753,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-flag"></span>
+								<i class="fa fa-map-marker"style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Country Local Partners</h5>
 						</div>
@@ -651,7 +763,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.3s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-heart2"></span>
+								<i class="fa fa-heart" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Charity Organizations</h5>
 						</div>
@@ -659,7 +771,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.5s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-arrows"></span>
+								<i class="fa fa-money" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Investment Partners</h5>
 						</div>
@@ -667,7 +779,7 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0.7s">
 						<div class="collaboration-item">
 							<div class="icon_box">
-								<span class="icon-shapes"></span>
+								<i class="fa fa-users" style="color: var(--secondary-color); font-size: 32px;"></i>
 							</div>
 							<h5>Strategic Alliances</h5>
 						</div>
@@ -716,7 +828,7 @@
 					<div class="col-md-6 col-sm-6 col-xs-12">
 						<div class="differentiator-item wow fadeInRight" data-wow-delay="0.5s">
 							<div class="icon-box">
-								<i class="fa fa-handshake-o" style="font-size: 36px; color: var(--secondary-color);"></i>
+								<i class="fa fa-users" style="font-size: 36px; color: var(--secondary-color);"></i>
 							</div>
 							<h4>Strategic HR-Tech Partnerships</h4>
 							<p>Collaborate with leading HR tech providers, fintech innovators, and digital transformation experts to deliver holistic workforce solutions.</p>
@@ -896,7 +1008,7 @@
 
 		<div class="border-bottom"></div>
 
-		<section class="clients-section sec-padd">
+		<!-- <section class="clients-section sec-padd">
 			<div class="container">
 				<div class="section-title center">
 					<h2 class="title-highlight-center"><span>our partners</span></h2>
@@ -921,7 +1033,82 @@
 
 				</div>
 			</div>
-		</section>
+		</section> -->
+
+		<!-- <section class="clients-section sec-padd">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center"><span>Partnerships and Certifications</span></h2>
+				</div>
+				<div class="client-carousel owl-carousel owl-theme">
+		
+					<div class="item tool_tip partner-logo-item" title="Partner">
+						<img src="images/parnters/microsoft.png" alt="">
+					</div>
+					<div class="item tool_tip partner-logo-item" title="Partner">
+						<img src="images/parnters/salesforce.png" alt="">
+					</div>
+                    <div class="item tool_tip partner-logo-item" title="Partner">
+                        <img src="images/parnters/linkedin-logo.png" alt="">
+                    </div>		
+					<div class="item tool_tip partner-logo-item" title="Partner">
+						<img src="images/parnters/paranimo.png" alt="">
+					</div>		
+				</div>
+			</div>  
+		</section> -->
+
+		<section class="partners-section sec-padd" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>Technology Partners & Collaborations</span></h2>
+                    <p class="text-center">We Drive Innovation Through Strategic Partnerships</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="partner-item wow fadeInUp" data-wow-delay="0.2s">
+                            <img src="images/parnters/microsoft.png" alt="Microsoft">
+                            <h4>Microsoft</h4>
+                            <p>Leveraging Azure cloud solutions for scalable and secure HR technology.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="partner-item wow fadeInUp" data-wow-delay="0.3s">
+                            <img src="images/parnters/salesforce.png" alt="Salesforce">
+                            <h4>Salesforce</h4>
+                            <p>Integrating CRM tools to enhance client relationship management.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="partner-item wow fadeInUp" data-wow-delay="0.4s">
+                            <img src="images/parnters/paranimo.png" alt="Paranimo">
+                            <h4>Paranimo</h4>
+                            <p>Delivering well-being programs to support employee health.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="partner-item wow fadeInUp" data-wow-delay="0.5s">
+                            <img src="images/parnters/linkedin-logo.png" alt="LinkedIn">
+                            <h4>LinkedIn</h4>
+                            <p>Optimizing recruitment and employer branding through LinkedIn's powerful platform.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="text-center wow fadeIn" data-wow-delay="0.3s" style="margin-top: 40px;">
+                            <p>We believe in the power of collaboration. By partnering with industry leaders, we deliver cutting-edge solutions that drive innovation and success for our clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
 		<section class="testimonials sec-padd">
 			<div class="container">
@@ -1030,11 +1217,11 @@
 									<p>Pioneering HR Transformation Since 2021. Empowering People, Transforming Business, Sustaining the Future.</p>
 								</div>
 								<ul class="contact-info">
-									<li><span class="icon-signs"></span>Basepoint River Mead Drive, Westlea,<br>Swindon
+									<li><span class="fa fa-map-marker"></span>Basepoint River Mead Drive, Westlea,<br>Swindon
 										SN5 7EX</li>
-									<li><span class="icon-phone-call"></span>Phone: +44 7828720102</li>
-									<li><span class="icon-note"></span>Email: info@orancyplanet.com</li>
-									<li><span class="icon-clock"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+									<li><span class="fa fa-phone"></span>Phone: +44 7828720102</li>
+									<li><span class="fa fa-envelope"></span>Email: info@orancyplanet.com</li>
+									<li><span class="fa fa-clock-o"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
 								</ul>
 							</div>
 						</div>
@@ -1066,19 +1253,18 @@
 										<li><a href="about.html">About Us</a></li>
 										<li><a href="services.html">Services</a></li>
 										<li><a href="contact.html">Contact Us</a></li>
-										<li><a href="military-support.html">Military Support</a></li>
+										<li><a href="orancy-card.html#military-support">Military Support</a></li>
 										<li><a href="about.html#careers">Careers</a></li>
 									</ul>
 								</div>
 							</div>
 						</div>
-						<!--Footer Column-->
 						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget contact-column">
-								<div class="section-title">
-									<h4>Social Media</h4>
-								</div>
-								<ul class="social-icon">
+                            <div class="footer-widget contact-column">
+                                <div class="section-title">
+                                    <h4>Social Media</h4>
+                                </div>
+                                <ul class="social-icon">
 									<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
 									<li><a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a></li>
 									<li><a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -1087,12 +1273,15 @@
 									<li><a href="https://pin.it/786ggb7JC" target="_blank"><i class="fa fa-pinterest"></i></a></li>
 								</ul>
 								<div style="margin-top: 30px;"></div>
-								<div class="booking-links">
-									<h5>Book a Consultation</h5>
-									<a href="https://calendly.com" class="thm-btn style-3 btn-sm">Book via Calendly</a>
+								<div class="tech-partners">
+									<h5>Technology Partners</h5>
+									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+									<img src="images/parnters/linkedin-logo.png" alt="LinkedIn" class="partner-logo">
+									<img src="images/parnters/paranimo.png" alt="Paranimo" class="partner-logo">
 								</div>
-							</div>
-						</div>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -1103,8 +1292,8 @@
 					</div>
 					<div class="pull-right get-text">
 						<ul class="footer-nav">
-							<li><a href="#">Privacy Policy</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
+							<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							<!-- <li><a href="#">Terms & Conditions</a></li> -->
 							<li><a href="contact.html">Contact Us</a></li>
 						</ul>
 					</div>
