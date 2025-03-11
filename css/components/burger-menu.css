@@ -124,6 +124,7 @@ body.menu-open {
 }
 
 .extended-menu-header img {
+    border-radius: 12px;
     max-width: 150px;
     margin-bottom: 10px;
 }
