@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="css/custom-colors.css">
 	<link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/custom-animations.css">
+	<link rel="stylesheet" href="css/components/burger-menu.css">
 
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
@@ -196,7 +197,7 @@
         .card-tier:hover .tier-badge span {
             transform: rotate(45deg) scale(1.1);
         }
-        
+
         .benefit-box {
             background: #f9f9f9;
             border-left: 4px solid var(--secondary-color);
@@ -547,29 +548,102 @@
 
 <body>
     <div class="boxed_wrapper">
+        <!-- Extended Menu Container -->
+        <div class="extended-menu">
+            <div class="close-menu">
+                <i class="fa fa-times"></i>
+            </div>
+            
+            <div class="extended-menu-header">
+                <img src="images/logo/logo.png" alt="Orancy Planet">
+                <p>Empowering People, Transforming Business, Sustaining the Future</p>
+            </div>
+            
+            <!-- Main Navigation Section -->
+            <div class="menu-section">
+                <h4>Main Navigation</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li class="active"><a href="orancy-card.html">Orancy Card</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="menu-section">
+                <h4>Our Services</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="services.html#hr-transformation">HR Transformation</a></li>
+                    <li><a href="services.html#technology-integration">Technology Integration</a></li>
+                    <li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+                    <li><a href="services.html#employee-wellbeing">Employee Well-Being</a></li>
+                    <li><a href="services.html#training-development">Training & Development</a></li>
+                    <li><a href="services.html#change-management">Change Management</a></li>
+                </ul>
+            </div>
+            
+            <!-- Special Programs Section -->
+            <div class="menu-section">
+                <h4>Special Programs</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="orancy-card.html#military-support">Military Support</a></li>
+                    <li><a href="orancy-card.html#healthcare">Healthcare Workers</a></li>
+                    <li><a href="services.html#international-business">International Business</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="extended-menu-contact">
+                <p><i class="fa fa-map-marker"></i> Basepoint River Mead Drive, Westlea, Swindon SN5 7EX</p>
+                <p><i class="fa fa-phone"></i> +44 7828720102</p>
+                <p><i class="fa fa-envelope"></i> info@orancyplanet.com</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a>
+                    <a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Backdrop -->
+        <div class="menu-backdrop"></div>
+
         <section class="theme_menu stricky">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<div class="main-logo">
-							<a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
-						</div>
-					</div>
-					<div class="col-md-9 menu-column">
-						<nav class="menuzord" id="main_menu">
-							<ul class="menuzord-menu">
-								<!-- Home, Services, Orancy Card, About Us, Contact Us -->
-								<li><a href="index.html">Home</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="orancy-card.html">Orancy Card</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <!-- Burger Menu Icon -->
+                        <a href="#" class="mobile-nav-toggler">
+                            <div class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        
+                        <nav class="menuzord">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="active"><a href="orancy-card.html">Orancy Card</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="inner-banner has-base-color-overlay text-center">
             <div class="video-background">
@@ -899,49 +973,6 @@
                             <div class="wow fadeInUp" data-wow-delay="0.7s" style="margin-top: 30px;">
                                 <a href="contact.html" class="thm-btn">Contact Us</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="partners-section sec-padd" style="background-color: #f9f9f9;">
-            <div class="container">
-                <div class="section-title center">
-                    <h2 class="title-highlight-center"><span>Technology Partners & Collaborations</span></h2>
-                    <p class="text-center">We Drive Innovation Through Strategic Partnerships</p>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.2s">
-                            <img src="images/parnters/microsoft.png" alt="Microsoft">
-                            <h4>Microsoft</h4>
-                            <p>Leveraging Azure cloud solutions for scalable and secure HR technology.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.3s">
-                            <img src="images/parnters/salesforce.png" alt="Salesforce">
-                            <h4>Salesforce</h4>
-                            <p>Integrating CRM tools to enhance client relationship management.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.5s">
-                            <img src="images/parnters/linkedin-logo.png" alt="LinkedIn">
-                            <h4>LinkedIn</h4>
-                            <p>Optimizing recruitment and employer branding through LinkedIn's powerful platform.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="text-center wow fadeIn" data-wow-delay="0.3s" style="margin-top: 40px;">
-                            <p>We believe in the power of collaboration. By partnering with industry leaders, we deliver cutting-edge solutions that drive innovation and success for our clients.</p>
                         </div>
                     </div>
                 </div>
@@ -1356,60 +1387,60 @@
         </section>
         
         <footer class="main-footer">
-			<div class="widgets-section">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget about-column">
+            <div class="widgets-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget about-column">
 								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png"
 											alt="Orancy Planet"></a></figure>
-								<div class="text">
+                                <div class="text">
 									<p>Pioneering HR Transformation Since 2021. Empowering People, Transforming Business, Sustaining the Future.</p>
-								</div>
-								<ul class="contact-info">
+                                </div>
+                                <ul class="contact-info">
 									<li><span class="fa fa-map-marker"></span>Basepoint River Mead Drive, Westlea,<br>Swindon
 										SN5 7EX</li>
 									<li><span class="fa fa-phone"></span>Phone: +44 7828720102</li>
 									<li><span class="fa fa-envelope"></span>Email: info@orancyplanet.com</li>
 									<li><span class="fa fa-clock-o"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget link-column">
-								<div class="section-title">
-									<h4>Our Services</h4>
-								</div>
-								<div class="widget-content">
-									<ul class="list">
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget link-column">
+                                <div class="section-title">
+                                    <h4>Our Services</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
 										<li><a href="services.html">HR Transformation</a></li>
 										<li><a href="services.html">Technology Integration</a></li>
 										<li><a href="services.html">Talent Acquisition</a></li>
 										<li><a href="services.html">Employee Well-Being</a></li>
-										<li><a href="services.html">Training & Development</a></li>
-										<li><a href="services.html">International Business</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
-							<div class="footer-widget link-column">
-								<div class="section-title">
+                                        <li><a href="services.html">Training & Development</a></li>
+                                        <li><a href="services.html">International Business</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget link-column">
+                                <div class="section-title">
 									<h4>Key Links</h4>
-								</div>
-								<div class="widget-content">
-									<ul class="list">
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="list">
 										<li><a href="orancy-card.html">Orancy Card</a></li>
 										<li><a href="about.html">About Us</a></li>
 										<li><a href="services.html">Services</a></li>
 										<li><a href="contact.html">Contact Us</a></li>
 										<li><a href="orancy-card.html#military-support">Military Support</a></li>
 										<li><a href="about.html#careers">Careers</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-6 col-xs-12">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-widget contact-column">
                                 <div class="section-title">
                                     <h4>Social Media</h4>
@@ -1421,35 +1452,35 @@
 									<li><a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a></li>
 									<li><a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a></li>
 									<li><a href="https://pin.it/786ggb7JC" target="_blank"><i class="fa fa-pinterest"></i></a></li>
-								</ul>
-								<div style="margin-top: 30px;"></div>
-								<div class="tech-partners">
-									<h5>Technology Partners</h5>
-									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
-									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+                                </ul>
+                                <div style="margin-top: 30px;"></div>
+                                <div class="tech-partners">
+                                    <h5>Technology Partners</h5>
+                                    <img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+                                    <img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
 									<img src="images/parnters/linkedin-logo.png" alt="LinkedIn" class="partner-logo">
 									<!-- <img src="images/parnters/paranimo.png" alt="Paranimo" class="partner-logo"> -->
-								</div>
+                                </div>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-bottom">
-				<div class="container">
-					<div class="pull-left copy-text">
-						<p>© 2024 Orancy Planet. All Rights Reserved.</p>
-					</div>
-					<div class="pull-right get-text">
-						<ul class="footer-nav">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="pull-left copy-text">
+                        <p>© 2024 Orancy Planet. All Rights Reserved.</p>
+                    </div>
+                    <div class="pull-right get-text">
+                        <ul class="footer-nav">
 							<li><a href="privacy-policy.html">Privacy Policy</a></li>
 							<!-- <li><a href="#">Terms & Conditions</a></li> -->
 							<li><a href="contact.html">Contact Us</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</footer>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Scroll Top  -->
         <button class="scroll-top tran3s color2_bg"><span class="fa fa-angle-up"></span></button>
@@ -1494,6 +1525,7 @@
 
         <script id="map-script" src="js/default-map.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/burger-menu.js"></script>
     </div>
 
     <script>

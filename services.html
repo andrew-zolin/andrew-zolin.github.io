@@ -32,6 +32,7 @@
 	<link rel="stylesheet" href="css/custom-colors.css">
 	<link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/custom-animations.css">
+	<link rel="stylesheet" href="css/components/burger-menu.css">
     
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
@@ -602,69 +603,105 @@
 
 	</style>
 </head>
-<body>
+<body class="lang-en">
     <div class="boxed_wrapper">
-        <!-- Header Section -->
-        <!-- <section class="theme_menu stricky">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<div class="main-logo">
-							<a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
-						</div>
-					</div>
-					<div class="col-md-9 menu-column">
-						<nav class="menuzord" id="main_menu">
-							<ul class="menuzord-menu">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li class="active"><a href="services.html">Services</a>
-									<ul class="dropdown">
-										<li><a href="#hr-core">HR Core Products</a></li>
-										<li><a href="#partnership">Partnership Development</a></li>
-										<li><a href="#development">Development Programs</a></li>
-										<li><a href="#business">Business Development</a></li>
-										<li><a href="#customer-journey">Customer Journey</a></li>
-									</ul>
-								</li>
-								<li><a href="orancy-card.html">Orancy Card</a></li>
-								<li><a href="military-support.html">Military Support</a>
-									<ul class="dropdown">
-										<li><a href="military-career-transition.html">Career Transition</a></li>
-										<li><a href="military-family-support.html">Family Support</a></li>
-										<li><a href="military-development.html">Personal Development</a></li>
-									</ul>
-								</li>							
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section> -->
+        <!-- Extended Menu Container -->
+        <div class="extended-menu">
+            <div class="close-menu">
+                <i class="fa fa-times"></i>
+            </div>
+            
+            <div class="extended-menu-header">
+                <img src="images/logo/logo.png" alt="Orancy Planet">
+                <p>Empowering People, Transforming Business, Sustaining the Future</p>
+            </div>
+            
+            <!-- Main Navigation Section -->
+            <div class="menu-section">
+                <h4>Main Navigation</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="services.html">Services</a></li>
+                    <li><a href="orancy-card.html">Orancy Card</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="menu-section">
+                <h4>Our Services</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="services.html#hr-transformation">HR Transformation</a></li>
+                    <li><a href="services.html#technology-integration">Technology Integration</a></li>
+                    <li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+                    <li><a href="services.html#employee-wellbeing">Employee Well-Being</a></li>
+                    <li><a href="services.html#training-development">Training & Development</a></li>
+                    <li><a href="services.html#change-management">Change Management</a></li>
+                </ul>
+            </div>
+            
+            <!-- Special Programs Section -->
+            <div class="menu-section">
+                <h4>Special Programs</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="orancy-card.html#military-support">Military Support</a></li>
+                    <li><a href="orancy-card.html#healthcare">Healthcare Workers</a></li>
+                    <li><a href="services.html#international-business">International Business</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="extended-menu-contact">
+                <p><i class="fa fa-map-marker"></i> Basepoint River Mead Drive, Westlea, Swindon SN5 7EX</p>
+                <p><i class="fa fa-phone"></i> +44 7828720102</p>
+                <p><i class="fa fa-envelope"></i> info@orancyplanet.com</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a>
+                    <a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Backdrop -->
+        <div class="menu-backdrop"></div>
+
         <section class="theme_menu stricky">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3">
-						<div class="main-logo">
-							<a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
-						</div>
-					</div>
-					<div class="col-md-9 menu-column">
-						<nav class="menuzord" id="main_menu">
-							<ul class="menuzord-menu">
-								<!-- Home, Services, Orancy Card, About Us, Contact Us -->
-								<li><a href="index.html">Home</a></li>
-								<li><a href="services.html">Services</a></li>
-								<li><a href="orancy-card.html">Orancy Card</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="contact.html">Contact</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <!-- Burger Menu Icon -->
+                        <a href="#" class="mobile-nav-toggler">
+                            <div class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        
+                        <nav class="menuzord">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="services.html">Services</a></li>
+                                <li><a href="orancy-card.html">Orancy Card</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Banner Section -->
         <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
             <div class="container">
@@ -1932,7 +1969,7 @@
         </section>
 
         <!-- Technology Partners Section -->
-        <section class="partners-section sec-padd" style="background-color: #f9f9f9;">
+        <!-- <section class="partners-section sec-padd" style="background-color: #f9f9f9;">
             <div class="container">
                 <div class="section-title center">
                     <h2 class="title-highlight-center"><span>Technology Partners & Collaborations</span></h2>
@@ -1973,7 +2010,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- Footer Section -->
@@ -2074,10 +2111,11 @@
 		</footer>
     </div>
     
-    <!-- jQuery -->
+    <!-- Scripts -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/burger-menu.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.mixitup.min.js"></script>
     <script src="js/jquery.fancybox.pack.js"></script>

@@ -8449,3 +8449,107 @@ article.slide-item.center {}
 
 
 
+/* Добавляю стили для логотипа в мобильной версии в конец файла */
+
+/* Mobile Logo Styles */
+@media (max-width: 991px) {
+    .main-logo {
+        padding: 5px 0;
+        margin: 0 !important;
+        max-height: 60px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .main-logo img {
+        max-height: 50px;
+        width: auto;
+        max-width: 100%;
+    }
+    
+    .theme_menu {
+        height: auto;
+        min-height: 70px;
+        padding: 5px 0;
+    }
+    
+    .theme_menu .row {
+        display: flex;
+        align-items: center;
+    }
+    
+    .col-md-3 {
+        width: 70%;
+        float: left;
+        padding-right: 0;
+    }
+    
+    .col-md-9.menu-column {
+        width: 30%;
+        float: right;
+        position: static;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-logo {
+        max-width: 80%;
+        padding-left: 10px;
+    }
+    
+    .main-logo img {
+        max-height: 40px;
+    }
+    
+    .col-md-3 {
+        width: 60%;
+    }
+    
+    .col-md-9.menu-column {
+        width: 40%;
+    }
+    
+    /* Убедимся, что бургер-меню видно */
+    .mobile-nav-toggler {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        right: 10px;
+    }
+    
+    .burger-icon, 
+    .burger-icon span {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Принудительно показываем бургер-меню */
+.mobile-nav-toggler {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 9999;
+}
+
+.burger-icon, 
+.burger-icon span {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

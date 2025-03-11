@@ -36,10 +36,10 @@
 	<link rel="stylesheet" href="css/custom-colors.css">
 	<link rel="stylesheet" href="css/pages.css">
 	<link rel="stylesheet" href="css/custom-animations.css">
+	<link rel="stylesheet" href="css/components/burger-menu.css">
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
-
 	<link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
 
 	<!-- Canonical URL -->
@@ -105,6 +105,11 @@
 		.footer-nav li a:hover {
 			color: var(--secondary-color);
 		}
+		
+		
+		
+		
+		
 		.partnerships-section {
             background: var(--primary-color);
             color: #fff;
@@ -215,12 +220,121 @@
         .stagger-delay-4 { transition-delay: 0.4s; }
         .stagger-delay-5 { transition-delay: 0.5s; }
 
-	</style>
+		/* Burger Menu Styles */
+		
+
+		/* Mobile Menu Overlay */
+		/* .mobile-menu-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.7);
+			z-index: 998;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.4s ease;
+		} */
+		
+		</style>
+		<!-- Отладочный скрипт -->
+		<script>
+			console.log("Index HTML loaded");
+			
+			// Проверка загрузки скриптов
+			window.addEventListener('DOMContentLoaded', function() {
+				console.log("DOM Content loaded");
+				
+				// Проверка наличия элементов меню
+				console.log("Menu Elements check:");
+				console.log("- Mobile toggler: ", document.querySelector('.mobile-nav-toggler') ? "FOUND" : "NOT FOUND");
+				console.log("- Extended menu: ", document.querySelector('.extended-menu') ? "FOUND" : "NOT FOUND");
+				console.log("- Menu overlay: ", document.querySelector('.mobile-menu-overlay') ? "FOUND" : "NOT FOUND");
+				
+				// Проверка стилей
+				const extendedMenu = document.querySelector('.extended-menu');
+				if (extendedMenu) {
+					const styles = window.getComputedStyle(extendedMenu);
+					console.log("Menu styles:", {
+						position: styles.position,
+						right: styles.right,
+						zIndex: styles.zIndex,
+						visibility: styles.visibility
+					});
+				}
+			});
+		</script>
 </head>
 
-<body>
+<body class="lang-en">
 
 	<div class="boxed_wrapper">
+
+		<!-- Extended Menu Container -->
+		<div class="extended-menu">
+			<div class="close-menu">
+				<i class="fa fa-times"></i>
+			</div>
+			
+			<div class="extended-menu-header">
+				<img src="images/logo/logo.png" alt="Orancy Planet">
+				<p>Empowering People, Transforming Business, Sustaining the Future</p>
+			</div>
+			
+			<!-- Main Navigation Section -->
+			<div class="menu-section">
+				<h4>Main Navigation</h4>
+				<ul class="extended-menu-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="orancy-card.html">Orancy Card</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			
+			<!-- Services Section -->
+			<div class="menu-section">
+				<h4>Our Services</h4>
+				<ul class="extended-menu-nav">
+					<li><a href="services.html#hr-transformation">HR Transformation</a></li>
+					<li><a href="services.html#technology-integration">Technology Integration</a></li>
+					<li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+					<li><a href="services.html#employee-wellbeing">Employee Well-Being</a></li>
+					<li><a href="services.html#training-development">Training & Development</a></li>
+					<li><a href="services.html#change-management">Change Management</a></li>
+				</ul>
+			</div>
+			
+			<!-- Special Programs Section -->
+			<div class="menu-section">
+				<h4>Special Programs</h4>
+				<ul class="extended-menu-nav">
+					<li><a href="orancy-card.html#military-support">Military Support</a></li>
+					<li><a href="orancy-card.html#healthcare">Healthcare Workers</a></li>
+					<li><a href="services.html#international-business">International Business</a></li>
+				</ul>
+			</div>
+			
+			<!-- Contact Section -->
+			<div class="extended-menu-contact">
+				<p><i class="fa fa-map-marker"></i> Basepoint River Mead Drive, Westlea, Swindon SN5 7EX</p>
+				<p><i class="fa fa-phone"></i> +44 7828720102</p>
+				<p><i class="fa fa-envelope"></i> info@orancyplanet.com</p>
+				
+				<div class="social-icons">
+					<a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a>
+					<a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Удаляем эту кнопку, она будет только в хедере -->
+		<!-- <a href="#" class="mobile-nav-toggler"><i class="fa fa-bars"></i></a> -->
 
 		<section class="theme_menu stricky">
 			<div class="container">
@@ -231,10 +345,19 @@
 						</div>
 					</div>
 					<div class="col-md-9 menu-column">
-						<nav class="menuzord" id="main_menu">
+						<!-- Burger Menu Icon -->
+						<a href="#" class="mobile-nav-toggler">
+							<div class="burger-icon">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+						
+						<nav class="menuzord">
 							<ul class="menuzord-menu">
 								<!-- Home, Services, Orancy Card, About Us, Contact Us -->
-								<li><a href="index.html">Home</a></li>
+								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="services.html">Services</a></li>
 								<li><a href="orancy-card.html">Orancy Card</a></li>
 								<li><a href="about.html">About Us</a></li>
@@ -245,6 +368,9 @@
 				</div>
 			</div>
 		</section>
+		
+		<!-- Menu Backdrop -->
+		<div class="menu-backdrop"></div>
 
 		<!--Start rev slider wrapper-->
 		<section class="rev_slider_wrapper">
@@ -1056,7 +1182,7 @@
 			</div>
 		</section>
 
-		<section class="gallery sec-padd3  default-gallery" style="background-color: var(--primary-color);">
+		<!-- <section class="gallery sec-padd3  default-gallery" style="background-color: var(--primary-color);">
 			<div class="container">
 				<div class="section-title" style="margin-bottom: 0px;">
 					<h2 style="color: var(--text-light);">Our Services</h2>
@@ -1065,7 +1191,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item HR-Services">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/1.jpg" alt="HR Transformation"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1084,7 +1209,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item Technology">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/2.jpg" alt="Technology Solutions"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1103,7 +1227,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item Training">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/3.jpg" alt="Training Programs"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1122,7 +1245,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item Career">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/4.jpg" alt="Career Support"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1141,7 +1263,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item HR-Services">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/5.jpg" alt="Employee Well-being"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1160,7 +1281,6 @@
 					<div class="col-md-4 col-sm-6 col-xs-12 filter-item Technology">
 						<div class="single-item">
 							<div class="img-box">
-								<!-- <img src="images/gallery/6.jpg" alt="AI Solutions"> -->
 								<div class="overlay">
 									<div class="inner">
 										<div class="social">
@@ -1179,7 +1299,7 @@
 				</div>
 			</div>
 		</section>
-
+ -->
 
 
 		<div class="border-bottom"></div>
@@ -1234,51 +1354,8 @@
 			</div>  
 		</section> -->
 
-		<section class="partners-section sec-padd" style="background-color: #f9f9f9;">
-            <div class="container">
-                <div class="section-title center">
-                    <h2 class="title-highlight-center"><span>Technology Partners & Collaborations</span></h2>
-                    <p class="text-center">We Drive Innovation Through Strategic Partnerships</p>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.2s">
-                            <img src="images/parnters/microsoft.png" alt="Microsoft">
-                            <h4>Microsoft</h4>
-                            <p>Leveraging Azure cloud solutions for scalable and secure HR technology.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.3s">
-                            <img src="images/parnters/salesforce.png" alt="Salesforce">
-                            <h4>Salesforce</h4>
-                            <p>Integrating CRM tools to enhance client relationship management.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-4 col-sm-6">
-                        <div class="partner-item wow fadeInUp" data-wow-delay="0.5s">
-                            <img src="images/parnters/linkedin-logo.png" alt="LinkedIn">
-                            <h4>LinkedIn</h4>
-                            <p>Optimizing recruitment and employer branding through LinkedIn's powerful platform.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="text-center wow fadeIn" data-wow-delay="0.3s" style="margin-top: 40px;">
-                            <p>We believe in the power of collaboration. By partnering with industry leaders, we deliver cutting-edge solutions that drive innovation and success for our clients.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-
-		<section class="testimonials sec-padd">
+		<!-- <section class="testimonials sec-padd">
 			<div class="container">
 				<div class="section-title center">
 					<h2 class="title-highlight-center"><span>Client Testimonials</span></h2>
@@ -1317,7 +1394,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="marketing-strategy sec-padd2" style="background-color: #f7f7f7;">
 			<div class="container">
@@ -1518,6 +1595,48 @@
 	<script src="js/rev-slider/revolution.extension.video.min.js"></script>
 	<script src="js/custom.js"></script>
 	
+	<!-- Mobile Menu JS -->
+	<script>
+		(function($) {
+			// Mobile Nav Toggler
+			if ($('.mobile-nav-toggler').length) {
+				$('.mobile-nav-toggler').on('click', function() {
+					$('body').addClass('mobile-menu-visible');
+					$('.mobile-menu').addClass('active');
+					$('.menu-backdrop').fadeIn(300);
+				});
+			}
+			
+			// Close Mobile Menu
+			$('.close-btn, .menu-backdrop').on('click', function() {
+				$('body').removeClass('mobile-menu-visible');
+				$('.mobile-menu').removeClass('active');
+				$('.menu-backdrop').fadeOut(300);
+			});
+			
+			// Check and fix menu on window resize
+			$(window).on('resize', function() {
+				if ($(window).width() > 991) {
+					$('body').removeClass('mobile-menu-visible');
+					$('.mobile-menu').removeClass('active');
+					$('.menu-backdrop').fadeOut(300);
+				}
+			});
+		})(jQuery);
+	</script>
+
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRvBPo3-t31YFk588DpMYS6EqKf-oGBSI"></script>
+    <script src="js/gmap.js"></script>
+
+    <script id="map-script" src="js/default-map.js"></script>
+    <script src="js/custom.js"></script>
+    
+    <!-- Burger Menu Script -->
+    <script src="js/burger-menu.js"></script>
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
 </body>
 
 </html>
