@@ -5136,8 +5136,8 @@ input,textarea {font-family: 'Open Sans', sans-serif;display: block; font-size: 
 }
 
 .main-footer .footer-logo {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px; */
+  margin-bottom: 30px;
   /* padding-top: 5px; */
   width: 100px;
 }

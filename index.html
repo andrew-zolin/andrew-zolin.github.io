@@ -37,6 +37,7 @@
 	<link rel="stylesheet" href="css/pages.css">
 	<link rel="stylesheet" href="css/custom-animations.css">
 	<link rel="stylesheet" href="css/components/burger-menu.css">
+	<link rel="stylesheet" href="css/components/custom-scrollbar.css">
 	<!-- Favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
@@ -236,7 +237,155 @@
 			visibility: hidden;
 			transition: all 0.4s ease;
 		} */
+		 /* Event styles */
+        .event-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .event-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+        }
+        
+        .event-card:hover .event-image {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+        
+        .event-details {
+            padding: 20px;
+        }
+        
+        .event-date {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+        .stagger-delay-5 { transition-delay: 0.5s; }
 		
+		.benefit-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .benefit-box:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-box.active {
+            background: #f0f0f0;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .benefit-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .benefit-box h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-box:hover h4:after {
+            width: 100px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefit-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+        
+        .benefit-list li:hover {
+            transform: translateX(5px);
+            opacity: 1;
+        }
+
+        .benefit-list li:before {
+            content: "\f00c";
+            font-family: 'FontAwesome';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-list li:hover:before {
+            transform: scale(1.2);
+        }
+        
+        .benefit-category h3 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-category h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: var(--secondary-color);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
 		</style>
 		<!-- Отладочный скрипт -->
 		<script>
@@ -288,6 +437,7 @@
 				<ul class="extended-menu-nav">
 					<li class="active"><a href="index.html">Home</a></li>
 					<li><a href="services.html">Services</a></li>
+					<li><a href="prices.html">Prices</a></li>
 					<li><a href="orancy-card.html">Orancy Card</a></li>
 					<li><a href="about.html">About Us</a></li>
 					<li><a href="contact.html">Contact</a></li>
@@ -311,8 +461,8 @@
 			<div class="menu-section">
 				<h4>Special Programs</h4>
 				<ul class="extended-menu-nav">
-					<li><a href="orancy-card.html#military-support">Military Support</a></li>
-					<li><a href="orancy-card.html#healthcare">Healthcare Workers</a></li>
+					<li><a href="military-support-and-health-care.html#military-support">Military Support</a></li>
+					<li><a href="military-support-and-health-care.html#healthcare">Healthcare Workers</a></li>
 					<li><a href="services.html#international-business">International Business</a></li>
 				</ul>
 			</div>
@@ -359,6 +509,7 @@
 								<!-- Home, Services, Orancy Card, About Us, Contact Us -->
 								<li class="active"><a href="index.html">Home</a></li>
 								<li><a href="services.html">Services</a></li>
+								<li><a href="prices.html">Prices</a></li>
 								<li><a href="orancy-card.html">Orancy Card</a></li>
 								<li><a href="about.html">About Us</a></li>
 								<li><a href="contact.html">Contact</a></li>
@@ -904,7 +1055,7 @@
 		<section class="fact-counter style-2 sec-padd" style="background-color: var(--primary-color);">
 			<div class="container">
 				<div class="section-title center">
-					<h2 class="title-highlight-center" style="color: var(--text-light);"><span>Our Impact</span></h2>
+					<h2 class="title-highlight-center" style="color: var(--text-light);"><span>Our Vision</span></h2>
 				</div>
 				<div class="row clearfix">
 					<div class="counter-outer clearfix">
@@ -1450,6 +1601,82 @@
 			</div>
 		</section>
 
+		<section class="events-section sec-padd">
+            <div class="container">
+                <div class="section-title center">
+                    <h2 class="title-highlight-center"><span>News, Events & Podcasts</span></h2>
+                    <p class="text-center">Stay Informed, Inspired, and Connected</p>
+                </div>
+                
+                <div class="text-center" style="margin-bottom: 40px;">
+                    <p>Join us for industry-leading events, webinars, and podcasts designed to empower businesses and professionals with the latest insights and trends.</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="benefit-category">
+                            <h3>Industry-Related Events</h3>
+                        </div>
+                        <div class="event-card wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="event-image" style="background-image: url('images/resource/pexels-tima-miroshnichenko-7567218.jpg');"></div>
+                            <div class="event-details">
+                                <div class="event-date">Annual Event</div>
+                                <h4>Annual HR Innovation Summit</h4>
+                                <p>A gathering of HR leaders to discuss the future of work.</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 70px;" class="event-card wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="event-image" style="background-image: url('images/resource/pexels-tima-miroshnichenko-7567218.jpg');"></div>
+                            <div class="event-details">
+                                <div class="event-date">Bi-Annual Event</div>
+                                <h4>Tech Transformation Conference</h4>
+                                <p>Explore the latest in HR technology and digital transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="benefit-category">
+                            <h3>Webinars and Live Q&A Sessions</h3>
+                        </div>
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.2s">
+                            <h4>Upcoming Webinars</h4>
+                            <ul class="benefit-list">
+                                <li>The Future of Remote Work: Challenges and Opportunities</li>
+                                <li>Building an Inclusive Workplace Culture</li>
+                                <li>HR Technology Implementation: Best Practices</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.3s">
+                            <h4>Live Q&A Sessions</h4>
+                            <p>Interactive sessions with industry experts to answer your burning questions.</p>
+                        </div>
+                        
+                        <div class="benefit-category" style="margin-top: 30px;">
+                            <h3>Expert Panel Discussions & Podcasts</h3>
+                        </div>
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.4s">
+                            <h4>Featured Panels</h4>
+                            <ul class="benefit-list">
+                                <li>Navigating the Great Resignation: Retention Strategies That Work</li>
+                                <li>The Role of HR in Digital Transformation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0.5s">
+                            <h4>Podcast Series</h4>
+                            <ul class="benefit-list">
+                                <li>HR Insights: Expert Interviews on Workforce Trends</li>
+                                <li>Tech Talk: How Technology is Reshaping HR</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 		<footer class="main-footer">
 			<div class="widgets-section">
 				<div class="container">
@@ -1458,9 +1685,9 @@
 							<div class="footer-widget about-column">
 								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png"
 											alt="Orancy Planet"></a></figure>
-								<div class="text">
+								<!-- <div class="text">
 									<p>Pioneering HR Transformation Since 2021. Empowering People, Transforming Business, Sustaining the Future.</p>
-								</div>
+								</div> -->
 								<ul class="contact-info">
 									<li><span class="fa fa-map-marker"></span>Basepoint River Mead Drive, Westlea,<br>Swindon
 										SN5 7EX</li>
@@ -1477,12 +1704,12 @@
 								</div>
 								<div class="widget-content">
 									<ul class="list">
-										<li><a href="services.html">HR Transformation</a></li>
-										<li><a href="services.html">Technology Integration</a></li>
-										<li><a href="services.html">Talent Acquisition</a></li>
-										<li><a href="services.html">Employee Well-Being</a></li>
-										<li><a href="services.html">Training & Development</a></li>
-										<li><a href="services.html">International Business</a></li>
+										<li><a href="services.html#hr-transformation">HR Transformation</a></li>
+										<li><a href="services.html#technology-integration">Technology Integration</a></li>
+										<li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+										<li><a href="services.html#employee-well-being">Employee Well-Being</a></li>
+										<li><a href="services.html#training-development">Training & Development</a></li>
+										<li><a href="services.html#international-business">International Business</a></li>
 									</ul>
 								</div>
 							</div>

@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Orancy Planet | Prices</title>
+
+	<!-- SEO Meta Tags -->
+	<meta name="description" content="Orancy Planet - Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+	<meta name="keywords" content="HR consultancy, technology solutions, career support, military support, employee well-being, training development">
+	<meta name="author" content="Orancy Planet">
+	
+	<!-- Mobile Responsive Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Open Graph Meta Tags -->
+	<meta property="og:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+	<meta property="og:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+	<meta property="og:image" content="images/logo/logo.png">
+	<!-- <meta property="og:url" content="https://orancyplanet.com"> -->
+
+	<!-- Twitter Card Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Orancy Planet | HR Consultancy & Technology Solutions">
+	<meta name="twitter:description" content="Revolutionizing HR functions with innovative solutions. Expert HR consultancy, technology integration, and career support services.">
+	<meta name="twitter:image" content="images/logo/logo.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/custom-colors.css">
+	<link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/custom-animations.css">
+	<link rel="stylesheet" href="css/components/burger-menu.css">
+	<link rel="stylesheet" href="css/components/custom-scrollbar.css">
+    
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="images/fav-icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/fav-icon/favicon-16x16.png" sizes="16x16">
+
+	<!-- Canonical URL -->
+	<!-- <link rel="canonical" href="https://orancyplanet.com"> -->
+
+	<!-- Inline Styles -->
+	<style>
+		.color1_bg {
+			background: var(--secondary-color) !important;
+			color: var(--primary-color) !important;
+		}
+
+		.thm-color {
+			color: var(--secondary-color) !important;
+		}
+
+		.menuzord-menu > li > a {
+			color: var(--primary-color);
+		}
+
+		.menuzord-menu > li.active > a,
+		.menuzord-menu > li:hover > a {
+			color: var(--secondary-color);
+		}
+
+		.menuzord-menu > li > .megamenu,
+		.menuzord-menu > li > .dropdown {
+			background: var(--background-light);
+		}
+
+		.menuzord-menu > li > .megamenu a,
+		.menuzord-menu > li > .dropdown a {
+			color: var(--text-light);
+		}
+
+		.menuzord-menu > li > .megamenu a:hover,
+		.menuzord-menu > li > .dropdown a:hover {
+			color: var(--secondary-color);
+		}
+
+		/* Additional Styles */
+		.tech-partners .partner-logo {
+			max-width: 80px;
+			margin: 5px;
+			border-radius: var(--border-radius-sm);
+		}
+
+		.footer-nav {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer-nav li {
+			display: inline-block;
+			margin-left: 20px;
+		}
+
+		.footer-nav li a {
+			color: var(--text-light);
+		}
+
+		.footer-nav li a:hover {
+			color: var(--secondary-color);
+		}
+        
+        /* Journey Timeline Styles */
+        .journey-timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .journey-step {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+            z-index: 2;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .step-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 25px;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        /* Process Box Styles */
+        .process-box {
+            transition: all 0.3s ease;
+        }
+        
+        .process-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .process-icon {
+            margin-bottom: 20px;
+        }
+        
+        /* Feature Block Styles */
+        .feature-block {
+            padding: 15px;
+            border-radius: 5px;
+            background: rgba(var(--secondary-color-rgb), 0.05);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-block:hover {
+            background: rgba(var(--secondary-color-rgb), 0.1);
+            transform: translateX(5px);
+        }
+        
+        /* Animation Enhancement */
+        .wow {
+            visibility: hidden;
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+		
+		/* Enhanced service icon boxes */
+		.service-box {
+			transition: all 0.3s ease;
+			padding: 30px 20px;
+			border-radius: 8px;
+			margin-bottom: 30px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+			background: #fff;
+		}
+		
+		.service-box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+		}
+		
+		/* Unified icon styling for both .icon and .icon-box */
+		.service-box .icon,
+		.service-box .icon-box {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 20px;
+			background: var(--primary-color);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #fff;
+			font-size: 32px;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+		}
+		
+		.service-box:hover .icon,
+		.service-box:hover .icon-box {
+			/* background: var(--secondary-color); */
+			transform: scale(1.1);
+		}
+		
+		.service-box .icon:after,
+		.service-box .icon-box:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+		}
+		
+		.service-box .icon i,
+		.service-box .icon-box i {
+			animation: pulse 2s infinite;
+			position: relative;
+			z-index: 1;
+		}
+		
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		
+		.service-box h3,
+		.service-box h4 {
+			margin-bottom: 15px;
+			font-weight: 600;
+			color: var(--primary-color);
+			transition: all 0.3s ease;
+		}
+		
+		.service-box:hover h3,
+		.service-box:hover h4 {
+			color: var(--secondary-color);
+		}
+		
+		.service-box p {
+			color: #666;
+			line-height: 1.7;
+		}
+		
+		/* Additional Styles */
+		
+		/* Numbered step icons */
+		.step-number {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			background-color: var(--secondary-color);
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			transition: all 0.3s ease;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			z-index: 1;
+		}
+		
+		/* Customer Journey Section Enhancements */
+		.journey-step {
+			margin-bottom: 30px;
+			position: relative;
+			transition: all 0.4s ease;
+		}
+		
+		.step-content {
+			background: rgba(255,255,255,0.9);
+			padding: 25px;
+			border-radius: 5px;
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+			transition: all 0.4s ease;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+		}
+		
+		.journey-step:hover .step-content {
+			transform: translateY(-5px) rotateY(5deg);
+			box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+		}
+		
+		.step-content:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 5px;
+			background: var(--secondary-color);
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.4s ease;
+		}
+		
+		.journey-step:hover .step-content:after {
+			transform: scaleX(1);
+		}
+		
+		.step-content h4 {
+			color: var(--primary-color);
+			margin-bottom: 15px;
+			font-weight: 600;
+			transition: all 0.3s ease;
+		}
+		
+		.journey-step:hover .step-content h4 {
+			color: var(--secondary-color);
+		}
+		
+		/* Numbered step icons */
+		.step-number {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			background-color: var(--secondary-color);
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+			transition: all 0.3s ease;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			z-index: 1;
+		}
+		
+		.journey-step:hover .step-number {
+			transform: scale(1.2) rotate(360deg);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+		}
+		
+		/* Accordion panel enhancements */
+		.panel-default {
+			margin-bottom: 15px;
+			border: none;
+			box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+			border-radius: 5px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+		
+		.panel-default:hover {
+			box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+		}
+		
+		.panel-heading {
+			padding: 0;
+			background-color: rgba(255,255,255,0.95) !important;
+			border: none !important;
+		}
+		
+		.panel-title a {
+			display: block;
+			padding: 15px 20px;
+			color: var(--primary-color);
+			font-weight: 600;
+			position: relative;
+			transition: all 0.3s ease;
+		}
+		
+		.panel-title a:hover, 
+		.panel-title a:not(.collapsed) {
+			color: var(--secondary-color);
+			background-color: rgba(255,255,255,1);
+		}
+		
+		.panel-title a i {
+			margin-right: 10px;
+			transition: all 0.4s ease;
+		}
+		
+		.panel-title a:not(.collapsed) i {
+			transform: rotate(360deg);
+			color: var(--secondary-color);
+		}
+		
+		.panel-collapse {
+			background-color: rgba(255,255,255,0.95);
+		}
+		
+		.panel-body {
+			padding: 20px;
+		}
+		
+		/* Consultation box enhancements */
+		.consultation-box {
+			background: rgba(255,255,255,0.9);
+			padding: 30px;
+			border-radius: 5px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+			transition: all 0.4s ease;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+		}
+		
+		.consultation-box:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle at top right, rgba(var(--secondary-color-rgb), 0.1), transparent 70%);
+			z-index: -1;
+		}
+		
+		.consultation-box:hover {
+			transform: translateY(-10px);
+			box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+		}
+		
+		.consultation-box h3 {
+			color: var(--primary-color);
+			margin-bottom: 15px;
+			position: relative;
+			display: inline-block;
+		}
+		
+		.consultation-box h3:after {
+			content: '';
+			position: absolute;
+			bottom: -5px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50px;
+			height: 2px;
+			background-color: var(--secondary-color);
+			transition: all 0.3s ease;
+		}
+		
+		.consultation-box:hover h3:after {
+			width: 100px;
+		}
+		
+		/* Additional Styles */
+		
+		/* Accordion Toggle Icons */
+		.panel-title a .fa-plus {
+			display: inline-block;
+		}
+		
+		.panel-title a .fa-minus {
+			display: none;
+		}
+		
+		.panel-title a[aria-expanded="true"] .fa-plus {
+			display: none;
+		}
+		
+		.panel-title a[aria-expanded="true"] .fa-minus {
+			display: inline-block;
+		}
+        /* Partner styles */
+        .partner-item {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .partner-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .partner-item img {
+            max-width: 120px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Event styles */
+        .event-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .event-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            transition: all 0.5s ease;
+        }
+        
+        .event-card:hover .event-image {
+            transform: scale(1.1);
+            filter: brightness(1.1);
+        }
+        
+        .event-details {
+            padding: 20px;
+        }
+        
+        .event-date {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stagger-delay-1 { transition-delay: 0.1s; }
+        .stagger-delay-2 { transition-delay: 0.2s; }
+        .stagger-delay-3 { transition-delay: 0.3s; }
+        .stagger-delay-4 { transition-delay: 0.4s; }
+        .stagger-delay-5 { transition-delay: 0.5s; }
+
+            .color1_bg {
+                background: var(--secondary-color) !important;
+                color: var(--primary-color) !important;
+            }
+    
+            .thm-color {
+                color: var(--secondary-color) !important;
+            }
+    
+            .menuzord-menu > li > a {
+                color: var(--primary-color);
+            }
+    
+            .menuzord-menu > li.active > a,
+            .menuzord-menu > li:hover > a {
+                color: var(--secondary-color);
+            }
+    
+            .menuzord-menu > li > .megamenu,
+            .menuzord-menu > li > .dropdown {
+                background: var(--background-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a,
+            .menuzord-menu > li > .dropdown a {
+                color: var(--text-light);
+            }
+    
+            .menuzord-menu > li > .megamenu a:hover,
+            .menuzord-menu > li > .dropdown a:hover {
+                color: var(--secondary-color);
+            }
+    
+            /* Additional Styles */
+            .tech-partners .partner-logo {
+                max-width: 80px;
+                margin: 5px;
+                border-radius: var(--border-radius-sm);
+            }
+    
+            .footer-nav {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .footer-nav li {
+                display: inline-block;
+                margin-left: 20px;
+            }
+    
+            .footer-nav li a {
+                color: var(--text-light);
+            }
+    
+            .footer-nav li a:hover {
+                color: var(--secondary-color);
+            }
+    
+            .process-box {
+                background: var(--text-light);
+                padding: 30px;
+                margin-bottom: 30px;
+                border-radius: var(--border-radius-md);
+                box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+                transition: all 0.3s ease;
+            }
+    
+            .process-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            }
+    
+            .process-box .step-number {
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                color: var(--text-light);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+    
+            .success-stats {
+                background: var(--primary-color);
+                color: var(--text-light);
+                padding: 60px 0;
+                margin: 40px 0;
+                border-radius: var(--border-radius-md);
+            }
+    
+            .success-stats .stat-item {
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .success-stats .stat-number {
+                font-size: 48px;
+                font-weight: bold;
+                color: var(--secondary-color);
+                margin-bottom: 10px;
+            }
+    
+            .success-stats .stat-text {
+                font-size: 18px;
+            }
+    
+            .features-list {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 20px 0;
+                text-align: left;
+            }
+    
+            .features-list li {
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+    
+            .features-list li:last-child {
+                border-bottom: none;
+            }
+
+        /* Стили для таблицы цен */
+        .pricing-table-container {
+            margin-bottom: 40px;
+        }
+
+        .pricing-table-wrapper {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .pricing-table-wrapper table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pricing-table-wrapper th {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .pricing-table-wrapper td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+        }
+
+        .pricing-table-wrapper tr:last-child td {
+            border-bottom: none;
+        }
+
+        .pricing-table-wrapper .service-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            width: 30%;
+        }
+
+        .pricing-table-wrapper .service-description {
+            width: 40%;
+            color: #666;
+        }
+
+        .pricing-table-wrapper .service-price {
+            width: 15%;
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 18px;
+        }
+
+        .pricing-table-wrapper .service-action {
+            width: 15%;
+            text-align: center;
+        }
+
+        .pricing-table-wrapper .thm-btn {
+            padding: 8px 15px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 767px) {
+            .pricing-table-wrapper {
+                overflow-x: auto;
+            }
+            
+            .pricing-table-wrapper table {
+                min-width: 600px;
+            }
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+            margin: 40px 0;
+        }
+	</style>
+</head>
+<body class="lang-en">
+    <div class="boxed_wrapper">
+        <!-- Extended Menu Container -->
+        <div class="extended-menu">
+            <div class="close-menu">
+                <i class="fa fa-times"></i>
+            </div>
+            
+            <div class="extended-menu-header">
+                <img src="images/logo/logo.png" alt="Orancy Planet">
+                <p>Empowering People, Transforming Business, Sustaining the Future</p>
+            </div>
+            
+            <!-- Main Navigation Section -->
+            <div class="menu-section">
+                <h4>Main Navigation</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="services.html">Services</a></li>
+                    <li><a href="orancy-card.html">Orancy Card</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="menu-section">
+                <h4>Our Services</h4>
+                <ul class="extended-menu-nav">
+                    <li><a href="services.html#hr-transformation">HR Transformation</a></li>
+                    <li><a href="services.html#technology-integration">Technology Integration</a></li>
+                    <li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+                    <li><a href="services.html#employee-wellbeing">Employee Well-Being</a></li>
+                    <li><a href="services.html#training-development">Training & Development</a></li>
+                    <li><a href="services.html#change-management">Change Management</a></li>
+                </ul>
+            </div>
+            
+            <!-- Special Programs Section -->
+            <div class="menu-section">
+                <h4>Special Programs</h4>
+                <ul class="extended-menu-nav">
+					<li><a href="military-support-and-health-care.html#military-support">Military Support</a></li>
+					<li><a href="military-support-and-health-care.html#healthcare">Healthcare Workers</a></li>
+					<li><a href="services.html#international-business">International Business</a></li>
+				</ul>
+            </div>
+            
+            <!-- Contact Section -->
+            <div class="extended-menu-contact">
+                <p><i class="fa fa-map-marker"></i> Basepoint River Mead Drive, Westlea, Swindon SN5 7EX</p>
+                <p><i class="fa fa-phone"></i> +44 7828720102</p>
+                <p><i class="fa fa-envelope"></i> info@orancyplanet.com</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a>
+                    <a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Backdrop -->
+        <div class="menu-backdrop"></div>
+
+        <section class="theme_menu stricky">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="main-logo">
+                            <a href="index.html"><img src="images/logo/logo.png" alt="Orancy Planet"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 menu-column">
+                        <!-- Burger Menu Icon -->
+                        <a href="#" class="mobile-nav-toggler">
+                            <div class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        
+                        <nav class="menuzord">
+                            <ul class="menuzord-menu">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li class="active"><a href="prices.html">Prices</a></li>
+                                <li><a href="orancy-card.html">Orancy Card</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Section -->
+        <!-- <div class="inner-banner has-base-color-overlay text-center" style="background: url(images/resource/retro-vhs-packaging-shelves.jpg); background-size: cover; background-position: center; width: 100%; max-height: 260px; margin: 0; padding: 0; position: relative;">
+            <div class="container">
+                <div class="box">
+                    <h1>Our Services</h1>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="inner-banner has-base-color-overlay text-center">
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="videos/3248176-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="box">
+                    <h1>Prices</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcumb-wrapper">
+            <div class="container">
+                <div class="pull-left">
+                    <ul class="list-inline link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Prices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CV and Cover Letter Services -->
+		<section id="cv-cover-letter-services" class="service-overview sec-padd">
+			<div class="container">
+				<div class="section-title center">
+					<h2 class="title-highlight-center"><span>Craft a Standout CV and Cover Letter</span></h2>
+					<p>Your CV and cover letter are your first impression on potential employers. Our expert team has helped over 1000+ clients land their dream jobs, with a 90% success rate in securing interviews.</p>
+				</div>
+
+				<!-- Success Stats -->
+				<div class="success-stats">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">90%</div>
+									<div class="stat-text">Interview Success Rate</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">2 Weeks</div>
+									<div class="stat-text">Average Time to First Interview</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="stat-item">
+									<div class="stat-number">1000+</div>
+									<div class="stat-text">Successful Placements</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Service Packages -->
+				<div class="row">
+					<!-- Gold Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table">
+							<div class="price-header">
+								<h3>Gold Package</h3>
+								<p>New CV + Telephone Consultations</p>
+								<div class="price">
+									<span class="amount">£120</span>
+								</div>
+								<span>Perfect for job
+									seekers who need
+									a polished CV to
+									stand out in
+									competitive
+									markets</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new, professionally written CV</b> tailored to your target roles.</li>
+								<li>An <b>outstanding personal profile</b> and comprehensive
+									career history highlighting your expertise, capabilities, and achievements.</li>
+								<li><b>Keyword optimization</b> to ensure your CV passes Applicant Tracking Systems (ATS).</li>
+								<li>A <b>well-designed, easy-to-read layout</b> that grabs attention</li>
+								<li><b>Unlimited revisions</b> and changes for 6 months, including telephone consultations.</li>
+								<li>Delivery in <b>Microsoft Word (fully editable)</b> and <b>PDF formats</b>.</li>
+								<li><b>Turnaround time:</b> 4 working days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_6oEbLU34sgLg4daeUX" class="thm-btn">Buy Now</a>
+						</div>
+					</div>
+
+					<!-- Platinum Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table featured">
+							<div class="price-header">
+								<h3>Platinum Package</h3>
+								<p>New CV + Cover Letter + Telephone Consultations</p>
+								<div class="price">
+									<span class="amount">£150</span>
+								</div>
+								<span>Ideal for job
+									seekers who want
+									a complete
+									application
+									package to make a
+									lasting impression.</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new CV and tailored cover letter</b> designed for your target roles.</li>
+								<li>An <b>outstanding personal profile</b> and detailed career history showcasing your expertise and achievements.</li>
+								<li><b>Keyword
+									optimization</b> to
+									ensure your CV
+									passes ATS.</li>
+								<li>A <b>professional,
+									easy-to-read
+									layout</b> for both CV
+									and cover letter</li>
+								<li><b>Unlimited
+									revisions</b> and
+									changes for 6
+									months, including
+									telephone
+									consultations.</li>
+								<li>Delivery
+									in <b>Microsoft
+										Word (fully
+										editable)</b> and <b></b>PDF formats.</b></li>
+									formats.</li>
+								<li><b>Turnaround
+									time:</b> 4 working
+									days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_5kA7vE8oM2Uq4da8wA" class="thm-btn">Buy Now</a>
+						</div>
+					</div>
+
+					<!-- Diamond Package -->
+					<div class="col-md-4 col-sm-6">
+						<div class="pricing-table">
+							<div class="price-header">
+								<h3>Diamond Package</h3>
+								<p>New CV
+									+ Cover Letter +
+									LinkedIn Profile +
+									Telephone
+									Consultations</p>
+								<div class="price">
+									<span class="amount">£200</span>
+								</div>
+								<span>The ultimate
+									package for job
+									seekers who want
+									to dominate both
+									online and
+									offline job
+									markets.</span>
+							</div>
+							<ul class="features-list">
+								<li>A <b>brand-new CV,
+									tailored cover
+									letter, and
+									optimized
+									LinkedIn profile.</b></li>
+								<li>An <b>outstanding
+									personal
+									profile</b> and
+									detailed career
+									history
+									showcasing your
+									expertise and
+									achievements.</li>
+								<li><b>Keyword
+									optimization</b> for
+									CV and LinkedIn to pass ATS and
+									attract recruiters.</li>
+								<li>A <b>professional,
+									easy-to-read
+									layout</b> for all
+									documents.</li>
+								<li><b>Unlimited
+									revisions</b> and
+									changes for 6
+									months, including
+									telephone
+									consultations.</li>
+								<li>Delivery
+									in <b>Microsoft
+										Word (fully
+										editable)</b> and 
+										<b>PDF formats.</b>
+									</li>
+								<li></b>Turnaround
+									time:</b> 4 working
+									days.</li>
+							</ul>
+							<a href="https://buy.stripe.com/test_fZe6rAbAYdz44da28d" class="thm-btn">Buy Now</a>
+						</div>
+					</div>
+				</div>
+		</section>
+        
+        <div class="container">
+            <div class="section-title center">
+                <h2 class="title-highlight-center"><span>Our Services and Pricing</span></h2>
+                <p>Choose suitable services for your business or career</p>
+            </div>
+
+            <!-- Personal Development & Corporate Training -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Personal Development & Corporate Training</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Personal Development Training</td>
+                                <td class="service-description">Customized training sessions for individual growth and skill development</td>
+                                <td class="service-price">£100 - £2,000 per session</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Executive Training</td>
+                                <td class="service-description">Comprehensive development programs for executive-level professionals</td>
+                                <td class="service-price">£5,000 - £20,000 per program</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Leadership Development</td>
+                                <td class="service-description">Specialized training to enhance leadership capabilities and strategic thinking</td>
+                                <td class="service-price">£3,000 - £15,000 per participant</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Line Manager Training</td>
+                                <td class="service-description">Practical training for line managers to improve team management skills</td>
+                                <td class="service-price">£300 - £1,000 per person</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">New Managers Training</td>
+                                <td class="service-description">Foundational training for professionals transitioning into management roles</td>
+                                <td class="service-price">£395 - £1,500 per person</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Strategic Business Growth Solutions -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Strategic Business Growth Solutions</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Competitive Advantage Services</td>
+                                <td class="service-description">Strategic consulting to develop and enhance your competitive edge in the market</td>
+                                <td class="service-price">£1,000 - £10,000 per project</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Emerging Markets Tailored Solutions</td>
+                                <td class="service-description">Specialized strategies for entering and thriving in emerging markets</td>
+                                <td class="service-price">£2,000 - £15,000 per project</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- HR Support & Consultancy -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">HR Support & Consultancy</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">HR and System Support</td>
+                                <td class="service-description">Professional assistance with HR systems, processes, and compliance</td>
+                                <td class="service-price">£55 - £1,500 per hour</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Consultancy Director</td>
+                                <td class="service-description">Strategic HR guidance from senior consultants with extensive expertise</td>
+                                <td class="service-price">£95 - £150 per hour</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Employment Law Advice</td>
+                                <td class="service-description">Expert guidance on employment legislation and legal compliance</td>
+                                <td class="service-price">£350 - £2,000 per hour</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">HR Business Analysis and Data</td>
+                                <td class="service-description">Comprehensive analysis of HR metrics and workforce data to inform decision-making</td>
+                                <td class="service-price">£1,000 - £10,000 per project</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Employee Retention Survey</td>
+                                <td class="service-description">Detailed surveys and strategies to improve employee retention rates</td>
+                                <td class="service-price">£1,000 - £5,000 per survey</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">HR Audits</td>
+                                <td class="service-description">Thorough evaluation of HR practices, policies, and compliance</td>
+                                <td class="service-price">£2,000 - £15,000 per audit</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- HR Products -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">HR Products</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Complaint Letter</td>
+                                <td class="service-description">Professionally drafted complaint letter for official communications</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_9AQ6rAcF252y5he4gm" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Grievance Letter</td>
+                                <td class="service-description">Legally sound letter for filing complaints to HR departments</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_28o5nwcF2eD85hefZ5" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Individual Visa Letters</td>
+                                <td class="service-description">Supporting documents for visa applications</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_bIYeY68oM0Mi9xuaEM" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Support Disciplinary (HR Email Template)</td>
+                                <td class="service-description">Templates for disciplinary communications</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_5kAdU29sQfHcfVSeV4" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Time Off (HR Email Template)</td>
+                                <td class="service-description">Templates for time off requests and approvals</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_8wM3focF20Mi9xu3cn" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Compassionate Leave (HR Email Template)</td>
+                                <td class="service-description">Templates for compassionate leave requests</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_5kA2bkfRe3Yu5hecMY" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Generic HR Letters</td>
+                                <td class="service-description">Universal HR templates for various situations</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_bIYdU26gEamS7pm00d" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Email Drafts</td>
+                                <td class="service-description">Business email templates for professional communications</td>
+                                <td class="service-price">£65</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_6oE8zI6gE8eK4da009" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Coaching Services -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Coaching Services</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">One-off Interview Coaching</td>
+                                <td class="service-description">Preparation for important interviews, practicing responses and behavior</td>
+                                <td class="service-price">£100</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_3cscPY34s8eK5hefZc" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Personal Coaching</td>
+                                <td class="service-description">Individual work with a coach for personal development</td>
+                                <td class="service-price">£150</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_00gaHQawUbqW9xueV9" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Manager Coaching</td>
+                                <td class="service-description">Development of management skills and leadership qualities</td>
+                                <td class="service-price">£200</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_5kA2bkawU52ydNK3cs" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Career Review</td>
+                                <td class="service-description">Comprehensive assessment of career path and development opportunities</td>
+                                <td class="service-price">£150</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_3csdU2eNagLg6li8wN" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Goal Setting</td>
+                                <td class="service-description">Structured approach to setting and achieving professional goals</td>
+                                <td class="service-price">£150</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_28o17g5cAeD8dNK5kC" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Case Review</td>
+                                <td class="service-description">In-depth analysis of specific workplace scenarios and challenges</td>
+                                <td class="service-price">£100 per hour</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_14kaHQ6gE1Qm2529AT" class="thm-btn">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Team Building -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Team Building Workshops and Events</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Online Cocktail Workshop</td>
+                                <td class="service-description">Interactive virtual cocktail making class for team bonding</td>
+                                <td class="service-price">From £25 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_28o2bk20o1QmdNKeVe" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Teambuilding Activities</td>
+                                <td class="service-description">Various engaging activities designed to strengthen team relationships</td>
+                                <td class="service-price">From £29.50 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_3cs7vE5cA52y8tqcN7" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Beach Yoga</td>
+                                <td class="service-description">Relaxing outdoor yoga sessions for team wellness</td>
+                                <td class="service-price">From £25 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_00g9DM0Wk66CbFCfZk" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Archery Attack</td>
+                                <td class="service-description">Fun and competitive archery games for team building</td>
+                                <td class="service-price">From £20 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_dR6eY6fRe1QmfVSfZl" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Powerkiting</td>
+                                <td class="service-description">Team training in kite flying for group coordination</td>
+                                <td class="service-price">From £25 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_14k6rA48wbqWfVS8wU" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Live Table Football</td>
+                                <td class="service-description">Human-sized table football game for team strategy and fun</td>
+                                <td class="service-price">From £25 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_28o8zIbAY3YufVSeVj" class="thm-btn">Book Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Bike Ride Through the Dunes</td>
+                                <td class="service-description">Guided bike tours through scenic areas for team adventure</td>
+                                <td class="service-price">From £25 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_aEU5nwcF29iO4daeVk" class="thm-btn">Book Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Packages -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Packages</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Package Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">HR Support Package</td>
+                                <td class="service-description">Includes 5 HR email templates and 3 individual visa letters</td>
+                                <td class="service-price">£500</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_6oE9DMawUeD8eRO28z" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Coaching Package</td>
+                                <td class="service-description">Includes one-off interview coaching, personal coaching, and career review</td>
+                                <td class="service-price">£350</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_dR6bLU5cA7aG8tq3cE" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Team Building Package</td>
+                                <td class="service-description">Includes online cocktail workshop, beach yoga, and archery attack</td>
+                                <td class="service-price">£70 per person</td>
+                                <td class="service-action"><a href="https://buy.stripe.com/test_bIY03c5cA7aGaBy4gJ" class="thm-btn">Buy Now</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Retainer Structure -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Retainer Structure</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Monthly HR Retainer</td>
+                                <td class="service-description">Ongoing HR support and consultancy services on a monthly basis</td>
+                                <td class="service-price">£950 per month</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Start-up Fee</td>
+                                <td class="service-description">One-time setup fee added to the first invoice for retainer clients</td>
+                                <td class="service-price">£1,500</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Other Costs/Expenses -->
+            <div class="pricing-table-container">
+                <h3 class="text-center" style="margin-bottom: 20px; color: var(--primary-color);">Other Costs/Expenses</h3>
+                <div class="pricing-table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="service-name">Car Mileage</td>
+                                <td class="service-description">Travel expenses for on-site consultations and services</td>
+                                <td class="service-price">45p per mile</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Train Fare</td>
+                                <td class="service-description">Travel expenses for consultations requiring train transport</td>
+                                <td class="service-price">Standard Class</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Postage Costs</td>
+                                <td class="service-description">Costs for shipping employee documents dispatched directly</td>
+                                <td class="service-price">Postage charge</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Additional HR Administrator Hours</td>
+                                <td class="service-description">Extra hours purchased outside of agreed Time Bank hours</td>
+                                <td class="service-price">£55 per hour</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                            <tr>
+                                <td class="service-name">Additional HR Consultancy Director Hours</td>
+                                <td class="service-description">Extra senior consultant hours outside of agreed Time Bank hours</td>
+                                <td class="service-price">£95 per hour</td>
+                                <td class="service-action"><a href="contact.html" class="thm-btn">Contact Us</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin: 50px 0;">
+                <p>Contact us for other customized packages and special pricing.</p>
+                <a href="contact.html" class="thm-btn">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="main-footer">
+			<div class="widgets-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget about-column">
+								<figure class="footer-logo"><a href="index.html"><img src="images/logo/logo2.png"
+											alt="Orancy Planet"></a></figure>
+								<ul class="contact-info">
+									<li><span class="fa fa-map-marker"></span>Basepoint River Mead Drive, Westlea,<br>Swindon
+										SN5 7EX</li>
+									<li><span class="fa fa-phone"></span>Phone: +44 7828720102</li>
+									<li><span class="fa fa-envelope"></span>Email: info@orancyplanet.com</li>
+									<li><span class="fa fa-clock-o"></span>Mon - Fri: 9:00 AM - 6:00 PM</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Our Services</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="services.html#hr-transformation">HR Transformation</a></li>
+										<li><a href="services.html#technology-integration">Technology Integration</a></li>
+										<li><a href="services.html#talent-acquisition">Talent Acquisition</a></li>
+										<li><a href="services.html#employee-well-being">Employee Well-Being</a></li>
+										<li><a href="services.html#training-development">Training & Development</a></li>
+										<li><a href="services.html#international-business">International Business</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							<div class="footer-widget link-column">
+								<div class="section-title">
+									<h4>Key Links</h4>
+								</div>
+								<div class="widget-content">
+									<ul class="list">
+										<li><a href="orancy-card.html">Orancy Card</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="services.html">Services</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+										<li><a href="orancy-card.html#military-support">Military Support</a></li>
+										<li><a href="about.html#careers">Careers</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="footer-widget contact-column">
+                                <div class="section-title">
+                                    <h4>Social Media</h4>
+                                </div>
+                                <ul class="social-icon">
+									<li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://www.linkedin.com/search/results/all/?keywords=%22Orancy%20Planet%22" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/orancyplanet6/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+									<li><a href="https://www.tiktok.com/@orancy.planet" target="_blank"><i class="fa fa-music"></i></a></li>
+									<li><a href="https://www.youtube.com/channel/UCZSYDX_t5vNr01Uz2pfZc-Iw" target="_blank"><i class="fa fa-youtube"></i></a></li>
+									<li><a href="https://pin.it/786ggb7JC" target="_blank"><i class="fa fa-pinterest"></i></a></li>
+								</ul>
+								<div style="margin-top: 30px;"></div>
+								<div class="tech-partners">
+									<h5>Technology Partners</h5>
+									<img src="images/parnters/microsoft.png" alt="Microsoft" class="partner-logo">
+									<img src="images/parnters/salesforce.png" alt="Salesforce" class="partner-logo">
+									<img src="images/parnters/linkedin-logo.png" alt="LinkedIn" class="partner-logo">
+									<!-- <img src="images/parnters/paranimo.png" alt="Paranimo" class="partner-logo"> -->
+								</div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="pull-left copy-text">
+						<p>© 2024 Orancy Planet. All Rights Reserved.</p>
+					</div>
+					<div class="pull-right get-text">
+						<ul class="footer-nav">
+							<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							<!-- <li><a href="#">Terms & Conditions</a></li> -->
+							<li><a href="contact.html">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/burger-menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/imagezoom.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.polyglot.language.switcher.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/nouislider.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/pie-chart.js"></script>
+    
+    <!-- revolution slider js -->
+    <script src="js/rev-slider/jquery.themepunch.tools.min.js"></script>
+    <script src="js/rev-slider/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.actions.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.carousel.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.kenburn.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.layeranimation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.migration.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.navigation.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.parallax.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.slideanims.min.js"></script>
+    <script src="js/rev-slider/revolution.extension.video.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    
+    <!-- Custom Script for Enhanced Animations -->
+    <script>
+        // Initialize WOW.js with custom settings
+        new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 100,
+            mobile: true,
+            live: true
+        }).init();
+        
+        // Smooth scroll functionality for internal links
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a[href^='#']").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+                    
+                    // Store hash
+                    var hash = this.hash;
+                    
+                    // Using jQuery's animate() method to add smooth page scroll
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 80
+                    }, 800, function(){
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Custom Animation Script for Services Page -->
+    <script>
+        // Custom JavaScript for services page
+        $(document).ready(function() {
+            // Direct toggling of panels with manual control
+            $('.panel-heading').on('click', function(e) {
+                e.preventDefault();
+                
+                var $heading = $(this);
+                var $panel = $heading.next('.panel-collapse');
+                var $link = $heading.find('a');
+                
+                // Close all other panels
+                $('.panel-collapse').not($panel).slideUp(300).removeClass('in');
+                $('.panel-heading').not($heading).find('a').addClass('collapsed');
+                
+                // Toggle this panel
+                $panel.slideToggle(300).toggleClass('in');
+                $link.toggleClass('collapsed');
+                
+                // Update icons
+                if ($panel.hasClass('in')) {
+                    $heading.find('.fa-plus').hide();
+                    $heading.find('.fa-minus').show();
+                } else {
+                    $heading.find('.fa-plus').show();
+                    $heading.find('.fa-minus').hide();
+                }
+                
+                // Reset other icons
+                $('.panel-heading').not($heading).find('.fa-plus').show();
+                $('.panel-heading').not($heading).find('.fa-minus').hide();
+                
+                return false;
+            });
+            
+            // Make sure first panel is open by default
+            if ($('.panel-collapse.in').length === 0) {
+                $('#headingOne').trigger('click');
+            }
+            
+            // Initialize WOW.js for animations
+            new WOW().init();
+            
+            // Journey step hover effects
+            $('.journey-step').hover(
+                function() {
+                    $(this).find('.step-content').css({
+                        'transform': 'translateY(-5px) rotateY(5deg)',
+                        'box-shadow': '0 15px 30px rgba(0,0,0,0.15)'
+                    });
+                    $(this).find('.step-number').css({
+                        'transform': 'scale(1.2) rotate(360deg)',
+                        'background-color': 'var(--secondary-color)'
+                    });
+                },
+                function() {
+                    $(this).find('.step-content').css({
+                        'transform': 'translateY(0) rotateY(0deg)',
+                        'box-shadow': '0 5px 15px rgba(0,0,0,0.08)'
+                    });
+                    $(this).find('.step-number').css({
+                        'transform': 'scale(1) rotate(0deg)'
+                    });
+                }
+            );
+        });
+    </script>
+</body>
+
+</html> 
