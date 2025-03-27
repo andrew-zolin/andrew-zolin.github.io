@@ -6393,8 +6393,8 @@ header.main-header .header-sticky.active{
 .login-btn {
     background-color: #FFFFFF;
     color: #0B3050;
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 5px 10px;
+    border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease-in-out;
@@ -7926,4 +7926,20 @@ ul {
     .slide-description {
         font-size: 14px;
     }
+}
+
+.topbar.dark-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.hero.bg-section {
+	/* background-color: var(--primary-color); */
+	position: relative;
+	background-image: null;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% auto;
+	margin-top: 20px;
+	overflow: hidden;
 }
