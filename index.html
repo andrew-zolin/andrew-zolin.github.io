@@ -1,1364 +1,1303 @@
-﻿<!DOCTYPE html>
-<html lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<!-- Meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta name="author" content="Awaiken">
-	<!-- Page Title -->
-	<title>SOF AI - The Radiology AI Platform</title>
-	<!-- Favicon Icon -->
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"> -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon/favicon.png">
-	<!-- Google Fonts Css-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="../css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-	<!-- Bootstrap Css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-	<!-- SlickNav Css -->
-	<link href="css/slicknav.min.css" rel="stylesheet">
-	<!-- Swiper Css -->
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<!-- Font Awesome Icon Css-->
-	<link href="css/all.min.css" rel="stylesheet" media="screen">
-	<!-- Animated Css -->
-	<link href="css/animate.css" rel="stylesheet">
-    <!-- Magnific Popup Core Css File -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<!-- Mouse Cursor Css File -->
-	<link rel="stylesheet" href="css/mousecursor.css">
-	<!-- Main Custom Css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sof Ai - AI-Powered X-Ray Analysis for Healthcare</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        :root {
+            /* Updated color palette based on Sof AI logo */
+            --primary-blue: #2851a3;
+            --secondary-purple: #7b5fc9;
+            --accent-orange: #ffb938;
+            --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            --gradient-accent: linear-gradient(135deg, var(--secondary-purple), var(--accent-orange));
+            --light-color: #f0f9ff;
+            --dark-color: #0f172a;
+            --bg-light: #ffffff;
+            --bg-off-white: #f9faff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.15);
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            position: relative;
+        }
+        
+        /* Simplified body background - removed pattern */
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .logo-img {
+            width: 100px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Simplified section styling */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--bg-off-white);
+        }
+        
+        /* Header and Navigation */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+        }
+        
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            position: relative;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition-smooth);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        /* Simplified Hero Section */
+        .hero {
+            padding-top: 160px;
+            padding-bottom: 100px;
+            background-color: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Single accent shape instead of multiple floating shapes */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 50%;
+            height: 70%;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            opacity: 0.4;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        /* Fancy Buttons */
+        .fancy-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .fancy-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+        
+        .fancy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .fancy-btn-primary {
+            color: white;
+        }
+        
+        .fancy-btn-light {
+            color: white;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-link {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary-blue);
+            transition: var(--transition-smooth);
+            gap: 8px;
+        }
+        
+        .hero-link:hover {
+            color: var(--secondary-purple);
+            transform: translateX(5px);
+        }
+        
+        .btn-icon {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .fancy-btn:hover .btn-icon {
+            transform: translateX(5px);
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--bg-off-white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: var(--gradient-primary);
+            margin: 15px auto 0;
+            border-radius: 3px;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            border-bottom: 3px solid transparent;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+            border-bottom: 3px solid var(--primary-blue);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-blue);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .feature-card p {
+            color: #666;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            background-color: var(--bg-light);
+        }
+        
+        .workflow {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 70px;
+            left: 25px;
+            height: calc(100% + 30px);
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-blue), var(--secondary-purple));
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 30px;
+            flex-shrink: 0;
+            z-index: 1;
+        }
+        
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .step-content p {
+            color: #666;
+        }
+        
+        /* Technology Section - Simplified */
+        .technology-section {
+            background-color: var(--bg-off-white);
+        }
+        
+        .tech-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 60px;
+        }
+        
+        .tech-image {
+            flex: 1;
+        }
+        
+        .tech-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .tech-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .tech-item {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .tech-icon {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+        
+        .tech-text h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        /* CTA Section - Simplified Modern Approach */
+        .cta {
+            background: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Stats with modern styling */
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+            min-width: 180px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            position: relative;
+        }
+        
+        .stat-number::after {
+            content: '%';
+            font-size: 1.5rem;
+            position: absolute;
+            top: 0;
+            right: -20px;
+        }
+        
+        .stat:first-child .stat-number::after {
+            content: '';
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+        
+        /* Fade In Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Media Queries for Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-content, .tech-content {
+                flex-direction: column;
+            }
+            
+            .hero-image {
+                margin-top: 30px;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero {
+                padding-top: 130px;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .stats-container {
+                gap: 20px;
+            }
+            
+            .stat {
+                padding: 20px;
+                min-width: 140px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Modern Testimonials Section */
+        .testimonials {
+            background-color: var(--bg-light);
+            position: relative;
+        }
+
+        .testimonial-slider {
+            position: relative;
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+
+        .testimonial-track {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+            padding: 20px 0;
+        }
+
+        .testimonial-track::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        .testimonial-card {
+            flex: 0 0 100%;
+            scroll-snap-align: center;
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.03);
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            font-size: 24px;
+            color: var(--secondary-purple);
+            opacity: 0.2;
+        }
+
+        .testimonial-text {
+            margin-bottom: 30px;
+            padding-top: 10px;
+        }
+
+        .testimonial-text p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(123, 95, 201, 0.2);
+        }
+
+        .author-info {
+            margin-left: 15px;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: var(--secondary-purple);
+            transform: scale(1.2);
+        }
+
+        /* Modern Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 80px 0 40px;
+        }
+
+        .footer-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand {
+            flex: 1 1 300px;
+        }
+
+        .footer-logo-img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 25px;
+            max-width: 300px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-nav {
+            flex: 1 1 500px;
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .footer-nav-column h3 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-nav-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--secondary-purple);
+        }
+
+        .footer-nav-column ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-nav-column a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.2s ease;
+        }
+
+        .footer-nav-column a:hover {
+            color: white;
+            transform: translateX(3px);
+            display: inline-block;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .contact-list i {
+            color: var(--secondary-purple);
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .copyright p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-legal {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .footer-wrapper {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Preloader Start -->
-	<div class="preloader">
-		<div class="loading-container">
-			<div class="loading"></div>
-			<!-- <div id="loading-icon"><img src="images/favicon/favicon.png" alt=""></div> -->
-		</div>
-	</div>
-	<!-- Preloader End -->
-
-    <!-- Announcement Banner Start -->
-    <!-- <div class="announcement-banner">
+    <!-- Header -->
+    <header id="header">
         <div class="container">
-            <div class="announcement-content">
-                <img src="images/announcement-icon.svg" alt="Announcement Icon"> Meet us at BIR AI Congress | 27 March - 28 March, London | <a href="#">Book your meeting</a>
+            <nav class="navbar">
+                <!-- <a href="#" class="logo">Sof AI</a> -->
+                <a href="/" class="logo"><img class="logo-img" src="media/image/logo/logo-with-text-d-b.png" alt="Sof AI Logo"></a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#technology">Technology</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <!-- <a href="#demo" class="fancy-btn fancy-btn-primary">Schedule a Demo</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text animate__animated animate__fadeInLeft">
+                    <h1>AI-Powered X-Ray Analysis for Better Patient Outcomes</h1>
+                    <p>Sof AI provides cutting-edge artificial intelligence solutions that help radiologists and doctors analyze X-rays faster and with greater accuracy, leading to earlier diagnosis and improved patient care.</p>
+                    <div class="hero-buttons">
+                        <a href="#demo" class="fancy-btn fancy-btn-primary">Get Started <i class="fas fa-arrow-right btn-icon"></i></a>
+                        <a href="#technology" class="hero-link">Learn about our technology <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image animate__animated animate__fadeInRight">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Doctor using Sof AI">
+                </div>
             </div>
         </div>
-    </div> -->
-    <!-- Announcement Banner End -->
+    </section>
 
-    <!-- Topbar Section Start -->
-    <div class="topbar dark-header">
+    <!-- Features Section -->
+    <section class="features" id="features">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3">
-                    <!-- Logo Start -->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="images/logo/logo-with-text-l-b.png" alt="SOF AI">
-                        <!-- <span class="logo-text">Sof</span> -->
-                    </a>
-                    <!-- Logo End -->
+            <div class="section-title">
+                <h2>Why Choose Sof AI?</h2>
+                <p>Our AI-powered platform offers a comprehensive solution to enhance radiologists' workflow and diagnostic accuracy.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Advanced AI Algorithms</h3>
+                    <p>Our deep learning algorithms have been trained on millions of X-rays to detect anomalies with high precision and recall.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Rapid Analysis</h3>
+                    <p>Get instant results and reduce radiology report turnaround time by up to 60%, enabling faster diagnosis and treatment.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Human-AI Collaboration</h3>
+                    <p>We don't replace doctors – we empower them with an intelligent second opinion that enhances their diagnostic capabilities.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>HIPAA Compliant</h3>
+                    <p>Your patient data is secure with our fully HIPAA-compliant infrastructure and end-to-end encryption.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Continuous Improvement</h3>
+                    <p>Our AI models improve over time, learning from new cases and adapting to unique clinical settings.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>Easily integrate Sof AI with your existing PACS, RIS, and EMR systems with minimal IT overhead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Sof AI Works</h2>
+                <p>Our streamlined process makes it easy to incorporate AI into your existing radiology workflow.</p>
+            </div>
+            <div class="workflow">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload X-Rays</h3>
+                        <p>X-ray images are securely uploaded to the Sof AI platform directly from your existing PACS or imaging systems.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Analysis</h3>
+                        <p>Our advanced neural networks analyze the images, identifying potential abnormalities and areas of concern with precision.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Radiologist Review</h3>
+                        <p>Radiologists review the AI-enhanced images with highlighted areas and probability scores for various pathologies.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Final Diagnosis</h3>
+                        <p>The clinician makes the final diagnosis, supported by the AI insights, leading to more accurate and confident assessments.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Continuous Learning</h3>
+                        <p>Our system learns from each case, continually improving its accuracy and adapting to your specific clinical context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="technology-section" id="technology">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Our Advanced Technology</h2>
+                <p>Powered by the latest innovations in artificial intelligence and medical imaging analysis</p>
+            </div>
+            
+            <div class="tech-content">
+                <div class="tech-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22731c9dda?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sof AI Technology">
                 </div>
                 
-                <div class="col-lg-6">
-                    <!-- Main Menu Start -->
-                    <div class="main-menu">
-                        <div class="nav-menu-wrapper">
-                            <ul class="navbar-nav mr-auto" id="menu">
-                                <li class="nav-item"><a class="nav-link" href="#product">Product</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#why-sof">Why Sof</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#ai-portfolio">AI Portfolio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#about">About</a>
-                                <!-- <li class="nav-item submenu"><a class="nav-link" href="#about">About</a> -->
-                                    <!-- <ul>
-                                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                                    </ul> -->
-                                </li>                               
-                            </ul>
+                <div class="tech-info">
+                    <div class="tech-item fade-in">
+                        <div class="tech-icon">
+                            <i class="fas fa-microchip"></i>
                         </div>
-                    </div>
-                    <!-- Main Menu End -->
-                </div>
-
-                <div class="col-lg-3">
-                    <!-- Header Actions Start -->
-                    <div class="header-actions">
-                        <!-- <div class="search-icon">
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
-                        </div> -->
-                        <div class="action-buttons">
-                            <!-- <a href="#" class="ai-consultation-btn">AI Consultation</a> -->
-                            <a href="#" class="login-btn">Login</a>
+                        <div class="tech-text">
+                            <h3>Deep Learning Neural Networks</h3>
+                            <p>Our proprietary convolutional neural networks are trained on over 10 million labeled medical images, enabling the detection of even subtle abnormalities.</p>
                         </div>
-                    </div>
-                    <!-- Header Actions End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar Section End -->
-
-
-    <!-- Hero Section Start -->
-    <div class="hero ">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <!-- Hero Content Start -->
-                    <div class="hero-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">your health our priority</h3>
-                            <h1 class="text-anime-style-3" data-cursor="-opaque">Any AI solution,
-                                in any workflow,
-                                at any scale</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s">One Platform to Truly Deliver the Value of Radiology AI</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Hero Buttons Start -->
-                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="#product" class="btn-default">Get started</a>
-                            <a href="#about" class="btn-default">about us</a>
-                        </div>
-                        <!-- Hero Buttons End -->
-
-                        <!-- Google Rating Start -->
-                        <!-- <div class="google-rating wow fadeInUp" data-wow-delay="0.75s">
-                            <ul>
-                               <li>Google Rating <span>5.0</span></li>
-                               <li>
-                                   <i class="fa-solid fa-star"></i>
-                                   <i class="fa-solid fa-star"></i>
-                                   <i class="fa-solid fa-star"></i>
-                                   <i class="fa-solid fa-star"></i>
-                                   <i class="fa-solid fa-star"></i>
-                               </li>
-                               <li>based on 500 reviews</li>
-                            </ul>   
-                       </div> -->
-                       <!-- Google Rating End -->
-                    </div>
-                    <!-- Hero Content End -->
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- Hero Image Start -->
-                    <div class="hero-image">
-                        <!-- Hero Img Start -->
-                        <div class="hero-img">
-                            <figure>
-                                <img src="images/hero-img.png" alt="">
-                            </figure>
-                        </div>
-                        <!-- Hero Img End -->
-
-                        <!-- Excerpt Doctor Box Start -->
-                        <div class="excerpt-doctor-box">
-                            <!-- Excerpt Doctor Images Start -->
-                            <div class="excerpt-doctor-images">
-                                <div class="excerpt-doctor-image">
-                                    <figure class="image-anime">
-                                        <img src="images/excerpt-doctor-img-1.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="excerpt-doctor-image">
-                                    <figure class="image-anime">
-                                        <img src="images/excerpt-doctor-img-2.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="excerpt-doctor-image">
-                                    <figure class="image-anime">
-                                        <img src="images/excerpt-doctor-img-3.jpg" alt="">
-                                    </figure>
-                                </div>
-                                <div class="excerpt-doctor-image">
-                                    <figure class="image-anime">
-                                        <img src="images/excerpt-doctor-img-4.jpg" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-                            <!-- Excerpt Doctor Images End -->
-                            
-                            <!-- Excerpt Doctor Content Start -->
-                            <div class="excerpt-doctor-content">
-                                <p>Talk to our <span class="counter">48</span>+ Doctors</p>
-                            </div>
-                            <!-- Excerpt Doctor Content End -->
-                        </div>
-                        <!-- Excerpt Doctor Box End -->
-
-                        <!-- Satisfied Clients Box Start -->
-                        <div class="satisfied-clients-box">
-                            <div class="icon-box">
-                                <img src="images/hero-satisfied-clients.svg" alt="">
-                            </div>
-                            <div class="satisfied-clients-content">
-                                <h3><span class="counter">3500</span>+</h3>
-                                <p>satisfied clients</p>
-                            </div>
-                        </div>
-                        <!-- Satisfied Clients Box End -->
-                    </div>
-                    <!-- Hero Image End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Hero Section End -->
-
-    <!-- AI Platform Intro Section Start -->
-    <div id="product" style="padding-bottom: 0px;" class="platform-intro">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12 text-center">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">AI Platform</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">One Platform to <span class="accent-text">Unify</span> your Radiology AI Workflows</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">All with one installation, one contract, one security framework, and one point of support, no matter your scale.</p>
-                        <!-- <div class="platform-btn wow fadeInUp" data-wow-delay="0.4s">
-                            <a href="#" class="btn-default">See how it works <i class="fa-solid fa-arrow-right"></i></a>
-                        </div> -->
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- AI Platform Intro Section End -->
-
-    <!-- AI Platform Features Section Start -->
-    <div style="padding-top: 0px;" class="platform-features-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="platform-features">
-                        <!-- First Row -->
-                        <div class="row justify-content-center">
-                            <!-- Build Feature -->
-                            <div class="col-lg-6 col-md-6">
-                                <div class="feature-box wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="feature-image-container">
-                                        <img src="images/build.png" alt="Build AI Solutions" class="feature-img">
-                                        <!-- <div class="feature-overlay">
-                                            <div class="overlay-content">
-                                                <p style="color: #ffffff;">Create powerful AI solutions with our robust development tools</p>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                    <div class="feature-content">
-                                        <div class="feature-icon">
-                                            <i class="fa-solid fa-code"></i>
-                                        </div>
-                                        <h3>Build</h3>
-                                        <p>Streamlined AI research, development, testing, and production for medical researchers and AI vendors.</p>
-                                        <div class="feature-hover">
-                                            <a href="#" class="feature-link">Learn more <i class="fa-solid fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Evaluate Feature -->
-                            <div class="col-lg-6 col-md-6">
-                                <div class="feature-box wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="feature-image-container">
-                                        <img src="images/evaluate.png" alt="Evaluate AI Solutions" class="feature-img">
-                                        <!-- <div class="feature-overlay">
-                                            <div class="overlay-content">
-                                                <p style="color: #ffffff;">Comprehensive testing and validation of AI models</p>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                    <div class="feature-content">
-                                        <div class="feature-icon">
-                                            <i class="fa-solid fa-magnifying-glass-chart"></i>
-                                        </div>
-                                        <h3>Evaluate</h3>
-                                        <p>Select optimal AI solutions for your organization. With the deepcOS AI Evaluator, test and validate market-leading AI solutions on your data without tedious installations.</p>
-                                        <div class="feature-hover">
-                                            <a href="#" class="feature-link">Learn more <i class="fa-solid fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Second Row -->
-                        <div class="row justify-content-center">
-                            <!-- Deploy Feature -->
-                            <div class="col-lg-6 col-md-6">
-                                <div class="feature-box wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="feature-image-container">
-                                        <img src="images/deploy.png" alt="Deploy AI Solutions" class="feature-img">
-                                        <!-- <div class="feature-overlay">
-                                            <div class="overlay-content">
-                                                <p style="color: #ffffff;">Seamless implementation of AI solutions in your workflow</p>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                    <div class="feature-content">
-                                        <div class="feature-icon">
-                                            <i class="fa-solid fa-rocket"></i>
-                                        </div>
-                                        <h3>Deploy</h3>
-                                        <p>Seamless access to leading AI solutions in one installation, no matter your scale. Flexible and secure architecture help to future-proof your AI strategy.</p>
-                                        <div class="feature-hover">
-                                            <a href="#" class="feature-link">Learn more <i class="fa-solid fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Monitor Feature -->
-                            <div class="col-lg-6 col-md-6">
-                                <div class="feature-box wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="feature-image-container">
-                                        <img src="images/monitor.png" alt="Monitor AI Solutions" class="feature-img">
-                                        <!-- <div class="feature-overlay">
-                                            <div class="overlay-content">
-                                                <p style="color: #ffffff;">Comprehensive monitoring of AI performance and safety</p>
-                                            </div>
-                                        </div> -->
-                                    </div>
-                                    <div class="feature-content">
-                                        <div class="feature-icon">
-                                            <i class="fa-solid fa-chart-line"></i>
-                                        </div>
-                                        <h3>Monitor</h3>
-                                        <p>Experience end-to-end AI Safety with comprehensive Monitoring capabilities.</p>
-                                        <div class="feature-hover">
-                                            <a href="#" class="feature-link">Learn more <i class="fa-solid fa-chevron-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- AI Platform Features Section End -->
-
-    <!-- Platform Showcase Slider Start -->
-    <div class="platform-showcase-slider">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <h3 class="wow fadeInUp">Platform Features</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">The complete Radiology AI Operating System</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.2s">Explore our platform capabilities with detailed diagrams and visualizations.</p>
                     </div>
                     
-                    <!-- Swiper Slider Start -->
-                    <div class="swiper platform-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf1.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">deepcOS® Gate</h3>
-                                        <p class="slide-description">Learn how our leading on premise infrastructure is the core of deepcOS® that seamlessly connects to the existing hospital infrastructure, enabling a myriad of possibilities.</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf2.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">Orchestration</h3>
-                                        <p class="slide-description">
-                                            Discover the benefits of both DICOM-tag and AI-based orchestration to ensure imaging studies are always processed by the right AI solution. Read more
-                                            Slide 2 of 10.
-                                            </p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf3.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">Cloud Native Deployment Platform</h3>
-                                        <p class="slide-description">
-                                            Explore how the cloud deployment of AI solutions optimizes for scalability, flexibility and security. Read more
-                                            Slide 3 of 10.
-                                            </p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf4.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">AI Marketplace</h3>
-                                        <p class="slide-description">
-                                            Realize the opportunities for accessing more than 50 commercial Radiology AI solutions from over 30 Vendors via one installation. Read more</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf5.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">Clinical Integrations</h3>
-                                        <p class="slide-description">
-                                            Explore how our state-of-the-art API integrations enable a truly AI-enhanced radiology workflow, where AI outputs are embedded within existing systems (e.g. PACS and RIS / EMR). Read more</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf6.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">Viewer Integration</h3>
-                                        <p class="slide-description">
-                                            Integrate AI outcomes with your viewer for interactive navigation to AI findings. Read more</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf6.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">AI Integrated Worklist</h3>
-                                        <p class="slide-description">
-                                            Add value to your worklist with additional features including embedded clinical findings, priority flagging of urgent studies and live AI Processing updates. Read more</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf6.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">AI-Driven Reporting</h3>
-                                        <p class="slide-description">AI-generated findings are seamlessly integrated into the radiology reporting workflow with deepcOS® AIR® to significantly reduce reporting times and improve reporting accuracy. Read more</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf6.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">AI Evaluator</h3>
-                                        <p class="slide-description">
-                                            Evaluate the performance of multiple AI solutions from different vendors via one centralized platform, before you decide on a solution to integrate. Online Demo (desktop)</p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="platform-slide-content">
-                                    <div class="diagram-container">
-                                        <img src="images/work-flow/wf7.svg" alt="deepCOS Gate" class="slide-diagram">
-                                        <h3 class="slide-title">deepcOS® Hub</h3>
-                                        <p class="slide-description">
-                                            Your entry point to the deepcOS® Radiology AI Platform, designed to streamline your oversight and control of AI-powered healthcare solutions within your organization. Read more -></p>
-                                        <a href="#" class="slide-link">Read more</a>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="tech-item fade-in">
+                        <div class="tech-icon">
+                            <i class="fas fa-chart-bar"></i>
                         </div>
-                        <!-- Navigation Arrows -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        
-                        <!-- Pagination Dots -->
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <!-- Swiper Slider End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Platform Showcase Slider End -->
-
-    <!-- Platform Benefits Section Start -->
-    <div class="platform-benefits-section">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Robust by nature, flexible by design</h2>
-                        <div class="title-separator"></div>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">
-                            Evaluate, deploy, monitor and Build AI solutions with deepCOS - a customizable 
-                            Radiology AI Operating System to support radiologists with leading AI.
-                        </p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row justify-content-center">
-                <!-- Simple Benefit -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="benefit-icon">
-                            <img src="images/icons/659fd60a444a5bb7e23b5726_Simple.svg" alt="Simple">
+                        <div class="tech-text">
+                            <h3>99.2% Accuracy Rate</h3>
+                            <p>In clinical trials, Sof AI demonstrated a 99.2% accuracy rate in detecting common pathologies, exceeding the average radiologist performance by 7%.</p>
                         </div>
-                        <h3>Simple</h3>
-                        <p>Easily access the outputs from multiple Radiology AI solutions via a single installation, and embed them within existing HIT systems.</p>
                     </div>
-                </div>
-
-                <!-- Secure Benefit -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="benefit-icon">
-                            <img src="images/icons/659fd60ac2215803b0ec1ebe_Secure.svg" alt="Secure">
-                        </div>
-                        <h3>Secure</h3>
-                        <p>On-premise data de-identification, cloud-hosting, encryption and strict GDPR compliance ensure that sensitive information is protected.</p>
-                    </div>
-                </div>
-
-                <!-- Scalable Benefit -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="benefit-icon">
-                            <img src="images/icons/659fd60af8c1e54210ce460c_Scalable.svg" alt="Scalable">
-                        </div>
-                        <h3>Scalable</h3>
-                        <p>Quickly turn on new AI solutions and automatically scale resources to meet demand with cloud-hosted, deeply integrated AI solutions.</p>
-                    </div>
-                </div>
-
-                <!-- Safe Benefit -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="benefit-card wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="benefit-icon">
-                            <img src="images/icons/659fd60a43099ebeffdc26fd_Safe.svg" alt="Safe">
-                        </div>
-                        <h3>Safe</h3>
-                        <p>Comprehensive AI Safety oversight from pre-deployment to post-market surveillance of AI solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Platform Benefits Section End -->
-
-    <!-- Dashboard Showcase Section Start -->
-    <!-- <div class="dashboard-showcase">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                     
-                    <div class="section-title text-center">
-                        <h3 class="wow fadeInUp">Platform Interface</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s">See the platform in action</h2>
-                    </div>
-                     
                     
-                    <div class="dashboard-container">
-                        <div class="dashboard-image wow fadeIn" data-wow-delay="0.4s">
-                            <img src="images/service-img-4.jpg" alt="AI Platform Dashboard" class="img-fluid">
-                            <div class="image-overlay">
-                                <div class="overlay-content">
-                                    <h4>Intuitive User Interface</h4>
-                                    <p>Our platform provides a comprehensive system for monitoring all aspects of radiology AI workflows in real-time</p>
-                                </div>
-                            </div>
-                            <div class="glow-overlay"></div>
-                            
-                             
-                            <div class="dashboard-indicator indicator-1">
-                                <span class="pulse-dot"></span>
-                                <span class="indicator-label">Engine Submission</span>
-                            </div>
-                            
-                            <div class="dashboard-indicator indicator-2">
-                                <span class="pulse-dot"></span>
-                                <span class="indicator-label">Model Upload</span>
-                            </div>
-                            
-                            <div class="dashboard-indicator indicator-3">
-                                <span class="pulse-dot"></span>
-                                <span class="indicator-label">License Management</span>
-                            </div>
+                    <div class="tech-item fade-in">
+                        <div class="tech-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="tech-text">
+                            <h3>Secure Federated Learning</h3>
+                            <p>Our system continuously improves through federated learning, allowing the AI to learn from new data while keeping patient information secure and private.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-item fade-in">
+                        <div class="tech-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="tech-text">
+                            <h3>Explainable AI</h3>
+                            <p>Unlike black-box solutions, Sof AI provides visual explanations for its findings, highlighting the specific image features that influenced its analysis.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Dashboard Showcase Section End -->
+    </section>
 
-    <!-- Intro Video Section Start -->
-    <div id="why-sof" class="intro-video">
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="row section-row align-items-center">
-                <div class="col-lg-7">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Why choose us</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Why patients trust us with their care</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Our commitment to excellence, compassion, and personalized treatment has earned the trust of countless patients. Discover what sets our care apart. Discover what sets our care apart.</p>
+            <div class="section-title fade-in">
+                <h2>What Medical Professionals Say</h2>
+                <p>Hear from radiologists and doctors who have incorporated Sof AI into their practice.</p>
+            </div>
+            <div class="testimonial-slider fade-in">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-text">
+                            <p>"Sof AI has transformed our radiology department's efficiency. We've reduced our reporting time by 45% while improving our diagnostic accuracy."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. James Wilson" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. James Wilson</h4>
+                                <p>Chief Radiologist, Metro Hospital</p>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Section Title End -->
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-text">
+                            <p>"As a pulmonologist, having Sof AI's analysis before consultations has significantly improved my diagnostic workflow. The system has helped us catch subtle early-stage pathologies."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. Sarah Chen" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Sarah Chen</h4>
+                                <p>Pulmonologist, Central Medical Center</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <div class="testimonial-text">
+                            <p>"Implementing Sof AI in our rural hospital has given us capabilities we never thought possible. Our small team can now handle a much larger caseload with confidence."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Dr. Robert Miller" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Dr. Robert Miller</h4>
+                                <p>Medical Director, Countryside Health</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="col-lg-5">
-                    <!-- Why Choose List Start -->
-                    <div class="why-choose-list wow fadeInUp">
+    <!-- CTA Section -->
+    <section class="cta" id="demo">
+        <div class="container">
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>Ready to Transform Your Diagnostic Capabilities?</h2>
+                <p>Join hundreds of healthcare facilities already using Sof AI to improve patient outcomes through faster, more accurate X-ray analysis.</p>
+                <a href="#contact" class="fancy-btn fancy-btn-light">Schedule a Demo <i class="fas fa-calendar-alt ml-2"></i></a>
+                
+                <div class="stats-container">
+                    <div class="stat">
+                        <div class="stat-number count-up" data-count="45">0</div>
+                        <div class="stat-label">Minutes Saved Per Case</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number count-up" data-count="98">0</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number count-up" data-count="800">0</div>
+                        <div class="stat-label">Healthcare Facilities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="media/image/logo/logo-with-text-d-w.png" alt="Sof AI Logo" class="footer-logo-img">
+                    </div>
+                    <p>Empowering healthcare professionals with AI-powered diagnostic tools for better patient outcomes.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav">
+                    <div class="footer-nav-column">
+                        <h3>Company</h3>
                         <ul>
-                            <li>We offer flexible hours to fit your busy schedule.</li>
-                            <li>Team is committed to making you feel comfortable.</li>
-                            <li>We ensure you receive prompt and effective care.</li>
-                            <li>Helping you manage your health at every stage of life.</li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
                         </ul>
                     </div>
-                    <!-- Why Choose List End -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!-- Intro Video Section End -->
-    
-
-    <!-- Platform Statistics Section Start -->
-    <div class="platform-statistics bg-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="statistics-title">
-                        <h3 class="wow fadeInUp">Our Impact</h3>
-                        <h2 class="wow fadeInUp" data-wow-delay="0.2s">Platform Performance Metrics</h2>
+                    
+                    <div class="footer-nav-column">
+                        <h3>Product</h3>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#how-it-works">How It Works</a></li>
+                            <li><a href="#technology">Technology</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3>Contact Us</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:info@sofai.com">info@sofai.com</a></li>
+                            <li><i class="fas fa-phone"></i> <a href="tel:+1-800-SOF-AI">+1-800-SOF-AI</a></li>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive<br>San Francisco, CA 94107</li>
+                        </ul>
                     </div>
                 </div>
             </div>
             
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="statistics-container wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <div class="stat-value">
-                                        <span class="counter-value">99.9</span>%
-                                    </div>
-                                    <div class="stat-label">
-                                        <p>UPTIME RELIABILITY</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <div class="stat-value">
-                                        <span class="counter-value">500</span>+
-                                    </div>
-                                    <div class="stat-label">
-                                        <p>HEALTHCARE FACILITIES</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-4">
-                                <div class="stat-item">
-                                    <div class="stat-value">
-                                        <span class="counter-value">5</span>M+
-                                    </div>
-                                    <div class="stat-label">
-                                        <p>PROCESSED STUDIES</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Sof AI, Inc. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Platform Statistics Section End -->
-
-    
-
-    <!-- Our Faqs Section Start -->
-    <div class="our-faqs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="our-faqs-content">
-                        <!-- Section Title Start -->
-                        <div class="section-title">
-                            <h3 class="wow fadeInUp">frequently asked questions</h3>
-                            <h2 class="text-anime-style-3" data-cursor="-opaque">Helping you understand Sof AI</h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.25s">Here to make your experience as seamless as possible—explore answers to common questions about our services, policies, and patient care.</p>
-                        </div>
-                        <!-- Section Title End -->
-
-                        <!-- Faq CTA Box Start -->
-                        <!-- <div class="faq-cta-box wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="icon-box">
-                                <img src="images/icon-faq-cta.svg" alt="">
-                            </div>
-                            <div class="faq-cta-content">
-                                <p>We always take care of your smile</p>
-                                <h3>24/7 Emergency</h3>
-                                <p><a href="tel:659888589">659-888-589</a></p>
-                            </div>
-                        </div> -->
-                        <!-- Faq CTA Box End -->
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <!-- FAQ Accordion Start -->
-                    <div class="faq-accordion" id="faqaccordion">
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    Deploy commercial AI solutions in your department
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
-                                <div class="accordion-body">
-                                    <p>Quickly and easily access Radiology AI solutions from our portfolio of globally leading vendors. The solutions available can be changed easily with the evolving needs of the department.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    Access research AI algorithms in your department easily
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
-                                <div class="accordion-body">
-                                    <p>Research focused institutions can easily deploy internally developed AI solutions, without needing to go through the complicated process of integrating with their IT department directly. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    Export of pseudonymized data at scale
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
-                                <div class="accordion-body">
-                                    <p>Institutions developing their own AI solutions can use deepcOS® to pseudonymize and export clinic data in large quantities for training new models or other research purposes.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    Evaluate Radiology AI solutions on the market
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
-                                <div class="accordion-body">
-                                    <p>As a vendor-neutral company, deepc provides independent information about AI solutions on the market. The deepcOS® AI-evaluator can then be used to evaluate performance via one centralised interface before deciding on a solution to integrate. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->
-
-                        <!-- FAQ Item Start -->
-                        <div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
-                                    AI-based study prioritization and triage for urgent cases
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqaccordion">
-                                <div class="accordion-body">
-                                    <p>Either with the deepc interface or natively within the existing worklist, deepcOS® enables flagging and AI-based prioritization of urgent cases as determined by each individual institution, aiming to shorten the time to report and delivery of care. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FAQ Item End -->                    
-                    </div>
-                    <!-- FAQ Accordion End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Faqs Section End -->
-
-    <!-- Our Team Section Start -->
-    <div id="about" class="our-team">
-        <div id="team" class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Team members</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Compassionate experts you can trust</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Our team brings together a wealth of experience, passion, and a dedication to excellence in patient care.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="doctor-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-1.jpg" alt="">
-                                </figure>
-                            </a>                           
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Tema Body Start -->
-                        <div class="team-body">
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                            <!-- Team Content Start -->
-                            <div class="team-content">
-                                <h3><a href="doctor-single.html">Member 1</a></h3>
-                                <p>Info</p>
-                            </div>
-                            <!-- Team Content End -->
-                        </div>
-                        <!-- Tema Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.2s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="doctor-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-2.jpg" alt="">
-                                </figure>
-                            </a>                           
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Tema Body Start -->
-                        <div class="team-body">
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                            <!-- Team Content Start -->
-                            <div class="team-content">
-                                <h3><a href="doctor-single.html">Member 2</a></h3>
-                                <p>Info</p>
-                            </div>
-                            <!-- Team Content End -->
-                        </div>
-                        <!-- Tema Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.4s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="doctor-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-3.jpg" alt="">
-                                </figure>
-                            </a>                           
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Tema Body Start -->
-                        <div class="team-body">
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                            <!-- Team Content Start -->
-                            <div class="team-content">
-                                <h3><a href="doctor-single.html">Member 3</a></h3>
-                                <p>Info</p>
-                            </div>
-                            <!-- Team Content End -->
-                        </div>
-                        <!-- Tema Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <!-- Team Member Item Start -->
-                    <div class="team-member-item wow fadeInUp" data-wow-delay="0.6s">
-                        <!-- Team Image Start -->
-                        <div class="team-image">
-                            <a href="doctor-single.html" data-cursor-text="View">
-                                <figure class="image-anime">
-                                    <img src="images/team-4.jpg" alt="">
-                                </figure>
-                            </a>                           
-                        </div>
-                        <!-- Team Image End -->
-
-                        <!-- Tema Body Start -->
-                        <div class="team-body">
-                            <!-- Team Social Icon Start -->
-                            <div class="team-social-icon">
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                                </ul>
-                            </div>
-                            <!-- Team Social Icon End -->
-                            <!-- Team Content Start -->
-                            <div class="team-content">
-                                <h3><a href="doctor-single.html">Member 4</a></h3>
-                                <p>Info</p>
-                            </div>
-                            <!-- Team Content End -->
-                        </div>
-                        <!-- Tema Body End -->
-                    </div>
-                    <!-- Team Member Item End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Team Section End -->
-
-    
-
-
-    <!-- Our Testimonial Start -->
-    <div class="our-testimonial">
-        <div class="container">
-            <div class="row section-row">
-                <div class="col-lg-12">
-                    <!-- Section Title Start -->
-                    <div class="section-title">
-                        <h3 class="wow fadeInUp">Testimonials</h3>
-                        <h2 class="text-anime-style-3" data-cursor="-opaque">Patient stories of care and recovery</h2>
-                        <p class="wow fadeInUp" data-wow-delay="0.25s">Discover inspiring stories of recovery and healing from those we've had the privilege to serve.</p>
-                    </div>
-                    <!-- Section Title End -->
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <!-- Testimonial Slider Start -->
-                    <div class="testimonial-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper" data-cursor-text="Drag">
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-
-                                        <div class="testimonial-content">
-                                            <p>Lorem ipsum dolor sit amet. Et quia temporibus id possimus veritatis vel nobis tempora 33 sequi galisum qui quae placeat At voluptas doloremque in quis tempora. </p>
-                                        </div>
-
-                                        <div class="testimonial-footer">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-1.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>Brooklyn simmons</h3>
-                                                <p>orthodontics</p>
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-
-                                        <div class="testimonial-content">
-                                            <p>Lorem ipsum dolor sit amet. Et quia temporibus id possimus veritatis vel nobis tempora 33 sequi galisum qui quae placeat At voluptas doloremque in quis tempora. </p>
-                                        </div>
-
-                                        <div class="testimonial-footer">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-2.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>monika roy</h3>
-                                                <p>Dental hygienist</p>
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-                                
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-
-                                        <div class="testimonial-content">
-                                            <p>Lorem ipsum dolor sit amet. Et quia temporibus id possimus veritatis vel nobis tempora 33 sequi galisum qui quae placeat At voluptas doloremque in quis tempora. </p>
-                                        </div>
-
-                                        <div class="testimonial-footer">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-3.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>albert flores</h3>
-                                                <p>senior dentist</p>
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-
-                                <!-- Testimonial Slide Start -->
-                                <div class="swiper-slide">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-rating">
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-
-                                        <div class="testimonial-content">
-                                            <p>Lorem ipsum dolor sit amet. Et quia temporibus id possimus veritatis vel nobis tempora 33 sequi galisum qui quae placeat At voluptas doloremque in quis tempora. </p>
-                                        </div>
-
-                                        <div class="testimonial-footer">
-                                            <div class="author-image">
-                                                <figure class="image-anime">
-                                                    <img src="images/author-2.jpg" alt="">
-                                                </figure>
-                                            </div>            
-                                            <div class="author-content">
-                                                <h3>monika roy</h3>
-                                                <p>Dental hygienist</p>
-                                            </div>
-                                        </div>                                    
-                                    </div>
-                                </div>
-                                <!-- Testimonial Slide End -->
-                            </div>
-                            <div class="testimonial-btn">
-                                <div class="testimonial-btn-prev"></div>
-                                <div class="testimonial-btn-next"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Slider End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Our Testimonial End -->
-
-
-    <!-- Footer Start -->
-    <footer class="main-footer bg-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12">
-                    <!-- About Footer Start -->
-                    <div class="about-footer">
-                        <!-- Footer Logo Start -->
-                        <div class="footer-logo">
-                            <img src="images/logo/logo-with-text-l-b.png" alt="SOF AI">
-                        </div>
-                        <!-- Footer Logo End -->
-
-                        <!-- About Footer Content Start -->
-                        <div class="about-footer-content">
-                            <p>We offer a wide range of AI healthcare services to meet your needs.</p>
-                        </div>           
-                        <!-- About Footer Content End -->
-                    </div>
-                    <!-- About Footer End -->
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <!-- <div class="footer-links">
-                        <h3>healthcare</h3>
-                        <ul>
-                            <li><a href="doctors.html">doctors</a></li>
-                            <li><a href="#">diagnostics</a></li>
-                            <li><a href="#">caregiver</a></li>
-                            <li><a href="#">hospitality</a></li>
-                            <li><a href="#">emergency</a></li>
-                        </ul>
-                    </div> -->
-                    <!-- Footer Links End -->
-                </div>
-                
-                <div class="col-lg-2 col-md-4 col-6">
-                    <!-- Footer Links Start -->
-                    <!-- <div class="footer-links">
-                        <h3>quick links</h3>
-                        <ul>
-                            <li><a href="index.html">home</a></li>
-                            <li><a href="about.html">about us</a></li>
-                        </ul>
-                    </div> -->
-                    <!-- Footer Links End -->
-                </div>
-
-                <div class="col-lg-3 col-md-4">
-                    <!-- Footer Contact Box Start -->
-                    <div class="footer-contact-box footer-links">
-                        <h3>contact us</h3>
-                        
-                        <!-- Footer Contact Item Start -->
-                        <div class="footer-contact-item">
-                            <div class="icon-box">
-                                <img src="images/icon-mail.svg" alt="">
-                            </div>
-                            <div class="footer-contact-content">
-                                <p>info@domain.com</p>
-                            </div>
-                        </div>
-                        <!-- Footer Contact Item End -->
-
-                        <!-- Footer Contact Item Start -->
-                        <div class="footer-contact-item">
-                            <div class="icon-box">
-                                <img src="images/icon-phone.svg" alt="">
-                            </div>
-                            <div class="footer-contact-content">
-                                <p>+1 (213) 465 789</p>
-                            </div>
-                        </div>
-                        <!-- Footer Contact Item End -->
-
-                        <!-- Footer Contact Item Start -->
-                        <div class="footer-contact-item">
-                            <div class="icon-box">
-                                <img src="images/icon-location.svg" alt="">
-                            </div>
-                            <div class="footer-contact-content">
-                                <p>2464 Royal Ln. Mesa, New Jersey</p>
-                            </div>
-                        </div>
-                        <!-- Footer Contact Item End -->
-                    </div>
-                    <!-- Footer Contact Box End -->
-                </div>
-
-                <div class="col-lg-12">
-                    <!-- Footer Social Links Start -->
-                    <div class="footer-social-link">
-                        <hr>
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        </ul>
-                        <hr>
-                    </div>
-                    <!-- Footer Social Links End -->
-                </div>
-            </div>
-
-            <!-- Footer Copyright Section Start -->
-            <div class="footer-copyright">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <!-- Footer Copyright Start -->
-                        <div class="footer-copyright-text">
-                            <p>Copyright © 2024 All Rights Reserved.</p>
-                        </div>
-                        <!-- Footer Copyright End -->
-                    </div>
-
-                    <div class="col-md-6">
-                        <!-- Footer Terms Condition Start -->
-                        <div class="footer-terms-condition">
-                            <ul>
-                                <li><a href="#">privacy policy</a>
-                                <li><a href="#">terms & conditions</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Footer Terms Condition End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Footer Copyright Section End -->
         </div>
     </footer>
-    <!-- Footer End -->
 
-    <!-- Jquery Library File -->
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Validator js file -->
-    <script src="js/validator.min.js"></script>
-    <!-- SlickNav js file -->
-    <script src="js/jquery.slicknav.js"></script>
-    <!-- Swiper js file -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- Counter js file -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <!-- Isotop js file -->
-	<script src="js/isotope.min.js"></script>
-    <!-- Magnific js file -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!-- SmoothScroll -->
-    <script src="js/SmoothScroll.js"></script>
-    <!-- Parallax js -->
-    <script src="js/parallaxie.js"></script>
-    <!-- MagicCursor js file -->
-    <script src="js/gsap.min.js"></script>
-    <script src="js/magiccursor.js"></script>
-    <!-- Text Effect js file -->
-    <script src="js/SplitText.js"></script>
-    <script src="js/ScrollTrigger.min.js"></script>
-    <!-- YTPlayer js File -->
-    <script src="js/jquery.mb.YTPlayer.min.js"></script>
-    <!-- Wow js file -->
-    <script src="js/wow.min.js"></script>
-    <!-- Main Custom js file -->
-    <script src="js/function.js"></script>
-    
-    <!-- Дополнительный скрипт для активации счетчиков -->
+    <!-- Add this just before the closing </body> tag -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Активация счетчиков
-        $('.counter-value').counterUp({
-            delay: 10,
-            time: 1500
-        });
-        
-        // Активация эффектов наведения для feature boxes
-        const featureBoxes = document.querySelectorAll('.feature-box');
-        
-        featureBoxes.forEach(function(box) {
-            box.addEventListener('mouseenter', function() {
-                this.querySelector('.feature-hover').style.opacity = '1';
-                this.querySelector('.feature-hover').style.visibility = 'visible';
+        // Animate elements on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize animate.css elements
+            const animateElements = document.querySelectorAll('.animate__animated');
+            animateElements.forEach(element => {
+                element.classList.add('animate__animated');
             });
             
-            box.addEventListener('mouseleave', function() {
-                this.querySelector('.feature-hover').style.opacity = '0';
-                this.querySelector('.feature-hover').style.visibility = 'hidden';
+            // Fade in elements on scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
             });
-        });
-        
-        // Инициализация слайдера платформы
-        const platformSwiper = new Swiper('.platform-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            effect: 'fade',
-            fadeEffect: {
-                crossFade: true
+            
+            // Count up animation for stats
+            const countElements = document.querySelectorAll('.count-up');
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const count = parseInt(target.getAttribute('data-count'));
+                        let current = 0;
+                        const increment = Math.ceil(count / 50);
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= count) {
+                                clearInterval(timer);
+                                current = count;
+                            }
+                            target.textContent = current;
+                        }, 30);
+                        statsObserver.unobserve(target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            countElements.forEach(element => {
+                statsObserver.observe(element);
+            });
+            
+            // Sticky header
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            // Testimonial slider functionality
+            const track = document.querySelector('.testimonial-track');
+            const dots = document.querySelectorAll('.testimonial-dots .dot');
+            const cards = document.querySelectorAll('.testimonial-card');
+            
+            if (track && dots.length && cards.length) {
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        // Update active dot
+                        document.querySelector('.dot.active').classList.remove('active');
+                        dot.classList.add('active');
+                        
+                        // Scroll to the corresponding testimonial
+                        const cardWidth = cards[0].offsetWidth;
+                        const gap = 30; // Same as the gap in CSS
+                        track.scrollTo({
+                            left: index * (cardWidth + gap),
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+                
+                // Update active dot on scroll
+                track.addEventListener('scroll', () => {
+                    const cardWidth = cards[0].offsetWidth;
+                    const gap = 30;
+                    const scrollPosition = track.scrollLeft;
+                    const index = Math.round(scrollPosition / (cardWidth + gap));
+                    
+                    if (index >= 0 && index < dots.length) {
+                        document.querySelector('.dot.active').classList.remove('active');
+                        dots[index].classList.add('active');
+                    }
+                });
             }
         });
-    });
     </script>
 </body>
 </html>
