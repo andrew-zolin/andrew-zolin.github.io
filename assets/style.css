@@ -25,6 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-time:before {
+  content: "\e921";
+  color: #fff;
+}
+
+.icon-eye:before {
+  content: "\e915";
+  color: #fff;
+}
+
 .icon-ico-adobe:before {
   content: "\e957";
   color: #fff;
