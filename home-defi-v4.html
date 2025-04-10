@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICOLand | ICO landing page & ICO Crypto HTML Template</title>
+    <title>SOF AI | AI-powered radiology software</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="app/dist/app.css">
@@ -30,32 +30,480 @@
         .features-box-4 .features-box-content p {
             flex: 1;
         }
+        /* New banner styles */
+        .banner-top.style-8 {
+            position: relative;
+            padding: 150px 0 100px;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #001440;
+        }
+        .banner-top__content .title {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+            font-weight: 700;
+            white-space: normal;
+            word-wrap: break-word;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+        }
+        .banner-top__content .desc {
+            font-size: 48px;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            max-width: 900px;
+            text-align: left;
+            color: #fff;
+            font-weight: 500;
+        }
+        .typing-animation {
+            display: block;
+            position: relative;
+            max-width: 100%;
+        }
+        .typing-animation::after {
+            content: '';
+            display: none;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .banner-top__features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .banner-top__features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #fff;
+            background: rgba(86, 55, 200, 0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+        }
+        .banner-top__features li i {
+            color: #00D199;
+            margin-right: 10px;
+        }
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        .btn-action.style-5 {
+            min-width: 180px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+            border: none;
+        }
+        .btn-action.style-6 {
+            background: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+            min-width: 180px;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .btn-action.style-6:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .banner-top__video-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .banner-top__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(to bottom, rgba(0,20,64,0.7), rgba(0,20,64,0.5)); */
+            background: rgba(0,0,0,0.2);
+            z-index: 0;
+        }
+        /* Text animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.8s ease forwards;
+        }
+        .animate-fadeInRight {
+            animation: fadeInRight 0.8s ease forwards;
+        }
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+        .delay-4 {
+            animation-delay: 0.8s;
+        }
+        
+        /* Banner animation styles */
+        .banner-top__content .title {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: white;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: left;
+            font-weight: 700;
+            white-space: normal;
+            word-wrap: break-word;
+        }
+        
+        .animated-title {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .animated-title:nth-child(1) {
+            animation: fadeInUp 0.8s ease forwards 0.2s;
+        }
+        
+        .animated-title:nth-child(2) {
+            animation: fadeInUp 0.8s ease forwards 0.4s;
+        }
+        
+        .animated-title:nth-child(3) {
+            animation: fadeInUp 0.8s ease forwards 0.6s;
+        }
+        
+        .animated-title:nth-child(4) {
+            animation: fadeInUp 0.8s ease forwards 0.8s;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Key Features Section */
+        .key-features {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-heading h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #001440;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .feature-card__icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        .feature-card__icon i {
+            font-size: 30px;
+            color: #fff;
+        }
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #001440;
+        }
+        .feature-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            flex: 1;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        .about-content h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #001440;
+        }
+        .about-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        /* Technologies Section */
+        .technologies-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+        .tech-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        .tech-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .tech-card__icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+        .tech-card__icon i {
+            font-size: 40px;
+            color: #fff;
+        }
+        .tech-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #001440;
+        }
+        .tech-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        /* Conclusion Section */
+        .conclusion-section {
+            padding: 100px 0;
+            background-color: #001440;
+            color: #fff;
+        }
+        .conclusion-content h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        .conclusion-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .cta-button {
+            margin-top: 40px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background-color: #f8f9fa;
+        }
+        .testimonial-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 20px 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .testimonial-card:before {
+            content: '\201C';
+            font-size: 80px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgba(86, 55, 200, 0.1);
+            font-family: Georgia, serif;
+        }
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        .testimonial-author-info h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #001440;
+        }
+        .testimonial-author-info p {
+            font-size: 14px;
+            color: #666;
+        }
+        .testimonial-slider .swiper-pagination {
+            margin-top: 30px;
+        }
+        .testimonial-slider .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: #3D88FB;
+            opacity: 0.3;
+        }
+        .testimonial-slider .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #5637C8;
+        }
+        
+        @media (max-width: 991px) {
+            .banner-top__content .title {
+                font-size: 42px;
+            }
+            .banner-top__content .desc {
+                font-size: 18px;
+            }
+            .banner-top__features {
+                flex-direction: column;
+                align-items: center;
+            }
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .section-heading h2 {
+                font-size: 32px;
+            }
+            .feature-card {
+                padding: 30px 20px;
+            }
+            .about-content h2 {
+                font-size: 32px;
+            }
+            .about-image {
+                margin-top: 40px;
+            }
+        }
     </style>
 
 </head>
 <body class="home-defi-4 header-fixed" data-magic-cursor="show">
-<!-- Preloading -->
-    <div class="preloader">
-        <div class=" loader">
-            <div class="square"></div>
-            <div class="path">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-          <p class="text-load">Loading :</p>
-        </div>
-    </div> 
-    <!-- End Preloading -->
     <!-- MAGIC CURSOR -->
-		<div class="mouse-cursor cursor-outer"></div>
-		<div class="mouse-cursor cursor-inner"></div>
+		<!-- <div class="mouse-cursor cursor-outer"></div>
+		<div class="mouse-cursor cursor-inner"></div> -->
 	<!-- /MAGIC CURSOR -->
-
 
     <!-- Header -->
     <header id="header_main" class="header style-8">
@@ -125,166 +573,238 @@
 
     <!-- Banner Top -->
     <section class="banner-top style-8">
+        <video class="banner-top__video-bg" autoplay muted loop playsinline>
+            <source src="assets/videos/background/6236753-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+        <div class="banner-top__overlay"></div>
         <div class="container">
             <div class="row">
-                <div class="col-xl-6 col-md-12">
+                <div class="col-xl-8 col-md-12">
                     <div class="banner-top__content">
-                        <h2 class="title">SOF AI</h2>
-                        <p class="desc">AI-powered radiology software for faster, more accurate diagnoses and smarter patient care.</p>
-                        <div class="button">
-                            <a class="btn-action style-5" href="home-defi-v4.html#">
-                                <span>Contact Us</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-md-12">
-                    <div class="banner-top__image">
-                        <img src="assets/images/layout/banner-5.png" alt="ICOLand">
+                        <h2 style="padding: 0px; margin: 0; max-width: 100%;" class="title">
+                            <span class="animated-title">AI-powered radiology software</span><br>
+                            <span class="animated-title">for faster, more accurate.</span><br>
+                        </h2>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="banner-top__main">
+    <!-- Key Features Section -->
+    <section class="key-features">
         <div class="container">
+            <div class="section-heading">
+                <h2>Key Features</h2>
+            </div>
             <div class="row">
-                <div class="col-12">
-                    <div class="banner-top__sale">
-                        <div class="countdown">
-                            <p class="fs-17">Token sale End In!</p>
-                            <span class="js-countdown" data-timer="2865550">     
-                            </span>
+                <!-- Feature 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-search"></i>
                         </div>
-                        
+                        <h3>Early disease detection</h3>
+                        <p>Finds signs of illness in medical images at the earliest stage.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Accurate and fast results</h3>
+                        <p>Supports doctors with quick and reliable image analysis.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Reduces human error</h3>
+                        <p>Helps radiologists catch what might be missed.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h3>Works with hospital systems</h3>
+                        <p>Easily connects to existing machines and software.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h3>Remote access, anytime</h3>
+                        <p>View and analyze scans securely from anywhere.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Utilizes advanced machine learning for precise diagnostics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                            <div class="token-bar">
-                                <div class="top">
-                                    <h6>Raised - <span>1,450 Tokens</span></h6>
-                                    <h6>Target - <span>150,000 Tokens</span></h6>
-                                </div>
-                                <div class="main">
-                                    <div class="progress-token">
-                                        <p class="fs-14">60,490</p>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content" data-aos="fade-right">
+                        <h2>Advanced AI for Medical Imaging</h2>
+                        <p>SOF AI utilizes advanced artificial intelligence to enhance the interpretation of lung and mammography images. By leveraging state-of-the-art image processing algorithms, SOF AI automates the detection of critical regions such as lung nodules, masses, and other key structures in breast tissue, improving the speed and accuracy of diagnoses.</p>
+                        <p>Designed to integrate seamlessly with standard workstations and DICOM formats, SOF AI supports healthcare professionals by streamlining the analysis of medical images. This powerful tool ensures more reliable and detailed assessments, enabling faster clinical decisions and better patient outcomes.</p>
+                        <p>With its user-friendly platform and sophisticated AI-driven analysis, SOF AI provides healthcare providers with the tools they need to identify conditions earlier and with greater precision, ultimately improving the quality of care.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image" data-aos="fade-left">
+                        <img src="assets/images/layout/banner-5.png" alt="SOF AI Technology">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>Our Technology</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card">
+                        <div class="tech-card__icon">
+                            <i class="fas fa-lungs"></i>
+                        </div>
+                        <h3>SOF CXR</h3>
+                        <p>Advanced chest X-ray analysis that detects abnormalities with high precision, helping radiologists identify potential issues quickly and accurately.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card">
+                        <div class="tech-card__icon">
+                            <i class="fas fa-venus"></i>
+                        </div>
+                        <h3>SOF MMG</h3>
+                        <p>Mammography AI solution that enhances breast cancer screening by identifying suspicious areas that might be overlooked in traditional analysis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tech-card">
+                        <div class="tech-card__icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h3>SOF PD-L1</h3>
+                        <p>Oncology-focused AI that assists pathologists in analyzing PD-L1 expression, crucial for determining immunotherapy effectiveness in cancer treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-heading">
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonial-slider swiper-container" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"SOF AI has revolutionized our radiology department. The speed and accuracy of diagnoses have improved significantly, allowing us to provide better care to our patients."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/avt/author-1.png" alt="Dr. Sarah Johnson">
+                                    <div class="testimonial-author-info">
+                                        <h4>Dr. Sarah Johnson</h4>
+                                        <p>Chief Radiologist, Memorial Hospital</p>
                                     </div>
                                 </div>
-
-                                <div class="bottom">
-                                    <p class="fs-14">Soft cap</p>
-                                    <p class="fs-14">Crowdsale</p>
-                                    <p class="fs-14">Hard cap</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"The integration with our existing systems was seamless. SOF AI has become an indispensable tool in our daily workflow, helping us detect subtle abnormalities that might otherwise be missed."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/avt/author-2.png" alt="Dr. Michael Chen">
+                                    <div class="testimonial-author-info">
+                                        <h4>Dr. Michael Chen</h4>
+                                        <p>Director of Imaging, City Medical Center</p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <ul class="list-coin">
-                                <li><span class="icon-bitcoin"></span></li>
-                                <li><span class="icon-coinp"></span></li>
-                                <li><span class="icon-coinp"></span></li>
-                                <li><span class="icon-kyber-network"></span></li>
-                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p class="testimonial-text">"SOF AI's mammography solution has significantly improved our early detection rates. We're now able to identify potential issues at earlier stages, which is crucial for successful treatment."</p>
+                                <div class="testimonial-author">
+                                    <img src="assets/images/avt/author-3.png" alt="Dr. Emily Rodriguez">
+                                    <div class="testimonial-author-info">
+                                        <h4>Dr. Emily Rodriguez</h4>
+                                        <p>Breast Cancer Specialist, Women's Health Clinic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-    </div>
-    <!-- end Banner Top -->
+    </section>
 
-    <!-- Section about -->
-    <section class="about style-4 style-8 bg-1">
+    <!-- Conclusion Section -->
+    <section class="conclusion-section">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block-text center">
-                        <h3 class="title">
-                            What is ICO Crypto-Currencies?
-                        </h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-vuesax"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Sercure Storage</a>
-                                <p class="fs-17 mt-5">The platform helps investors to make easy to purchase and sell their tokens</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-startup"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Investment Projects</a>
-                                <p class="fs-17 mt-5">The platform helps investors to make easy to purchase and sell their tokens</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-calendar"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Planing</a>
-                                <p class="fs-17 mt-5">The platform helps investors to make easy to purchase and sell their tokens.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-mobile"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Mobile App</a>
-                                <p class="fs-17 mt-5">The process of taking into account the collective opinion of a group.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-convert-card"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Exchange Storage</a>
-                                <p class="fs-17 mt-5">The system pay a bonus for excillent individuals conveniently.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="choose__box">
-                        <div class="choose__box-icon center">
-                            <div class="icon">
-                                <span class="icon-card"></span>
-                            </div>
-                            <div class="content">
-                                <a href="home-defi-v4.html#" class="h5">Credit Card Use</a>
-                                <p class="fs-17 mt-5">The platform helps investors to make easy to purchase and sell their tokens.</p>
-                            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="conclusion-content text-center" data-aos="fade-up">
+                        <h2>Transforming Radiology with AI</h2>
+                        <p>The integration of AI into radiology offers substantial improvements across multiple areas, including image acquisition, diagnostic reporting, prognosis prediction, and treatment monitoring. By automating repetitive tasks, enhancing image quality, and providing valuable insights into disease progression, AI is transforming the radiology field and improving patient care.</p>
+                        <p>As technology continues to evolve, the role of AI in radiology will expand, offering even greater potential for precision medicine and better patient outcomes.</p>
+                        <div class="cta-button">
+                            <a href="#contact" class="btn-action style-5"><span>Get Started Today</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End Section about -->
 
     <!-- Section features -->
     <section class="features style-4" id="features">
@@ -1081,7 +1601,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p>© 2022. All rights reserved by <a href="https://themeforest.net/user/themesflat/portfolio">Themesflat</a></p>
+                        <p> 2022. All rights reserved by <a href="https://themeforest.net/user/themesflat/portfolio">Themesflat</a></p>
                     </div>
                 </div>
             </div>
@@ -1102,6 +1622,29 @@
     <script src="app/js/mouse.js"></script>
     <script>
           AOS.init();
+          
+          // Initialize testimonial slider
+          const testimonialSlider = new Swiper('.testimonial-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }
+          });
     </script>
   
   <script>
