@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="app/dist/app.css">
     <link rel="stylesheet" href="app/dist/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- end Styles -->
 
     <!-- Favicon and Touch Icons  -->
@@ -496,6 +497,217 @@
                 margin-top: 40px;
             }
         }
+        
+        /* Market Research Section Styles */
+        .market-research {
+            background: linear-gradient(135deg, #001440 0%, #0a1f3d 100%);
+            padding: 80px 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+        
+        .market-research::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/images/pattern/pattern-1.png');
+            opacity: 0.05;
+            z-index: 1;
+        }
+        
+        .market-research .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .market-research__title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #fff, #a0b4d8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .market-research__title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+        }
+        
+        .market-research__subtitle {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .market-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .market-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .market-card__image {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .market-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .market-card:hover .market-card__image img {
+            transform: scale(1.05);
+        }
+        
+        .market-card__content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .market-card__icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #3D88FB, #5637C8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 150px;
+            right: 25px;
+            transform: translateY(-50%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+        
+        .market-card__icon i {
+            font-size: 24px;
+            color: #fff;
+        }
+        
+        .market-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .market-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 0;
+            flex-grow: 1;
+        }
+        
+        .market-highlight {
+            color: #3D88FB;
+            font-weight: 600;
+        }
+        
+        .market-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #3D88FB, #5637C8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .market-card__image {
+                height: 160px;
+            }
+            
+            .market-card__icon {
+                top: 130px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+        }
     </style>
 
 </head>
@@ -586,6 +798,116 @@
                             <span class="animated-title">for faster, more accurate.</span><br>
                         </h2>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Research Section -->
+    <section class="market-research">
+        <div class="container">
+            <h2 class="market-research__title">Market Research in Uzbekistan</h2>
+            <p class="market-research__subtitle">Comprehensive analysis of the CXR and MMG market landscape for SOF AI implementation</p>
+            
+            <div class="row">
+                <!-- Market Overview Card -->
+                <div style="margin-bottom: 20px;" class="col-lg-6 col-md-12">
+                    <div class="market-card">
+                        <div class="market-card__image">
+                            <img src="assets/images/healthcare-reform.jpg" alt="Healthcare Reforms" onerror="this.src='https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="market-card__icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <div class="market-card__content">
+                            <h3>Healthcare Reforms</h3>
+                            <p>Uzbekistan is actively reforming its healthcare system to improve quality and accessibility of services. <span class="market-highlight">Digitalization and modern technologies</span> are key components of these reforms, creating an ideal environment for AI-powered solutions like SOF AI.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Infrastructure Card -->
+                <div style="margin-bottom: 20px;" class="col-lg-6 col-md-12">
+                    <div class="market-card">
+                        <div class="market-card__image">
+                            <img src="assets/images/hospital-infrastructure.jpg" alt="Hospital Infrastructure" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="market-card__icon">
+                            <i class="bi bi-hospital"></i>
+                        </div>
+                        <div class="market-card__content">
+                            <h3>Infrastructure</h3>
+                            <p>A network of public and private clinics equipped with X-ray and mammography equipment of varying levels exists throughout the country. There is a <span class="market-highlight">clear trend towards digitalization</span> and increased adoption of PACS (Picture Archiving and Communication Systems).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CXR Significance Card -->
+                <div style="margin-bottom: 20px;" class="col-lg-6 col-md-12">
+                    <div class="market-card">
+                        <div class="market-card__image">
+                            <img src="assets/images/chest-xray.jpg" alt="Chest X-ray" onerror="this.src='https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="market-card__icon">
+                            <i class="bi bi-lungs"></i>
+                        </div>
+                        <div class="market-card__content">
+                            <h3>CXR Significance</h3>
+                            <p>Chest X-rays are crucial for diagnosing tuberculosis (a regional concern), pneumonias (including COVID-19), lung cancer, and other chest pathologies. It remains <span class="market-highlight">one of the most frequently performed radiologic examinations</span> in the country, creating high demand for efficient analysis tools.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MMG Significance Card -->
+                <div style="margin-bottom: 20px;" class="col-lg-6 col-md-12">
+                    <div class="market-card">
+                        <div class="market-card__image">
+                            <img src="assets/images/mammography.jpg" alt="Mammography" onerror="this.src='https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="market-card__icon">
+                            <i class="bi bi-gender-female"></i>
+                        </div>
+                        <div class="market-card__content">
+                            <h3>MMG Significance</h3>
+                            <p>Mammography is the "gold standard" for breast cancer screening and diagnosis, which is one of the leading cancers affecting women in Uzbekistan. <span class="market-highlight">State breast cancer screening programs are developing</span>, increasing the need for quality and rapid interpretation of scans.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Staffing Card -->
+                <div style="margin-bottom: 20px;" class="col-lg-12 col-md-12">
+                    <div class="market-card">
+                        <div class="market-card__image">
+                            <img src="assets/images/medical-staff.jpg" alt="Medical Staff" onerror="this.src='https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="market-card__icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div class="market-card__content">
+                            <h3>Staffing Challenges</h3>
+                            <p>As in many countries, Uzbekistan faces a shortage of highly qualified radiographers, especially in regional areas. Existing specialists often have high workloads, creating an opportunity for AI assistance to <span class="market-highlight">improve efficiency and reduce burnout</span> among medical professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Market Statistics -->
+            <div class="market-stats">
+                <div class="stat-item">
+                    <div class="stat-number">35M+</div>
+                    <div class="stat-label">Population Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Healthcare Facilities</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">40%</div>
+                    <div class="stat-label">Digital Adoption Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2.5M</div>
+                    <div class="stat-label">Annual CXR & MMG Scans</div>
                 </div>
             </div>
         </div>
@@ -1547,6 +1869,7 @@
 
 
 
+    
     <!-- Footer -->
     <footer class="footer style-4">
         <div class="footer__top">
