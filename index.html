@@ -306,7 +306,8 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: var(--dark-bg-secondary);
+            /* background: var(--dark-bg-secondary); */
+            background: rgba(5, 5, 5, 0.8);;
             border-radius: 8px;
             padding: 10px 0;
             min-width: 200px;
@@ -678,6 +679,10 @@
         .try-demo-btn:hover::before {
             width: 100%; /* Конечная ширина - 100% */
         }
+
+        .header.is-fixed.is-small {
+            background: rgba(5, 5, 5, 0.8);
+        }
     </style>
     <!-- end Styles -->
 
@@ -1012,19 +1017,19 @@
                         
                         <div class="feature-list" style="margin-top: 25px;">
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">Automated detection of abnormalities</p>
                             </div>
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">Precise localization with heatmap visualization</p>
                             </div>
                             <div class="feature-item" style="display: flex; align-items: center;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">Automated report generation</p>
@@ -1050,13 +1055,13 @@
                         
                         <div class="feature-list" style="margin-top: 25px;">
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">DICOM and HL7 compatibility</p>
                             </div>
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">On-premises or cloud deployment options</p>
