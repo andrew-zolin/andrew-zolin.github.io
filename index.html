@@ -352,8 +352,15 @@
             align-items: center;
             justify-self: center;
             max-height: 36px;
-            border-radius: 8px !important;
-            /* border-width: 2px !important; */
+            border: 1px solid var(--primary-color) !important;
+            border-radius: 4px !important;
+            color: var(--light-text);
+            background: transparent;
+            /* margin-right: 10px; */
+            transition: all 0.3s ease;
+        }
+        .header__right .btn-action-outline.style-4:hover {
+            color: var(--dark-bg-primary);
         }
 
         /* .header__right .btn-action-outline.style-4 {
@@ -740,6 +747,10 @@
                                     <span>Contact Us</span>
                                 </a>
                             </div>
+                            <!-- <div class="group-button">
+                                <a href="#" class="active">EN</a>
+                                <a href="#" class="btn-action-outline">Contact Us</a>
+                            </div> -->
                             <div class="mobile-button">
                                 <span></span>
                             </div>
