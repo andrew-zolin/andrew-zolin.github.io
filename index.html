@@ -227,6 +227,400 @@
             justify-content: center;
             margin-top: 40px;
         }
+
+        .scheme-section {
+            /* margin-top: 50px; */
+            /* margin-bottom: 50px; */
+        }
+        @media (max-width: 768px) {
+            .scheme-section img {
+                width: 100% !important;
+                min-width: 0 !important;
+            }
+            .scheme-card {
+                padding: 20px 5px !important;
+            }
+        }
+        
+        /* Desktop Menu */
+        .header__body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+        }
+
+        /* Remove previous desktop menu styles */
+        .header__main {
+            display: none;
+        }
+
+        /* Style for right side elements */
+        .header__right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            height: auto;
+        }
+
+        /* Navigation Menu */
+        .header__right nav {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        .header__right nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+        }
+        
+        .header__right nav li {
+            position: relative;
+            margin-inline: 10px;
+        }
+
+        .header__right nav li a {
+            color: var(--light-text);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .header__right nav li a:hover {
+            color: var(--primary-color);
+        }
+
+        .header__right nav li.menu-item-has-children > a::after {
+            content: "\f107";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        /* Submenu styles */
+        .header__right nav li .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--dark-bg-secondary);
+            border-radius: 8px;
+            padding: 10px 0;
+            min-width: 200px;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.2s ease;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header__right nav li:hover > .sub-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .header__right nav li .sub-menu li {
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+
+        .header__right nav li .sub-menu li a {
+            display: block;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        /* Button styles */
+        .header__right .group-button {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }   
+
+
+        .header__right .btn-action-outline.style-4 {
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-self: center;
+            max-height: 36px;
+            border-radius: 8px !important;
+            /* border-width: 2px !important; */
+        }
+
+        /* .header__right .btn-action-outline.style-4 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            padding: 0 15px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--light-text);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        } */
+
+        /* .header__right .btn-action-outline.style-4:last-child {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        } */
+
+        /* Mobile responsive */
+        @media (max-width: 991px) {
+            .header__right nav {
+                display: none;
+            }
+            
+            .mobile-button {
+                display: flex;
+            }
+        }
+        
+        /* Typing Text */
+        .typing-text {
+            border-right: 3px solid var(--primary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            display: inline-block;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary-color) }
+        }
+
+        .banner-top__buttons .btn-action-outline:hover {
+            background: rgba(61, 136, 251, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .banner-top__image img {
+            transition: transform 0.5s ease;
+        }
+
+        .banner-top__image:hover img {
+            transform: scale(1.03);
+        }
+        
+        /* Mobile Nav Overlay */
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: var(--dark-bg-secondary);
+            border-left: 1px solid rgba(255, 255, 255, 0.05);
+            z-index: 999;
+            padding: 80px 25px 30px;
+            overflow-y: auto;
+            transition: all 0.4s ease;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu ul li {
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-menu ul li a {
+            display: block;
+            color: var(--light-text);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 15px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Submenu styles */
+        .mobile-menu ul li.menu-item-has-children > a {
+            padding-right: 30px;
+        }
+
+        .mobile-menu ul li.menu-item-has-children > a:after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu ul li.menu-item-has-children.active > a:after {
+            transform: translateY(-50%) rotate(180deg);
+            color: var(--primary-color);
+        }
+
+        .mobile-menu ul li.menu-item-has-children.active > a {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu .sub-menu {
+            display: none;
+            padding-left: 15px;
+        }
+
+        .mobile-menu .sub-menu li {
+            border-bottom: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .mobile-menu .sub-menu li a {
+            font-size: 14px;
+            padding: 12px 0;
+        }
+
+        /* Mobile Language Selector */
+        .mobile-menu .mobile-language {
+            margin-top: 30px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu .mobile-language a {
+            display: inline;
+            padding: 8px 20px;
+            color: var(--light-text);
+            background: rgba(61, 136, 251, 0.12);
+            border-radius: 4px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu .mobile-language a:hover,
+        .mobile-menu .mobile-language a.active {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Mobile Button & Menu */
+        .mobile-button {
+            position: relative;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 999;
+            margin-left: 10px;
+        }
+
+        .mobile-button:hover {
+            background: rgba(61, 136, 251, 0.15);
+        }
+
+        .mobile-button span {
+            position: relative;
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: var(--light-text);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-button span:before,
+        .mobile-button span:after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            background: var(--light-text);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            left: 0;
+        }
+
+        .mobile-button span:before {
+            top: -5px;
+        }
+
+        .mobile-button span:after {
+            top: 5px;
+        }
+
+        .mobile-button.active {
+            background: var(--primary-color);
+        }
+
+        .mobile-button.active span {
+            background: transparent;
+        }
+
+        .mobile-button.active span:before {
+            transform: rotate(45deg);
+            top: 0;
+            background: #fff;
+        }
+
+        .mobile-button.active span:after {
+            transform: rotate(-45deg);
+            top: 0;
+            background: #fff;
+        }
+
+        .group-button.active {
+            display: none !important;
+        }
     </style>
     <!-- end Styles -->
 
@@ -255,49 +649,38 @@
                                 data-height="40">
                             </a>
                         </div>
-
                         <div class="header__right">
-                            <nav id="main-nav" class="main-nav">
-                                <ul id="menu-primary-menu" class="menu">
-                                    <li class="menu-item  current-menu-item">
-                                        <a href="index.html#">Platform</a>
-                
-                                    </li>
-                                    <li class="menu-item menu-item-has-children">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Platform</a></li>
+                                    <li class="menu-item-has-children">
                                         <a href="radiology-cxr.html">Radiology</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
-                                            <li class="menu-item"><a href="#">Sof MMG</a></li>
-                                            <li class="menu-item"><a href="#">Testimonials</a></li>
-    
+                                            <li><a href="radiology-cxr.html">Sof CXR</a></li>
+                                            <li><a href="#">Sof MMG</a></li>
+                                            <li><a href="#">Testimonials</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children">
+                                    <li class="menu-item-has-children">
                                         <a href="#">Oncology</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="#">Sof PD-L1</a></li>
-                                          
+                                            <li><a href="#">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
-                                    
-                                    
-                                    <li class="menu-item">
-                                        <a href="#">Publications</a>
-                                    </li>
-                                    <!-- <li class="menu-item">
-                                        <a href="About Us</a>
-                                    </li> -->
+                                    <li><a href="#">Publications</a></li>
                                 </ul>
                             </nav>
                             <div class="group-button">
-                                <a href="#" class="btn-action-outline style-4">
+                                <a href="home-defi-v1.html#" class="btn-action-outline style-4">
                                     <span>EN</span>
                                 </a>
-                                <a class="btn-action-outline style-4" href="#">
+                                <a class="btn-action-outline style-4" href="home-defi-v4.html#">
                                     <span>Contact Us</span>
                                 </a>
                             </div>
-                            <div class="mobile-button"><span></span></div>
+                            <div class="mobile-button">
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -305,6 +688,36 @@
         </div>
     </header>
     <!-- end Header -->
+
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+        <ul>
+            <li class="menu-item current-menu-item">
+                <a href="index.html#">Platform</a>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="radiology-cxr.html">Radiology</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
+                    <li class="menu-item"><a href="#">Sof MMG</a></li>
+                    <li class="menu-item"><a href="#">Testimonials</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#">Oncology</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Sof PD-L1</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="#">Publications</a>
+            </li>
+        </ul>
+        <div class="mobile-language">
+            <a href="#" class="active">EN</a>
+            <a href="#" class="btn-action-outline">Contact Us</a>
+        </div>
+    </div>
 
     <!-- Banner Top -->
     <section class="banner-top style-8">
@@ -318,7 +731,7 @@
                     <div  class="banner-top__content">
                         <h2 style="padding: 0px; margin: 0; max-width: 100%; font-size: 50px;" class="title">
                             <span class="">AI-powered radiology software</span><br>
-                            <span class="" style="color: var(--primary-color);">For faster,<br>more accurate diagnostics.</span><br>
+                            <span class="" style="color: var(--primary-color);">for faster, more accurate.</span><br>
                         </h2>
                         <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;">
                             SOF AI helps radiologists analyze chest X-rays and mammograms with 97-99% accuracy, reducing diagnostic time by up to 85% and improving patient outcomes.
@@ -599,12 +1012,6 @@
                                 </div>
                                 <p style="margin: 0; color: var(--light-text);">On-premises or cloud deployment options</p>
                             </div>
-                            <div class="feature-item" style="display: flex; align-items: center;">
-                                <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
-                                </div>
-                                <p style="margin: 0; color: var(--light-text);">Secure, HIPAA-compliant data handling</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -702,6 +1109,29 @@
                 </div>
             </div>
         </div>
+        <div style="margin-top: 50px;" class="container">
+            <!-- <div class="block-text center">
+                <h3 class="heading">Scheme of operation of the product</h3>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="scheme-section" style="padding: 80px 0;">
+                        <div class="container d-flex flex-column align-items-center justify-content-center" style="max-width: 900px;">
+                            <div class="block-text center" data-aos="fade-up" data-aos-duration="800">
+                                <h3 class="heading" style="color: var(--light-text); margin-bottom: 24px;">Scheme of operation of the product</h3>
+                            </div>
+                            <div class="row w-100 justify-content-center">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <div class="scheme-card" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                                        <img src="assets/images/workflow/scheme.png" alt="SOF AI Technology" style="margin-top: 20px; width: 60%; min-width: 260px; max-width: 600px; height: auto;" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- End Section Road Map -->
 
@@ -722,6 +1152,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image" data-aos="fade-left">
+                        <!-- <img src="assets/images/workflow/scheme.png" alt="SOF AI Technology"> -->
                         <img src="assets/images/layout/ai-in-radiology.png" alt="SOF AI Technology">
                     </div>
                 </div>
@@ -757,7 +1188,7 @@
                 <div class="col-md-12">
                     <div class="block-text center" data-aos="fade-up">
                         <h3>Have Any Questions?</h3>
-                        <p class="mt-12">Find answers to frequently asked questions about SOF AI technology</p>
+                        <p class="mt-12 fs-17">Find answers to frequently asked questions about SOF AI technology</p>
                     </div>
 
                     <div class="section-faq__main">
@@ -862,7 +1293,7 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
                     <div class="blog-box">
                         <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Central Hospital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                            <img src="assets/images/medical/medical-center.jpg" alt="Central Hospital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                         </div>
                         <div class="box-content" style="padding: 20px;">
                             <h4 style="font-size: 18px; margin-bottom: 10px;">Central Medical Center</h4>
@@ -1223,6 +1654,31 @@
     
 </script>
 
+    <script>
+          $(document).ready(function() {
+              // Mobile Menu Toggle
+              $('.mobile-button').on('click', function() {
+                  $(this).toggleClass('active');
+                  $('.mobile-overlay').toggleClass('active');
+                  $('.mobile-menu').toggleClass('active');
+                  $('.group-button').toggleClass('active');
+              });
 
+              // Overlay Click Close
+              $('.mobile-overlay').on('click', function() {
+                  $(this).removeClass('active');
+                  $('.mobile-button').removeClass('active');
+                  $('.mobile-menu').removeClass('active');
+                  $('.group-button').removeClass('active');
+              });
+
+              // Submenu Toggle
+              $('.mobile-menu li.menu-item-has-children > a').on('click', function(e) {
+                  e.preventDefault();
+                  $(this).parent().toggleClass('active');
+                  $(this).next('.sub-menu').slideToggle(300);
+              });
+          });
+    </script>
 </body>
 </html>
