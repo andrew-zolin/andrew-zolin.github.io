@@ -696,3 +696,684 @@
     display: block;
     margin: 0 auto;
 }
+
+
+
+:root {
+    --dark-bg-primary: #0a0a0a;
+    --dark-bg-secondary: #121212;
+    --dark-bg-gradient: linear-gradient(135deg, #0a0a0ad2 0%, #121212b6 100%);
+    --dark-bg-gradient-alt: linear-gradient(135deg, #0a0a0abd 0%, #12121298 100%);
+    --primary-color: #3D88FB;
+    --secondary-color: #5637C8;
+    --accent-color: #00D199;
+    --light-text: #ffffff;
+    --light-text-secondary: rgba(255, 255, 255, 0.8);
+    --dark-overlay: rgba(5, 5, 5, 0.8);
+    --card-bg: rgba(18, 18, 18, 0.7);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: #0a0a0a;
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    background: var(--dark-bg-gradient);
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/pattern/pattern-1.png');
+    opacity: 0.05;
+    z-index: 1;
+}
+
+section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.header.style-8 {
+    /* background-color: var(--dark-bg-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); */
+}
+
+.footer {
+    background: var(--dark-bg-gradient-alt);
+}
+
+.footer__bottom {
+    background-color: var(--dark-bg-primary);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Card styles */
+.card, .blog-box, .features-box, .about-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.card:hover, .blog-box:hover, .features-box:hover, .about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Text styles */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--light-text);
+}
+
+p {
+    color: var(--light-text-secondary);
+}
+
+/* Button styles */
+.btn-action.style-5 {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.btn-action-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--light-text);
+}
+
+/* Form styles */
+input, textarea {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: var(--light-text) !important;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* FAQ Section Styling */
+.section-faq {
+    padding: 100px 0;
+}
+
+.section-faq .block-text h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.section-faq .block-text p {
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: var(--light-text-secondary);
+}
+
+.flat-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.flat-toggle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.flat-toggle .toggle-title {
+    position: relative;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--light-text);
+    padding-right: 30px;
+    margin: 0;
+}
+
+.flat-toggle .toggle-title::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.flat-toggle .toggle-title.active::after {
+    content: '-';
+}
+
+.flat-toggle .toggle-content {
+    display: none;
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--light-text-secondary);
+}
+
+.flat-toggle.active .toggle-content {
+    display: block;
+}
+
+/* Conclusion Section Styling */
+.conclusion-section {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.conclusion-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/pattern/pattern-1.png');
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.conclusion-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.conclusion-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--light-text);
+}
+
+.conclusion-content p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--light-text-secondary);
+}
+
+.cta-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.scheme-section {
+    /* margin-top: 50px; */
+    /* margin-bottom: 50px; */
+}
+@media (max-width: 768px) {
+    .scheme-section img {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .scheme-card {
+        padding: 20px 5px !important;
+    }
+}
+
+/* Desktop Menu */
+.header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+/* Remove previous desktop menu styles */
+.header__main {
+    display: none;
+}
+
+/* Style for right side elements */
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+}
+
+/* Navigation Menu */
+.header__right nav {
+    display: flex;
+    margin-right: 10px;
+}
+
+.header__right nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+.header__right nav li {
+    position: relative;
+    margin-inline: 10px;
+}
+
+.header__right nav li a {
+    color: var(--light-text);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header__right nav li a:hover {
+    color: var(--primary-color);
+}
+
+.header__right nav li.menu-item-has-children > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* Submenu styles */
+.header__right nav li .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background: var(--dark-bg-secondary); */
+    background: rgba(5, 5, 5, 0.8);;
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header__right nav li:hover > .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.header__right nav li .sub-menu li {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.header__right nav li .sub-menu li a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Button styles */
+.header__right .group-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}   
+
+
+.header__right .btn-action-outline.style-4 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+    max-height: 36px;
+    border: 1px solid var(--primary-color) !important;
+    border-radius: 4px !important;
+    color: var(--light-text);
+    background: transparent;
+    /* margin-right: 10px; */
+    transition: all 0.3s ease;
+}
+.header__right .btn-action-outline.style-4:hover {
+    color: var(--dark-bg-primary);
+}
+
+/* .header__right .btn-action-outline.style-4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 0 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--light-text);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+} */
+
+/* .header__right .btn-action-outline.style-4:last-child {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+} */
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .header__right nav {
+        display: none;
+    }
+    
+    .mobile-button {
+        display: flex;
+    }
+}
+
+/* Typing Text */
+.typing-text {
+    border-right: 3px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color) }
+}
+
+.banner-top__buttons .btn-action-outline:hover {
+    background: rgba(61, 136, 251, 0.1);
+    transform: translateY(-3px);
+}
+
+.banner-top__image img {
+    transition: transform 0.5s ease;
+}
+
+.banner-top__image:hover img {
+    transform: scale(1.03);
+}
+
+/* Mobile Nav Overlay */
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background: var(--dark-bg-secondary);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 999;
+    padding: 80px 25px 30px;
+    overflow-y: auto;
+    transition: all 0.4s ease;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-menu ul li a {
+    display: block;
+    color: var(--light-text);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Submenu styles */
+.mobile-menu ul li.menu-item-has-children > a {
+    padding-right: 30px;
+}
+
+.mobile-menu ul li.menu-item-has-children > a:after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu ul li.menu-item-has-children.active > a:after {
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--primary-color);
+}
+
+.mobile-menu ul li.menu-item-has-children.active > a {
+    color: var(--primary-color);
+}
+
+.mobile-menu .sub-menu {
+    display: none;
+    padding-left: 15px;
+}
+
+.mobile-menu .sub-menu li {
+    border-bottom: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-menu .sub-menu li a {
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+/* Mobile Language Selector */
+.mobile-menu .mobile-language {
+    margin-top: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu .mobile-language a {
+    display: inline;
+    padding: 8px 20px;
+    color: var(--light-text);
+    background: rgba(61, 136, 251, 0.12);
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu .mobile-language a:hover,
+.mobile-menu .mobile-language a.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Mobile Button & Menu */
+.mobile-button {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 999;
+    margin-left: 10px;
+}
+
+.mobile-button:hover {
+    background: rgba(61, 136, 251, 0.15);
+}
+
+.mobile-button span {
+    position: relative;
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--light-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.mobile-button span:before,
+.mobile-button span:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    background: var(--light-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    left: 0;
+}
+
+.mobile-button span:before {
+    top: -5px;
+}
+
+.mobile-button span:after {
+    top: 5px;
+}
+
+.mobile-button.active {
+    background: var(--primary-color);
+}
+
+.mobile-button.active span {
+    background: transparent;
+}
+
+.mobile-button.active span:before {
+    transform: rotate(45deg);
+    top: 0;
+    background: #fff;
+}
+
+.mobile-button.active span:after {
+    transform: rotate(-45deg);
+    top: 0;
+    background: #fff;
+}
+
+.group-button.active {
+    display: none !important;
+}
+
+.try-demo-btn {
+    display: inline-flex; /* Используем inline-flex для лучшего контроля */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid 2px var(--primary-color);
+    border-radius: 8px;
+    /* Убираем background-color отсюда, он будет на псевдоэлементе */
+    /* background-color: transparent; */ 
+    padding: 10px 20px;
+    
+    /* Добавляем position: relative для позиционирования ::before */
+    position: relative; 
+    /* Добавляем overflow: hidden для обрезки ::before */
+    overflow: hidden; 
+    
+    /* Основной цвет текста кнопки */
+    color: var(--light-text); 
+    
+    /* Анимация для ИЗМЕНЕНИЯ ЦВЕТА ТЕКСТА */
+    transition: color 0.3s ease; 
+    
+    /* Убедимся, что контент кнопки выше ::before */
+    z-index: 1; 
+    
+    /* Убираем стандартное выделение текста, если мешает */
+    user-select: none; 
+    cursor: pointer;
+}
+
+    /* Псевдоэлемент для анимации фона */
+.try-demo-btn::before {
+    content: ''; /* Обязательно для псевдоэлементов */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Начальная ширина - 0 */
+    height: 100%;
+    background-color: var(--primary-color); /* Цвет заливки */
+    
+    /* Анимация для ИЗМЕНЕНИЯ ШИРИНЫ ::before */
+    transition: width 0.3s ease; 
+    
+    /* Помещаем под контентом кнопки */
+    z-index: -1; 
+}
+
+/* При наведении на кнопку */
+.try-demo-btn:hover {
+    color: var(--dark-bg-primary); /* Меняем цвет текста */
+}
+
+/* При наведении на кнопку - меняем ширину псевдоэлемента */
+.try-demo-btn:hover::before {
+    width: 100%; /* Конечная ширина - 100% */
+}
+
+.header.is-fixed.is-small {
+    background: rgba(5, 5, 5, 0.8);
+}
