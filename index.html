@@ -621,6 +621,63 @@
         .group-button.active {
             display: none !important;
         }
+
+        .try-demo-btn {
+            display: inline-flex; /* Используем inline-flex для лучшего контроля */
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: solid 2px var(--primary-color);
+            border-radius: 8px;
+            /* Убираем background-color отсюда, он будет на псевдоэлементе */
+            /* background-color: transparent; */ 
+            padding: 10px 20px;
+            
+            /* Добавляем position: relative для позиционирования ::before */
+            position: relative; 
+            /* Добавляем overflow: hidden для обрезки ::before */
+            overflow: hidden; 
+            
+            /* Основной цвет текста кнопки */
+            color: var(--light-text); 
+            
+            /* Анимация для ИЗМЕНЕНИЯ ЦВЕТА ТЕКСТА */
+            transition: color 0.3s ease; 
+            
+            /* Убедимся, что контент кнопки выше ::before */
+            z-index: 1; 
+            
+            /* Убираем стандартное выделение текста, если мешает */
+            user-select: none; 
+            cursor: pointer;
+        }
+
+            /* Псевдоэлемент для анимации фона */
+        .try-demo-btn::before {
+            content: ''; /* Обязательно для псевдоэлементов */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0; /* Начальная ширина - 0 */
+            height: 100%;
+            background-color: var(--primary-color); /* Цвет заливки */
+            
+            /* Анимация для ИЗМЕНЕНИЯ ШИРИНЫ ::before */
+            transition: width 0.3s ease; 
+            
+            /* Помещаем под контентом кнопки */
+            z-index: -1; 
+        }
+
+        /* При наведении на кнопку */
+        .try-demo-btn:hover {
+            color: var(--dark-bg-primary); /* Меняем цвет текста */
+        }
+
+        /* При наведении на кнопку - меняем ширину псевдоэлемента */
+        .try-demo-btn:hover::before {
+            width: 100%; /* Конечная ширина - 100% */
+        }
     </style>
     <!-- end Styles -->
 
@@ -733,13 +790,11 @@
                             <span class="">AI-powered radiology software</span><br>
                             <span class="" style="color: var(--primary-color);">for faster, more accurate.</span><br>
                         </h2>
+                        
                         <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;">
                             SOF AI helps radiologists analyze chest X-rays and mammograms with 97-99% accuracy, reducing diagnostic time by up to 85% and improving patient outcomes.
                         </p>
-                        <!-- <div class="group-button" style="display: flex; gap: 20px;">
-                            <a href="#" class="btn-action-outline style-4"><span>Try Demo</span></a>
-                        </div>
-                         -->
+
                         <div class="banner-stats" style="display: flex; gap: 40px; margin-top: 40px;">
                             <div class="banner-stat-item" style="text-align: center;">
                                 <div style="font-size: 32px; font-weight: 700; color: var(--primary-color);">97-99%</div>
@@ -756,12 +811,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-xl-4 col-md-12 d-flex align-items-center">
-                    <div class="banner-top__image" data-aos="fade-left" style="position: relative; margin-top: 40px;">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SOF AI in action" style="width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
-                        <div style="position: absolute; top: -20px; right: -20px; background: var(--primary-color); color: white; padding: 10px 15px; border-radius: 8px; font-weight: 600; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);">AI-Powered</div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -1171,7 +1220,9 @@
                         <p>The integration of AI into radiology offers substantial improvements across multiple areas, including image acquisition, diagnostic reporting, prognosis prediction, and treatment monitoring. By automating repetitive tasks, enhancing image quality, and providing valuable insights into disease progression, AI is transforming the radiology field and improving patient care.</p>
                         <p>As technology continues to evolve, the role of AI in radiology will expand, offering even greater potential for precision medicine and better patient outcomes.</p>
                         <div class="cta-button" style="display: flex; justify-content: center;">
-                            <a href="#contact" class="btn-action style-5"><span>Get Started Today</span></a>
+                            <a href="#contact" style="display: flex; justify-content: center;" class="btn-action style-5"><span>Try Demo</span></a>
+                            <!-- <a href="#contact" class="btn-action style-5"><span>Get Started Today</span></a>
+                            <a href="#" class="try-demo-btn"><span>Try Demo</span></a> -->
                         </div>
                     </div>
                 </div>
@@ -1179,7 +1230,233 @@
         </div>
     </section>
 
-    
+
+    <section id="about-sof">
+        <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                    <div class="about-content">
+                        <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">About SOF AI</h2>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Founded with a mission to transform radiology through artificial intelligence, SOF AI is dedicated to enhancing diagnostic accuracy, reducing radiologist workload, and improving patient outcomes through cutting-edge AI technology.</p>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Our team combines expertise in radiology, artificial intelligence, and healthcare implementation to create solutions that seamlessly integrate into existing clinical workflows.</p>
+                        <!-- <a href="#contact" style="display: flex; justify-content: center;" class="btn-action style-5"><span>Try Demo</span></a> -->
+                        <a type="submit" class="try-demo-btn"><span>Try Demo</span></a>
+                        <!-- <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+                            <div style="text-align: center;">
+                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">2020</span>
+                                <span style="font-size: 14px; color: var(--light-text-secondary);">Founded</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">30+</span>
+                                <span style="font-size: 14px; color: var(--light-text-secondary);">Team Members</span>
+                            </div>
+                            <div style="text-align: center;">
+                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">15+</span>
+                                <span style="font-size: 14px; color: var(--light-text-secondary);">Countries</span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                    <div class="about-image" style="border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SOF AI Team" style="width: 100%; height: auto; display: block;" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Team/About Us Section -->
+    <section class="team" id="team">
+        <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block-text center" data-aos="fade-up">
+                        <h3 class="heading">Our Team</h3>
+                        <p class="mt-16 fs-17">Meet the experts behind SOF AI's innovative medical imaging technology</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="blog-box" style="height: 100%;">
+                        <div class="box-image" style="height: 250px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Sarah Johnson" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 5px;">Dr. Sarah Johnson</h4>
+                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Chief Medical Officer</p>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Board-certified radiologist with 15+ years of experience in chest imaging and AI implementation in clinical settings.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="blog-box" style="height: 100%;">
+                        <div class="box-image" style="height: 250px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Alex Chen" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 5px;">Alex Chen</h4>
+                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Chief Technology Officer</p>
+                            <p style="font-size: 14px; margin-bottom: 15px;">AI researcher with expertise in deep learning for medical image analysis and computer vision. Previously led AI projects at top tech companies.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="blog-box" style="height: 100%;">
+                        <div class="box-image" style="height: 250px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Michael Rodriguez" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 5px;">Dr. Michael Rodriguez</h4>
+                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Research Director</p>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Specializes in developing and validating AI algorithms for medical imaging with a focus on improving diagnostic accuracy in radiology.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                    <div class="blog-box" style="height: 100%;">
+                        <div class="box-image" style="height: 250px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Emma Wilson" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 5px;">Emma Wilson</h4>
+                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Product Manager</p>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Expert in healthcare product development with a background in implementing AI solutions in hospital systems worldwide.</p>
+                            <div style="display: flex; gap: 10px;">
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+ 
+
+    <!-- Partners/Cases Section -->
+    <section class="partners" id="partners" style="background: var(--dark-bg-gradient); padding: 50px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block-text center" data-aos="fade-up">
+                        <h3 class="heading">Our Partners</h3>
+                        <p class="mt-16 fs-17">Leading healthcare institutions trust SOF AI for their radiology needs</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="blog-box">
+                        <div class="box-image" style="height: 200px; position: relative;">
+                            <img src="assets/images/medical/medical-center.jpg" alt="Central Hospital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 10px;">Central Medical Center</h4>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Implemented SOF AI to analyze over 50,000 chest X-rays annually, reducing diagnosis time by 78% and improving early detection rates.</p>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">78%</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Time Saved</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">45%</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Detection Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="blog-box">
+                        <div class="box-image" style="height: 200px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="University Medical Center" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 10px;">University Hospital</h4>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Integrated SOF AI into their radiology department workflow, enabling radiologists to handle 40% more cases daily while maintaining diagnostic accuracy.</p>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">40%</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">More Cases</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">98%</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="blog-box">
+                        <div class="box-image" style="height: 200px; position: relative;">
+                            <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Regional Healthcare Network" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                        </div>
+                        <div class="box-content" style="padding: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 10px;">Regional Healthcare Network</h4>
+                            <p style="font-size: 14px; margin-bottom: 15px;">Deployed SOF AI across 12 remote clinics, providing high-quality diagnostic support in areas with limited access to specialist radiologists.</p>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">12</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Clinics</span>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">200K+</span>
+                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Patients</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- 
+            <div style="margin-top: 50px" class="row">
+                <div class="col-md-12">
+                    <div class="partner-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;" data-aos="fade-up">
+                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+1" alt="Partner 1" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                        </div>
+                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+2" alt="Partner 2" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                        </div>
+                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+3" alt="Partner 3" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                        </div>
+                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+4" alt="Partner 4" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                        </div>
+                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+5" alt="Partner 5" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
 
     <!-- Section Faq -->
     <section class="section-faq style-1" style="background: var(--dark-bg-gradient);">
@@ -1276,229 +1553,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Partners/Cases Section -->
-    <section class="partners" id="partners" style="background: var(--dark-bg-gradient); padding: 50px 0;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block-text center" data-aos="fade-up">
-                        <h3 class="heading">Our Partners</h3>
-                        <p class="mt-16 fs-17">Leading healthcare institutions trust SOF AI for their radiology needs</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="assets/images/medical/medical-center.jpg" alt="Central Hospital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">Central Medical Center</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Implemented SOF AI to analyze over 50,000 chest X-rays annually, reducing diagnosis time by 78% and improving early detection rates.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">78%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Time Saved</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">45%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Detection Rate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="University Medical Center" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">University Hospital</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Integrated SOF AI into their radiology department workflow, enabling radiologists to handle 40% more cases daily while maintaining diagnostic accuracy.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">40%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">More Cases</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">98%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Accuracy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Regional Healthcare Network" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">Regional Healthcare Network</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Deployed SOF AI across 12 remote clinics, providing high-quality diagnostic support in areas with limited access to specialist radiologists.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">12</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Clinics</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">200K+</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Patients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div style="margin-top: 50px" class="row">
-                <div class="col-md-12">
-                    <div class="partner-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;" data-aos="fade-up">
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+1" alt="Partner 1" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+2" alt="Partner 2" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+3" alt="Partner 3" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+4" alt="Partner 4" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+5" alt="Partner 5" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team/About Us Section -->
-    <section class="team" id="team">
-        <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="block-text center" data-aos="fade-up">
-                        <h3 class="heading">Our Team</h3>
-                        <p class="mt-16 fs-17">Meet the experts behind SOF AI's innovative medical imaging technology</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
-                    <div class="blog-box" style="height: 100%;">
-                        <div class="box-image" style="height: 250px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Sarah Johnson" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 5px;">Dr. Sarah Johnson</h4>
-                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Chief Medical Officer</p>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Board-certified radiologist with 15+ years of experience in chest imaging and AI implementation in clinical settings.</p>
-                            <div style="display: flex; gap: 10px;">
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <div class="blog-box" style="height: 100%;">
-                        <div class="box-image" style="height: 250px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Alex Chen" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 5px;">Alex Chen</h4>
-                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Chief Technology Officer</p>
-                            <p style="font-size: 14px; margin-bottom: 15px;">AI researcher with expertise in deep learning for medical image analysis and computer vision. Previously led AI projects at top tech companies.</p>
-                            <div style="display: flex; gap: 10px;">
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <div class="blog-box" style="height: 100%;">
-                        <div class="box-image" style="height: 250px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Michael Rodriguez" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 5px;">Dr. Michael Rodriguez</h4>
-                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Research Director</p>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Specializes in developing and validating AI algorithms for medical imaging with a focus on improving diagnostic accuracy in radiology.</p>
-                            <div style="display: flex; gap: 10px;">
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                    <div class="blog-box" style="height: 100%;">
-                        <div class="box-image" style="height: 250px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Emma Wilson" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 5px;">Emma Wilson</h4>
-                            <p style="font-size: 14px; color: var(--primary-color); margin-bottom: 10px;">Product Manager</p>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Expert in healthcare product development with a background in implementing AI solutions in hospital systems worldwide.</p>
-                            <div style="display: flex; gap: 10px;">
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-linkedin"></i></a>
-                                <a href="#" style="width: 32px; height: 32px; border-radius: 50%; background: var(--primary-color); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 16px;"><i class="bi bi-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-        
-    <section id="about-sof">
-        <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
-            <div class="row mt-5">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
-                    <div class="about-content">
-                        <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">About SOF AI</h2>
-                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Founded with a mission to transform radiology through artificial intelligence, SOF AI is dedicated to enhancing diagnostic accuracy, reducing radiologist workload, and improving patient outcomes through cutting-edge AI technology.</p>
-                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Our team combines expertise in radiology, artificial intelligence, and healthcare implementation to create solutions that seamlessly integrate into existing clinical workflows.</p>
-                        <!-- <div style="display: flex; justify-content: space-between; margin-top: 30px;">
-                            <div style="text-align: center;">
-                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">2020</span>
-                                <span style="font-size: 14px; color: var(--light-text-secondary);">Founded</span>
-                            </div>
-                            <div style="text-align: center;">
-                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">30+</span>
-                                <span style="font-size: 14px; color: var(--light-text-secondary);">Team Members</span>
-                            </div>
-                            <div style="text-align: center;">
-                                <span style="display: block; font-size: 32px; font-weight: 700; color: var(--primary-color);">15+</span>
-                                <span style="font-size: 14px; color: var(--light-text-secondary);">Countries</span>
-                            </div>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
-                    <div class="about-image" style="border-radius: 15px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);">
-                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="SOF AI Team" style="width: 100%; height: auto; display: block;" loading="lazy">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    
     <!-- Footer -->
     <footer class="footer style-4" style="background: var(--dark-bg-gradient);">
         <div class="footer__top">
