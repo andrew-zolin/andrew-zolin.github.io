@@ -11,29 +11,12 @@
     <link rel="stylesheet" href="app/dist/custom.css">
     <link rel="stylesheet" href="app/dist/swiper-bundle.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
     <!-- end Styles -->
 
     <!-- Favicon and Touch Icons  -->
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/partner/favicon.png.html">
-
-    <style>
-        :root {
-            --dark-bg-primary: #0a0a0a;
-            --dark-bg-secondary: #121212;
-            --dark-bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
-            --dark-bg-gradient-alt: linear-gradient(135deg, #0a0a0a 0%, #121212 100%);
-            --primary-color: #3D88FB;
-            --secondary-color: #5637C8;
-            --accent-color: #00D199;
-            --light-text: #ffffff;
-            --light-text-secondary: rgba(255, 255, 255, 0.8);
-            --dark-overlay: rgba(5, 5, 5, 0.8);
-            --card-bg: rgba(18, 18, 18, 0.7);
-            --card-border: rgba(255, 255, 255, 0.1);
-        }
-
-    </style>
 
 </head>
 <body class="home-defi-4 header-fixed" data-magic-cursor="show">
@@ -44,6 +27,17 @@
 
     <!-- Header -->
     <header id="header_main" class="header style-8">
+        <div class="notification-banner" id="notification-banner">
+            <div class="container">
+                <div class="notification-content">
+                    Want to learn more about SOF AI Solutions? Let's connect!
+                    <a href="#contact" class="notification-btn">Contact Us</a>
+                </div>
+                <button class="notification-close" id="notification-close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -56,47 +50,43 @@
                                 data-height="40">
                             </a>
                         </div>
-
                         <div class="header__right">
-                            <nav id="main-nav" class="main-nav">
-                                <ul id="menu-primary-menu" class="menu">
-                                    <li class="menu-item">
-                                        <a href="index.html#">Platform</a>
-                                    </li>
-                                    <li class="menu-item current-menu-item menu-item-has-children">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Platform</a></li>
+                                    <li class="menu-item-has-children">
                                         <a href="radiology-cxr.html">Radiology</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item current-item"><a href="radiology-cxr.html">Sof CXR</a></li>
-                                            <li class="menu-item"><a href="#">Sof MMG</a></li>
-                                            <li class="menu-item"><a href="#">Testimonials</a></li>
-    
+                                            <li><a href="radiology-cxr.html">Sof CXR</a></li>
+                                            <li><a href="#">Sof MMG</a></li>
+                                            <!-- <li><a href="#">Testimonials</a></li> -->
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-has-children">
+                                    <li class="menu-item-has-children">
                                         <a href="#">Oncology</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item"><a href="#">Sof PD-L1</a></li>
-                                           
+                                            <li><a href="#">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item">
-                                        <a href="#">Publications</a>
-                                    </li>
-                                    <!-- <li class="menu-item">
-                                        <a href="home-defi-v4.html#">About Us</a>
-                                    </li> -->
-                                    
+                                    <li><a href="blog.html">Publications</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
                                 </ul>
                             </nav>
                             <div class="group-button">
-                                <a href="home-defi-v1.html#" class="btn-action-outline style-4">
+                                <a href="#" class="btn-action-outline style-4">
                                     <span>EN</span>
                                 </a>
-                                <a class="btn-action-outline style-4" href="home-defi-v4.html#">
+                                <a class="btn-action-outline style-4" href="#contact">
                                     <span>Contact Us</span>
                                 </a>
                             </div>
-                            <div class="mobile-button"><span></span></div>
+                            <!-- <div class="group-button">
+                                <a href="#" class="active">EN</a>
+                                <a href="#" class="btn-action-outline">Contact Us</a>
+                            </div> -->
+                            <div class="mobile-button">
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +94,38 @@
         </div>
     </header>
     <!-- end Header -->
+
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu">
+        <ul>
+            <li class="menu-item current-menu-item">
+                <a href="index.html#">Platform</a>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="radiology-cxr.html">Radiology</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
+                    <li class="menu-item"><a href="#">Sof MMG</a></li>
+                </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+                <a href="#">Oncology</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Sof PD-L1</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="blog.html">Publications</a>
+            </li>
+            <li class="menu-item">
+                <a href="about-us.html">About Us</a>
+            </li>
+        </ul>
+        <div class="mobile-language">
+            <a href="#" class="active">EN</a>
+            <a href="#contact" class="btn-action-outline">Contact Us</a>
+        </div>
+    </div>
 
     <!-- Section CXR Disease Detection -->
     <section class="cxr-detection style-3" id="diseases" style="background: var(--dark-bg-gradient);">
@@ -573,4 +595,162 @@
             });
         });
     </script>
-</body> 
+
+      
+    <!-- Footer -->
+    <footer id="contact" class="footer style-4" style="background: var(--dark-bg-gradient);">
+        <div class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="content-left">
+                            <h3 class="fs-22">Contact Us</h3>
+                            <p class="fs-20">We are always open and welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.</p>
+                            <ul class="list-info">
+                                <li><span class="icon-message"></span>info@sofai.com</li>
+                                <li><span class="icon-Calling"></span>+1 (800) 555-1234</li>
+                            </ul>
+                            <ul class="list-social">
+                                <li><a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a></li>
+                                <li><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+                                <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-right">
+                            <form id="contact-form">
+                                <div class="form row">
+                                    <div class="form-group col-md-6">
+                                        <label for="name">Your Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Type your name here" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Type your email here" required>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <label class="mb-6">Your Message</label>
+                                        <textarea id="message" placeholder="Leave your question or comment here" required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn-action style-5"><span>SUBMIT YOUR MESSAGE</span></button>
+                                
+                              </form>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p> 2025 SOF AI. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <a id="scroll-top"></a>
+
+    <script src="app/js/jquery.min.js"></script>
+    <script src="app/js/jquery.magnific-popup.min.js"></script>
+    <script src="app/js/jquery.easing.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/count-down.js"></script>
+    <script src="app/js/aos.js"></script>
+    <script src="app/js/chart.js"></script>
+    <script src="app/js/swiper-bundle.min.js"></script>
+    <script src="app/js/swiper.js"></script>
+    <script src="app/js/mouse.js"></script>
+    <script src="app/js/custom.js"></script>
+    <script src="app/js/contact.js"></script>
+    <script>
+        // Initialize AOS with updated settings
+        AOS.init({
+            // Global settings
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+
+        // Refresh AOS on window resize and orientation change
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                AOS.refresh();
+            }, 100);
+        });
+
+        // Initialize testimonial slider
+        const testimonialSlider = new Swiper('.testimonial-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+
+        // Initialize partners slider
+        const partnersSlider = new Swiper('.partners-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
+  
+
+
+
+</body>
+</html>

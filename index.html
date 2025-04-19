@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="app/dist/custom.css">
     <link rel="stylesheet" href="app/dist/swiper-bundle.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <style>
-        
-    </style>
+
     <!-- end Styles -->
 
     <!-- Favicon and Touch Icons  -->
@@ -29,6 +27,17 @@
 
     <!-- Header -->
     <header id="header_main" class="header style-8">
+        <div class="notification-banner" id="notification-banner">
+            <div class="container">
+                <div class="notification-content">
+                    Want to learn more about SOF AI Solutions? Let's connect!
+                    <a href="#contact" class="notification-btn">Contact Us</a>
+                </div>
+                <button class="notification-close" id="notification-close">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -59,14 +68,15 @@
                                             <li><a href="#">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Publications</a></li>
+                                    <li><a href="blog.html">Publications</a></li>
+                                    <li><a href="about-us.html">About Us</a></li>
                                 </ul>
                             </nav>
                             <div class="group-button">
-                                <a href="home-defi-v1.html#" class="btn-action-outline style-4">
+                                <a href="#" class="btn-action-outline style-4">
                                     <span>EN</span>
                                 </a>
-                                <a class="btn-action-outline style-4" href="home-defi-v4.html#">
+                                <a class="btn-action-outline style-4" href="#contact">
                                     <span>Contact Us</span>
                                 </a>
                             </div>
@@ -96,7 +106,6 @@
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
                     <li class="menu-item"><a href="#">Sof MMG</a></li>
-                    <!-- <li class="menu-item"><a href="#">Testimonials</a></li> -->
                 </ul>
             </li>
             <li class="menu-item menu-item-has-children">
@@ -106,12 +115,15 @@
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="#">Publications</a>
+                <a href="blog.html">Publications</a>
+            </li>
+            <li class="menu-item">
+                <a href="about-us.html">About Us</a>
             </li>
         </ul>
         <div class="mobile-language">
             <a href="#" class="active">EN</a>
-            <a href="#" class="btn-action-outline">Contact Us</a>
+            <a href="#contact" class="btn-action-outline">Contact Us</a>
         </div>
     </div>
 
@@ -153,39 +165,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        .typing-text {
-            border-right: 3px solid var(--primary-color);
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-            display: inline-block;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: var(--primary-color) }
-        }
-
-        .banner-top__buttons .btn-action-outline:hover {
-            background: rgba(61, 136, 251, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .banner-top__image img {
-            transition: transform 0.5s ease;
-        }
-
-        .banner-top__image:hover img {
-            transform: scale(1.03);
-        }
-    </style>
 
     <!-- Market Research Section -->
     <section class="market-research" style="background: var(--dark-bg-gradient-alt); padding: 100px 0;">
@@ -243,19 +222,19 @@
             
             <div class="market-stats">
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="stat-number">2.3M+</div>
+                    <div class="stat-number"><span class="stat-number-text">2.3</span>M+</div>
                     <div class="stat-label">Annual CXR Exams</div>
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="stat-number">342</div>
+                    <div class="stat-number"><span class="stat-number-text">342</span></div>
                     <div class="stat-label">Hospitals</div>
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="stat-number">156</div>
+                    <div class="stat-number"><span class="stat-number-text">156</span></div>
                     <div class="stat-label">Radiology Centers</div>
                 </div>
                 <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="stat-number">78%</div>
+                    <div class="stat-number"><span class="stat-number-text">78</span>%</div>
                     <div class="stat-label">Planning Tech Upgrades</div>
                 </div>
             </div>
@@ -333,7 +312,7 @@
                 <div class="col-md-12">
                     <div class="block-text center">
                         <h3 class="title" style="text-align: center;">
-                            Solution: SOF AI — artificial intelligence to help a radiologist
+                            Our solution: SOF AI — artificial intelligence to help a radiologist
                         </h3>
                         <p class="mt-16 fs-17" style="max-width: 800px; margin: 0 auto 40px;">
                             SOF AI is a cutting-edge platform that leverages artificial intelligence to assist radiologists in analyzing medical images, particularly chest X-rays and mammograms, with unprecedented speed and accuracy.
@@ -528,7 +507,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <div class="about-content" data-aos="fade-right">
+                    <div class="about-content" data-aos="fade-right" data-aos-offset="200" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                         <h2 style="color: #fff;">Advanced AI for Medical Imaging</h2>
                         <p style="color: rgba(255, 255, 255, 0.8);">SOF AI utilizes advanced artificial intelligence to enhance the interpretation of lung and mammography images. By leveraging state-of-the-art image processing algorithms, SOF AI automates the detection of critical regions such as lung nodules, masses, and other key structures in breast tissue, improving the speed and accuracy of diagnoses.</p>
                         <p style="color: rgba(255, 255, 255, 0.8);">Designed to integrate seamlessly with standard workstations and DICOM formats, SOF AI supports healthcare professionals by streamlining the analysis of medical images. This powerful tool ensures more reliable and detailed assessments, enabling faster clinical decisions and better patient outcomes.</p>
@@ -536,8 +515,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-image" data-aos="fade-left">
-                        <!-- <img src="assets/images/workflow/scheme.png" alt="SOF AI Technology"> -->
+                    <div class="about-image" data-aos="fade-left" data-aos-offset="200" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
                         <img src="assets/images/layout/ai-in-radiology.png" alt="SOF AI Technology">
                     </div>
                 </div>
@@ -562,12 +540,12 @@
                 </div>
             </div> -->
             <div class="row mt-5">
-                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800">
+                <div class="col-lg-6" data-aos="fade-left" data-aos-offset="200" data-aos-delay="100" data-aos-anchor-placement="center-bottom">
                     <div style="overflow: hidden;">
                         <img src="assets/images/medical/transform-radiology.png" alt="Transforming Radiology" style="border-radius: 12px; width: 100%; height: auto; display: block;" loading="lazy">
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" data-aos-anchor-placement="center-bottom">
                     <div style="padding-right: 30px;" class="about-content">
                         <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">Transforming Radiology with AI</h2>
                         <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">The integration of AI into radiology offers substantial improvements across multiple areas, including image acquisition, diagnostic reporting, prognosis prediction, and treatment monitoring. By automating repetitive tasks, enhancing image quality, and providing valuable insights into disease progression, AI is transforming the radiology field and improving patient care.</p>
@@ -575,6 +553,7 @@
                         <a href="#contact" style="border-radius: 8px; display: flex; justify-content: center;" class="btn-action style-5"><span>Try Demo</span></a>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -585,8 +564,9 @@
                 <div class="col-lg-6" data-aos="fade-right" data-aos-duration="800">
                     <div style="padding-right: 30px;" class="about-content">
                         <h2 style="color: #fff; font-size: 32px; margin-bottom: 20px;">About SOF AI</h2>
-                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Founded with a mission to transform radiology through artificial intelligence, SOF AI is dedicated to enhancing diagnostic accuracy, reducing radiologist workload, and improving patient outcomes through cutting-edge AI technology.</p>
-                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">Our team combines expertise in radiology, artificial intelligence, and healthcare implementation to create solutions that seamlessly integrate into existing clinical workflows.</p>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">SOF AI is transforming radiology and oncology through advanced AI to improve diagnostic accuracy and patient outcomes.</p>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">With over 4 years of medical imaging data behind our technology, we deliver reliable and clinically relevant solutions.</p>
+                        <p style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.7; margin-bottom: 20px;">We work closely with doctors, oncologists, and specialists across the republic to ensure seamless integration into real-world clinical workflows.</p>
                         <!-- <a href="#contact" style="display: flex; justify-content: center;" class="btn-action style-5"><span>Try Demo</span></a> -->
                         <!-- <a type="submit" class="try-demo-btn"><span>Contact Us</span></a> -->
                         <!-- <div style="display: flex; justify-content: space-between; margin-top: 30px;">
@@ -616,7 +596,7 @@
     </section>
 
     <!-- Team/About Us Section -->
-    <section class="team" id="team">
+    <!-- <section class="team" id="team">
         <div style="margin-top: 50px; margin-bottom: 50px;" class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -697,7 +677,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
         
  
 
@@ -713,96 +693,47 @@
                 </div>
             </div>
 
-            <div class="row mt-5">
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="assets/images/medical/medical-center.jpg" alt="Central Hospital" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">Central Medical Center</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Implemented SOF AI to analyze over 50,000 chest X-rays annually, reducing diagnosis time by 78% and improving early detection rates.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">78%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Time Saved</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">45%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Detection Rate</span>
-                                </div>
+            <div class="partners-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <!-- Partner 1 -->
+                    <div class="swiper-slide">
+                        <div class="partner-card">
+                            <div class="partner-image">
+                                <img src="assets/images/partner/Medical_center_of_oncology_and_radiology.jpg" alt="Partner 1">
+                            </div>
+                            <div class="partner-content">
+                                <h4>Medical center of oncology and radiology</h4>
+                                
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="University Medical Center" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">University Hospital</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Integrated SOF AI into their radiology department workflow, enabling radiologists to handle 40% more cases daily while maintaining diagnostic accuracy.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">40%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">More Cases</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">98%</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Accuracy</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-                    <div class="blog-box">
-                        <div class="box-image" style="height: 200px; position: relative;">
-                            <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Regional Healthcare Network" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
-                        </div>
-                        <div class="box-content" style="padding: 20px;">
-                            <h4 style="font-size: 18px; margin-bottom: 10px;">Regional Healthcare Network</h4>
-                            <p style="font-size: 14px; margin-bottom: 15px;">Deployed SOF AI across 12 remote clinics, providing high-quality diagnostic support in areas with limited access to specialist radiologists.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">12</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Clinics</span>
-                                </div>
-                                <div style="text-align: center;">
-                                    <span style="display: block; font-size: 24px; font-weight: 700; color: var(--primary-color);">200K+</span>
-                                    <span style="font-size: 14px; color: var(--light-text-secondary);">Patients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-<!-- 
-            <div style="margin-top: 50px" class="row">
-                <div class="col-md-12">
-                    <div class="partner-logos" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;" data-aos="fade-up">
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+1" alt="Partner 1" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                    <!-- Partner 2 -->
+                    <div class="swiper-slide">
+                        <div class="partner-card">
+                            <div class="partner-image">
+                                <img src="assets/images/partner/Republican_specialized_scientific_Practical Medical_Center_of_Hematology.jpg" alt="Partner 2">
+                            </div>
+                            <div class="partner-content">
+                                <h4>Republican specialized scientific Practical Medical Center of Hematology</h4>
+                                
+                            </div>
                         </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+2" alt="Partner 2" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+3" alt="Partner 3" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+4" alt="Partner 4" style="max-width: 120px; max-height: 40px;" loading="lazy">
-                        </div>
-                        <div class="partner-logo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 20px; width: 160px; height: 80px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
-                            <img src="https://via.placeholder.com/120x50/071a36/ffffff?text=Partner+5" alt="Partner 5" style="max-width: 120px; max-height: 40px;" loading="lazy">
+                    </div>
+
+                    <!-- Partner 3 (No Image) -->
+                    <div class="swiper-slide">
+                        <div class="partner-card no-image">
+                            <div class="partner-content">
+                                <h4>Ministry of Public Health of the Republic of Uzbekistan</h4>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> -->
+                <!-- Add pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
 
@@ -822,20 +753,24 @@
                             <div class="content-tab">
                                 <div class="content-inner flat-accordion active">
                                     <div class="flat-toggle" data-aos="fade-up" data-aos-delay="100">
-                                        <h5 class="toggle-title">How does SOF AI improve radiologist workflow?</h5>
-                                        <p class="toggle-content">SOF AI assists radiologists by automatically detecting abnormalities in medical images, prioritizing cases based on urgency, and providing detailed analysis that helps reduce reading time while improving accuracy. This allows radiologists to focus on the most critical cases and make faster, more informed decisions.</p>
+                                        <h5 class="toggle-title">How Does SOF AI Improve Radiologist Workflow?</h5>
+                                        <p class="toggle-content">SOF AI automates the initial analysis of medical images, helping radiologists focus on critical cases, reduce reading time, and minimize diagnostic fatigue.</p>
                                     </div>
                                     <div class="flat-toggle active" data-aos="fade-up" data-aos-delay="200">
-                                        <h5 class="toggle-title active">What types of medical images can SOF AI analyze?</h5>
-                                        <p class="toggle-content" style="display: block;">SOF AI is designed to analyze chest X-rays (CXR) and mammography (MMG) images, detecting a wide range of conditions including nodules, consolidation, pneumothorax, and more with high accuracy rates of 97-99%. Our technology is continuously expanding to support additional imaging modalities.</p>
+                                        <h5 class="toggle-title active">What Types of Medical Images Can SOF AI Analyze?</h5>
+                                        <p class="toggle-content" style="display: block;">SOF AI supports chest X-rays (CXR) and mammography (MMG), detecting conditions like nodules, consolidation, pneumothorax, and more—with 97–99% accuracy. More modalities are being added.</p>
                                     </div>
                                     <div class="flat-toggle" data-aos="fade-up" data-aos-delay="300">
-                                        <h5 class="toggle-title">How accurate is SOF AI in detecting abnormalities?</h5>
-                                        <p class="toggle-content">SOF AI achieves 97-99% accuracy in detecting abnormalities on chest X-rays and mammograms. Our algorithms have been trained on diverse datasets and validated through rigorous clinical testing to ensure reliable performance across different patient populations and imaging equipment.</p>
+                                        <h5 class="toggle-title">How Accurate Is SOF AI in Detecting Abnormalities?</h5>
+                                        <p class="toggle-content">Our models are clinically validated with accuracy rates of up to 99%, ensuring reliable detection of both common and subtle abnormalities.</p>
                                     </div>
                                     <div class="flat-toggle" data-aos="fade-up" data-aos-delay="400">
-                                        <h5 class="toggle-title">How does SOF AI integrate with existing hospital systems?</h5>
-                                        <p class="toggle-content">SOF AI seamlessly integrates with existing PACS (Picture Archiving and Communication Systems) and other hospital information systems through standard DICOM and HL7 protocols. Our solution can be deployed on-premises or via secure cloud infrastructure, depending on your facility's requirements.</p>
+                                        <h5 class="toggle-title">How Does SOF AI Integrate with Existing Hospital Systems?</h5>
+                                        <p class="toggle-content">SOF AI integrates easily with PACS, RIS, and other hospital IT systems using standard protocols like DICOM and HL7—ensuring smooth adoption without workflow disruption.</p>
+                                    </div>                                                       
+                                    <div class="flat-toggle" data-aos="fade-up" data-aos-delay="400">
+                                        <h5 class="toggle-title">Who Are the Clinical Experts Behind SOF AI?</h5>
+                                        <p class="toggle-content">We collaborate closely with radiologists, oncologists, and specialists across the republic, ensuring our solutions are clinically relevant and aligned with real-world healthcare needs.</p>
                                     </div>                                                       
                                 </div>
                             </div>
@@ -903,7 +838,7 @@
     </section>
     
     <!-- Footer -->
-    <footer class="footer style-4" style="background: var(--dark-bg-gradient);">
+    <footer id="contact" class="footer style-4" style="background: var(--dark-bg-gradient);">
         <div class="footer__top">
             <div class="container">
                 <div class="row">
@@ -973,115 +908,89 @@
     <script src="app/js/swiper-bundle.min.js"></script>
     <script src="app/js/swiper.js"></script>
     <script src="app/js/mouse.js"></script>
+    <script src="app/js/custom.js"></script>
+    <script src="app/js/contact.js"></script>
     <script>
-          AOS.init();
-          
-          // Initialize testimonial slider
-          const testimonialSlider = new Swiper('.testimonial-slider', {
+        // Initialize AOS with updated settings
+        AOS.init({
+            // Global settings
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 800, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: true, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+        });
+
+        // Refresh AOS on window resize and orientation change
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                AOS.refresh();
+            }, 100);
+        });
+
+        // Initialize testimonial slider
+        const testimonialSlider = new Swiper('.testimonial-slider', {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
             autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: false,
             },
             pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
+                el: '.swiper-pagination',
+                clickable: true,
             },
             breakpoints: {
-              768: {
-                slidesPerView: 2,
-              },
-              1024: {
-                slidesPerView: 3,
-              },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
             }
-          });
+        });
+
+        // Initialize partners slider
+        const partnersSlider = new Swiper('.partners-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
     </script>
   
-  <script>
-          
-            
-    const data = {
-      labels: [
-          'Marketing',
-          'Bussiness Development',
-          'Product Development',
-          'Reserve',
-          'Reserve',
-          'Token Sale'
-      ],
-      datasets: [{
-          label: 'My First Dataset',
-          data: [25, 25, 10 , 10 , 10 , 20],
-          backgroundColor: [
-          '#3D88FB',
-          '#5637C8',
-          '#00D199',
-          '#C87B07',
-          '#A92535',
-          '#9116CD'
-          ], 
-      }]
-      };
 
-      const config = {
-      type: 'doughnut',
-      data: data,
-      width:240,
-      options: {
-          maintainAspectRatio: false,
-          plugins: {
-              legend: false // Hide legend
-          },
-          scales: {
-              y: {
-                  display: false // Hide Y axis labels
-              },
-              x: {
-                  display: false // Hide X axis labels
-              }
-          }   
-}
-      };
 
-      const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-      );
-      const myChart2 = new Chart(
-      document.getElementById('myChart2'),
-      config
-      );
-    
-</script>
 
-    <script>
-          $(document).ready(function() {
-              // Mobile Menu Toggle
-              $('.mobile-button').on('click', function() {
-                  $(this).toggleClass('active');
-                  $('.mobile-overlay').toggleClass('active');
-                  $('.mobile-menu').toggleClass('active');
-                  $('.group-button').toggleClass('active');
-              });
-
-              // Overlay Click Close
-              $('.mobile-overlay').on('click', function() {
-                  $(this).removeClass('active');
-                  $('.mobile-button').removeClass('active');
-                  $('.mobile-menu').removeClass('active');
-                  $('.group-button').removeClass('active');
-              });
-
-              // Submenu Toggle
-              $('.mobile-menu li.menu-item-has-children > a').on('click', function(e) {
-                  e.preventDefault();
-                  $(this).parent().toggleClass('active');
-                  $(this).next('.sub-menu').slideToggle(300);
-              });
-          });
-    </script>
 </body>
 </html>

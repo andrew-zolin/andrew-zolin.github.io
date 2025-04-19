@@ -841,7 +841,7 @@ body[data-magic-cursor=hide] .mouse-cursor {
 
 .header.style-8 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  height: 80px;
+  height:  80px;
   border: none;
 }
 .header.style-8 .group-button a {
@@ -6450,6 +6450,7 @@ form button.btn-action {
 .blog-page .blog-page__main {
   display: flex;
   justify-content: space-between;
+  
 }
 .blog-page .blog-page__main .main-content {
   width: 75%;
@@ -6941,12 +6942,11 @@ form button.btn-action {
 }
 .blog-page-3 .blog-page__main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .blog-page-3 .blog-page__main .main-content {
   width: 75%;
   position: relative;
-  padding-right: 37px;
 }
 .blog-page-3 .blog-page__main .main-content .blog-box {
   overflow: hidden;
@@ -6981,7 +6981,7 @@ form button.btn-action {
   object-fit: cover;
 }
 .blog-page-3 .blog-page__main .main-content .blog-box .content {
-  padding: 28px 0px 42px;
+  padding: 28px 28px 42px;
 }
 .blog-page-3 .blog-page__main .main-content .blog-box .content .meta {
   display: flex;
