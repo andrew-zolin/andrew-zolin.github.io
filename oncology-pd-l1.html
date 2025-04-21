@@ -58,7 +58,7 @@
                                         <a href="radiology-cxr.html">Radiology</a>
                                         <ul class="sub-menu">
                                             <li><a href="radiology-cxr.html">Sof CXR</a></li>
-                                            <li><a href="#">Sof MMG</a></li>
+                                            <li><a href="radiology-mmg.html">Sof MMG</a></li>
                                             <!-- <li><a href="#">Testimonials</a></li> -->
                                         </ul>
                                     </li>
@@ -105,7 +105,7 @@
                 <a href="radiology-cxr.html">Radiology</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
-                    <li class="menu-item"><a href="#">Sof MMG</a></li>
+                    <li class="menu-item"><a href="radiology-mmg.html">Sof MMG</a></li>
                 </ul>
             </li>
             <li class="menu-item menu-item-has-children">
@@ -127,239 +127,108 @@
         </div>
     </div>
 
-
-
-    <style>
-        body {
-            background-color: #0a0f1a;
-            color: #e0e0e0;
-        }
-        .publication-header {
-            padding: 150px 0 100px;
-            background-color: #050d13;
-            color: #fff;
-            position: relative;
-        }
-        .publication-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(61, 136, 251, 0.1) 0%, rgba(86, 55, 200, 0.1) 100%);
-            z-index: 1;
-        }
-        .publication-header .container {
-            position: relative;
-            z-index: 2;
-        }
-        .publication-header .title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 30px;
-            line-height: 1.3;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        .publication-header .meta {
-            display: flex;
-            gap: 30px;
-            margin-bottom: 40px;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
-            justify-content: center;
-        }
-        .publication-header .meta span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .publication-content {
-            padding: 100px 0;
-            background-color: #0a0f1a;
-        }
-        .publication-content .container {
-            max-width: 900px;
-        }
-        .publication-content img {
-            width: 100%;
-            max-width: 800px;
-            margin: 60px auto;
-            display: block;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .publication-content p {
-            font-size: 20px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            color: #e0e0e0;
-            font-weight: 400;
-        }
-        .publication-content h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin: 60px 0 30px;
-            color: #fff;
-            line-height: 1.3;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        .publication-content h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(to right, #3D88FB, #5637C8);
-        }
-        .publication-content h3 {
-            font-size: 28px;
-            font-weight: 600;
-            margin: 40px 0 20px;
-            color: #fff;
-            line-height: 1.3;
-        }
-        .publication-content ul, .publication-content ol {
-            margin-bottom: 30px;
-            padding-left: 30px;
-        }
-        .publication-content li {
-            margin-bottom: 15px;
-            font-size: 20px;
-            line-height: 1.6;
-            color: #e0e0e0;
-        }
-        .publication-content li::marker {
-            color: #3D88FB;
-        }
-        .footer {
-            background-color: #050d13;
-            color: #e0e0e0;
-        }
-        .footer .content-left h3 {
-            color: #fff;
-        }
-        .footer .content-left p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        .footer .form-control {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
-        .footer .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        .footer textarea {
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff;
-        }
-        .footer textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        .footer__bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        @media (max-width: 768px) {
-            .publication-header .title {
-                font-size: 36px;
-            }
-            .publication-header .meta {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-            .publication-content p {
-                font-size: 18px;
-            }
-            .publication-content h2 {
-                font-size: 30px;
-            }
-            .publication-content h3 {
-                font-size: 24px;
-            }
-            .publication-content li {
-                font-size: 18px;
-            }
-        }
-        #publication-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            margin-top: 50px;
-            /* background: url('assets/images/background/bg-pagetitle.jpg') no-repeat center center/cover; */
-        }
-    </style>
-    <!-- Header -->
-   
-
-    <!-- Publication Header -->
-    <section class="publication-header" id="publication-header">
+      
+    <!-- Banner Top -->
+    <section class="banner-top style-8">
+        <div class="banner-top__overlay" style="background: rgba(5, 13, 19, 0.7);"></div>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 class="title">Benefits of AI in Radiology: Most Significant Advances and Potential Applications</h1>
-                    <div class="meta">
-                        <span><i class="bi bi-calendar"></i> March 15, 2024</span>
-                        <span><i class="bi bi-tag"></i> Radiology, AI, Medical Imaging</span>
+                <div class="col-xl-8 col-md-12">
+                    <h1 class="display-4 fw-bold mb-4">Sof PD-L1: AI-Powered PD-L1 Quantification for Immunotherapy</h1>
+                    <p class="lead mb-4">Accurate, efficient, and objective PD-L1 scoring for immuno-oncology. Powered by AI, trusted by pathologists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PD-L1 Benefits Section -->
+    <section class="section pt-5 pb-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Close to the Ground Truth</h2>
+                    <p>Trained with 1M+ cell annotations by 150+ pathologists worldwide, Sof PD-L1 delivers analysis results that are close to the ground truth.</p>
+                    <h2 class="fw-bold mt-4 mb-3">Reduced Discrepancy</h2>
+                    <p>Objective results reduce interpretation discrepancy between pathologists. Consensus rate increased from <span class="fw-bold text-primary">81.4%</span> to <span class="fw-bold text-primary">90.2%</span> with AI assistance. <span class="text-muted small">(Choi et al., Eur J Cancer 2022)</span></p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/images/pdl1-benefit.png" alt="PD-L1 AI Analysis" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Enrichment Section -->
+    <section class="section pt-5 pb-5">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-3">Patient Enrichment</h2>
+                    <p>With 96% accuracy, Sof PD-L1 finds 50% more patients eligible for immunotherapy compared to human-classified PD-L1(-) groups. AI accurately predicted and rescued ICI responders with TPS &lt; 1% by pathologists.</p>
+                    <div class="d-flex gap-4 mt-4">
+                        <div>
+                            <h3 class="fw-bold text-primary mb-0">47.6%</h3>
+                            <div class="small">of patients reclassified as TPS&gt; by AI</div>
+                        </div>
+                        <div>
+                            <h3 class="fw-bold text-primary mb-0">2.7</h3>
+                            <div class="small">mPFS (months) for this subgroup</div>
+                        </div>
+                    </div>
+                    <span class="text-muted small">(Choi et al., Eur J Cancer 2022)</span>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="assets/images/pdl1-patient.png" alt="Patient Enrichment" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section pt-5 pb-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">Detection</h4>
+                            <p>Detects tumor cell PD-L1 +/- and inflammatory cell PD-L1 +/- from whole slide images.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">Quantification</h4>
+                            <p>Calculates PD-L1 positive scores including TPS (Tumor Proportion Score) and CPS (Combined Positive Score; to be provided).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h4 class="fw-bold mb-2">AI Score and Report</h4>
+                            <p>Provides AI analysis results including PD-L1 TPS score and map within a report.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Publication Content -->
-    <section class="publication-content">
+    <!-- Publications Section -->
+    <section class="section pt-5 pb-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <img src="assets/images/blog/ai-in-radiology.jpg" alt="AI in Radiology">
-                    
-                    <p>The integration of AI into radiology has revolutionized the way medical imaging data is processed, analyzed, and utilized. This advancement brings significant improvements in accuracy, efficiency, and patient care. Below are some of the most notable advances and potential applications of AI in radiology.</p>
-
-                    <h2>1. Enhancing Image Acquisition</h2>
-                    <p>AI has significantly improved the process of image acquisition in radiology, making it faster and more precise. Through AI-driven algorithms, radiologists can acquire higher-quality images more quickly, while reducing common issues such as motion artifacts caused by patient movement. This not only speeds up the imaging process but also ensures better-quality data, resulting in more accurate diagnoses. Additionally, AI helps create a more comfortable patient experience by reducing the amount of time spent during imaging procedures.</p>
-
-                    <h2>2. Streamlining Reporting and Diagnostics</h2>
-                    <p>AI technologies are transforming how radiologists handle the large volumes of imaging data they deal with daily. The following AI applications are streamlining the diagnostic process:</p>
-                    <ul>
-                        <li><strong>Quality Enhancement Algorithms:</strong> These algorithms improve image quality by removing artifacts, enhancing resolution, and adjusting contrast, providing clearer and more reliable images for radiologists.</li>
-                        <li><strong>Image Segmentation Algorithms:</strong> AI automates the time-consuming task of manually identifying and delineating regions of interest in medical images. This technology speeds up the process and improves accuracy in identifying tissues, lesions, and disease areas. It also plays a crucial role in surgical and radiotherapy planning, where precise delineation is essential.</li>
-                        <li><strong>Lesion Detection Algorithms:</strong> Detecting abnormalities such as lesions in medical images can be challenging. AI algorithms help radiologists identify suspicious areas within the images, optimizing the detection and localization of lesions or other abnormalities.</li>
-                        <li><strong>Classification and Prioritization Algorithms:</strong> AI can classify images based on the likelihood of abnormalities, helping radiologists prioritize their workloads. AI can generate priority lists, ensuring that more urgent or time-sensitive cases are reviewed first. This improves the efficiency of radiology departments and minimizes the chances of missing critical findings.</li>
-                    </ul>
-
-                    <h2>3. Advancing Prognosis with Radiomics</h2>
-                    <p>Beyond its role in diagnosis, AI is also making significant strides in the field of prognosis through radiomics. Radiomics refers to the extraction of quantitative features from medical images that reveal patterns not immediately visible to the human eye. These features can provide valuable insights into disease progression and patient outcomes. Some of the key benefits include:</p>
-                    <ul>
-                        <li><strong>Predicting Clinical Endpoints:</strong> AI models that analyze radiomic features can predict important clinical outcomes such as disease recurrence, treatment response, and overall survival rates. This allows for more informed decision-making and better planning of patient care.</li>
-                        <li><strong>Early Disease Detection:</strong> Radiomics can identify subtle changes in tissues that indicate the early stages of disease progression. This allows for earlier interventions, which can significantly improve patient outcomes by addressing issues before they become more severe.</li>
-                        <li><strong>Treatment Monitoring:</strong> AI-powered radiomics tools can track a patient's response to treatment over time. By analyzing changes in radiomic features, AI helps physicians adjust treatment strategies in real time, optimizing patient care and improving treatment effectiveness.</li>
-                    </ul>
-
-                    <h2>4. Challenges and Future Directions</h2>
-                    <p>Despite the immense potential of AI in radiology, there are still challenges to overcome, particularly in the standardization of imaging data. Variations in scanners and acquisition protocols across different healthcare institutions can affect the consistency of data.</p>
-                    <p>To address this, researchers are working on harmonization tools that will standardize imaging data, ensuring more reliable and consistent results.</p>
-
-                    <h2>Conclusion</h2>
-                    <p>The integration of AI into radiology offers substantial improvements across multiple areas, including image acquisition, diagnostic reporting, prognosis prediction, and treatment monitoring. By automating repetitive tasks, enhancing image quality, and providing valuable insights into disease progression, AI is transforming the radiology field and improving patient care. As technology continues to evolve, the role of AI in radiology will expand, offering even greater potential for precision medicine and better patient outcomes.</p>
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="fw-bold mb-4">Publications featuring Sof PD-L1</h2>
+                    <p class="lead">Artificial intelligence–powered programmed death ligand 1 analyser reduces interobserver variation in tumour proportion score for non–small cell lung cancer with better prediction of immunotherapy response. <span class="text-muted small">(Choi et al., Eur J Cancer 2022)</span></p>
+                    <a href="https://www.lunit.io/en/products/pdl1" class="btn-action style-5 mt-3" target="_blank" rel="noopener">Learn more at Lunit.io</a>
                 </div>
             </div>
         </div>
     </section>
 
-   
-    
     <!-- Footer -->
     <footer id="contact" class="footer style-4" style="background: var(--dark-bg-gradient);">
         <div class="footer__top">
