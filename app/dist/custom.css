@@ -1,8 +1,31 @@
+
+:root {
+    --dark-bg-primary: #0a0a0a;
+    --dark-bg-secondary: #121212;
+    /* --dark-bg-gradient: linear-gradient(135deg, #0a0a0ad2 0%, #121212b6 100%); */
+    --dark-bg-gradient: #0a0a0ad2 0%;
+    /* --dark-bg-gradient-alt: linear-gradient(135deg, #0a0a0abd 0%, #12121298 100%); */
+    --dark-bg-gradient-alt: #0a0a0abd 0%;
+    /* --primary-color: #3D88FB; */
+    --primary-color: #2E72D2;
+    --secondary-color: #5637C8;
+    --accent-color: #00D199;
+    --light-text: #ffffff;
+    --light-text-secondary: rgba(255, 255, 255, 0.8);
+    --light-text-third: rgba(255, 255, 255, 0.5);
+    --dark-overlay: rgba(5, 5, 5, 0.8);
+    --card-bg: rgba(18, 18, 18, 0.7);
+    --card-border: rgba(255, 255, 255, 0.1);
+}
+.box-content {
+    background-color: var(--card-bg) !important;
+}
 .features-box-4 {
     height: 100%;
     display: flex;
     flex-direction: column;
     min-height: 280px;
+    background-color: var(--card-bg) !important;
 }
 .features-box-4 .features-box-content {
     flex: 1;
@@ -11,6 +34,18 @@
 }
 .features-box-4 .features-box-content p {
     flex: 1;
+}
+.features-box-4::before,
+.features-box-4.center:hover {
+    border-color: var(--primary-color) !important;
+}
+ 
+.features-box-4 .icon span::before {
+    color: var(--light-text) !important;
+}
+.features-box-4 .icon {
+    background-color: var(--primary-color) !important;
+
 }
 /* New banner styles */
 .banner-top.style-8 {
@@ -95,7 +130,9 @@
     border-radius: 30px;
     font-weight: 600;
     font-size: 16px;
-    background: linear-gradient(to right, #3D88FB, #5637C8);
+    color: var(--light-text) !important;
+    /* background: linear-gradient(to right, #3D88FB, #5637C8) !important; */
+    background: var(--primary-color) !important;
     border: none;
 }
 .btn-action.style-6 {
@@ -496,7 +533,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('assets/images/pattern/pattern-1.png');
+    /* background-image: url('assets/images/pattern/pattern-1.png'); */
+    /* background-image: url('assets/images/background/bg-4.jpg'); */
     opacity: 0.05;
     z-index: 1;
 }
@@ -699,24 +737,7 @@
 
 
 
-:root {
-    --dark-bg-primary: #0a0a0a;
-    --dark-bg-secondary: #121212;
-    /* --dark-bg-gradient: linear-gradient(135deg, #0a0a0ad2 0%, #121212b6 100%); */
-    --dark-bg-gradient: #0a0a0ad2 0%;
-    /* --dark-bg-gradient-alt: linear-gradient(135deg, #0a0a0abd 0%, #12121298 100%); */
-    --dark-bg-gradient-alt: #0a0a0abd 0%;
-    /* --primary-color: #3D88FB; */
-    /* --primary-color: #2E72D2; */
-    --secondary-color: #5637C8;
-    --accent-color: #00D199;
-    --light-text: #ffffff;
-    --light-text-secondary: rgba(255, 255, 255, 0.8);
-    --light-text-third: rgba(255, 255, 255, 0.5);
-    --dark-overlay: rgba(5, 5, 5, 0.8);
-    --card-bg: rgba(18, 18, 18, 0.7);
-    --card-border: rgba(255, 255, 255, 0.1);
-}
+
 
 body {
     background-color: #0a0a0a;
@@ -764,7 +785,7 @@ section .container {
 /* Card styles */
 .card, .blog-box, .features-box, .about-box {
     background: var(--card-bg);
-    border: 1px solid var(--card-border);
+    border: 1px solid var(--card-border) !important;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
@@ -1064,6 +1085,7 @@ input::placeholder, textarea::placeholder {
 }
 .header__right .btn-action-outline.style-4:hover {
     color: var(--dark-bg-primary);
+    
 }
 
 /* .header__right .btn-action-outline.style-4 {
@@ -1394,6 +1416,13 @@ input::placeholder, textarea::placeholder {
     background: rgba(5, 5, 5, 0.8);
 }
 
+.btn-action-outline.style-4:hover {
+    color: var(--light-text) !important;
+}
+
+.btn-action-outline.style-4::before {
+    background-color: var(--primary-color) !important;
+}
 
 
 .typing-text {
@@ -1456,7 +1485,7 @@ input::placeholder, textarea::placeholder {
 
 .notification-btn {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--light-text);
     padding: 6px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -1466,9 +1495,10 @@ input::placeholder, textarea::placeholder {
 }
 
 .notification-btn:hover {
-    background: #4d93ff;
+    color: var(--light-text);
+    /* background: #4d93ff; */
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(61, 136, 251, 0.4);
+    /* box-shadow: 0 4px 12px rgba(61, 136, 251, 0.4); */
 }
 
 .notification-close {
@@ -1738,4 +1768,10 @@ body.has-notification .header.style-8 {
     margin-top: 40px; 
     margin-bottom: 30px; 
     /* color: var(--light-text-secondary); */
+}
+
+#message:focus,
+#email:focus,
+#name:focus{
+    border-color: var(--primary-color) !important;
 }
