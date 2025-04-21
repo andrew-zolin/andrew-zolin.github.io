@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="app/dist/app.css">
     <link rel="stylesheet" href="app/dist/custom.css">
+    <link rel="stylesheet" href="app/dist/disease-detection.css">
     <link rel="stylesheet" href="app/dist/swiper-bundle.min.css" >
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
@@ -161,7 +162,7 @@
                                 <span class="check-icon"><i class="bi bi-check"></i></span>
                                 <span class="disease-name">Normal / Benign mass </span>
                             </div>
-                            <div class="disease-button" data-disease="malignant-mass">
+                            <div class="disease-button" data-disease="mucinous-carcinoma">
                                 <span class="disease-name">Malignant mass </span>
                             </div>
                         </div>
@@ -170,7 +171,7 @@
                 <div style="max-height: 740px;" class="col-md-6">
                     <div class="xray-display">
                         <div class="xray-image-container">
-                            <img id="xray-image" src="assets/images/background/bg-banner-nft.jpg" alt="CXR with AI detection" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+                            <img id="xray-image" src="assets/images/insight-mmg/Normal.png" alt="MMG with AI detection" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
                             <div class="sof-logo-overlay">
                                 <span>SOF INSIGHT MMG</span>
                             </div>
@@ -199,241 +200,84 @@
         </div>
     </section>
 
-    <style>
-        /* CXR Detection Section Styles - Updated to match site colors */
-        .cxr-detection {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #001440 0%, #0a1f3d 100%);
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cxr-detection::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('assets/images/pattern/pattern-1.png');
-            opacity: 0.05;
-            z-index: 1;
-        }
-        
-        .cxr-detection .container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cxr-detection .heading {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #fff;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .cxr-detection .heading .highlight {
-            color: #3D88FB;
-            position: relative;
-        }
-        
-        .heading-line {
-            width: 80px;
-            height: 3px;
-            background: linear-gradient(to right, #3D88FB, #5637C8);
-            margin: 0 auto 20px;
-        }
-        
-        .accuracy-highlight {
-            font-weight: 700;
-            color: #3D88FB;
-        }
-        
-        .cxr-detection .subtitle {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            color: #3D88FB;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .disease-buttons-container {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            margin-top: 30px;
-        }
-        
-        .disease-buttons-row {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-        }
-        
-        .disease-buttons-row .disease-button {
-            flex: 1;
-            width: calc(50% - 5px);
-        }
-        
-        .disease-button {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            padding: 15px 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .disease-button:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .disease-button.active {
-            background: linear-gradient(135deg, rgba(61, 136, 251, 0.2), rgba(86, 55, 200, 0.2));
-            border-left: 3px solid #3D88FB;
-        }
-        
-        .check-icon {
-            margin-right: 10px;
-            color: #3D88FB;
-            font-size: 18px;
-        }
-        
-        .disease-name {
-            font-size: 16px;
-            color: #fff;
-        }
-        
-        .xray-display {
-            margin-top: 30px;
-            position: relative;
-            height: 80%;
-            max-height: 440px;
-        }
-        
-        .xray-image-container {
-            border-radius: 15px;
-            overflow: hidden;
-            position: relative;
-            background-color: #000;
-            height: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-        
-        #xray-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .sof-logo-overlay {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(0, 20, 64, 0.7);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            color: #fff;
-        }
-        
-        .detection-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        
-        .detection-highlight {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid rgba(61, 136, 251, 0.7);
-            background: radial-gradient(circle, rgba(61, 136, 251, 0.3) 0%, rgba(61, 136, 251, 0) 70%);
-            transform: translate(-50%, -50%);
-        }
-        
-        .disease-info-box {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .disease-info-box h4 {
-            color: #fff;
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        
-        .disease-info-box p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 25px;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        
-        .accuracy-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .accuracy-label {
-            white-space: nowrap;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 500;
-        }
-        
-        .accuracy-bar {
-            flex-grow: 1;
-            height: 25px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .accuracy-value {
-            height: 100%;
-            background: linear-gradient(90deg, #3D88FB, #5637C8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            color: #fff;
-            font-weight: bold;
-            transition: width 0.5s ease;
-        }
-        
-        @media (max-width: 768px) {
-            .accuracy-info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .accuracy-bar {
-                width: 100%;
-            }
-        }
-    </style>
+    <!-- MMG Clinical Benefits Section -->
+    <section class="section pt-5 pb-5" style="background: var(--dark-bg-gradient);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-4">
+                    <h2 class="fw-bold">Clinical Benefits</h2>
+                    <p class="lead">SOF INSIGHT MMG delivers measurable improvements in breast cancer detection and workflow efficiency</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="performance-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <div class="d-flex mb-3">
+                            <div>
+                                <h3 class="text-primary mb-0 mt-2" style="font-size: 32px; font-weight: 700;">5%</h3>
+                                <h3 class="text-primary mt-2" style="font-size: 32px; font-weight: 700;">12%</h3>
+                            </div>
+                            <div class="ms-3 mt-2">
+                                <div class="mt-2" style="font-size: 14px; color: var(--light-text-secondary);">Dense breast</div>
+                                <div class="mt-4" style="font-size: 14px; color: var(--light-text-secondary);">Fatty breast</div>
+                            </div>
+                        </div>
+                        <h4 class="mb-3" style="color: var(--light-text);">Improved Diagnostic Accuracy</h4>
+                        <p style="color: var(--light-text-secondary);">According to studies published in THE LANCET Digital Health, radiologists can improve diagnostic accuracy for dense and fatty breasts by up to 5% and 12% respectively with AI assistance.</p>
+                    </div>
+                </div> -->
+
+                <div class="col-lg-12 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="performance-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h3 class="text-primary mb-3" style="font-size: 42px; font-weight: 700;">40%</h3>
+                        <h4 class="mb-3" style="color: var(--light-text);">Earlier Diagnosis</h4>
+                        <p style="color: var(--light-text-secondary);">40% of breast cancer patients can be diagnosed earlier. SOF INSIGHT MMG can detect cancer in cases where it was missed in traditional analysis, enabling detection up to 2 years earlier.</p>
+                        <p class="mt-3" style="font-size: 14px; color: var(--light-text-third);">In a real case example, AI successfully analyzed a mammogram from 2020 where cancer was missed, but was later diagnosed in 2022.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="performance-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h3 class="text-primary mb-3" style="font-size: 42px; font-weight: 700;">13%</h3>
+                        <h4 class="mb-3" style="color: var(--light-text);">Better Cancer Detection</h4>
+                        <p style="color: var(--light-text-secondary);">According to studies in THE LANCET Digital Health, among women with top AI scores for negative mammograms after initial reading, 13% more cancers were detected earlier with SOF INSIGHT MMG.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="performance-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h3 class="text-primary mb-3" style="font-size: 42px; font-weight: 700;">60%</h3>
+                        <h4 class="mb-3" style="color: var(--light-text);">Workflow Efficiency</h4>
+                        <p style="color: var(--light-text-secondary);">SOF INSIGHT MMG can triage 60% of cases without missing any breast cancer. The suggested workflow model, where the AI score functions as supportive information, reduces radiologists' reading volume and complements their interpretations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="density-assessment-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h4 class="mb-3" style="color: var(--light-text);">Automated Density Assessment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <p style="color: var(--light-text-secondary);">SOF INSIGHT MMG automatically analyzes and generates quantitative density assessment during breast screening, supporting recent recommendations from the European Society of Breast Imaging (EUSOBI) that patients should be informed of their breast density when screened.</p>
+                                <p class="mt-2" style="font-size: 14px; color: var(--light-text-third);">Breast density is an important risk factor for breast cancer and can impact the sensitivity of traditional mammography.</p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div style="background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; display: inline-block;">
+                                    <div style="color: var(--primary-color); font-weight: 700; font-size: 24px;">C</div>
+                                    <div style="color: var(--light-text); font-size: 12px;">7 / 10</div>
+                                    <div style="color: var(--light-text-secondary); font-size: 12px;">Heterogeneously Dense</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         // Disease data
@@ -441,80 +285,17 @@
             "normal-benign": {
                 title: "Normal / Benign mass ",
                 description: "SOF INSIGHT CXR enables AI-powered detection of lung nodules with high accuracy, helping radiologists identify potential early signs of lung cancer.",
-                image: "assets/images/background/bg-banner-nft.jpg",
+                image: "assets/images/insight-mmg/Normal.png",
                 accuracy: "97%",
-                highlightPosition: { x: 70, y: 60 }
+                // highlightPosition: { x: 0, y: 0 }
             },
-            "malignant-mass": {
+            "mucinous-carcinoma": {
                 title: "Malignant mass ",
                 description: "SOF AI accurately detects areas of consolidation in the lungs, which can indicate pneumonia or other inflammatory conditions.",
-                image: "assets/images/cxr/consolidation-detection.jpg",
+                image: "assets/images/insight-mmg/Mucinous-carcinoma.png",
                 accuracy: "96%",
-                highlightPosition: { x: 60, y: 50 }
+                highlightPosition: { x: 52, y: 70 }
             },
-            "pneumothorax": {
-                title: "Pneumothorax",
-                description: "Our AI system can quickly identify pneumothorax (collapsed lung), a potentially life-threatening condition requiring immediate medical attention.",
-                image: "assets/images/cxr/pneumothorax-detection.jpg",
-                accuracy: "98%",
-                highlightPosition: { x: 30, y: 40 }
-            },
-            "pleural-effusion": {
-                title: "Pleural Effusion",
-                description: "SOF INSIGHT CXR detects pleural effusion, the abnormal accumulation of fluid in the pleural space between the lungs and chest wall.",
-                image: "assets/images/cxr/effusion-detection.jpg",
-                accuracy: "97%",
-                highlightPosition: { x: 80, y: 55 }
-            },
-            "atelectasis": {
-                title: "Atelectasis",
-                description: "Our AI accurately identifies atelectasis, the complete or partial collapse of a lung or lobe of a lung, which can be caused by various conditions.",
-                image: "assets/images/cxr/atelectasis-detection.jpg",
-                accuracy: "95%",
-                highlightPosition: { x: 65, y: 45 }
-            },
-            "pneumoperitoneum": {
-                title: "Pneumoperitoneum",
-                description: "SOF AI can detect pneumoperitoneum, the presence of air or gas in the abdominal cavity, which is often a sign of a perforated organ.",
-                image: "assets/images/cxr/pneumoperitoneum-detection.jpg",
-                accuracy: "96%",
-                highlightPosition: { x: 50, y: 70 }
-            },
-            "cardiomegaly": {
-                title: "Cardiomegaly",
-                description: "Our system accurately identifies cardiomegaly (enlarged heart), which can be a sign of various heart conditions or diseases.",
-                image: "assets/images/cxr/cardiomegaly-detection.jpg",
-                accuracy: "98%",
-                highlightPosition: { x: 50, y: 50 }
-            },
-            "mediastinal-widening": {
-                title: "Mediastinal Widening",
-                description: "SOF INSIGHT CXR detects mediastinal widening, which can indicate serious conditions such as aortic aneurysm or lymphadenopathy.",
-                image: "assets/images/cxr/mediastinal-detection.jpg",
-                accuracy: "94%",
-                highlightPosition: { x: 50, y: 40 }
-            },
-            "calcification": {
-                title: "Calcification",
-                description: "Our AI system identifies calcifications in the lungs, which can be indicative of prior infections, granulomatous diseases, or other conditions.",
-                image: "assets/images/cxr/calcification-detection.jpg",
-                accuracy: "95%",
-                highlightPosition: { x: 40, y: 55 }
-            },
-            "fibrosis": {
-                title: "Fibrosis",
-                description: "SOF AI accurately detects pulmonary fibrosis, the scarring of lung tissue that can lead to serious breathing problems.",
-                image: "assets/images/cxr/fibrosis-detection.jpg",
-                accuracy: "93%",
-                highlightPosition: { x: 60, y: 60 }
-            },
-            "tuberculosis": {
-                title: "Tuberculosis Screening",
-                description: "SOF INSIGHT CXR provides support for tuberculosis screening programs, helping to identify potential TB cases for further evaluation.",
-                image: "assets/images/cxr/tuberculosis-detection.jpg",
-                accuracy: "96%",
-                highlightPosition: { x: 55, y: 45 }
-            }
         };
 
         // Function to update the disease display
@@ -554,11 +335,13 @@
             const detectionOverlay = document.getElementById('detection-overlay');
             detectionOverlay.innerHTML = '';
             
-            const highlight = document.createElement('div');
-            highlight.className = 'detection-highlight';
-            highlight.style.left = `${data.highlightPosition.x}%`;
-            highlight.style.top = `${data.highlightPosition.y}%`;
-            detectionOverlay.appendChild(highlight);
+            if (data.highlightPosition) {
+                const highlight = document.createElement('div');
+                highlight.className = 'detection-highlight';
+                highlight.style.left = `${data.highlightPosition.x}%`;
+                highlight.style.top = `${data.highlightPosition.y}%`;
+                detectionOverlay.appendChild(highlight);
+            }
         }
 
         // Add event listeners to disease buttons

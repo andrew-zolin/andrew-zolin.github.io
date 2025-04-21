@@ -8351,6 +8351,7 @@ img.mfp-img {
 }
 
 .features-box-4 {
+  /* background: rgba(46, 114, 210, 0.1); */
   background: rgba(46, 114, 210, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 20px;

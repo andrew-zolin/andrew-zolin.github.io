@@ -1,0 +1,235 @@
+/* CXR Detection Section Styles - Updated to match site colors */
+.cxr-detection {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #001440 0%, #0a1f3d 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cxr-detection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/pattern/pattern-1.png');
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.cxr-detection .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cxr-detection .heading {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.cxr-detection .heading .highlight {
+    color: #3D88FB;
+    position: relative;
+}
+
+.heading-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #3D88FB, #5637C8);
+    margin: 0 auto 20px;
+}
+
+.accuracy-highlight {
+    font-weight: 700;
+    color: #3D88FB;
+}
+
+.cxr-detection .subtitle {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3D88FB;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.disease-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.disease-buttons-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.disease-buttons-row .disease-button {
+    flex: 1;
+    width: calc(50% - 5px);
+}
+
+.disease-button {
+    /* background: rgba(255, 255, 255, 0.05); */
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.disease-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.disease-button.active {
+    background: linear-gradient(135deg, rgba(61, 136, 251, 0.2), rgba(86, 55, 200, 0.2));
+    border-left: 3px solid #3D88FB;
+}
+
+.check-icon {
+    margin-right: 10px;
+    color: #3D88FB;
+    font-size: 18px;
+}
+
+.disease-name {
+    font-size: 16px;
+    color: #fff;
+}
+
+.xray-display {
+    margin-top: 30px;
+    position: relative;
+    height: 80%;
+    max-height: 440px;
+}
+
+.xray-image-container {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+#xray-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sof-logo-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 20, 64, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.detection-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.detection-highlight {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgba(61, 136, 251, 0.7);
+    background: radial-gradient(circle, rgba(61, 136, 251, 0.3) 0%, rgba(61, 136, 251, 0) 70%);
+    transform: translate(-50%, -50%);
+}
+
+.disease-info-box {
+    /* background: rgba(255, 255, 255, 0.05); */
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.disease-info-box h4 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.disease-info-box p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.accuracy-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.accuracy-label {
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.accuracy-bar {
+    flex-grow: 1;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.accuracy-value {
+    height: 100%;
+    background: linear-gradient(90deg, #3D88FB, #5637C8);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: #fff;
+    font-weight: bold;
+    transition: width 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .accuracy-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .accuracy-bar {
+        width: 100%;
+    }
+}
