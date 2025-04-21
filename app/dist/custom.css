@@ -709,6 +709,7 @@
     --accent-color: #00D199;
     --light-text: #ffffff;
     --light-text-secondary: rgba(255, 255, 255, 0.8);
+    --light-text-third: rgba(255, 255, 255, 0.5);
     --dark-overlay: rgba(5, 5, 5, 0.8);
     --card-bg: rgba(18, 18, 18, 0.7);
     --card-border: rgba(255, 255, 255, 0.1);
@@ -1726,4 +1727,12 @@ body.has-notification .header.style-8 {
     .partner-content p {
         font-size: 14px;
     }
+}
+
+
+.small-title {
+    text-align: center; 
+    margin-top: 40px; 
+    margin-bottom: 30px; 
+    /* color: var(--light-text-secondary); */
 }

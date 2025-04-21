@@ -63,9 +63,9 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Oncology</a>
+                                        <a href="oncology-pd-l1.html">Oncology</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Sof PD-L1</a></li>
+                                            <li><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="blog.html">Publications</a></li>
@@ -109,9 +109,9 @@
                 </ul>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="#">Oncology</a>
+                <a href="oncology-pd-l1.html">Oncology</a>
                 <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Sof PD-L1</a></li>
+                    <li class="menu-item"><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                 </ul>
             </li>
             <li class="menu-item">
@@ -127,66 +127,42 @@
         </div>
     </div>
 
-    <!-- Section CXR Disease Detection -->
-    <section class="cxr-detection style-3" id="diseases" style="background: var(--dark-bg-gradient);">
-        <div style="margin-top: 50px" class="container">
+    <!-- Banner Top -->
+    <section class="banner-top style-8">
+        <video class="banner-top__video-bg" autoplay muted loop playsinline">
+            <source src="assets/videos/background/5406015-uhd_3840_2160_25fps.mp4" type="video/mp4">
+        </video>
+
+        <div class="banner-top__overlay" style="background: rgba(5, 13, 19, 0.7);"></div>
+        <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="block-text center">
-                        <!-- <span class="subtitle">ADVANCED AI TECHNOLOGY</span> -->
-                        <h3 class="heading">SOF INSIGHT <span class="highlight">CXR</span></h3>
-                        <p class="fs-17 mt-16"><span class="accuracy-highlight">97-99% accuracy</span> in detecting abnormalities on chest X-rays<br>Click on a condition to see AI detection examples</p>
+                <div class="col-xl-8 col-md-12">
+                    <div  class="banner-top__content">
+                        <h2 style="padding: 0px; margin: 0; max-width: 100%; font-size: 50px;" class="title">
+                            <span>SOF INSIGHT MMG</span>
+                        </h2>
+                        <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;" data-aos="fade-up" data-aos-duration="800">
+                            <span class="accuracy-highlight">96% accuracy</span> in detecting lesions suspicious of breast cancer in mammograms<br>AI-powered analysis for improved breast screening
+                        </p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="row">
+    <!-- Section MMG Disease Detection -->
+    <section class="cxr-detection style-3" id="diseases" style="background: var(--dark-bg-gradient);">
+        <div class="container">
+            <div class="row" style="max-height: 450px !important;">
                 <div class="col-md-6">
                     <div class="disease-buttons-container">
                         <div class="disease-buttons-row">
-                            <div class="disease-button active" data-disease="nodule">
+                            <div class="disease-button active" data-disease="normal-benign">
                                 <span class="check-icon"><i class="bi bi-check"></i></span>
-                                <span class="disease-name">Nodule</span>
+                                <span class="disease-name">Normal / Benign mass </span>
                             </div>
-                            <div class="disease-button" data-disease="consolidation">
-                                <span class="disease-name">Consolidation</span>
-                            </div>
-                        </div>
-                        <div class="disease-buttons-row">
-                            <div class="disease-button" data-disease="pneumothorax">
-                                <span class="disease-name">Pneumothorax</span>
-                            </div>
-                            <div class="disease-button" data-disease="pleural-effusion">
-                                <span class="disease-name">Pleural effusion</span>
-                            </div>
-                        </div>
-                        <div class="disease-buttons-row">
-                            <div class="disease-button" data-disease="atelectasis">
-                                <span class="disease-name">Atelectasis</span>
-                            </div>
-                            <div class="disease-button" data-disease="pneumoperitoneum">
-                                <span class="disease-name">Pneumoperitoneum</span>
-                            </div>
-                        </div>
-                        <div class="disease-buttons-row">
-                            <div class="disease-button" data-disease="cardiomegaly">
-                                <span class="disease-name">Cardiomegaly</span>
-                            </div>
-                            <div class="disease-button" data-disease="mediastinal-widening">
-                                <span class="disease-name">Mediastinal widening</span>
-                            </div>
-                        </div>
-                        <div class="disease-buttons-row">
-                            <div class="disease-button" data-disease="calcification">
-                                <span class="disease-name">Calcification</span>
-                            </div>
-                            <div class="disease-button" data-disease="fibrosis">
-                                <span class="disease-name">Fibrosis</span>
-                            </div>
-                        </div>
-                        <div class="disease-buttons-row">
-                            <div class="disease-button" data-disease="tuberculosis">
-                                <span class="disease-name">Tuberculosis screening</span>
+                            <div class="disease-button" data-disease="malignant-mass">
+                                <span class="disease-name">Malignant mass </span>
                             </div>
                         </div>
                     </div>
@@ -196,7 +172,7 @@
                         <div class="xray-image-container">
                             <img id="xray-image" src="assets/images/background/bg-banner-nft.jpg" alt="CXR with AI detection" onerror="this.src='https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
                             <div class="sof-logo-overlay">
-                                <span>SOF INSIGHT CXR</span>
+                                <span>SOF INSIGHT MMG</span>
                             </div>
                             <div class="detection-overlay" id="detection-overlay">
                                 <!-- Detection highlight will be positioned here -->
@@ -206,11 +182,11 @@
                 </div>
             </div>
             
-            <div class="row mt-4">
+            <!-- <div class="row mt-4">
                 <div class="col-md-12">
                     <div class="disease-info-box">
-                        <h4 id="disease-title">Nodule</h4>
-                        <p id="disease-description">SOF INSIGHT CXR enables AI-powered detection of lung nodules with high accuracy, helping radiologists identify potential early signs of lung cancer.</p>
+                        <h4 id="disease-title">Normal / Benign mass </h4>
+                        <p id="disease-description">SOF INSIGHT MMG accurately identifies normal or benign masses, helping radiologists rule out cancerous growths.</p>
                         <div class="accuracy-info">
                             <div class="accuracy-label">Detection Accuracy:</div>
                             <div class="accuracy-bar">
@@ -219,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -462,15 +438,15 @@
     <script>
         // Disease data
         const diseaseData = {
-            "nodule": {
-                title: "Nodule",
+            "normal-benign": {
+                title: "Normal / Benign mass ",
                 description: "SOF INSIGHT CXR enables AI-powered detection of lung nodules with high accuracy, helping radiologists identify potential early signs of lung cancer.",
                 image: "assets/images/background/bg-banner-nft.jpg",
                 accuracy: "97%",
                 highlightPosition: { x: 70, y: 60 }
             },
-            "consolidation": {
-                title: "Consolidation",
+            "malignant-mass": {
+                title: "Malignant mass ",
                 description: "SOF AI accurately detects areas of consolidation in the lungs, which can indicate pneumonia or other inflammatory conditions.",
                 image: "assets/images/cxr/consolidation-detection.jpg",
                 accuracy: "96%",
@@ -549,13 +525,13 @@
             document.getElementById('xray-image').src = data.image;
             
             // Update text content
-            document.getElementById('disease-title').textContent = data.title;
-            document.getElementById('disease-description').textContent = data.description;
+            // document.getElementById('disease-title').textContent = data.title;
+            // document.getElementById('disease-description').textContent = data.description;
             
             // Update accuracy
-            const accuracyValue = document.querySelector('.accuracy-value');
-            accuracyValue.style.width = data.accuracy;
-            accuracyValue.textContent = data.accuracy;
+            // const accuracyValue = document.querySelector('.accuracy-value');
+            // accuracyValue.style.width = data.accuracy;
+            // accuracyValue.textContent = data.accuracy;
             
             // Update active button
             document.querySelectorAll('.disease-button').forEach(button => {
