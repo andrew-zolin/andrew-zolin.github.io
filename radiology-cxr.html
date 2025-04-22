@@ -251,7 +251,7 @@
     <!-- AI Performance Section -->
     <section class="section pt-5 pb-5" style="background: var(--dark-bg-gradient);">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-12 text-center mb-4">
                     <h2 class="fw-bold">Clinical Benefits</h2>
                     <p class="lead">SOF INSIGHT CXR delivers measurable improvements in clinical workflow and diagnostic accuracy</p>
@@ -294,6 +294,195 @@
                             <div class="text-end mt-2">
                                 <span style="font-size: 12px; color: var(--light-text-third);">Sensitivity ↑</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Workflow Optimization Charts -->
+            <div class="row mt-5">
+                <div class="col-md-12 text-center mb-4">
+                    <h3 class="fw-bold">Optimized Workflow Visualization</h3>
+                    <p class="lead">Reduce overall reading time via worklist prioritization with AI</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="chart-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 style="color: var(--light-text); margin-bottom: 0;">All Cases</h4>
+                            <div class="stat-badge" style="background: rgba(46, 114, 210, 0.15); border-radius: 6px; padding: 5px 10px;">
+                                <span style="color: var(--primary-color); font-weight: 700; font-size: 18px;">13</span>
+                                <span style="color: var(--primary-color); font-weight: 700;">% Reduction</span>
+                            </div>
+                        </div>
+                        <p style="color: var(--light-text-secondary); margin-bottom: 25px;">Reading time for all cases reduced by 13% (p < 0.001)</p>
+                        
+                        <div class="chart-container" style="height: 200px; position: relative;">
+                            <div class="chart-bars d-flex align-items-end justify-content-around" style="height: 100%; padding-bottom: 40px;">
+                                <div class="chart-bar" style="width: 25%; height: 90%; position: relative;">
+                                    <div class="bar" style="background: #555; width: 60%; height: 100%; margin: 0 auto; position: relative;">
+                                        <div class="bar-value" style="position: absolute; top: -25px; left: 0; right: 0; text-align: center; color: var(--light-text);">
+                                            23.5 mins
+                                        </div>
+                                    </div>
+                                    <div class="bar-label" style="position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; color: var(--light-text-secondary);">
+                                        Without AI
+                                    </div>
+                                </div>
+                                <div class="chart-bar" style="width: 25%; height: 78%; position: relative;">
+                                    <div class="bar" style="background: var(--primary-color); width: 60%; height: 100%; margin: 0 auto; position: relative;">
+                                        <div class="bar-value" style="position: absolute; top: -25px; left: 0; right: 0; text-align: center; color: var(--light-text);">
+                                            20.5 mins
+                                        </div>
+                                    </div>
+                                    <div class="bar-label" style="position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; color: var(--light-text-secondary);">
+                                        With AI
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-note text-center mt-3" style="color: var(--light-text-third); font-size: 13px;">
+                            <Reading time for all cases>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="chart-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 style="color: var(--light-text); margin-bottom: 0;">Normal Cases</h4>
+                            <div class="stat-badge" style="background: rgba(46, 114, 210, 0.15); border-radius: 6px; padding: 5px 10px;">
+                                <span style="color: var(--primary-color); font-weight: 700; font-size: 18px;">33</span>
+                                <span style="color: var(--primary-color); font-weight: 700;">% Reduction</span>
+                            </div>
+                        </div>
+                        <p style="color: var(--light-text-secondary); margin-bottom: 25px;">Reading time for normal cases reduced by 33% (p < 0.001)</p>
+                        
+                        <div class="chart-container" style="height: 200px; position: relative;">
+                            <div class="chart-bars d-flex align-items-end justify-content-around" style="height: 100%; padding-bottom: 40px;">
+                                <div class="chart-bar" style="width: 25%; height: 90%; position: relative;">
+                                    <div class="bar" style="background: #555; width: 60%; height: 100%; margin: 0 auto; position: relative;">
+                                        <div class="bar-value" style="position: absolute; top: -25px; left: 0; right: 0; text-align: center; color: var(--light-text);">
+                                            17.9 sec
+                                        </div>
+                                    </div>
+                                    <div class="bar-label" style="position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; color: var(--light-text-secondary);">
+                                        Without AI
+                                    </div>
+                                </div>
+                                <div class="chart-bar" style="width: 25%; height: 60%; position: relative;">
+                                    <div class="bar" style="background: var(--primary-color); width: 60%; height: 100%; margin: 0 auto; position: relative;">
+                                        <div class="bar-value" style="position: absolute; top: -25px; left: 0; right: 0; text-align: center; color: var(--light-text);">
+                                            13.5 sec
+                                        </div>
+                                    </div>
+                                    <div class="bar-label" style="position: absolute; bottom: -30px; left: 0; right: 0; text-align: center; color: var(--light-text-secondary);">
+                                        With AI
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-note text-center mt-3" style="color: var(--light-text-third); font-size: 13px;">
+                            <Reading time for normal cases>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Early Diagnosis and Improved Reading Performance Charts -->
+    <section class="section pt-5 pb-5" style="background: var(--dark-bg-gradient);">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800">
+                    <div class="chart-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;">50% of lung cancer patients can be diagnosed earlier</h3>
+                        <p style="color: var(--light-text-secondary);">SOF INSIGHT CXR successfully analyzed the chest X-ray image of a 54-year-old male patient, <span style="color: var(--primary-color);">detecting lung cancer 3 years prior</span> to when it was diagnosed</p>
+                        
+                        <div class="timeline mt-4" style="display: flex; justify-content: space-between; position: relative; margin-bottom: 20px;">
+                            <div class="timeline-year" style="color: var(--light-text-third); font-size: 14px;">2013</div>
+                            <div class="timeline-year" style="color: var(--light-text-third); font-size: 14px;">2014</div>
+                            <div class="timeline-year" style="color: var(--light-text-third); font-size: 14px;">2015</div>
+                            <div class="timeline-year" style="color: var(--light-text-third); font-size: 14px;">2016</div>
+                        </div>
+                        
+                        <div class="image-comparison mt-5">
+                            <div class="row">
+                                <div class="col-md-6 mb-4 mb-md-0">
+                                    <div class="xray-detected position-relative mb-2" style="border: 1px solid rgba(46, 114, 210, 0.3); border-radius: 8px; overflow: hidden;">
+                                        <img src="assets/images/xray-detected.png" alt="X-ray detected by AI" class="img-fluid w-100">
+                                    </div>
+                                    <div class="detection-info d-flex justify-content-end">
+                                        <div style="text-align: right;">
+                                            <div style="color: var(--primary-color); font-weight: 500; font-size: 14px;">Detected by SOF AI</div>
+                                            <div style="color: var(--primary-color); font-weight: 500; font-size: 14px;">in 2013</div>
+                                            <div style="color: var(--primary-color); font-weight: 700; font-size: 16px; margin-top: 5px;">Score 16.7%</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="xray-missed position-relative mb-2" style="border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; overflow: hidden;">
+                                        <img src="assets/images/xray-missed.png" alt="X-ray missed without AI" class="img-fluid w-100">
+                                    </div>
+                                    <div class="detection-info d-flex">
+                                        <div>
+                                            <div style="color: var(--light-text); font-weight: 500; font-size: 14px;">Missed (without AI)</div>
+                                            <div style="color: var(--light-text); font-weight: 500; font-size: 14px;">in 2013</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="chart-card h-100" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
+                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;">Improved reading performance</h3>
+                        <p style="color: var(--light-text-secondary);">Better detection of early-stage lung cancer <a href="#" style="color: var(--primary-color); text-decoration: none;">without increasing false-positive cases<sup>2</sup></a></p>
+                        
+                        <div class="chart-container mt-5" style="height: 250px; position: relative;">
+                            <div class="chart-labels d-flex justify-content-between" style="position: absolute; top: 10px; left: 0; right: 0;">
+                                <div style="color: var(--light-text-third); font-size: 14px;">SOF AI</div>
+                                <div style="color: var(--primary-color); font-weight: 700; font-size: 24px;">65%</div>
+                            </div>
+                            
+                            <div class="chart-horizontal-bars" style="position: absolute; top: 60px; left: 0; right: 0; height: 150px;">
+                                <div class="chart-row d-flex align-items-center mb-4" style="height: 36px;">
+                                    <div style="width: 150px; color: var(--light-text-third); font-size: 14px;">Radiologists only</div>
+                                    <div class="progress" style="height: 36px; flex-grow: 1; background: transparent;">
+                                        <div class="progress-bar" style="width: 40%; background: #555; height: 36px;"></div>
+                                        <div class="progress-value" style="position: absolute; right: 55%; transform: translateX(100%); line-height: 36px; color: var(--light-text); font-weight: 500;">40%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chart-row d-flex align-items-center mb-4" style="height: 36px;">
+                                    <div style="width: 150px; color: var(--light-text-third); font-size: 14px;">Radiologists + SOF</div>
+                                    <div class="progress" style="height: 36px; flex-grow: 1; background: transparent;">
+                                        <div class="progress-bar" style="width: 65%; background: var(--primary-color); height: 36px;"></div>
+                                        <div class="progress-value" style="position: absolute; right: 30%; transform: translateX(100%); line-height: 36px; color: var(--light-text); font-weight: 500;">65%</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="chart-row d-flex align-items-center" style="height: 36px;">
+                                    <div style="width: 150px; color: var(--light-text-third); font-size: 14px;">Radiologists + SOF</div>
+                                    <div class="progress" style="height: 36px; flex-grow: 1; background: transparent;">
+                                        <div class="progress-bar" style="width: 53%; background: var(--primary-color); height: 36px;"></div>
+                                        <div class="progress-value" style="position: absolute; right: 42%; transform: translateX(100%); line-height: 36px; color: var(--light-text); font-weight: 500;">53%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-footer text-center" style="position: absolute; bottom: 0; left: 0; right: 0;">
+                                <div style="color: var(--light-text-third); font-size: 13px;">&lt;Sensitivity&gt;</div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-pagination mt-4 text-center">
+                            <span class="pagination-dot active" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); margin: 0 3px;"></span>
+                            <span class="pagination-dot" style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.2); margin: 0 3px;"></span>
                         </div>
                     </div>
                 </div>
