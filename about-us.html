@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +10,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="app/dist/app.css">
     <link rel="stylesheet" href="app/dist/custom.css">
-    <link rel="stylesheet" href="app/dist/swiper-bundle.min.css" >
+    <link rel="stylesheet" href="app/dist/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- end Styles -->
@@ -18,68 +19,122 @@
     <link rel="shortcut icon" href="assets/images/logo/favicon.png">
     <link rel="apple-touch-icon-precomposed" href="assets/images/partner/favicon.png.html">
     <style>
-        
-     
-
         body {
-          background: url('assets/images/medical/together_about_us.jpg') no-repeat center center fixed !important;
-          background-size:cover !important;
-          min-height: 100vh; /* Ensure body can contain content */
+            background-color: #000 !important;
+            background-image: none !important;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
         
-    
+        /* Стили для видео фона */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        
+        /* Затемнение видео для лучшей читаемости текста */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+
         /* This container now defines the scroll height for the animation trigger AND a buffer */
         .scroll-trigger-area {
-          position: relative; /* Needed for offsetTop calculation */
-          /* --- CHANGED HEIGHT --- */
-          height: 400vh; /* 3 blocks * 100vh each + 100vh buffer */
-          /* Make it invisible and non-interactive, it's just for measurement */
-           /* outline: 1px dashed red; */ /* For debugging visibility */
+            position: relative;
+            /* Needed for offsetTop calculation */
+            /* --- CHANGED HEIGHT --- */
+            height: 400vh;
+            /* 3 blocks * 100vh each + 100vh buffer */
+            /* Make it invisible and non-interactive, it's just for measurement */
+            /* outline: 1px dashed red; */
+            /* For debugging visibility */
         }
-    
+
         .text-block {
-          /* --- Key Changes for Fixed Positioning --- */
-          position: fixed;
-          top: 50%;             /* Center vertically */
-          left: 50%;            /* Center horizontally */
-          transform: translate(-50%, -50%); /* Precise centering */
-          width: 90%;           /* Control width */
-          max-width: 800px;     /* Max width */
-          height: auto;         /* Height based on content */
-          /* --- Styling & Animation --- */
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 2rem;
-          text-align: center;
-          font-size: clamp(1rem, 3.7vw, 1.5rem);
-          opacity: 0;
-          /* Only transition opacity now */
-          transition: opacity 0.6s ease-in-out;
-          /* Ensure it appears above the background but below potential future fixed headers */
-          z-index: 10;
-          /* Add a subtle background/shadow for readability if needed */
-          /* background-color: rgba(0, 0, 0, 0.3); */
-          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added subtle shadow for readability */
-          pointer-events: none; /* Prevent fixed text blocks from interfering with scrolling over trigger area */
+            /* --- Key Changes for Fixed Positioning --- */
+            position: fixed;
+            top: 50%;
+            /* Center vertically */
+            left: 50%;
+            /* Center horizontally */
+            transform: translate(-50%, -50%);
+            /* Precise centering */
+            width: 90%;
+            /* Control width */
+            max-width: 800px;
+            /* Max width */
+            height: auto;
+            /* Height based on content */
+            /* --- Styling & Animation --- */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+            font-size: clamp(1rem, 3.7vw, 1.5rem);
+            opacity: 0;
+            /* Only transition opacity now */
+            transition: opacity 0.6s ease-in-out;
+            /* Ensure it appears above the background but below potential future fixed headers */
+            z-index: 10;
+            /* Add a subtle background/shadow for readability if needed */
+            /* background-color: rgba(0, 0, 0, 0.3); */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            /* Added subtle shadow for readability */
+            pointer-events: none;
+            /* Prevent fixed text blocks from interfering with scrolling over trigger area */
         }
-    
+
         .text-block.visible {
-          opacity: 1;
-          pointer-events: auto; /* Allow interaction if needed when visible */
+            opacity: 1;
+            pointer-events: auto;
+            /* Allow interaction if needed when visible */
         }
-        #block1{
+
+        #block1 {
             font-size: clamp(2rem, 4vw, 2.5rem);
         }
-    
-      </style>
+    </style>
 </head>
+
 <body class="home-defi-4 header-fixed" data-magic-cursor="show">
+    <!-- Видео фон -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <source src="assets/videos/background/854225-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <!-- /Видео фон -->
+    
     <!-- MAGIC CURSOR -->
-		<!-- <div class="mouse-cursor cursor-outer"></div>
+    <!-- <div class="mouse-cursor cursor-outer"></div>
 		<div class="mouse-cursor cursor-inner"></div> -->
-	<!-- /MAGIC CURSOR -->
+    <!-- /MAGIC CURSOR -->
 
     <!-- Header -->
     <header id="header_main" class="header style-8">
@@ -100,10 +155,8 @@
                     <div class="header__body">
                         <div class="header__logo">
                             <a href="index.html">
-                                <img id="site-logo" src="assets/images/logo/logo-05.png"
-                                alt="Monteno" height="55"
-                                data-retina="assets/images/logo/logo-04@x2.png" data-width="165"
-                                data-height="40">
+                                <img id="site-logo" src="assets/images/logo/logo-05.png" alt="Monteno" height="55"
+                                    data-retina="assets/images/logo/logo-04@x2.png" data-width="165" data-height="40">
                             </a>
                         </div>
                         <div class="header__right">
@@ -184,53 +237,33 @@
     </div>
 
 
-
-
     <div class="banner-top__overlay" style="background: rgba(5, 13, 19, 0.7); z-index: -1;"></div>
 
 
+    <!-- This div now serves to create scrollable space for 3 blocks + 1 buffer block -->
+    <div class="scroll-trigger-area"></div>
 
+    <!-- Text blocks are siblings, positioned fixed -->
+    <div class="text-block" id="block1">
+        Cancer is complex — and every case is unique.
+    </div>
+    <div class="text-block" id="block2">
+        Behind each diagnosis lies a wealth of data that needs to be understood. This is where AI excels. By analyzing
+        vast amounts of information, AI unlocks insights that lead to new discoveries, empowering us to make smarter,
+        more personalized treatment decisions.
+        <br><br>
+        With these powerful, data-driven revelations, we can take meaningful steps forward in the fight against cancer.
+        Through AI, we have the potential to not just fight cancer — but to conquer it.
+    </div>
+    <div class="text-block" id="block3">
+        <strong>Vision & Mission:</strong>
+        <br><br>
+        To conquer cancer through the power of AI.<br>
+        We develop advanced AI solutions that detect early-stage cancer and optimize personalized treatment plans. By
+        unlocking the potential of AI, we aim to transform cancer care, offering hope and precision in the fight against
+        this complex disease.
+    </div>
 
-
-<!-- This div now serves to create scrollable space for 3 blocks + 1 buffer block -->
-<div class="scroll-trigger-area"></div>
-
-<!-- Text blocks are siblings, positioned fixed -->
-<div class="text-block" id="block1">
-Cancer is complex — and every case is unique.
-</div>
-<div class="text-block" id="block2">
-Behind each diagnosis lies a wealth of data that needs to be understood. This is where AI excels. By analyzing vast amounts of information, AI unlocks insights that lead to new discoveries, empowering us to make smarter, more personalized treatment decisions.
-<br><br>
-With these powerful, data-driven revelations, we can take meaningful steps forward in the fight against cancer. Through AI, we have the potential to not just fight cancer — but to conquer it.
-</div>
-<div class="text-block" id="block3">
-<strong>Vision & Mission:</strong>
-<br><br>
-To conquer cancer through the power of AI.<br>
-We develop advanced AI solutions that detect early-stage cancer and optimize personalized treatment plans. By unlocking the potential of AI, we aim to transform cancer care, offering hope and precision in the fight against this complex disease.
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <!-- Footer -->
     <footer id="contact" class="footer style-4" style="background: var(--dark-bg-gradient);">
         <div class="footer__top">
@@ -239,7 +272,8 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
                     <div class="col-md-6">
                         <div class="content-left">
                             <h3 class="fs-22">Contact Us</h3>
-                            <p class="fs-20">We are always open and welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.</p>
+                            <p class="fs-20">We are always open and welcome any questions you have for our team. If you
+                                wish to get in touch, please fill out the form below.</p>
                             <ul class="list-info">
                                 <li><span class="icon-message"></span>info@sofai.com</li>
                                 <li><span class="icon-Calling"></span>+1 (800) 555-1234</li>
@@ -250,7 +284,7 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
                                 <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
                                 <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
                             </ul>
-                            
+
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -259,21 +293,24 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
                                 <div class="form row">
                                     <div class="form-group col-md-6">
                                         <label for="name">Your Name</label>
-                                        <input type="text" id="name" class="form-control" placeholder="Type your name here" required>
+                                        <input type="text" id="name" class="form-control"
+                                            placeholder="Type your name here" required>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="email">Your Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Type your email here" required>
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="Type your email here" required>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <label class="mb-6">Your Message</label>
-                                        <textarea id="message" placeholder="Leave your question or comment here" required></textarea>
+                                        <textarea id="message" placeholder="Leave your question or comment here"
+                                            required></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-action style-5"><span>SUBMIT YOUR MESSAGE</span></button>
-                                
-                              </form>
-                        
+                                <button type="submit" class="btn-action style-5"><span>SUBMIT YOUR
+                                        MESSAGE</span></button>
+                            </form>
+
                         </div>
                     </div>
                 </div>
@@ -313,7 +350,7 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
             initClassName: 'aos-init', // class applied after initialization
             animatedClassName: 'aos-animate', // class applied on animation
             useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-            
+
             // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
             offset: 120, // offset (in px) from the original trigger point
             delay: 0, // values from 0 to 3000, with step 50ms
@@ -325,12 +362,12 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
         });
 
         // Refresh AOS on window resize and orientation change
-        window.addEventListener('resize', function() {
+        window.addEventListener('resize', function () {
             AOS.refresh();
         });
 
-        window.addEventListener('orientationchange', function() {
-            setTimeout(function() {
+        window.addEventListener('orientationchange', function () {
+            setTimeout(function () {
                 AOS.refresh();
             }, 100);
         });
@@ -386,70 +423,71 @@ We develop advanced AI solutions that detect early-stage cancer and optimize per
         const blocks = document.querySelectorAll('.text-block');
         const scrollTriggerArea = document.querySelector('.scroll-trigger-area');
         let currentActiveIndex = -1; // Track which block is currently active
-    
+
         function updateVisibleBlock() {
-          // Ensure the trigger area exists before proceeding
-          if (!scrollTriggerArea) return;
-    
-          const containerTop = scrollTriggerArea.offsetTop;
-          const containerHeight = scrollTriggerArea.offsetHeight; // Should be ~ 4 * vh now
-          const viewportHeight = window.innerHeight;
-          const scrollY = window.scrollY;
-    
-          let activeIndex = -1; // Default: no block visible
-    
-          // --- Calculate index based on scroll position relative to the trigger area ---
-    
-          // Check if the *top* of the viewport is somewhere between the top of the trigger area
-          // and the bottom of the trigger area.
-          // Add a tiny buffer (1px) to the end condition to prevent floating point issues
-          if (scrollY >= containerTop && scrollY < containerTop + containerHeight - 1) {
-              // Calculate how many 'viewport heights' we've scrolled into the container
-              const scrollIntoContainer = scrollY - containerTop;
-              // Determine the potential index (0, 1, 2, or 3 for the buffer)
-              const potentialIndex = Math.floor(scrollIntoContainer / viewportHeight);
-    
-              // --- ADJUSTED LOGIC ---
-              // If the potential index corresponds to an actual block, use it.
-              // Otherwise (if it's in the buffer zone or beyond), activeIndex remains -1.
-              if (potentialIndex < blocks.length) {
-                  activeIndex = potentialIndex;
-              } else {
-                  // We are in the buffer zone (the last 100vh of the trigger area)
-                  activeIndex = -1;
-              }
-              // Ensure index is not negative (can happen at the very top)
-              activeIndex = Math.max(-1, activeIndex);
-    
-          }
-          // If scrollY < containerTop, activeIndex remains -1 (Before area)
-          // If scrollY >= containerTop + containerHeight -1, activeIndex remains -1 (After area)
-    
-    
-          // --- Update classes only if the active block changed ---
-          if (activeIndex !== currentActiveIndex) {
-            // console.log(`ScrollY: ${scrollY.toFixed(0)}, containerTop: ${containerTop.toFixed(0)}, containerHeight: ${containerHeight.toFixed(0)}, vh: ${viewportHeight.toFixed(0)}, Potential Index: ${Math.floor((scrollY - containerTop) / viewportHeight)}, Final Index: ${activeIndex}`); // Debugging
-    
-            currentActiveIndex = activeIndex; // Update the tracked index
-    
-            blocks.forEach((block, index) => {
-              // Use classList.toggle for cleaner add/remove based on condition
-              block.classList.toggle('visible', index === activeIndex);
-            });
-          }
+            // Ensure the trigger area exists before proceeding
+            if (!scrollTriggerArea) return;
+
+            const containerTop = scrollTriggerArea.offsetTop;
+            const containerHeight = scrollTriggerArea.offsetHeight; // Should be ~ 4 * vh now
+            const viewportHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            let activeIndex = -1; // Default: no block visible
+
+            // --- Calculate index based on scroll position relative to the trigger area ---
+
+            // Check if the *top* of the viewport is somewhere between the top of the trigger area
+            // and the bottom of the trigger area.
+            // Add a tiny buffer (1px) to the end condition to prevent floating point issues
+            if (scrollY >= containerTop && scrollY < containerTop + containerHeight - 1) {
+                // Calculate how many 'viewport heights' we've scrolled into the container
+                const scrollIntoContainer = scrollY - containerTop;
+                // Determine the potential index (0, 1, 2, or 3 for the buffer)
+                const potentialIndex = Math.floor(scrollIntoContainer / viewportHeight);
+
+                // --- ADJUSTED LOGIC ---
+                // If the potential index corresponds to an actual block, use it.
+                // Otherwise (if it's in the buffer zone or beyond), activeIndex remains -1.
+                if (potentialIndex < blocks.length) {
+                    activeIndex = potentialIndex;
+                } else {
+                    // We are in the buffer zone (the last 100vh of the trigger area)
+                    activeIndex = -1;
+                }
+                // Ensure index is not negative (can happen at the very top)
+                activeIndex = Math.max(-1, activeIndex);
+
+            }
+            // If scrollY < containerTop, activeIndex remains -1 (Before area)
+            // If scrollY >= containerTop + containerHeight -1, activeIndex remains -1 (After area)
+
+
+            // --- Update classes only if the active block changed ---
+            if (activeIndex !== currentActiveIndex) {
+                // console.log(`ScrollY: ${scrollY.toFixed(0)}, containerTop: ${containerTop.toFixed(0)}, containerHeight: ${containerHeight.toFixed(0)}, vh: ${viewportHeight.toFixed(0)}, Potential Index: ${Math.floor((scrollY - containerTop) / viewportHeight)}, Final Index: ${activeIndex}`); // Debugging
+
+                currentActiveIndex = activeIndex; // Update the tracked index
+
+                blocks.forEach((block, index) => {
+                    // Use classList.toggle for cleaner add/remove based on condition
+                    block.classList.toggle('visible', index === activeIndex);
+                });
+            }
         }
-    
+
         // Run on initial load
         updateVisibleBlock();
-    
+
         // Add listeners
         window.addEventListener('scroll', updateVisibleBlock, { passive: true });
         // Recalculate on resize as element positions/heights might change
         window.addEventListener('resize', updateVisibleBlock);
-    
-      </script> 
+
+    </script>
 
 
 
 </body>
+
 </html>
