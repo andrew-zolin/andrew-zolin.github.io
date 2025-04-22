@@ -3,14 +3,14 @@ const diseaseData = {
     "normal-benign": {
         title: "Normal / Benign mass ",
         description: "SOF INSIGHT CXR enables AI-powered detection of lung nodules with high accuracy, helping radiologists identify potential early signs of lung cancer.",
-        image: "assets/images/insight-mmg/Normal.png",
+        image: "assets/images/insight-mmg/mmg-normal.png",
         accuracy: "97%",
         // highlightPosition: { x: 0, y: 0 }
     },
     "mucinous-carcinoma": {
         title: "Malignant mass ",
         description: "SOF AI accurately detects areas of consolidation in the lungs, which can indicate pneumonia or other inflammatory conditions.",
-        image: "assets/images/insight-mmg/Mucinous-carcinoma.png",
+        image: "assets/images/insight-mmg/mmg-ubnormal.png",
         accuracy: "96%",
         highlightPosition: { x: 52, y: 70 }
     },

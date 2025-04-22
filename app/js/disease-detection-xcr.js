@@ -10,7 +10,7 @@
     "consolidation": {
         title: "Consolidation",
         description: "SOF AI accurately detects areas of consolidation in the lungs, which can indicate pneumonia or other inflammatory conditions.",
-        image: "assets/images/insight-cxr/Consolidation2.jpg",
+        image: "assets/images/insight-cxr/Consolidation.jpg",
         accuracy: "96%",
         highlightPosition: { x: 60, y: 50 }
     },
@@ -52,7 +52,7 @@
     "mediastinal-widening": {
         title: "Mediastinal Widening",
         description: "SOF INSIGHT CXR detects mediastinal widening, which can indicate serious conditions such as aortic aneurysm or lymphadenopathy.",
-        image: "assets/images/insight-cxr/Mediastinal-Widening1.jpg",
+        image: "assets/images/insight-cxr/Mediastinal-Widening.jpg",
         accuracy: "94%",
         highlightPosition: { x: 50, y: 40 }
     },
