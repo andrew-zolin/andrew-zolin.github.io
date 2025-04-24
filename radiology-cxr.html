@@ -32,9 +32,9 @@
     <header id="header_main" class="header style-8">
         <div class="notification-banner" id="notification-banner">
             <div class="container">
-                <div class="notification-content">
+                <div class="notification-content" data-i18n="notification-text">
                     Want to learn more about SOF AI Solutions? Let's connect!
-                    <a href="#contact" class="notification-btn">Contact Us</a>
+                    <a href="#contact" class="notification-btn" data-i18n="contact-us">Contact Us</a>
                 </div>
                 <button class="notification-close" id="notification-close">
                     <i class="bi bi-x"></i>
@@ -166,14 +166,14 @@
                 <div class="col-xl-8 col-md-12">
                     <div class="banner-top__content">
                         <h2 style="padding: 0px; margin: 0; max-width: 100%; font-size: 50px;" class="title">
-                            <span>SOF INSIGHT CXR</span>
+                            <span data-i18n="sof-cxr-title">SOF INSIGHT CXR</span>
                             <!-- <span class="" style="color: var(--primary-color);">Quantification for Immunotherapy.</span><br> -->
                         </h2>
 
                         <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;" data-aos="fade-up"
                             data-aos-duration="800">
-                            <span class="accuracy-highlight">97-99% accuracy</span> in detecting abnormalities on chest
-                            X-rays<br>Click on a condition to see AI detection examples
+                            <span class="accuracy-highlight" data-i18n="cxr-accuracy">97-99% accuracy in detecting abnormalities on chest
+                            X-rays</span><br><span data-i18n="cxr-click-condition">Click on a condition to see AI detection examples</span>
                         </p>
                     </div>
                 </div>
@@ -199,34 +199,34 @@
                         <div class="disease-buttons-row">
                             <div class="disease-button active" data-disease="nodule">
                                 <span class="check-icon"><i class="bi bi-check"></i></span>
-                                <span class="disease-name">Nodule</span>
+                                <span class="disease-name" data-i18n="disease-nodule">Nodule</span>
                             </div>
                             <div class="disease-button" data-disease="pneumothorax">
-                                <span class="disease-name">Pneumothorax</span>
+                                <span class="disease-name" data-i18n="disease-pneumothorax">Pneumothorax</span>
                             </div>
                         </div>
                         <div class="disease-buttons-row">
                             <div class="disease-button" data-disease="atelectasis">
-                                <span class="disease-name">Atelectasis</span>
+                                <span class="disease-name" data-i18n="disease-atelectasis">Atelectasis</span>
                             </div>
                             <div class="disease-button" data-disease="cardiomegaly">
-                                <span class="disease-name">Cardiomegaly</span>
+                                <span class="disease-name" data-i18n="disease-cardiomegaly">Cardiomegaly</span>
                             </div>
                         </div>
                         <div class="disease-buttons-row">
                             <div class="disease-button" data-disease="consolidation">
-                                <span class="disease-name">Consolidation</span>
+                                <span class="disease-name" data-i18n="disease-consolidation">Consolidation</span>
                             </div>
                             <div class="disease-button" data-disease="tuberculosis">
-                                <span class="disease-name">Tuberculosis</span>
+                                <span class="disease-name" data-i18n="disease-tuberculosis">Tuberculosis</span>
                             </div>
                         </div>
                         <div class="disease-buttons-row">
                             <div class="disease-button" data-disease="fibrosis">
-                                <span class="disease-name">Fibrosis</span>
+                                <span class="disease-name" data-i18n="disease-fibrosis">Fibrosis</span>
                             </div>
                             <div class="disease-button" data-disease="mediastinal-widening">
-                                <span class="disease-name">Mediastinal widening</span>
+                                <span class="disease-name" data-i18n="disease-mediastinal-widening">Mediastinal widening</span>
                             </div>
                         </div>
                         <!-- <div class="disease-buttons-row">
@@ -285,7 +285,7 @@
             <!-- Workflow Optimization Charts -->
             <div class="row mt-5">
                 <div class="col-md-12 text-center mb-4">
-                    <h3 class="fw-bold">Optimized Workflow Visualization</h3>
+                    <h3 class="fw-bold" data-i18n="workflow-optimization">Optimized Workflow Visualization</h3>
                     <p class="lead">Reduce overall reading time via worklist prioritization with AI</p>
                 </div>
             </div>
@@ -295,7 +295,7 @@
                     <div class="chart-card h-100 fixed-height"
                         style="max-height: 400px !important; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 style="color: var(--light-text); margin-bottom: 0;">All Cases</h4>
+                            <h4 style="color: var(--light-text); margin-bottom: 0;" data-i18n="abnormal-cases">Abnormal Cases</h4>
                             <div class="stat-badge"
                                 style="background: rgba(46, 114, 210, 0.15); border-radius: 6px; padding: 5px 10px;">
                                 <span style="color: var(--primary-color); font-weight: 700; font-size: 18px;">13</span>
@@ -347,7 +347,7 @@
                     <div class="chart-card h-100 fixed-height"
                         style="max-height: 400px !important; background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h4 style="color: var(--light-text); margin-bottom: 0;">Normal Cases</h4>
+                            <h4 style="color: var(--light-text); margin-bottom: 0;" data-i18n="normal-cases">Normal Cases</h4>
                             <div class="stat-badge"
                                 style="background: rgba(46, 114, 210, 0.15); border-radius: 6px; padding: 5px 10px;">
                                 <span style="color: var(--primary-color); font-weight: 700; font-size: 18px;">33</span>
@@ -530,7 +530,7 @@
                     data-aos="fade-up" data-aos-duration="800">
                     <div class="chart-card"
                         style="height: 900px; background: var(--card-bg); border: none; border-radius: 8px; padding: 25px; transition: all 0.3s ease;">
-                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;">
+                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;" data-i18n="early-diagnosis">
                             50% of lung cancer patients can be diagnosed earlier</h3>
                         <p style="color: var(--light-text-secondary);">SOF INSIGHT CXR successfully analyzed the chest
                             X-ray image of a 54-year-old male patient, <span
@@ -605,9 +605,9 @@
                 <div class="col-lg-12 mb-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="chart-card fixed-height"
                         style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 15px; padding: 30px; transition: all 0.3s ease;">
-                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;">
+                        <h3 style="color: var(--light-text); font-size: 28px; font-weight: 700; margin-bottom: 20px;" data-i18n="improved-reading">
                             Improved reading performance</h3>
-                        <p style="color: var(--light-text-secondary);">Better detection of early-stage lung cancer <span
+                        <p style="color: var(--light-text-secondary);" data-i18n="better-detection">Better detection of early-stage lung cancer <span
                                 style="color: var(--primary-color);">without increasing false-positive cases</span></p>
 
                         <div class="row" style="display: flex; justify-content: center;">
@@ -1041,6 +1041,9 @@
             });
         }
     </script>
+    
+    <!-- Translations JS -->
+    <script src="app/js/translations.js"></script>
 </body>
 
 </html>

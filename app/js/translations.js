@@ -77,6 +77,30 @@ const translations = {
 
         // Как это работает
         'how-it-works': 'How It Works',
+        
+        // Радиология CXR страница
+        'sof-cxr-title': 'SOF INSIGHT CXR',
+        'cxr-accuracy': '97-99% accuracy in detecting abnormalities on chest X-rays',
+        'cxr-click-condition': 'Click on a condition to see AI detection examples',
+        'disease-nodule': 'Nodule',
+        'disease-pneumonia': 'Pneumonia',
+        'disease-tuberculosis': 'Tuberculosis',
+        'disease-effusion': 'Effusion',
+        'disease-atelectasis': 'Atelectasis',
+        'disease-cardiomegaly': 'Cardiomegaly',
+        'disease-pneumothorax': 'Pneumothorax',
+        'disease-mass': 'Mass',
+        'disease-infiltration': 'Infiltration',
+        'workflow-optimization': 'Optimized Workflow Visualization',
+        'normal-cases': 'Normal Cases',
+        'abnormal-cases': 'Abnormal Cases',
+        'early-diagnosis': '50% of lung cancer patients can be diagnosed earlier',
+        'improved-reading': 'Improved reading performance',
+        'better-detection': 'Better detection of early-stage lung cancer',
+        
+        // Радиология MMG страница
+        'sof-mmg-title': 'SOF INSIGHT MMG',
+        'mmg-accuracy': 'High precision in breast cancer detection',
     },
     
     // Русский
@@ -154,6 +178,30 @@ const translations = {
 
         // Как это работает
         'how-it-works': 'Как это работает',
+        
+        // Радиология CXR страница
+        'sof-cxr-title': 'SOF INSIGHT CXR',
+        'cxr-accuracy': '97-99% точность в обнаружении аномалий на рентгеновских снимках грудной клетки',
+        'cxr-click-condition': 'Нажмите на заболевание, чтобы увидеть примеры ИИ-обнаружения',
+        'disease-nodule': 'Узел',
+        'disease-pneumonia': 'Пневмония',
+        'disease-tuberculosis': 'Туберкулез',
+        'disease-effusion': 'Выпот',
+        'disease-atelectasis': 'Ателектаз',
+        'disease-cardiomegaly': 'Кардиомегалия',
+        'disease-pneumothorax': 'Пневмоторакс',
+        'disease-mass': 'Масса',
+        'disease-infiltration': 'Инфильтрация',
+        'workflow-optimization': 'Визуализация оптимизированного рабочего процесса',
+        'normal-cases': 'Нормальные случаи',
+        'abnormal-cases': 'Аномальные случаи',
+        'early-diagnosis': '50% пациентов с раком легких можно диагностировать раньше',
+        'improved-reading': 'Улучшенное чтение снимков',
+        'better-detection': 'Лучшее обнаружение рака легких на ранней стадии',
+        
+        // Радиология MMG страница
+        'sof-mmg-title': 'SOF INSIGHT MMG',
+        'mmg-accuracy': 'Высокая точность в обнаружении рака молочной железы',
     },
     
     // Узбекский
@@ -230,7 +278,31 @@ const translations = {
         'feature-telemedicine-description': 'Hisobotlar 24/7 va turli tillarda mavjud, jumladan o\'zbek, rus va ingliz tillarida.',
 
         // Как это работает
-        'how-it-works': 'Bu qanday ishlaydi',
+        'how-it-works': 'Qanday ishlaydi',
+        
+        // Радиология CXR страница
+        'sof-cxr-title': 'SOF INSIGHT CXR',
+        'cxr-accuracy': 'Ko\'krak qafasi rentgen tasvirlaridagi anomaliyalarni aniqlashda 97-99% aniqlik',
+        'cxr-click-condition': 'Sun\'iy intellekt aniqlash namunalarini ko\'rish uchun kasallikni bosing',
+        'disease-nodule': 'Tugunchalar',
+        'disease-pneumonia': 'Pnevmoniya',
+        'disease-tuberculosis': 'Sil',
+        'disease-effusion': 'Suyuqlik to\'planishi',
+        'disease-atelectasis': 'Atelektaz',
+        'disease-cardiomegaly': 'Kardiomegaliya',
+        'disease-pneumothorax': 'Pnevmotoraks',
+        'disease-mass': 'Massa',
+        'disease-infiltration': 'Infiltratsiya',
+        'workflow-optimization': 'Optimallashtirilgan ish jarayoni vizualizatsiyasi',
+        'normal-cases': 'Normal holatlar',
+        'abnormal-cases': 'Anomal holatlar',
+        'early-diagnosis': 'O\'pka saratoni bilan og\'rigan bemorlarning 50% ertaroq tashxis qo\'yilishi mumkin',
+        'improved-reading': 'Tahlil qilish samaradorligi oshgan',
+        'better-detection': 'Ilk bosqichdagi o\'pka saratonini yaxshiroq aniqlash',
+        
+        // Радиология MMG страница
+        'sof-mmg-title': 'SOF INSIGHT MMG',
+        'mmg-accuracy': 'Ko\'krak saratonini aniqlashda yuqori aniqlik'
     }
 };
 

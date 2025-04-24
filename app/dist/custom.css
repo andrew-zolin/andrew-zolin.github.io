@@ -1782,10 +1782,15 @@ body.has-notification .header.style-8 {
 
 .btn-action-outline.language-selector {
     max-height: 38px !important;
+    margin-left: 0px !important;   
     width: 58px !important;
     border-radius: 5px !important;
     overflow: hidden !important;
+    background-color: transparent !important;
     border-color: var(--primary-color) !important;
+}
+.btn-action-outline.language-selector::before {
+    background: transparent !important;
 }
 
 .language-option {
@@ -1795,6 +1800,9 @@ body.has-notification .header.style-8 {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     transition: all 0.3s ease !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
 }
 
 .language-option:hover {
@@ -1803,10 +1811,3 @@ body.has-notification .header.style-8 {
 }
 
 
-.btn-action-outline.language-selector {
-    margin-left: 0px !important;   
-    
-}
-.btn-action-outline.language-selector::before {
-    background: transparent !important;
-}
