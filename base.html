@@ -53,31 +53,51 @@
                         <div class="header__right">
                             <nav>
                                 <ul>
-                                    <li><a href="#">Platform</a></li>
+                                    <li><a href="index.html#" data-i18n="platform">Platform</a></li>
                                     <li class="menu-item-has-children">
-                                        <a href="radiology-cxr.html">Radiology</a>
+                                        <a href="radiology-cxr.html" data-i18n="radiology">Radiology</a>
                                         <ul class="sub-menu">
                                             <li><a href="radiology-cxr.html">Sof CXR</a></li>
-                                            <li><a href="#">Sof MMG</a></li>
+                                            <li><a href="radiology-mmg.html">Sof MMG</a></li>
                                             <!-- <li><a href="#">Testimonials</a></li> -->
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">Oncology</a>
+                                        <a href="oncology-pd-l1.html" data-i18n="oncology">Oncology</a>
                                         <ul class="sub-menu">
-                                            <li><a href="#">Sof PD-L1</a></li>
+                                            <li><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Publications</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="blog.html" data-i18n="publications">Publications</a></li>
+                                    <li><a href="about-us.html" data-i18n="about-us">About Us</a></li>
                                 </ul>
                             </nav>
                             <div class="group-button">
-                                <a href="#" class="btn-action-outline style-4">
-                                    <span>EN</span>
-                                </a>
+                                <div class="language-dropdown" style="position: relative; display: inline-block;">
+                                    <a href="#" class="btn-action-outline language-selector" style="position: relative; display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 8px; border: 1px solid rgba(80, 160, 255, 0.3); background: rgba(16, 26, 42, 0.4); transition: all 0.3s ease;">
+                                        <span style="font-weight: 600; letter-spacing: 0.5px; margin-right: 6px;">EN</span>
+                                        <i class="bi bi-chevron-down" style="font-size: 12px; transition: transform 0.3s ease;"></i>
+                                    </a>
+                                    <div class="language-dropdown-content" style="display: none; position: absolute; top: calc(100% + 10px); left: 0; background: rgba(16, 26, 42, 0.95); width: 60px; box-shadow: 0px 8px 20px rgba(0,0,0,0.25); z-index: 1000; border-radius: 5%; overflow: hidden; border: 1px solid rgba(80, 160, 255, 0.15);">
+                                        <a href="#" class="language-option" data-lang="en" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">EN</span> -->
+                                            <!-- English -->
+                                            EN
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="ru" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">RU</span> -->
+                                            <!-- Русский -->
+                                            RU
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="uz" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">UZ</span> -->
+                                            <!-- O'zbekcha -->
+                                            UZ
+                                        </a>
+                                    </div>
+                                </div>
                                 <a class="btn-action-outline style-4" href="#contact">
-                                    <span>Contact Us</span>
+                                    <span data-i18n="contact-us">Contact Us</span>
                                 </a>
                             </div>
                             <!-- <div class="group-button">
@@ -99,34 +119,37 @@
     <div class="mobile-menu">
         <ul>
             <li class="menu-item current-menu-item">
-                <a href="index.html#">Platform</a>
+                <a href="index.html#" data-i18n="platform">Platform</a>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="radiology-cxr.html">Radiology</a>
+                <a href="radiology-cxr.html" data-i18n="radiology">Radiology</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
-                    <li class="menu-item"><a href="#">Sof MMG</a></li>
+                    <li class="menu-item"><a href="radiology-mmg.html">Sof MMG</a></li>
                 </ul>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="#">Oncology</a>
+                <a href="oncology-pd-l1.html" data-i18n="oncology">Oncology</a>
                 <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Sof PD-L1</a></li>
+                    <li class="menu-item"><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="blog.html">Publications</a>
+                <a href="blog.html" data-i18n="publications">Publications</a>
             </li>
             <li class="menu-item">
-                <a href="about-us.html">About Us</a>
+                <a href="about-us.html" data-i18n="about-us">About Us</a>
             </li>
         </ul>
         <div class="mobile-language">
-            <a href="#" class="active">EN</a>
-            <a href="#contact" class="btn-action-outline">Contact Us</a>
+            <div class="mobile-language-switcher" style="margin-bottom: 15px; display: flex; justify-content: center;">
+                <a href="#" class="language-option" data-lang="en" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">EN</a>
+                <a href="#" class="language-option" data-lang="ru" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">RU</a>
+                <a href="#" class="language-option" data-lang="uz" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">UZ</a>
+            </div>
+            <a href="#contact" class="btn-action-outline" data-i18n="contact-us">Contact Us</a>
         </div>
     </div>
-
 
 
 
@@ -218,6 +241,7 @@
     <script src="app/js/mouse.js"></script>
     <script src="app/js/custom.js"></script>
     <script src="app/js/contact.js"></script>
+    <script src="app/js/translations.js"></script>
     <script>
         // Initialize AOS with updated settings
         AOS.init({

@@ -1775,3 +1775,38 @@ body.has-notification .header.style-8 {
 #name:focus{
     border-color: var(--primary-color) !important;
 }
+
+.language-dropdown {
+    max-height: 38px !important;
+}
+
+.btn-action-outline.language-selector {
+    max-height: 38px !important;
+    width: 58px !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    border-color: var(--primary-color) !important;
+}
+
+.language-option {
+    border-color: transparent !important;
+    border-radius: 2% !important;
+    margin-left: 0 !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.language-option:hover {
+    /* background: rgba(80, 160, 255, 0.15) !important; */
+    background: var(--primary-color) !important;
+}
+
+
+.btn-action-outline.language-selector {
+    margin-left: 0px !important;   
+    
+}
+.btn-action-outline.language-selector::before {
+    background: transparent !important;
+}

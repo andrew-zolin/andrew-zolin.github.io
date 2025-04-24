@@ -53,9 +53,9 @@
                         <div class="header__right">
                             <nav>
                                 <ul>
-                                    <li><a href="index.html#">Platform</a></li>
+                                    <li><a href="index.html#" data-i18n="platform">Platform</a></li>
                                     <li class="menu-item-has-children">
-                                        <a href="radiology-cxr.html">Radiology</a>
+                                        <a href="radiology-cxr.html" data-i18n="radiology">Radiology</a>
                                         <ul class="sub-menu">
                                             <li><a href="radiology-cxr.html">Sof CXR</a></li>
                                             <li><a href="radiology-mmg.html">Sof MMG</a></li>
@@ -63,21 +63,41 @@
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="oncology-pd-l1.html">Oncology</a>
+                                        <a href="oncology-pd-l1.html" data-i18n="oncology">Oncology</a>
                                         <ul class="sub-menu">
                                             <li><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Publications</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="blog.html" data-i18n="publications">Publications</a></li>
+                                    <li><a href="about-us.html" data-i18n="about-us">About Us</a></li>
                                 </ul>
                             </nav>
                             <div class="group-button">
-                                <a href="#" class="btn-action-outline style-4">
-                                    <span>EN</span>
-                                </a>
+                                <div class="language-dropdown" style="position: relative; display: inline-block;">
+                                    <a href="#" class="btn-action-outline language-selector" style="position: relative; display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 8px; border: 1px solid rgba(80, 160, 255, 0.3); background: rgba(16, 26, 42, 0.4); transition: all 0.3s ease;">
+                                        <span style="font-weight: 600; letter-spacing: 0.5px; margin-right: 6px;">EN</span>
+                                        <i class="bi bi-chevron-down" style="font-size: 12px; transition: transform 0.3s ease;"></i>
+                                    </a>
+                                    <div class="language-dropdown-content" style="display: none; position: absolute; top: calc(100% + 10px); left: 0; background: rgba(16, 26, 42, 0.95); width: 60px; box-shadow: 0px 8px 20px rgba(0,0,0,0.25); z-index: 1000; border-radius: 5%; overflow: hidden; border: 1px solid rgba(80, 160, 255, 0.15);">
+                                        <a href="#" class="language-option" data-lang="en" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">EN</span> -->
+                                            <!-- English -->
+                                            EN
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="ru" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">RU</span> -->
+                                            <!-- Русский -->
+                                            RU
+                                        </a>
+                                        <a href="#" class="language-option" data-lang="uz" style="color: var(--light-text); padding: 12px 20px; text-decoration: none; display: flex; align-items: center; font-size: 14px;">
+                                            <!-- <span class="lang-indicator" style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: rgba(80, 160, 255, 0.2); margin-right: 10px; text-align: center; line-height: 24px; font-size: 11px; font-weight: bold;">UZ</span> -->
+                                            <!-- O'zbekcha -->
+                                            UZ
+                                        </a>
+                                    </div>
+                                </div>
                                 <a class="btn-action-outline style-4" href="#contact">
-                                    <span>Contact Us</span>
+                                    <span data-i18n="contact-us">Contact Us</span>
                                 </a>
                             </div>
                             <!-- <div class="group-button">
@@ -99,31 +119,35 @@
     <div class="mobile-menu">
         <ul>
             <li class="menu-item current-menu-item">
-                <a href="index.html#">Platform</a>
+                <a href="index.html#" data-i18n="platform">Platform</a>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="radiology-cxr.html">Radiology</a>
+                <a href="radiology-cxr.html" data-i18n="radiology">Radiology</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="radiology-cxr.html">Sof CXR</a></li>
                     <li class="menu-item"><a href="radiology-mmg.html">Sof MMG</a></li>
                 </ul>
             </li>
             <li class="menu-item menu-item-has-children">
-                <a href="oncology-pd-l1.html">Oncology</a>
+                <a href="oncology-pd-l1.html" data-i18n="oncology">Oncology</a>
                 <ul class="sub-menu">
                     <li class="menu-item"><a href="oncology-pd-l1.html">Sof PD-L1</a></li>
                 </ul>
             </li>
             <li class="menu-item">
-                <a href="blog.html">Publications</a>
+                <a href="blog.html" data-i18n="publications">Publications</a>
             </li>
             <li class="menu-item">
-                <a href="about-us.html">About Us</a>
+                <a href="about-us.html" data-i18n="about-us">About Us</a>
             </li>
         </ul>
         <div class="mobile-language">
-            <a href="#" class="active">EN</a>
-            <a href="#contact" class="btn-action-outline">Contact Us</a>
+            <div class="mobile-language-switcher" style="margin-bottom: 15px; display: flex; justify-content: center;">
+                <a href="#" class="language-option" data-lang="en" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">EN</a>
+                <a href="#" class="language-option" data-lang="ru" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">RU</a>
+                <a href="#" class="language-option" data-lang="uz" style="margin: 0 5px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: rgba(80, 160, 255, 0.15); color: var(--light-text); text-decoration: none; font-weight: 600; transition: all 0.3s ease; font-size: 13px;">UZ</a>
+            </div>
+            <a href="#contact" class="btn-action-outline" data-i18n="contact-us">Contact Us</a>
         </div>
     </div>
 
@@ -138,26 +162,26 @@
                 <div class="col-xl-8 col-md-12">
                     <div  class="banner-top__content">
                         <h2 style="padding: 0px; margin: 0; max-width: 100%; font-size: 50px;" class="title">
-                            <span class="">AI-powered radiology software</span><br>
-                            <span class="" style="color: var(--primary-color);">for faster, more accurate diagnoses.</span><br>
+                            <span class="" data-i18n="ai-powered-title">AI-powered radiology software</span><br>
+                            <span class="" style="color: var(--primary-color);" data-i18n="ai-powered-subtitle">for faster, more accurate diagnoses.</span><br>
                         </h2>
                         
-                        <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;" data-aos="fade-up" data-aos-duration="800">
+                        <p class="fs-20 mt-16" style="max-width: 600px; margin-bottom: 30px;" data-aos="fade-up" data-aos-duration="800" data-i18n="ai-powered-description">
                             SOF AI helps radiologists analyze chest X-rays and mammograms with 97-99% accuracy, reducing diagnostic time by up to 85% and improving patient outcomes.
                         </p>
 
                         <div class="banner-stats" style="display: flex; gap: 40px; margin-top: 40px;" data-aos="fade-up" data-aos-duration="800">
                             <div class="banner-stat-item" style="text-align: center;">
                                 <div style="font-size: 32px; font-weight: 700; color: var(--primary-color);">97-99%</div>
-                                <div style="font-size: 14px; color: var(--light-text-secondary);">Accuracy</div>
+                                <div style="font-size: 14px; color: var(--light-text-secondary);" data-i18n="stat-accuracy">Accuracy</div>
                             </div>
                             <div class="banner-stat-item" style="text-align: center;">
                                 <div style="font-size: 32px; font-weight: 700; color: var(--primary-color);">85%</div>
-                                <div style="font-size: 14px; color: var(--light-text-secondary);">Time Saved</div>
+                                <div style="font-size: 14px; color: var(--light-text-secondary);" data-i18n="stat-time-saved">Time Saved</div>
                             </div>
                             <div class="banner-stat-item" style="text-align: center;">
                                 <div style="font-size: 32px; font-weight: 700; color: var(--primary-color);">60+</div>
-                                <div style="font-size: 14px; color: var(--light-text-secondary);">Conditions Detected</div>
+                                <div style="font-size: 14px; color: var(--light-text-secondary);" data-i18n="stat-conditions">Conditions Detected</div>
                             </div>
                         </div>
                     </div>
@@ -169,7 +193,7 @@
     <!-- Market Research Section -->
     <section class="market-research" style="background: var(--dark-bg-gradient-alt); padding: 100px 0;">
         <div class="container">
-            <h2 class="market-research__title">Market Research</h2>
+            <h2 class="market-research__title" data-i18n="market-research-title">Market Research</h2>
             <!-- <p class="market-research__subtitle">Comprehensive analysis of the CXR and MMG market landscape for SOF AI implementation</p> -->
             <!-- <p class="market-research__subtitle">Market Research</p> -->
             <!-- <div class="market-research__text-block" style="margin-top: 40px;" data-aos="fade-up" data-aos-duration="800">
@@ -194,8 +218,8 @@
                             <i class="bi bi-hospital"></i>
                         </div>
                         <div class="market-card__content">
-                            <h3>Hospital Market</h3>
-                            <p>The global healthcare AI market is rapidly expanding, projected to surpass <span class="market-highlight">$150 Billion by 2030</span>. Reflecting this trend, hospitals worldwide show immense demand for AI solutions, with surveys indicating over <span class="market-highlight">70%</span> of healthcare leaders planning significant investments in diagnostic AI to enhance efficiency and care quality.</p>
+                            <h3 data-i18n="hospital-market-title">Hospital Market</h3>
+                            <p data-i18n="hospital-market-description">The global healthcare AI market is rapidly expanding, projected to surpass <span class="market-highlight">$150 Billion by 2030</span>. Reflecting this trend, hospitals worldwide show immense demand for AI solutions, with surveys indicating over <span class="market-highlight">70%</span> of healthcare leaders planning significant investments in diagnostic AI to enhance efficiency and care quality.</p>
                         </div>
                     </div>
                 </div>
@@ -209,8 +233,8 @@
                             <i class="bi bi-hospital-fill"></i> <!-- Consider changing icon if needed e.g., bi-radioactive or bi-diagram-3 -->
                         </div>
                         <div class="market-card__content">
-                            <h3>Radiology Opportunity</h3>
-                            <p>Billions of diagnostic imaging procedures occur globally each year, including over <span class="market-highlight">2 billion X-rays</span>. With the AI in medical imaging market growing at a <span class="market-highlight">CAGR of over 30%</span>, there's a critical need and vast potential for AI integration in radiology centers worldwide to manage volumes, improve diagnostic accuracy, and alleviate radiologist workload.</p>
+                            <h3 data-i18n="radiology-opportunity-title">Radiology Opportunity</h3>
+                            <p data-i18n="radiology-opportunity-description">Billions of diagnostic imaging procedures occur globally each year, including over <span class="market-highlight">2 billion X-rays</span>. With the AI in medical imaging market growing at a <span class="market-highlight">CAGR of over 30%</span>, there's a critical need and vast potential for AI integration in radiology centers worldwide to manage volumes, improve diagnostic accuracy, and alleviate radiologist workload.</p>
                         </div>
                     </div>
                 </div>
@@ -333,10 +357,10 @@
                         <!-- <h3 class="title" style="text-align: center;">
                             SOF AI — artificial intelligence to help a radiologist
                         </h3> -->
-                        <h3 class="title" style="text-align: center;">
+                        <h3 class="title" style="text-align: center;" data-i18n="solution">
                             Solution
                         </h3>
-                        <p class="mt-16 fs-17" style="max-width: 800px; margin: 0 auto 40px; font-size: 23px;">
+                        <p class="mt-16 fs-17" style="max-width: 800px; margin: 0 auto 40px; font-size: 23px;" data-i18n="ai-description">
                             SOF AI is a cutting-edge platform that leverages artificial intelligence to assist radiologists in analyzing medical images, particularly chest X-rays and mammograms, with unprecedented speed and accuracy.
                         </p>
                     </div>
@@ -384,22 +408,22 @@
             <div class="row align-items-center mb-5">
                 <div class="col-lg-6 order-lg-2" data-aos="fade-left" data-aos-duration="800">
                     <div class="about-content">
-                        <h2 style="color: #fff; margin-bottom: 20px;">Seamless Integration</h2>
-                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 15px;">SOF AI integrates seamlessly with existing hospital PACS systems and radiology workflows. The platform supports all standard DICOM formats and can be deployed on-premises or via secure cloud infrastructure.</p>
-                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 15px;">Our system is designed to complement radiologists' expertise, not replace it. By handling routine cases and flagging potential abnormalities, SOF AI allows specialists to focus their attention where it's needed most.</p>
+                        <h2 style="color: #fff; margin-bottom: 20px;" data-i18n="seamless-integration">Seamless Integration</h2>
+                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 15px;" data-i18n="integration-description">SOF AI integrates seamlessly with existing hospital PACS systems and radiology workflows. The platform supports all standard DICOM formats and can be deployed on-premises or via secure cloud infrastructure.</p>
+                        <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 15px;" data-i18n="integration-expertise">Our system is designed to complement radiologists' expertise, not replace it. By handling routine cases and flagging potential abnormalities, SOF AI allows specialists to focus their attention where it's needed most.</p>
                         
                         <div class="feature-list" style="margin-top: 25px;">
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
                                 <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
-                                <p style="margin: 0; color: var(--light-text);">DICOM and HL7 compatibility</p>
+                                <p style="margin: 0; color: var(--light-text);" data-i18n="integration-feature-1">DICOM and HL7 compatibility</p>
                             </div>
                             <div class="feature-item" style="display: flex; align-items: center; margin-bottom: 15px;">
                                 <div style="width: 40px; height: 40px; border-radius: 50%; border: solid 2px var(--primary-color); background: transparent; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
                                     <i class="bi bi-check2" style="color: white; font-size: 20px;"></i>
                                 </div>
-                                <p style="margin: 0; color: var(--light-text);">On-premises or cloud deployment options</p>
+                                <p style="margin: 0; color: var(--light-text);" data-i18n="integration-feature-2">On-premises or cloud deployment options</p>
                             </div>
                         </div>
                     </div>
@@ -416,7 +440,7 @@
             <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="block-text center" data-aos="fade-up">
-                        <h3 class="heading">Key Features</h3>
+                        <h3 class="heading" data-i18n="key-features">Key Features</h3>
                     </div>
                 </div>
             </div>
@@ -427,8 +451,8 @@
                         <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(61, 136, 251, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                             <i class="bi bi-lightning-charge" style="color: var(--primary-color); font-size: 28px;"></i>
                         </div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);">Real-time Analysis</h4>
-                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);">Process X-rays and mammograms in seconds, providing immediate results to radiologists without workflow disruption.</p>
+                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);" data-i18n="feature-realtime-title">Real-time Analysis</h4>
+                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);" data-i18n="feature-realtime-description">Process X-rays and mammograms in seconds, providing immediate results to radiologists without workflow disruption.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 mb-4" style="max-height: 210px;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
@@ -436,8 +460,8 @@
                         <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(61, 136, 251, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                             <i class="bi bi-eye" style="color: var(--primary-color); font-size: 28px;"></i>
                         </div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);">Visual Highlighting</h4>
-                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);">Automatically highlights regions of interest on images, drawing attention to potential abnormalities for closer examination.</p>
+                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);" data-i18n="feature-visual-title">Visual Highlighting</h4>
+                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);" data-i18n="feature-visual-description">Automatically highlights regions of interest on images, drawing attention to potential abnormalities for closer examination.</p>
                     </div>
                 </div>
             </div>
@@ -447,8 +471,8 @@
                         <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(61, 136, 251, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                             <i class="bi bi-file-earmark-text" style="color: var(--primary-color); font-size: 28px;"></i>
                         </div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);">Automated Reporting</h4>
-                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);">Generates preliminary reports with findings and recommendations, saving radiologists valuable documentation time.</p>
+                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);" data-i18n="feature-reporting-title">Automated Reporting</h4>
+                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);" data-i18n="feature-reporting-description">Generates preliminary reports with findings and recommendations, saving radiologists valuable documentation time.</p>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 mb-4" style="max-height: 210px;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
@@ -456,8 +480,8 @@
                         <div style="width: 60px; height: 60px; border-radius: 12px; background: rgba(61, 136, 251, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
                             <i class="bi bi-card-checklist" style="color: var(--primary-color); font-size: 28px;"></i>
                         </div>
-                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);">Telemedicine opportunities</h4>
-                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);">Reports available 24/7 and different languages including Uzb , Rus , English.</p>
+                        <h4 style="font-size: 20px; margin-bottom: 15px; color: var(--light-text);" data-i18n="feature-telemedicine-title">Telemedicine opportunities</h4>
+                        <p style="font-size: 15px; line-height: 1.6; color: var(--light-text-secondary);" data-i18n="feature-telemedicine-description">Reports available 24/7 and different languages including Uzb , Rus , English.</p>
                     </div>
                 </div>
             </div>
@@ -474,7 +498,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block-text center">
-                        <h3 class="heading">How It Works</h3>
+                        <h3 class="heading" data-i18n="how-it-works">How It Works</h3>
                         <!-- <p class="mt-16 fs-17">The use of crypto-currencies has become more widespread, and they are now increasingly accepted as a legitimate for transactions.</p> -->
                     </div>
     
@@ -861,8 +885,8 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="content-left">
-                            <h3 class="fs-22">Contact Us</h3>
-                            <p class="fs-20">We are always open and welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.</p>
+                            <h3 class="fs-22" data-i18n="contact-title">Contact Us</h3>
+                            <p class="fs-20" data-i18n="contact-description">We are always open and welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.</p>
                             <ul class="list-info">                                
                                 <li style="cursor: pointer;" onclick="location.href='mailto:info@sofai.uz'"><span class="icon-message"></span>info@sofai.uz</li>
                                 <li><span class="icon-Calling"></span>+1 (800) 555-1234</li>
@@ -881,19 +905,19 @@
                             <form id="contact-form">
                                 <div class="form row">
                                     <div class="form-group col-md-6">
-                                        <label for="name">Your Name</label>
-                                        <input type="text" id="name" class="form-control" placeholder="Type your name here" required>
+                                        <label for="name" data-i18n="your-name">Your Name</label>
+                                        <input type="text" id="name" class="form-control" data-i18n-placeholder="name-placeholder" placeholder="Type your name here" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Your Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Type your email here" required>
+                                        <label for="email" data-i18n="your-email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" data-i18n-placeholder="email-placeholder" placeholder="Type your email here" required>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="mb-6">Your Message</label>
-                                        <textarea id="message" placeholder="Leave your question or comment here" required></textarea>
+                                        <label class="mb-6" data-i18n="your-message">Your Message</label>
+                                        <textarea id="message" data-i18n-placeholder="message-placeholder" placeholder="Leave your question or comment here" required></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-action style-5"><span>SUBMIT YOUR MESSAGE</span></button>
+                                <button type="submit" class="btn-action style-5"><span data-i18n="submit-button">SUBMIT YOUR MESSAGE</span></button>
                                 
                               </form>
                         
@@ -906,7 +930,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p> 2025 SOF AI. All rights reserved.</p>
+                        <p data-i18n="copyright"> 2025 SOF AI. All rights reserved.</p>
                     </div>
                 </div>
             </div>
@@ -927,6 +951,8 @@
     <script src="app/js/mouse.js"></script>
     <script src="app/js/custom.js"></script>
     <script src="app/js/contact.js"></script>
+    <script src="app/js/translations.js"></script>
+
     <script>
         // Initialize AOS with updated settings
         AOS.init({
