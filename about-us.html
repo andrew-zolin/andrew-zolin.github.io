@@ -140,9 +140,9 @@
     <header id="header_main" class="header style-8">
         <div class="notification-banner" id="notification-banner">
             <div class="container">
-                <div class="notification-content">
+                <div class="notification-content" data-i18n="notification-text">
                     Want to learn more about SOF AI Solutions? Let's connect!
-                    <a href="#contact" class="notification-btn">Contact Us</a>
+                    <a href="#contact" class="notification-btn" data-i18n="contact-us">Contact Us</a>
                 </div>
                 <button class="notification-close" id="notification-close">
                     <i class="bi bi-x"></i>
@@ -270,24 +270,24 @@
     <div class="scroll-trigger-area"></div>
 
     <!-- Text blocks are siblings, positioned fixed -->
-    <div class="text-block" id="block1">
+    <div class="text-block" id="block1" data-i18n="cancer-complex">
         Cancer is complex — and every case is unique.
     </div>
     <div class="text-block" id="block2">
-        Behind each diagnosis lies a wealth of data that needs to be understood. This is where AI excels. By analyzing
+        <span data-i18n="ai-expertise">Behind each diagnosis lies a wealth of data that needs to be understood. This is where AI excels. By analyzing
         vast amounts of information, AI unlocks insights that lead to new discoveries, empowering us to make smarter,
-        more personalized treatment decisions.
+        more personalized treatment decisions.</span>
         <br><br>
-        With these powerful, data-driven revelations, we can take meaningful steps forward in the fight against cancer.
-        Through AI, we have the potential to not just fight cancer — but to conquer it.
+        <span data-i18n="ai-potential">With these powerful, data-driven revelations, we can take meaningful steps forward in the fight against cancer.
+        Through AI, we have the potential to not just fight cancer — but to conquer it.</span>
     </div>
     <div class="text-block" id="block3">
-        <strong>Vision & Mission:</strong>
+        <strong data-i18n="vision-mission">Vision & Mission:</strong>
         <br><br>
-        To conquer cancer through the power of AI.<br>
-        We develop advanced AI solutions that detect early-stage cancer and optimize personalized treatment plans. By
+        <span data-i18n="conquer-cancer">To conquer cancer through the power of AI.</span><br>
+        <span data-i18n="develop-solutions">We develop advanced AI solutions that detect early-stage cancer and optimize personalized treatment plans. By
         unlocking the potential of AI, we aim to transform cancer care, offering hope and precision in the fight against
-        this complex disease.
+        this complex disease.</span>
     </div>
 
     <!-- Footer -->
@@ -297,10 +297,9 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="content-left">
-                            <h3 class="fs-22">Contact Us</h3>
-                            <p class="fs-20">We are always open and welcome any questions you have for our team. If you
-                                wish to get in touch, please fill out the form below.</p>
-                            <ul class="list-info">
+                            <h3 class="fs-22" data-i18n="contact-title">Contact Us</h3>
+                            <p class="fs-20" data-i18n="contact-description">We are always open and welcome any questions you have for our team. If you wish to get in touch, please fill out the form below.</p>
+                            <ul class="list-info">                                
                                 <li style="cursor: pointer;" onclick="location.href='mailto:info@sofai.uz'"><span class="icon-message"></span>info@sofai.uz</li>
                                 <!-- <li><span class="icon-Calling"></span>+1 (800) 555-1234</li> -->
                             </ul>
@@ -310,7 +309,7 @@
                                 <li><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
                                 <li><a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
                             </ul>
-
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -318,25 +317,22 @@
                             <form id="contact-form">
                                 <div class="form row">
                                     <div class="form-group col-md-6">
-                                        <label for="name">Your Name</label>
-                                        <input type="text" id="name" class="form-control"
-                                            placeholder="Type your name here" required>
+                                        <label for="name" data-i18n="your-name">Your Name</label>
+                                        <input type="text" id="name" class="form-control" data-i18n-placeholder="name-placeholder" placeholder="Type your name here" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="email">Your Email</label>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Type your email here" required>
+                                        <label for="email" data-i18n="your-email">Your Email</label>
+                                        <input type="email" class="form-control" id="email" data-i18n-placeholder="email-placeholder" placeholder="Type your email here" required>
                                     </div>
                                     <div class="form-group col-md-12">
-                                        <label class="mb-6">Your Message</label>
-                                        <textarea id="message" placeholder="Leave your question or comment here"
-                                            required></textarea>
+                                        <label class="mb-6" data-i18n="your-message">Your Message</label>
+                                        <textarea id="message" data-i18n-placeholder="message-placeholder" placeholder="Leave your question or comment here" required></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn-action style-5"><span>SUBMIT YOUR
-                                        MESSAGE</span></button>
+                                <button type="submit" class="btn-action style-5"><span data-i18n="submit-button">SUBMIT YOUR MESSAGE</span></button>
+                                
                             </form>
-
+                        
                         </div>
                     </div>
                 </div>
@@ -346,7 +342,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <p> 2025 SOF AI. All rights reserved.</p>
+                        <p data-i18n="copyright"> 2025 SOF AI. All rights reserved.</p>
                     </div>
                 </div>
             </div>
