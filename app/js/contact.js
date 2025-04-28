@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Make API request
-            const response = await fetch('http://127.0.0.1:8000/contact', {
+            const response = await fetch('http://108.181.162.134:8000/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
