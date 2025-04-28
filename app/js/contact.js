@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         try {
             // Make API request
-            const response = await fetch('http://108.181.162.134:8000/contact', {
+            const response = await fetch('https://contact.sofai.uz/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
